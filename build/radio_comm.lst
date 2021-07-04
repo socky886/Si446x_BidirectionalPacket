@@ -1,0 +1,850 @@
+ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccZQqhLo.s 			page 1
+
+
+   1              		.cpu cortex-m4
+   2              		.eabi_attribute 27, 1
+   3              		.eabi_attribute 28, 1
+   4              		.eabi_attribute 20, 1
+   5              		.eabi_attribute 21, 1
+   6              		.eabi_attribute 23, 3
+   7              		.eabi_attribute 24, 1
+   8              		.eabi_attribute 25, 1
+   9              		.eabi_attribute 26, 1
+  10              		.eabi_attribute 30, 1
+  11              		.eabi_attribute 34, 1
+  12              		.eabi_attribute 18, 4
+  13              		.file	"radio_comm.c"
+  14              		.text
+  15              	.Ltext0:
+  16              		.cfi_sections	.debug_frame
+  17              		.section	.rodata.radio_comm_GetResp.str1.4,"aMS",%progbits,1
+  18              		.align	2
+  19              	.LC0:
+  20 0000 72616469 		.ascii	"radio communication error\000"
+  20      6F20636F 
+  20      6D6D756E 
+  20      69636174 
+  20      696F6E20 
+  21              		.section	.text.radio_comm_GetResp,"ax",%progbits
+  22              		.align	1
+  23              		.global	radio_comm_GetResp
+  24              		.arch armv7e-m
+  25              		.syntax unified
+  26              		.thumb
+  27              		.thumb_func
+  28              		.fpu fpv4-sp-d16
+  30              	radio_comm_GetResp:
+  31              	.LVL0:
+  32              	.LFB135:
+  33              		.file 1 "Drivers/radio/radio_comm.c"
+   1:Drivers/radio/radio_comm.c **** /*!
+   2:Drivers/radio/radio_comm.c ****  * File:
+   3:Drivers/radio/radio_comm.c ****  *  radio_comm.h
+   4:Drivers/radio/radio_comm.c ****  *
+   5:Drivers/radio/radio_comm.c ****  * Description:
+   6:Drivers/radio/radio_comm.c ****  *  This file contains the RADIO communication layer.
+   7:Drivers/radio/radio_comm.c ****  *
+   8:Drivers/radio/radio_comm.c ****  * Silicon Laboratories Confidential
+   9:Drivers/radio/radio_comm.c ****  * Copyright 2012 Silicon Laboratories, Inc.
+  10:Drivers/radio/radio_comm.c ****  */
+  11:Drivers/radio/radio_comm.c **** 
+  12:Drivers/radio/radio_comm.c ****                 /* ======================================= *
+  13:Drivers/radio/radio_comm.c ****                  *              I N C L U D E              *
+  14:Drivers/radio/radio_comm.c ****                  * ======================================= */
+  15:Drivers/radio/radio_comm.c **** 
+  16:Drivers/radio/radio_comm.c **** #include "bsp.h"
+  17:Drivers/radio/radio_comm.c **** #include <stdio.h>
+  18:Drivers/radio/radio_comm.c **** 
+  19:Drivers/radio/radio_comm.c ****                 /* ======================================= *
+  20:Drivers/radio/radio_comm.c ****                  *          D E F I N I T I O N S          *
+  21:Drivers/radio/radio_comm.c ****                  * ======================================= */
+ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccZQqhLo.s 			page 2
+
+
+  22:Drivers/radio/radio_comm.c **** 
+  23:Drivers/radio/radio_comm.c ****                 /* ======================================= *
+  24:Drivers/radio/radio_comm.c ****                  *     G L O B A L   V A R I A B L E S     *
+  25:Drivers/radio/radio_comm.c ****                  * ======================================= */
+  26:Drivers/radio/radio_comm.c **** 
+  27:Drivers/radio/radio_comm.c **** #if (defined SILABS_RADIO_SI446X) || (defined SILABS_RADIO_SI4455)
+  28:Drivers/radio/radio_comm.c **** BIT ctsWentHigh = 0;
+  29:Drivers/radio/radio_comm.c **** #endif
+  30:Drivers/radio/radio_comm.c **** 
+  31:Drivers/radio/radio_comm.c **** 
+  32:Drivers/radio/radio_comm.c ****                 /* ======================================= *
+  33:Drivers/radio/radio_comm.c ****                  *      L O C A L   F U N C T I O N S      *
+  34:Drivers/radio/radio_comm.c ****                  * ======================================= */
+  35:Drivers/radio/radio_comm.c **** 
+  36:Drivers/radio/radio_comm.c ****                 /* ======================================= *
+  37:Drivers/radio/radio_comm.c ****                  *     P U B L I C   F U N C T I O N S     *
+  38:Drivers/radio/radio_comm.c ****                  * ======================================= */
+  39:Drivers/radio/radio_comm.c **** 
+  40:Drivers/radio/radio_comm.c **** #if (defined SILABS_RADIO_SI446X) || (defined SILABS_RADIO_SI4455)
+  41:Drivers/radio/radio_comm.c **** 
+  42:Drivers/radio/radio_comm.c **** /*!
+  43:Drivers/radio/radio_comm.c ****  * Gets a command response from the radio chip
+  44:Drivers/radio/radio_comm.c ****  *
+  45:Drivers/radio/radio_comm.c ****  * @param byteCount     Number of bytes to get from the radio chip
+  46:Drivers/radio/radio_comm.c ****  * @param pData         Pointer to where to put the data
+  47:Drivers/radio/radio_comm.c ****  *
+  48:Drivers/radio/radio_comm.c ****  * @return CTS value
+  49:Drivers/radio/radio_comm.c ****  */
+  50:Drivers/radio/radio_comm.c **** U8 radio_comm_GetResp(U8 byteCount, U8* pData)
+  51:Drivers/radio/radio_comm.c **** {
+  34              		.loc 1 51 1 view -0
+  35              		.cfi_startproc
+  36              		@ args = 0, pretend = 0, frame = 0
+  37              		@ frame_needed = 0, uses_anonymous_args = 0
+  38              		.loc 1 51 1 is_stmt 0 view .LVU1
+  39 0000 F8B5     		push	{r3, r4, r5, r6, r7, lr}
+  40              	.LCFI0:
+  41              		.cfi_def_cfa_offset 24
+  42              		.cfi_offset 3, -24
+  43              		.cfi_offset 4, -20
+  44              		.cfi_offset 5, -16
+  45              		.cfi_offset 6, -12
+  46              		.cfi_offset 7, -8
+  47              		.cfi_offset 14, -4
+  48 0002 0646     		mov	r6, r0
+  49 0004 0F46     		mov	r7, r1
+  52:Drivers/radio/radio_comm.c ****   SEGMENT_VARIABLE(ctsVal = 0u, U8, SEG_DATA);
+  50              		.loc 1 52 3 is_stmt 1 view .LVU2
+  51              	.LVL1:
+  53:Drivers/radio/radio_comm.c ****   SEGMENT_VARIABLE(errCnt = RADIO_CTS_TIMEOUT, U16, SEG_DATA);
+  52              		.loc 1 53 3 view .LVU3
+  54:Drivers/radio/radio_comm.c **** 
+  55:Drivers/radio/radio_comm.c ****   while (errCnt != 0)      //wait until radio IC is ready with the data
+  53              		.loc 1 55 3 view .LVU4
+  53:Drivers/radio/radio_comm.c ****   SEGMENT_VARIABLE(errCnt = RADIO_CTS_TIMEOUT, U16, SEG_DATA);
+  54              		.loc 1 53 3 is_stmt 0 view .LVU5
+  55 0006 42F21074 		movw	r4, #10000
+ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccZQqhLo.s 			page 3
+
+
+  52:Drivers/radio/radio_comm.c ****   SEGMENT_VARIABLE(errCnt = RADIO_CTS_TIMEOUT, U16, SEG_DATA);
+  56              		.loc 1 52 3 view .LVU6
+  57 000a 0025     		movs	r5, #0
+  58              	.LVL2:
+  59              	.L2:
+  60              		.loc 1 55 9 is_stmt 1 view .LVU7
+  61 000c 8CB1     		cbz	r4, .L5
+  56:Drivers/radio/radio_comm.c ****   {
+  57:Drivers/radio/radio_comm.c ****     radio_hal_ClearNsel();
+  62              		.loc 1 57 5 view .LVU8
+  63 000e FFF7FEFF 		bl	radio_hal_ClearNsel
+  64              	.LVL3:
+  58:Drivers/radio/radio_comm.c ****     radio_hal_SpiWriteByte(0x44);    //read CMD buffer
+  65              		.loc 1 58 5 view .LVU9
+  66 0012 4420     		movs	r0, #68
+  67 0014 FFF7FEFF 		bl	radio_hal_SpiWriteByte
+  68              	.LVL4:
+  59:Drivers/radio/radio_comm.c ****     ctsVal = radio_hal_SpiReadByte();
+  69              		.loc 1 59 5 view .LVU10
+  70              		.loc 1 59 14 is_stmt 0 view .LVU11
+  71 0018 FFF7FEFF 		bl	radio_hal_SpiReadByte
+  72              	.LVL5:
+  73 001c 0546     		mov	r5, r0
+  74              	.LVL6:
+  60:Drivers/radio/radio_comm.c ****     if (ctsVal == 0xFF)
+  75              		.loc 1 60 5 is_stmt 1 view .LVU12
+  76              		.loc 1 60 8 is_stmt 0 view .LVU13
+  77 001e FF28     		cmp	r0, #255
+  78 0020 04D0     		beq	.L11
+  61:Drivers/radio/radio_comm.c ****     {
+  62:Drivers/radio/radio_comm.c ****       if (byteCount)
+  63:Drivers/radio/radio_comm.c ****       {
+  64:Drivers/radio/radio_comm.c ****         radio_hal_SpiReadData(byteCount, pData);
+  65:Drivers/radio/radio_comm.c ****       }
+  66:Drivers/radio/radio_comm.c ****       radio_hal_SetNsel();
+  67:Drivers/radio/radio_comm.c ****       break;
+  68:Drivers/radio/radio_comm.c ****     }
+  69:Drivers/radio/radio_comm.c ****     radio_hal_SetNsel();
+  79              		.loc 1 69 5 is_stmt 1 view .LVU14
+  80 0022 FFF7FEFF 		bl	radio_hal_SetNsel
+  81              	.LVL7:
+  70:Drivers/radio/radio_comm.c ****     errCnt--;
+  82              		.loc 1 70 5 view .LVU15
+  83              		.loc 1 70 11 is_stmt 0 view .LVU16
+  84 0026 013C     		subs	r4, r4, #1
+  85              	.LVL8:
+  86              		.loc 1 70 11 view .LVU17
+  87 0028 A4B2     		uxth	r4, r4
+  88              	.LVL9:
+  89              		.loc 1 70 11 view .LVU18
+  90 002a EFE7     		b	.L2
+  91              	.LVL10:
+  92              	.L11:
+  62:Drivers/radio/radio_comm.c ****       {
+  93              		.loc 1 62 7 is_stmt 1 view .LVU19
+  62:Drivers/radio/radio_comm.c ****       {
+  94              		.loc 1 62 10 is_stmt 0 view .LVU20
+ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccZQqhLo.s 			page 4
+
+
+  95 002c 36B9     		cbnz	r6, .L12
+  96              	.LVL11:
+  97              	.L4:
+  66:Drivers/radio/radio_comm.c ****       break;
+  98              		.loc 1 66 7 is_stmt 1 view .LVU21
+  99 002e FFF7FEFF 		bl	radio_hal_SetNsel
+ 100              	.LVL12:
+  67:Drivers/radio/radio_comm.c ****     }
+ 101              		.loc 1 67 7 view .LVU22
+ 102              	.L5:
+  71:Drivers/radio/radio_comm.c ****   }
+  72:Drivers/radio/radio_comm.c **** 
+  73:Drivers/radio/radio_comm.c ****   if (errCnt == 0)
+ 103              		.loc 1 73 3 view .LVU23
+ 104              		.loc 1 73 6 is_stmt 0 view .LVU24
+ 105 0032 44B9     		cbnz	r4, .L7
+ 106              	.L8:
+  74:Drivers/radio/radio_comm.c ****   {
+  75:Drivers/radio/radio_comm.c ****     while(1)
+ 107              		.loc 1 75 5 is_stmt 1 discriminator 1 view .LVU25
+  76:Drivers/radio/radio_comm.c ****     {
+  77:Drivers/radio/radio_comm.c ****       /* ERROR!!!!  CTS should never take this long. */
+  78:Drivers/radio/radio_comm.c ****       printf("radio communication error\n");
+ 108              		.loc 1 78 7 discriminator 1 view .LVU26
+ 109 0034 0848     		ldr	r0, .L14
+ 110 0036 FFF7FEFF 		bl	puts
+ 111              	.LVL13:
+  75:Drivers/radio/radio_comm.c ****     {
+ 112              		.loc 1 75 10 discriminator 1 view .LVU27
+ 113 003a FBE7     		b	.L8
+ 114              	.LVL14:
+ 115              	.L12:
+  64:Drivers/radio/radio_comm.c ****       }
+ 116              		.loc 1 64 9 view .LVU28
+ 117 003c 3946     		mov	r1, r7
+ 118 003e 3046     		mov	r0, r6
+ 119              	.LVL15:
+  64:Drivers/radio/radio_comm.c ****       }
+ 120              		.loc 1 64 9 is_stmt 0 view .LVU29
+ 121 0040 FFF7FEFF 		bl	radio_hal_SpiReadData
+ 122              	.LVL16:
+ 123 0044 F3E7     		b	.L4
+ 124              	.LVL17:
+ 125              	.L7:
+  79:Drivers/radio/radio_comm.c ****       #ifdef RADIO_COMM_ERROR_CALLBACK
+  80:Drivers/radio/radio_comm.c ****         RADIO_COMM_ERROR_CALLBACK();
+  81:Drivers/radio/radio_comm.c ****       #endif
+  82:Drivers/radio/radio_comm.c ****     }
+  83:Drivers/radio/radio_comm.c ****   }
+  84:Drivers/radio/radio_comm.c **** 
+  85:Drivers/radio/radio_comm.c ****   if (ctsVal == 0xFF)
+ 126              		.loc 1 85 3 is_stmt 1 view .LVU30
+ 127              		.loc 1 85 6 is_stmt 0 view .LVU31
+ 128 0046 FF2D     		cmp	r5, #255
+ 129 0048 01D0     		beq	.L13
+ 130              	.L9:
+  86:Drivers/radio/radio_comm.c ****   {
+ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccZQqhLo.s 			page 5
+
+
+  87:Drivers/radio/radio_comm.c ****     ctsWentHigh = 1;
+  88:Drivers/radio/radio_comm.c ****   }
+  89:Drivers/radio/radio_comm.c **** 
+  90:Drivers/radio/radio_comm.c ****   return ctsVal;
+ 131              		.loc 1 90 3 is_stmt 1 view .LVU32
+  91:Drivers/radio/radio_comm.c **** }
+ 132              		.loc 1 91 1 is_stmt 0 view .LVU33
+ 133 004a 2846     		mov	r0, r5
+ 134 004c F8BD     		pop	{r3, r4, r5, r6, r7, pc}
+ 135              	.LVL18:
+ 136              	.L13:
+  87:Drivers/radio/radio_comm.c ****   }
+ 137              		.loc 1 87 5 is_stmt 1 view .LVU34
+  87:Drivers/radio/radio_comm.c ****   }
+ 138              		.loc 1 87 17 is_stmt 0 view .LVU35
+ 139 004e 034B     		ldr	r3, .L14+4
+ 140 0050 0122     		movs	r2, #1
+ 141 0052 1A70     		strb	r2, [r3]
+ 142 0054 F9E7     		b	.L9
+ 143              	.L15:
+ 144 0056 00BF     		.align	2
+ 145              	.L14:
+ 146 0058 00000000 		.word	.LC0
+ 147 005c 00000000 		.word	.LANCHOR0
+ 148              		.cfi_endproc
+ 149              	.LFE135:
+ 151              		.section	.text.radio_comm_PollCTS,"ax",%progbits
+ 152              		.align	1
+ 153              		.global	radio_comm_PollCTS
+ 154              		.syntax unified
+ 155              		.thumb
+ 156              		.thumb_func
+ 157              		.fpu fpv4-sp-d16
+ 159              	radio_comm_PollCTS:
+ 160              	.LFB139:
+  92:Drivers/radio/radio_comm.c **** 
+  93:Drivers/radio/radio_comm.c **** /*!
+  94:Drivers/radio/radio_comm.c ****  * Sends a command to the radio chip
+  95:Drivers/radio/radio_comm.c ****  *
+  96:Drivers/radio/radio_comm.c ****  * @param byteCount     Number of bytes in the command to send to the radio device
+  97:Drivers/radio/radio_comm.c ****  * @param pData         Pointer to the command to send.
+  98:Drivers/radio/radio_comm.c ****  */
+  99:Drivers/radio/radio_comm.c **** void radio_comm_SendCmd(U8 byteCount, U8* pData)
+ 100:Drivers/radio/radio_comm.c **** {
+ 101:Drivers/radio/radio_comm.c ****     while (!ctsWentHigh)
+ 102:Drivers/radio/radio_comm.c ****     {
+ 103:Drivers/radio/radio_comm.c ****         radio_comm_PollCTS();
+ 104:Drivers/radio/radio_comm.c ****     }
+ 105:Drivers/radio/radio_comm.c ****     radio_hal_ClearNsel();
+ 106:Drivers/radio/radio_comm.c ****     radio_hal_SpiWriteData(byteCount, pData);
+ 107:Drivers/radio/radio_comm.c ****     radio_hal_SetNsel();
+ 108:Drivers/radio/radio_comm.c ****     ctsWentHigh = 0;
+ 109:Drivers/radio/radio_comm.c **** }
+ 110:Drivers/radio/radio_comm.c **** 
+ 111:Drivers/radio/radio_comm.c **** /*!
+ 112:Drivers/radio/radio_comm.c ****  * Gets a command response from the radio chip
+ 113:Drivers/radio/radio_comm.c ****  *
+ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccZQqhLo.s 			page 6
+
+
+ 114:Drivers/radio/radio_comm.c ****  * @param cmd           Command ID
+ 115:Drivers/radio/radio_comm.c ****  * @param pollCts       Set to poll CTS
+ 116:Drivers/radio/radio_comm.c ****  * @param byteCount     Number of bytes to get from the radio chip.
+ 117:Drivers/radio/radio_comm.c ****  * @param pData         Pointer to where to put the data.
+ 118:Drivers/radio/radio_comm.c ****  */
+ 119:Drivers/radio/radio_comm.c **** void radio_comm_ReadData(U8 cmd, BIT pollCts, U8 byteCount, U8* pData)
+ 120:Drivers/radio/radio_comm.c **** {
+ 121:Drivers/radio/radio_comm.c ****     if(pollCts)
+ 122:Drivers/radio/radio_comm.c ****     {
+ 123:Drivers/radio/radio_comm.c ****         while(!ctsWentHigh)
+ 124:Drivers/radio/radio_comm.c ****         {
+ 125:Drivers/radio/radio_comm.c ****             radio_comm_PollCTS();
+ 126:Drivers/radio/radio_comm.c ****         }
+ 127:Drivers/radio/radio_comm.c ****     }
+ 128:Drivers/radio/radio_comm.c ****     radio_hal_ClearNsel();
+ 129:Drivers/radio/radio_comm.c ****     radio_hal_SpiWriteByte(cmd);
+ 130:Drivers/radio/radio_comm.c ****     radio_hal_SpiReadData(byteCount, pData);
+ 131:Drivers/radio/radio_comm.c ****     radio_hal_SetNsel();
+ 132:Drivers/radio/radio_comm.c ****     ctsWentHigh = 0;
+ 133:Drivers/radio/radio_comm.c **** }
+ 134:Drivers/radio/radio_comm.c **** 
+ 135:Drivers/radio/radio_comm.c **** 
+ 136:Drivers/radio/radio_comm.c **** /*!
+ 137:Drivers/radio/radio_comm.c ****  * Gets a command response from the radio chip
+ 138:Drivers/radio/radio_comm.c ****  *
+ 139:Drivers/radio/radio_comm.c ****  * @param cmd           Command ID
+ 140:Drivers/radio/radio_comm.c ****  * @param pollCts       Set to poll CTS
+ 141:Drivers/radio/radio_comm.c ****  * @param byteCount     Number of bytes to get from the radio chip
+ 142:Drivers/radio/radio_comm.c ****  * @param pData         Pointer to where to put the data
+ 143:Drivers/radio/radio_comm.c ****  */
+ 144:Drivers/radio/radio_comm.c **** void radio_comm_WriteData(U8 cmd, BIT pollCts, U8 byteCount, U8* pData)
+ 145:Drivers/radio/radio_comm.c **** {
+ 146:Drivers/radio/radio_comm.c ****     if(pollCts)
+ 147:Drivers/radio/radio_comm.c ****     {
+ 148:Drivers/radio/radio_comm.c ****         while(!ctsWentHigh)
+ 149:Drivers/radio/radio_comm.c ****         {
+ 150:Drivers/radio/radio_comm.c ****             radio_comm_PollCTS();
+ 151:Drivers/radio/radio_comm.c ****         }
+ 152:Drivers/radio/radio_comm.c ****     }
+ 153:Drivers/radio/radio_comm.c ****     radio_hal_ClearNsel();
+ 154:Drivers/radio/radio_comm.c ****     radio_hal_SpiWriteByte(cmd);
+ 155:Drivers/radio/radio_comm.c ****     radio_hal_SpiWriteData(byteCount, pData);
+ 156:Drivers/radio/radio_comm.c ****     radio_hal_SetNsel();
+ 157:Drivers/radio/radio_comm.c ****     ctsWentHigh = 0;
+ 158:Drivers/radio/radio_comm.c **** }
+ 159:Drivers/radio/radio_comm.c **** 
+ 160:Drivers/radio/radio_comm.c **** /*!
+ 161:Drivers/radio/radio_comm.c ****  * Waits for CTS to be high
+ 162:Drivers/radio/radio_comm.c ****  *
+ 163:Drivers/radio/radio_comm.c ****  * @return CTS value
+ 164:Drivers/radio/radio_comm.c ****  */
+ 165:Drivers/radio/radio_comm.c **** U8 radio_comm_PollCTS(void)
+ 166:Drivers/radio/radio_comm.c **** {
+ 161              		.loc 1 166 1 is_stmt 1 view -0
+ 162              		.cfi_startproc
+ 163              		@ args = 0, pretend = 0, frame = 0
+ 164              		@ frame_needed = 0, uses_anonymous_args = 0
+ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccZQqhLo.s 			page 7
+
+
+ 165 0000 08B5     		push	{r3, lr}
+ 166              	.LCFI1:
+ 167              		.cfi_def_cfa_offset 8
+ 168              		.cfi_offset 3, -8
+ 169              		.cfi_offset 14, -4
+ 167:Drivers/radio/radio_comm.c **** #ifdef RADIO_USER_CFG_USE_GPIO1_FOR_CTS
+ 168:Drivers/radio/radio_comm.c ****     while(!radio_hal_Gpio1Level())
+ 169:Drivers/radio/radio_comm.c ****     {
+ 170:Drivers/radio/radio_comm.c ****         /* Wait...*/
+ 171:Drivers/radio/radio_comm.c ****     }
+ 172:Drivers/radio/radio_comm.c ****     ctsWentHigh = 1;
+ 173:Drivers/radio/radio_comm.c ****     return 0xFF;
+ 174:Drivers/radio/radio_comm.c **** #else
+ 175:Drivers/radio/radio_comm.c ****     return radio_comm_GetResp(0, 0);
+ 170              		.loc 1 175 5 view .LVU37
+ 171              		.loc 1 175 12 is_stmt 0 view .LVU38
+ 172 0002 0021     		movs	r1, #0
+ 173 0004 0846     		mov	r0, r1
+ 174 0006 FFF7FEFF 		bl	radio_comm_GetResp
+ 175              	.LVL19:
+ 176:Drivers/radio/radio_comm.c **** #endif
+ 177:Drivers/radio/radio_comm.c **** }
+ 176              		.loc 1 177 1 view .LVU39
+ 177 000a 08BD     		pop	{r3, pc}
+ 178              		.cfi_endproc
+ 179              	.LFE139:
+ 181              		.section	.text.radio_comm_SendCmd,"ax",%progbits
+ 182              		.align	1
+ 183              		.global	radio_comm_SendCmd
+ 184              		.syntax unified
+ 185              		.thumb
+ 186              		.thumb_func
+ 187              		.fpu fpv4-sp-d16
+ 189              	radio_comm_SendCmd:
+ 190              	.LVL20:
+ 191              	.LFB136:
+ 100:Drivers/radio/radio_comm.c ****     while (!ctsWentHigh)
+ 192              		.loc 1 100 1 is_stmt 1 view -0
+ 193              		.cfi_startproc
+ 194              		@ args = 0, pretend = 0, frame = 0
+ 195              		@ frame_needed = 0, uses_anonymous_args = 0
+ 100:Drivers/radio/radio_comm.c ****     while (!ctsWentHigh)
+ 196              		.loc 1 100 1 is_stmt 0 view .LVU41
+ 197 0000 38B5     		push	{r3, r4, r5, lr}
+ 198              	.LCFI2:
+ 199              		.cfi_def_cfa_offset 16
+ 200              		.cfi_offset 3, -16
+ 201              		.cfi_offset 4, -12
+ 202              		.cfi_offset 5, -8
+ 203              		.cfi_offset 14, -4
+ 204 0002 0446     		mov	r4, r0
+ 205 0004 0D46     		mov	r5, r1
+ 101:Drivers/radio/radio_comm.c ****     {
+ 206              		.loc 1 101 5 is_stmt 1 view .LVU42
+ 101:Drivers/radio/radio_comm.c ****     {
+ 207              		.loc 1 101 11 is_stmt 0 view .LVU43
+ 208 0006 01E0     		b	.L19
+ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccZQqhLo.s 			page 8
+
+
+ 209              	.LVL21:
+ 210              	.L20:
+ 103:Drivers/radio/radio_comm.c ****     }
+ 211              		.loc 1 103 9 is_stmt 1 view .LVU44
+ 212 0008 FFF7FEFF 		bl	radio_comm_PollCTS
+ 213              	.LVL22:
+ 214              	.L19:
+ 101:Drivers/radio/radio_comm.c ****     {
+ 215              		.loc 1 101 11 view .LVU45
+ 101:Drivers/radio/radio_comm.c ****     {
+ 216              		.loc 1 101 12 is_stmt 0 view .LVU46
+ 217 000c 074B     		ldr	r3, .L22
+ 218 000e 1B78     		ldrb	r3, [r3]	@ zero_extendqisi2
+ 101:Drivers/radio/radio_comm.c ****     {
+ 219              		.loc 1 101 11 view .LVU47
+ 220 0010 002B     		cmp	r3, #0
+ 221 0012 F9D0     		beq	.L20
+ 105:Drivers/radio/radio_comm.c ****     radio_hal_SpiWriteData(byteCount, pData);
+ 222              		.loc 1 105 5 is_stmt 1 view .LVU48
+ 223 0014 FFF7FEFF 		bl	radio_hal_ClearNsel
+ 224              	.LVL23:
+ 106:Drivers/radio/radio_comm.c ****     radio_hal_SetNsel();
+ 225              		.loc 1 106 5 view .LVU49
+ 226 0018 2946     		mov	r1, r5
+ 227 001a 2046     		mov	r0, r4
+ 228 001c FFF7FEFF 		bl	radio_hal_SpiWriteData
+ 229              	.LVL24:
+ 107:Drivers/radio/radio_comm.c ****     ctsWentHigh = 0;
+ 230              		.loc 1 107 5 view .LVU50
+ 231 0020 FFF7FEFF 		bl	radio_hal_SetNsel
+ 232              	.LVL25:
+ 108:Drivers/radio/radio_comm.c **** }
+ 233              		.loc 1 108 5 view .LVU51
+ 108:Drivers/radio/radio_comm.c **** }
+ 234              		.loc 1 108 17 is_stmt 0 view .LVU52
+ 235 0024 014B     		ldr	r3, .L22
+ 236 0026 0022     		movs	r2, #0
+ 237 0028 1A70     		strb	r2, [r3]
+ 109:Drivers/radio/radio_comm.c **** 
+ 238              		.loc 1 109 1 view .LVU53
+ 239 002a 38BD     		pop	{r3, r4, r5, pc}
+ 240              	.LVL26:
+ 241              	.L23:
+ 109:Drivers/radio/radio_comm.c **** 
+ 242              		.loc 1 109 1 view .LVU54
+ 243              		.align	2
+ 244              	.L22:
+ 245 002c 00000000 		.word	.LANCHOR0
+ 246              		.cfi_endproc
+ 247              	.LFE136:
+ 249              		.section	.text.radio_comm_ReadData,"ax",%progbits
+ 250              		.align	1
+ 251              		.global	radio_comm_ReadData
+ 252              		.syntax unified
+ 253              		.thumb
+ 254              		.thumb_func
+ 255              		.fpu fpv4-sp-d16
+ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccZQqhLo.s 			page 9
+
+
+ 257              	radio_comm_ReadData:
+ 258              	.LVL27:
+ 259              	.LFB137:
+ 120:Drivers/radio/radio_comm.c ****     if(pollCts)
+ 260              		.loc 1 120 1 is_stmt 1 view -0
+ 261              		.cfi_startproc
+ 262              		@ args = 0, pretend = 0, frame = 0
+ 263              		@ frame_needed = 0, uses_anonymous_args = 0
+ 120:Drivers/radio/radio_comm.c ****     if(pollCts)
+ 264              		.loc 1 120 1 is_stmt 0 view .LVU56
+ 265 0000 F8B5     		push	{r3, r4, r5, r6, r7, lr}
+ 266              	.LCFI3:
+ 267              		.cfi_def_cfa_offset 24
+ 268              		.cfi_offset 3, -24
+ 269              		.cfi_offset 4, -20
+ 270              		.cfi_offset 5, -16
+ 271              		.cfi_offset 6, -12
+ 272              		.cfi_offset 7, -8
+ 273              		.cfi_offset 14, -4
+ 274 0002 0746     		mov	r7, r0
+ 275 0004 1546     		mov	r5, r2
+ 276 0006 1E46     		mov	r6, r3
+ 121:Drivers/radio/radio_comm.c ****     {
+ 277              		.loc 1 121 5 is_stmt 1 view .LVU57
+ 121:Drivers/radio/radio_comm.c ****     {
+ 278              		.loc 1 121 7 is_stmt 0 view .LVU58
+ 279 0008 81B9     		cbnz	r1, .L25
+ 280              	.LVL28:
+ 281              	.L26:
+ 128:Drivers/radio/radio_comm.c ****     radio_hal_SpiWriteByte(cmd);
+ 282              		.loc 1 128 5 is_stmt 1 view .LVU59
+ 283 000a FFF7FEFF 		bl	radio_hal_ClearNsel
+ 284              	.LVL29:
+ 129:Drivers/radio/radio_comm.c ****     radio_hal_SpiReadData(byteCount, pData);
+ 285              		.loc 1 129 5 view .LVU60
+ 286 000e 3846     		mov	r0, r7
+ 287 0010 FFF7FEFF 		bl	radio_hal_SpiWriteByte
+ 288              	.LVL30:
+ 130:Drivers/radio/radio_comm.c ****     radio_hal_SetNsel();
+ 289              		.loc 1 130 5 view .LVU61
+ 290 0014 3146     		mov	r1, r6
+ 291 0016 2846     		mov	r0, r5
+ 292 0018 FFF7FEFF 		bl	radio_hal_SpiReadData
+ 293              	.LVL31:
+ 131:Drivers/radio/radio_comm.c ****     ctsWentHigh = 0;
+ 294              		.loc 1 131 5 view .LVU62
+ 295 001c FFF7FEFF 		bl	radio_hal_SetNsel
+ 296              	.LVL32:
+ 132:Drivers/radio/radio_comm.c **** }
+ 297              		.loc 1 132 5 view .LVU63
+ 132:Drivers/radio/radio_comm.c **** }
+ 298              		.loc 1 132 17 is_stmt 0 view .LVU64
+ 299 0020 054B     		ldr	r3, .L29
+ 300 0022 0022     		movs	r2, #0
+ 301 0024 1A70     		strb	r2, [r3]
+ 133:Drivers/radio/radio_comm.c **** 
+ 302              		.loc 1 133 1 view .LVU65
+ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccZQqhLo.s 			page 10
+
+
+ 303 0026 F8BD     		pop	{r3, r4, r5, r6, r7, pc}
+ 304              	.LVL33:
+ 305              	.L27:
+ 125:Drivers/radio/radio_comm.c ****         }
+ 306              		.loc 1 125 13 is_stmt 1 view .LVU66
+ 307 0028 FFF7FEFF 		bl	radio_comm_PollCTS
+ 308              	.LVL34:
+ 309              	.L25:
+ 123:Drivers/radio/radio_comm.c ****         {
+ 310              		.loc 1 123 14 view .LVU67
+ 123:Drivers/radio/radio_comm.c ****         {
+ 311              		.loc 1 123 15 is_stmt 0 view .LVU68
+ 312 002c 024C     		ldr	r4, .L29
+ 313 002e 2478     		ldrb	r4, [r4]	@ zero_extendqisi2
+ 123:Drivers/radio/radio_comm.c ****         {
+ 314              		.loc 1 123 14 view .LVU69
+ 315 0030 002C     		cmp	r4, #0
+ 316 0032 F9D0     		beq	.L27
+ 317 0034 E9E7     		b	.L26
+ 318              	.L30:
+ 319 0036 00BF     		.align	2
+ 320              	.L29:
+ 321 0038 00000000 		.word	.LANCHOR0
+ 322              		.cfi_endproc
+ 323              	.LFE137:
+ 325              		.section	.text.radio_comm_WriteData,"ax",%progbits
+ 326              		.align	1
+ 327              		.global	radio_comm_WriteData
+ 328              		.syntax unified
+ 329              		.thumb
+ 330              		.thumb_func
+ 331              		.fpu fpv4-sp-d16
+ 333              	radio_comm_WriteData:
+ 334              	.LVL35:
+ 335              	.LFB138:
+ 145:Drivers/radio/radio_comm.c ****     if(pollCts)
+ 336              		.loc 1 145 1 is_stmt 1 view -0
+ 337              		.cfi_startproc
+ 338              		@ args = 0, pretend = 0, frame = 0
+ 339              		@ frame_needed = 0, uses_anonymous_args = 0
+ 145:Drivers/radio/radio_comm.c ****     if(pollCts)
+ 340              		.loc 1 145 1 is_stmt 0 view .LVU71
+ 341 0000 F8B5     		push	{r3, r4, r5, r6, r7, lr}
+ 342              	.LCFI4:
+ 343              		.cfi_def_cfa_offset 24
+ 344              		.cfi_offset 3, -24
+ 345              		.cfi_offset 4, -20
+ 346              		.cfi_offset 5, -16
+ 347              		.cfi_offset 6, -12
+ 348              		.cfi_offset 7, -8
+ 349              		.cfi_offset 14, -4
+ 350 0002 0746     		mov	r7, r0
+ 351 0004 1546     		mov	r5, r2
+ 352 0006 1E46     		mov	r6, r3
+ 146:Drivers/radio/radio_comm.c ****     {
+ 353              		.loc 1 146 5 is_stmt 1 view .LVU72
+ 146:Drivers/radio/radio_comm.c ****     {
+ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccZQqhLo.s 			page 11
+
+
+ 354              		.loc 1 146 7 is_stmt 0 view .LVU73
+ 355 0008 81B9     		cbnz	r1, .L32
+ 356              	.LVL36:
+ 357              	.L33:
+ 153:Drivers/radio/radio_comm.c ****     radio_hal_SpiWriteByte(cmd);
+ 358              		.loc 1 153 5 is_stmt 1 view .LVU74
+ 359 000a FFF7FEFF 		bl	radio_hal_ClearNsel
+ 360              	.LVL37:
+ 154:Drivers/radio/radio_comm.c ****     radio_hal_SpiWriteData(byteCount, pData);
+ 361              		.loc 1 154 5 view .LVU75
+ 362 000e 3846     		mov	r0, r7
+ 363 0010 FFF7FEFF 		bl	radio_hal_SpiWriteByte
+ 364              	.LVL38:
+ 155:Drivers/radio/radio_comm.c ****     radio_hal_SetNsel();
+ 365              		.loc 1 155 5 view .LVU76
+ 366 0014 3146     		mov	r1, r6
+ 367 0016 2846     		mov	r0, r5
+ 368 0018 FFF7FEFF 		bl	radio_hal_SpiWriteData
+ 369              	.LVL39:
+ 156:Drivers/radio/radio_comm.c ****     ctsWentHigh = 0;
+ 370              		.loc 1 156 5 view .LVU77
+ 371 001c FFF7FEFF 		bl	radio_hal_SetNsel
+ 372              	.LVL40:
+ 157:Drivers/radio/radio_comm.c **** }
+ 373              		.loc 1 157 5 view .LVU78
+ 157:Drivers/radio/radio_comm.c **** }
+ 374              		.loc 1 157 17 is_stmt 0 view .LVU79
+ 375 0020 054B     		ldr	r3, .L36
+ 376 0022 0022     		movs	r2, #0
+ 377 0024 1A70     		strb	r2, [r3]
+ 158:Drivers/radio/radio_comm.c **** 
+ 378              		.loc 1 158 1 view .LVU80
+ 379 0026 F8BD     		pop	{r3, r4, r5, r6, r7, pc}
+ 380              	.LVL41:
+ 381              	.L34:
+ 150:Drivers/radio/radio_comm.c ****         }
+ 382              		.loc 1 150 13 is_stmt 1 view .LVU81
+ 383 0028 FFF7FEFF 		bl	radio_comm_PollCTS
+ 384              	.LVL42:
+ 385              	.L32:
+ 148:Drivers/radio/radio_comm.c ****         {
+ 386              		.loc 1 148 14 view .LVU82
+ 148:Drivers/radio/radio_comm.c ****         {
+ 387              		.loc 1 148 15 is_stmt 0 view .LVU83
+ 388 002c 024C     		ldr	r4, .L36
+ 389 002e 2478     		ldrb	r4, [r4]	@ zero_extendqisi2
+ 148:Drivers/radio/radio_comm.c ****         {
+ 390              		.loc 1 148 14 view .LVU84
+ 391 0030 002C     		cmp	r4, #0
+ 392 0032 F9D0     		beq	.L34
+ 393 0034 E9E7     		b	.L33
+ 394              	.L37:
+ 395 0036 00BF     		.align	2
+ 396              	.L36:
+ 397 0038 00000000 		.word	.LANCHOR0
+ 398              		.cfi_endproc
+ 399              	.LFE138:
+ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccZQqhLo.s 			page 12
+
+
+ 401              		.section	.text.radio_comm_ClearCTS,"ax",%progbits
+ 402              		.align	1
+ 403              		.global	radio_comm_ClearCTS
+ 404              		.syntax unified
+ 405              		.thumb
+ 406              		.thumb_func
+ 407              		.fpu fpv4-sp-d16
+ 409              	radio_comm_ClearCTS:
+ 410              	.LFB140:
+ 178:Drivers/radio/radio_comm.c **** 
+ 179:Drivers/radio/radio_comm.c **** /**
+ 180:Drivers/radio/radio_comm.c ****  * Clears the CTS state variable.
+ 181:Drivers/radio/radio_comm.c ****  */
+ 182:Drivers/radio/radio_comm.c **** void radio_comm_ClearCTS()
+ 183:Drivers/radio/radio_comm.c **** {
+ 411              		.loc 1 183 1 is_stmt 1 view -0
+ 412              		.cfi_startproc
+ 413              		@ args = 0, pretend = 0, frame = 0
+ 414              		@ frame_needed = 0, uses_anonymous_args = 0
+ 415              		@ link register save eliminated.
+ 184:Drivers/radio/radio_comm.c ****   ctsWentHigh = 0;
+ 416              		.loc 1 184 3 view .LVU86
+ 417              		.loc 1 184 15 is_stmt 0 view .LVU87
+ 418 0000 014B     		ldr	r3, .L39
+ 419 0002 0022     		movs	r2, #0
+ 420 0004 1A70     		strb	r2, [r3]
+ 185:Drivers/radio/radio_comm.c **** }
+ 421              		.loc 1 185 1 view .LVU88
+ 422 0006 7047     		bx	lr
+ 423              	.L40:
+ 424              		.align	2
+ 425              	.L39:
+ 426 0008 00000000 		.word	.LANCHOR0
+ 427              		.cfi_endproc
+ 428              	.LFE140:
+ 430              		.section	.text.radio_comm_SendCmdGetResp,"ax",%progbits
+ 431              		.align	1
+ 432              		.global	radio_comm_SendCmdGetResp
+ 433              		.syntax unified
+ 434              		.thumb
+ 435              		.thumb_func
+ 436              		.fpu fpv4-sp-d16
+ 438              	radio_comm_SendCmdGetResp:
+ 439              	.LVL43:
+ 440              	.LFB141:
+ 186:Drivers/radio/radio_comm.c **** 
+ 187:Drivers/radio/radio_comm.c **** #elif (defined SILABS_RADIO_SI4012)
+ 188:Drivers/radio/radio_comm.c **** 
+ 189:Drivers/radio/radio_comm.c **** /*!
+ 190:Drivers/radio/radio_comm.c ****  * Gets a command response from the radio chip
+ 191:Drivers/radio/radio_comm.c ****  *
+ 192:Drivers/radio/radio_comm.c ****  * @param byteCount     Number of bytes to get from the radio chip
+ 193:Drivers/radio/radio_comm.c ****  * @param pData         Pointer to where to put the data
+ 194:Drivers/radio/radio_comm.c ****  *
+ 195:Drivers/radio/radio_comm.c ****  * @return CTS value
+ 196:Drivers/radio/radio_comm.c ****  */
+ 197:Drivers/radio/radio_comm.c **** U8 radio_comm_GetResp(U8 byteCount, U8* pData)
+ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccZQqhLo.s 			page 13
+
+
+ 198:Drivers/radio/radio_comm.c **** {
+ 199:Drivers/radio/radio_comm.c ****   SEGMENT_VARIABLE(ctsVal = 0u, U8, SEG_DATA);
+ 200:Drivers/radio/radio_comm.c **** 
+ 201:Drivers/radio/radio_comm.c ****   if (qSmbus_SMBusRead(SI4012_SMBUS_ADDRESS, byteCount, pData) != \
+ 202:Drivers/radio/radio_comm.c ****                                                           SMBUS_RX_FINISHED) {
+ 203:Drivers/radio/radio_comm.c ****     return FALSE;
+ 204:Drivers/radio/radio_comm.c ****   }
+ 205:Drivers/radio/radio_comm.c **** 
+ 206:Drivers/radio/radio_comm.c ****   if (pData[0] == 0x80) {
+ 207:Drivers/radio/radio_comm.c ****     return TRUE;
+ 208:Drivers/radio/radio_comm.c ****   }
+ 209:Drivers/radio/radio_comm.c **** 
+ 210:Drivers/radio/radio_comm.c ****   return FALSE;
+ 211:Drivers/radio/radio_comm.c **** }
+ 212:Drivers/radio/radio_comm.c **** 
+ 213:Drivers/radio/radio_comm.c **** /*!
+ 214:Drivers/radio/radio_comm.c ****  * Sends a command to the radio chip
+ 215:Drivers/radio/radio_comm.c ****  *
+ 216:Drivers/radio/radio_comm.c ****  * @param byteCount     Number of bytes in the command to send to the radio device
+ 217:Drivers/radio/radio_comm.c ****  * @param pData         Pointer to the command to send.
+ 218:Drivers/radio/radio_comm.c ****  */
+ 219:Drivers/radio/radio_comm.c **** U8 radio_comm_SendCmd(U8 byteCount, U8* pData)
+ 220:Drivers/radio/radio_comm.c **** {
+ 221:Drivers/radio/radio_comm.c ****   if (qSmbus_SMBusWrite(SI4012_SMBUS_ADDRESS, byteCount, pData) != \
+ 222:Drivers/radio/radio_comm.c ****                                                       SMBUS_TRANSMISSION_OK) {
+ 223:Drivers/radio/radio_comm.c ****     return FALSE;
+ 224:Drivers/radio/radio_comm.c ****   }
+ 225:Drivers/radio/radio_comm.c **** 
+ 226:Drivers/radio/radio_comm.c ****   return TRUE;
+ 227:Drivers/radio/radio_comm.c **** }
+ 228:Drivers/radio/radio_comm.c **** 
+ 229:Drivers/radio/radio_comm.c **** #endif
+ 230:Drivers/radio/radio_comm.c **** 
+ 231:Drivers/radio/radio_comm.c **** /*!
+ 232:Drivers/radio/radio_comm.c ****  * Sends a command to the radio chip and gets a response
+ 233:Drivers/radio/radio_comm.c ****  *
+ 234:Drivers/radio/radio_comm.c ****  * @param cmdByteCount  Number of bytes in the command to send to the radio device
+ 235:Drivers/radio/radio_comm.c ****  * @param pCmdData      Pointer to the command data
+ 236:Drivers/radio/radio_comm.c ****  * @param respByteCount Number of bytes in the response to fetch
+ 237:Drivers/radio/radio_comm.c ****  * @param pRespData     Pointer to where to put the response data
+ 238:Drivers/radio/radio_comm.c ****  *
+ 239:Drivers/radio/radio_comm.c ****  * @return CTS value
+ 240:Drivers/radio/radio_comm.c ****  */
+ 241:Drivers/radio/radio_comm.c **** U8 radio_comm_SendCmdGetResp(U8 cmdByteCount, U8* pCmdData, U8 respByteCount, U8* pRespData)
+ 242:Drivers/radio/radio_comm.c **** {
+ 441              		.loc 1 242 1 is_stmt 1 view -0
+ 442              		.cfi_startproc
+ 443              		@ args = 0, pretend = 0, frame = 0
+ 444              		@ frame_needed = 0, uses_anonymous_args = 0
+ 445              		.loc 1 242 1 is_stmt 0 view .LVU90
+ 446 0000 38B5     		push	{r3, r4, r5, lr}
+ 447              	.LCFI5:
+ 448              		.cfi_def_cfa_offset 16
+ 449              		.cfi_offset 3, -16
+ 450              		.cfi_offset 4, -12
+ 451              		.cfi_offset 5, -8
+ 452              		.cfi_offset 14, -4
+ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccZQqhLo.s 			page 14
+
+
+ 453 0002 1446     		mov	r4, r2
+ 454 0004 1D46     		mov	r5, r3
+ 243:Drivers/radio/radio_comm.c ****     radio_comm_SendCmd(cmdByteCount, pCmdData);
+ 455              		.loc 1 243 5 is_stmt 1 view .LVU91
+ 456 0006 FFF7FEFF 		bl	radio_comm_SendCmd
+ 457              	.LVL44:
+ 244:Drivers/radio/radio_comm.c ****     return radio_comm_GetResp(respByteCount, pRespData);
+ 458              		.loc 1 244 5 view .LVU92
+ 459              		.loc 1 244 12 is_stmt 0 view .LVU93
+ 460 000a 2946     		mov	r1, r5
+ 461 000c 2046     		mov	r0, r4
+ 462 000e FFF7FEFF 		bl	radio_comm_GetResp
+ 463              	.LVL45:
+ 245:Drivers/radio/radio_comm.c **** }
+ 464              		.loc 1 245 1 view .LVU94
+ 465 0012 38BD     		pop	{r3, r4, r5, pc}
+ 466              		.loc 1 245 1 view .LVU95
+ 467              		.cfi_endproc
+ 468              	.LFE141:
+ 470              		.global	ctsWentHigh
+ 471              		.section	.bss.ctsWentHigh,"aw",%nobits
+ 472              		.set	.LANCHOR0,. + 0
+ 475              	ctsWentHigh:
+ 476 0000 00       		.space	1
+ 477              		.text
+ 478              	.Letext0:
+ 479              		.file 2 "c:\\program files (x86)\\gnu arm embedded toolchain\\10 2020-q4-major\\arm-none-eabi\\inc
+ 480              		.file 3 "c:\\program files (x86)\\gnu arm embedded toolchain\\10 2020-q4-major\\arm-none-eabi\\inc
+ 481              		.file 4 "Inc/bsp.h"
+ 482              		.file 5 "Drivers/radio/radio_hal.h"
+ 483              		.file 6 "<built-in>"
+ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccZQqhLo.s 			page 15
+
+
+DEFINED SYMBOLS
+                            *ABS*:00000000 radio_comm.c
+C:\Users\andywei\AppData\Local\Temp\ccZQqhLo.s:18     .rodata.radio_comm_GetResp.str1.4:00000000 $d
+C:\Users\andywei\AppData\Local\Temp\ccZQqhLo.s:22     .text.radio_comm_GetResp:00000000 $t
+C:\Users\andywei\AppData\Local\Temp\ccZQqhLo.s:30     .text.radio_comm_GetResp:00000000 radio_comm_GetResp
+C:\Users\andywei\AppData\Local\Temp\ccZQqhLo.s:146    .text.radio_comm_GetResp:00000058 $d
+C:\Users\andywei\AppData\Local\Temp\ccZQqhLo.s:152    .text.radio_comm_PollCTS:00000000 $t
+C:\Users\andywei\AppData\Local\Temp\ccZQqhLo.s:159    .text.radio_comm_PollCTS:00000000 radio_comm_PollCTS
+C:\Users\andywei\AppData\Local\Temp\ccZQqhLo.s:182    .text.radio_comm_SendCmd:00000000 $t
+C:\Users\andywei\AppData\Local\Temp\ccZQqhLo.s:189    .text.radio_comm_SendCmd:00000000 radio_comm_SendCmd
+C:\Users\andywei\AppData\Local\Temp\ccZQqhLo.s:245    .text.radio_comm_SendCmd:0000002c $d
+C:\Users\andywei\AppData\Local\Temp\ccZQqhLo.s:250    .text.radio_comm_ReadData:00000000 $t
+C:\Users\andywei\AppData\Local\Temp\ccZQqhLo.s:257    .text.radio_comm_ReadData:00000000 radio_comm_ReadData
+C:\Users\andywei\AppData\Local\Temp\ccZQqhLo.s:321    .text.radio_comm_ReadData:00000038 $d
+C:\Users\andywei\AppData\Local\Temp\ccZQqhLo.s:326    .text.radio_comm_WriteData:00000000 $t
+C:\Users\andywei\AppData\Local\Temp\ccZQqhLo.s:333    .text.radio_comm_WriteData:00000000 radio_comm_WriteData
+C:\Users\andywei\AppData\Local\Temp\ccZQqhLo.s:397    .text.radio_comm_WriteData:00000038 $d
+C:\Users\andywei\AppData\Local\Temp\ccZQqhLo.s:402    .text.radio_comm_ClearCTS:00000000 $t
+C:\Users\andywei\AppData\Local\Temp\ccZQqhLo.s:409    .text.radio_comm_ClearCTS:00000000 radio_comm_ClearCTS
+C:\Users\andywei\AppData\Local\Temp\ccZQqhLo.s:426    .text.radio_comm_ClearCTS:00000008 $d
+C:\Users\andywei\AppData\Local\Temp\ccZQqhLo.s:431    .text.radio_comm_SendCmdGetResp:00000000 $t
+C:\Users\andywei\AppData\Local\Temp\ccZQqhLo.s:438    .text.radio_comm_SendCmdGetResp:00000000 radio_comm_SendCmdGetResp
+C:\Users\andywei\AppData\Local\Temp\ccZQqhLo.s:475    .bss.ctsWentHigh:00000000 ctsWentHigh
+C:\Users\andywei\AppData\Local\Temp\ccZQqhLo.s:476    .bss.ctsWentHigh:00000000 $d
+
+UNDEFINED SYMBOLS
+radio_hal_ClearNsel
+radio_hal_SpiWriteByte
+radio_hal_SpiReadByte
+radio_hal_SetNsel
+puts
+radio_hal_SpiReadData
+radio_hal_SpiWriteData

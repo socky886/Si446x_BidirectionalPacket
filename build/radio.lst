@@ -1,0 +1,2254 @@
+ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccXFQblt.s 			page 1
+
+
+   1              		.cpu cortex-m4
+   2              		.eabi_attribute 27, 1
+   3              		.eabi_attribute 28, 1
+   4              		.eabi_attribute 20, 1
+   5              		.eabi_attribute 21, 1
+   6              		.eabi_attribute 23, 3
+   7              		.eabi_attribute 24, 1
+   8              		.eabi_attribute 25, 1
+   9              		.eabi_attribute 26, 1
+  10              		.eabi_attribute 30, 1
+  11              		.eabi_attribute 34, 1
+  12              		.eabi_attribute 18, 4
+  13              		.file	"radio.c"
+  14              		.text
+  15              	.Ltext0:
+  16              		.cfi_sections	.debug_frame
+  17              		.section	.text.vRadio_PowerUp,"ax",%progbits
+  18              		.align	1
+  19              		.global	vRadio_PowerUp
+  20              		.arch armv7e-m
+  21              		.syntax unified
+  22              		.thumb
+  23              		.thumb_func
+  24              		.fpu fpv4-sp-d16
+  26              	vRadio_PowerUp:
+  27              	.LFB135:
+  28              		.file 1 "Src/si4463/radio.c"
+   1:Src/si4463/radio.c **** /*! @file radio.c
+   2:Src/si4463/radio.c ****  * @brief This file contains functions to interface with the radio chip.
+   3:Src/si4463/radio.c ****  *
+   4:Src/si4463/radio.c ****  * @b COPYRIGHT
+   5:Src/si4463/radio.c ****  * @n Silicon Laboratories Confidential
+   6:Src/si4463/radio.c ****  * @n Copyright 2012 Silicon Laboratories, Inc.
+   7:Src/si4463/radio.c ****  * @n http://www.silabs.com
+   8:Src/si4463/radio.c ****  */
+   9:Src/si4463/radio.c **** #include "radio.h"
+  10:Src/si4463/radio.c **** #include <stdio.h>
+  11:Src/si4463/radio.c **** 
+  12:Src/si4463/radio.c **** //#include "bsp.h"
+  13:Src/si4463/radio.c **** // #include "..\bsp.h"
+  14:Src/si4463/radio.c **** 
+  15:Src/si4463/radio.c **** /*****************************************************************************
+  16:Src/si4463/radio.c ****  *  Local Macros & Definitions
+  17:Src/si4463/radio.c ****  *****************************************************************************/
+  18:Src/si4463/radio.c **** 
+  19:Src/si4463/radio.c **** /*****************************************************************************
+  20:Src/si4463/radio.c ****  *  Global Variables
+  21:Src/si4463/radio.c ****  *****************************************************************************/
+  22:Src/si4463/radio.c **** // SEGMENT_VARIABLE(Radio_Configuration_Data_Array[], U8, SEG_CODE) = \
+  23:Src/si4463/radio.c **** //               RADIO_CONFIGURATION_DATA_ARRAY;
+  24:Src/si4463/radio.c **** 
+  25:Src/si4463/radio.c **** // SEGMENT_VARIABLE(RadioConfiguration, tRadioConfiguration, SEG_CODE) = \
+  26:Src/si4463/radio.c **** //                         RADIO_CONFIGURATION_DATA;
+  27:Src/si4463/radio.c **** 
+  28:Src/si4463/radio.c **** // SEGMENT_VARIABLE_SEGMENT_POINTER(pRadioConfiguration, tRadioConfiguration, SEG_CODE, SEG_CODE) =
+  29:Src/si4463/radio.c **** //                         &RadioConfiguration;
+  30:Src/si4463/radio.c **** 
+ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccXFQblt.s 			page 2
+
+
+  31:Src/si4463/radio.c **** 
+  32:Src/si4463/radio.c **** // SEGMENT_VARIABLE(customRadioPacket[RADIO_MAX_PACKET_LENGTH], U8, SEG_XDATA);
+  33:Src/si4463/radio.c **** 
+  34:Src/si4463/radio.c **** 
+  35:Src/si4463/radio.c **** 
+  36:Src/si4463/radio.c **** U8 Radio_Configuration_Data_Array[]=RADIO_CONFIGURATION_DATA_ARRAY;
+  37:Src/si4463/radio.c **** tRadioConfiguration RadioConfiguration=RADIO_CONFIGURATION_DATA;
+  38:Src/si4463/radio.c **** tRadioConfiguration *pRadioConfiguration=&RadioConfiguration;
+  39:Src/si4463/radio.c **** U8 customRadioPacket[RADIO_MAX_PACKET_LENGTH];
+  40:Src/si4463/radio.c **** 
+  41:Src/si4463/radio.c **** /*****************************************************************************
+  42:Src/si4463/radio.c ****  *  Local Function Declarations
+  43:Src/si4463/radio.c ****  *****************************************************************************/
+  44:Src/si4463/radio.c **** void vRadio_PowerUp(void);
+  45:Src/si4463/radio.c **** 
+  46:Src/si4463/radio.c **** /*!
+  47:Src/si4463/radio.c ****  *  Power up the Radio.
+  48:Src/si4463/radio.c ****  *
+  49:Src/si4463/radio.c ****  *  @note
+  50:Src/si4463/radio.c ****  *
+  51:Src/si4463/radio.c ****  */
+  52:Src/si4463/radio.c **** void vRadio_PowerUp(void)
+  53:Src/si4463/radio.c **** {
+  29              		.loc 1 53 1 view -0
+  30              		.cfi_startproc
+  31              		@ args = 0, pretend = 0, frame = 0
+  32              		@ frame_needed = 0, uses_anonymous_args = 0
+  33 0000 08B5     		push	{r3, lr}
+  34              	.LCFI0:
+  35              		.cfi_def_cfa_offset 8
+  36              		.cfi_offset 3, -8
+  37              		.cfi_offset 14, -4
+  54:Src/si4463/radio.c ****   SEGMENT_VARIABLE(wDelay,  U16, SEG_XDATA) = 0u;
+  38              		.loc 1 54 3 view .LVU1
+  39              	.LVL0:
+  55:Src/si4463/radio.c **** 
+  56:Src/si4463/radio.c ****   /* Hardware reset the chip */
+  57:Src/si4463/radio.c ****   si446x_reset();
+  40              		.loc 1 57 3 view .LVU2
+  41 0002 FFF7FEFF 		bl	si446x_reset
+  42              	.LVL1:
+  58:Src/si4463/radio.c **** 
+  59:Src/si4463/radio.c ****   /* Wait until reset timeout or Reset IT signal */
+  60:Src/si4463/radio.c ****   for (; wDelay < pRadioConfiguration->Radio_Delay_Cnt_After_Reset; wDelay++);
+  43              		.loc 1 60 3 view .LVU3
+  54:Src/si4463/radio.c **** 
+  44              		.loc 1 54 3 is_stmt 0 view .LVU4
+  45 0006 0023     		movs	r3, #0
+  46              		.loc 1 60 3 view .LVU5
+  47 0008 01E0     		b	.L2
+  48              	.LVL2:
+  49              	.L3:
+  50              		.loc 1 60 78 is_stmt 1 discriminator 2 view .LVU6
+  51              		.loc 1 60 69 discriminator 2 view .LVU7
+  52              		.loc 1 60 75 is_stmt 0 discriminator 2 view .LVU8
+  53 000a 0133     		adds	r3, r3, #1
+  54              	.LVL3:
+ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccXFQblt.s 			page 3
+
+
+  55              		.loc 1 60 75 discriminator 2 view .LVU9
+  56 000c 9BB2     		uxth	r3, r3
+  57              	.LVL4:
+  58              	.L2:
+  59              		.loc 1 60 10 is_stmt 1 discriminator 1 view .LVU10
+  60              		.loc 1 60 38 is_stmt 0 discriminator 1 view .LVU11
+  61 000e 034A     		ldr	r2, .L5
+  62 0010 1268     		ldr	r2, [r2]
+  63 0012 1289     		ldrh	r2, [r2, #8]
+  64              		.loc 1 60 3 discriminator 1 view .LVU12
+  65 0014 9A42     		cmp	r2, r3
+  66 0016 F8D8     		bhi	.L3
+  61:Src/si4463/radio.c **** 
+  62:Src/si4463/radio.c **** }
+  67              		.loc 1 62 1 view .LVU13
+  68 0018 08BD     		pop	{r3, pc}
+  69              	.LVL5:
+  70              	.L6:
+  71              		.loc 1 62 1 view .LVU14
+  72 001a 00BF     		.align	2
+  73              	.L5:
+  74 001c 00000000 		.word	.LANCHOR0
+  75              		.cfi_endproc
+  76              	.LFE135:
+  78              		.section	.text.vRadio_Init,"ax",%progbits
+  79              		.align	1
+  80              		.global	vRadio_Init
+  81              		.syntax unified
+  82              		.thumb
+  83              		.thumb_func
+  84              		.fpu fpv4-sp-d16
+  86              	vRadio_Init:
+  87              	.LFB136:
+  63:Src/si4463/radio.c **** 
+  64:Src/si4463/radio.c **** /*!
+  65:Src/si4463/radio.c ****  *  Radio Initialization.
+  66:Src/si4463/radio.c ****  *
+  67:Src/si4463/radio.c ****  *  @author Sz. Papp
+  68:Src/si4463/radio.c ****  *
+  69:Src/si4463/radio.c ****  *  @note
+  70:Src/si4463/radio.c ****  *
+  71:Src/si4463/radio.c ****  */
+  72:Src/si4463/radio.c **** void vRadio_Init(void)
+  73:Src/si4463/radio.c **** {
+  88              		.loc 1 73 1 is_stmt 1 view -0
+  89              		.cfi_startproc
+  90              		@ args = 0, pretend = 0, frame = 0
+  91              		@ frame_needed = 0, uses_anonymous_args = 0
+  92 0000 08B5     		push	{r3, lr}
+  93              	.LCFI1:
+  94              		.cfi_def_cfa_offset 8
+  95              		.cfi_offset 3, -8
+  96              		.cfi_offset 14, -4
+  74:Src/si4463/radio.c ****   U16 wDelay;
+  97              		.loc 1 74 3 view .LVU16
+  75:Src/si4463/radio.c **** 
+  76:Src/si4463/radio.c ****   /* Power Up the radio chip */
+ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccXFQblt.s 			page 4
+
+
+  77:Src/si4463/radio.c ****   vRadio_PowerUp();
+  98              		.loc 1 77 3 view .LVU17
+  99 0002 FFF7FEFF 		bl	vRadio_PowerUp
+ 100              	.LVL6:
+  78:Src/si4463/radio.c **** 
+  79:Src/si4463/radio.c ****   /* Load radio configuration */
+  80:Src/si4463/radio.c ****   while (SI446X_SUCCESS != si446x_configuration_init(pRadioConfiguration->Radio_ConfigurationArray)
+ 101              		.loc 1 80 3 view .LVU18
+ 102              		.loc 1 80 9 is_stmt 0 view .LVU19
+ 103 0006 08E0     		b	.L8
+ 104              	.L10:
+  81:Src/si4463/radio.c ****   {
+  82:Src/si4463/radio.c ****     /* Error hook */
+  83:Src/si4463/radio.c **** // #if !(defined SILABS_PLATFORM_WMB912)
+  84:Src/si4463/radio.c **** //     LED4 = !LED4;
+  85:Src/si4463/radio.c **** // #else
+  86:Src/si4463/radio.c **** //     vCio_ToggleLed(eHmi_Led4_c);
+  87:Src/si4463/radio.c **** // #endif
+  88:Src/si4463/radio.c ****     for (wDelay = 0x7FFF; wDelay--; ) ;
+ 105              		.loc 1 88 17 view .LVU20
+ 106 0008 47F6FF73 		movw	r3, #32767
+ 107              	.L9:
+ 108              	.LVL7:
+ 109              		.loc 1 88 39 is_stmt 1 discriminator 2 view .LVU21
+ 110              		.loc 1 88 27 discriminator 2 view .LVU22
+ 111 000c 1A46     		mov	r2, r3
+ 112              		.loc 1 88 33 is_stmt 0 discriminator 2 view .LVU23
+ 113 000e 013B     		subs	r3, r3, #1
+ 114              	.LVL8:
+ 115              		.loc 1 88 33 discriminator 2 view .LVU24
+ 116 0010 9BB2     		uxth	r3, r3
+ 117              	.LVL9:
+ 118              		.loc 1 88 5 discriminator 2 view .LVU25
+ 119 0012 002A     		cmp	r2, #0
+ 120 0014 FAD1     		bne	.L9
+  89:Src/si4463/radio.c ****     /* Power Up the radio chip */
+  90:Src/si4463/radio.c ****     vRadio_PowerUp();
+ 121              		.loc 1 90 5 is_stmt 1 view .LVU26
+ 122 0016 FFF7FEFF 		bl	vRadio_PowerUp
+ 123              	.LVL10:
+ 124              	.L8:
+  80:Src/si4463/radio.c ****   {
+ 125              		.loc 1 80 9 view .LVU27
+  80:Src/si4463/radio.c ****   {
+ 126              		.loc 1 80 73 is_stmt 0 view .LVU28
+ 127 001a 064B     		ldr	r3, .L12
+ 128 001c 1B68     		ldr	r3, [r3]
+  80:Src/si4463/radio.c ****   {
+ 129              		.loc 1 80 28 view .LVU29
+ 130 001e 1868     		ldr	r0, [r3]
+ 131 0020 FFF7FEFF 		bl	si446x_configuration_init
+ 132              	.LVL11:
+  80:Src/si4463/radio.c ****   {
+ 133              		.loc 1 80 9 view .LVU30
+ 134 0024 0028     		cmp	r0, #0
+ 135 0026 EFD1     		bne	.L10
+  91:Src/si4463/radio.c ****   }
+ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccXFQblt.s 			page 5
+
+
+  92:Src/si4463/radio.c **** 
+  93:Src/si4463/radio.c ****   // Read ITs, clear pending ones
+  94:Src/si4463/radio.c ****   si446x_get_int_status(0u, 0u, 0u);
+ 136              		.loc 1 94 3 is_stmt 1 view .LVU31
+ 137 0028 0022     		movs	r2, #0
+ 138 002a 1146     		mov	r1, r2
+ 139 002c 1046     		mov	r0, r2
+ 140 002e FFF7FEFF 		bl	si446x_get_int_status
+ 141              	.LVL12:
+  95:Src/si4463/radio.c **** }
+ 142              		.loc 1 95 1 is_stmt 0 view .LVU32
+ 143 0032 08BD     		pop	{r3, pc}
+ 144              	.L13:
+ 145              		.align	2
+ 146              	.L12:
+ 147 0034 00000000 		.word	.LANCHOR0
+ 148              		.cfi_endproc
+ 149              	.LFE136:
+ 151              		.section	.rodata.bRadio_Check_Tx_RX.str1.4,"aMS",%progbits,1
+ 152              		.align	2
+ 153              	.LC0:
+ 154 0000 74686520 		.ascii	"the payload length is %d\012\000"
+ 154      7061796C 
+ 154      6F616420 
+ 154      6C656E67 
+ 154      74682069 
+ 155 001a 0000     		.align	2
+ 156              	.LC1:
+ 157 001c 30782530 		.ascii	"0x%02x, \000"
+ 157      32782C20 
+ 157      00
+ 158 0025 000000   		.align	2
+ 159              	.LC2:
+ 160 0028 2D2D2D2D 		.ascii	"-----------crc error-------------\000"
+ 160      2D2D2D2D 
+ 160      2D2D2D63 
+ 160      72632065 
+ 160      72726F72 
+ 161              		.section	.text.bRadio_Check_Tx_RX,"ax",%progbits
+ 162              		.align	1
+ 163              		.global	bRadio_Check_Tx_RX
+ 164              		.syntax unified
+ 165              		.thumb
+ 166              		.thumb_func
+ 167              		.fpu fpv4-sp-d16
+ 169              	bRadio_Check_Tx_RX:
+ 170              	.LFB137:
+  96:Src/si4463/radio.c **** 
+  97:Src/si4463/radio.c **** /*!
+  98:Src/si4463/radio.c ****  *  Check if Packet sent IT flag or Packet Received IT is pending.
+  99:Src/si4463/radio.c ****  *
+ 100:Src/si4463/radio.c ****  *  @return   SI4455_CMD_GET_INT_STATUS_REP_PACKET_SENT_PEND_BIT / SI4455_CMD_GET_INT_STATUS_REP_PA
+ 101:Src/si4463/radio.c ****  *
+ 102:Src/si4463/radio.c ****  *  @note
+ 103:Src/si4463/radio.c ****  *
+ 104:Src/si4463/radio.c ****  */
+ 105:Src/si4463/radio.c **** U8 bRadio_Check_Tx_RX(void)
+ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccXFQblt.s 			page 6
+
+
+ 106:Src/si4463/radio.c **** {
+ 171              		.loc 1 106 1 is_stmt 1 view -0
+ 172              		.cfi_startproc
+ 173              		@ args = 0, pretend = 0, frame = 0
+ 174              		@ frame_needed = 0, uses_anonymous_args = 0
+ 175 0000 38B5     		push	{r3, r4, r5, lr}
+ 176              	.LCFI2:
+ 177              		.cfi_def_cfa_offset 16
+ 178              		.cfi_offset 3, -16
+ 179              		.cfi_offset 4, -12
+ 180              		.cfi_offset 5, -8
+ 181              		.cfi_offset 14, -4
+ 107:Src/si4463/radio.c ****   int i;
+ 182              		.loc 1 107 3 view .LVU34
+ 108:Src/si4463/radio.c ****   int len;
+ 183              		.loc 1 108 3 view .LVU35
+ 109:Src/si4463/radio.c ****   if (radio_hal_NirqLevel() == FALSE)
+ 184              		.loc 1 109 3 view .LVU36
+ 185              		.loc 1 109 7 is_stmt 0 view .LVU37
+ 186 0002 FFF7FEFF 		bl	radio_hal_NirqLevel
+ 187              	.LVL13:
+ 188              		.loc 1 109 6 view .LVU38
+ 189 0006 08B1     		cbz	r0, .L23
+ 110:Src/si4463/radio.c ****   {
+ 111:Src/si4463/radio.c ****       /* Read ITs, clear pending ones */
+ 112:Src/si4463/radio.c ****       si446x_get_int_status(0u, 0u, 0u);
+ 113:Src/si4463/radio.c ****       
+ 114:Src/si4463/radio.c **** 	  if (Si446xCmd.GET_INT_STATUS.CHIP_PEND & SI446X_CMD_GET_CHIP_STATUS_REP_CHIP_PEND_CMD_ERROR_PEND
+ 115:Src/si4463/radio.c ****       {
+ 116:Src/si4463/radio.c ****       	/* State change to */
+ 117:Src/si4463/radio.c ****       	si446x_change_state(SI446X_CMD_CHANGE_STATE_ARG_NEXT_STATE1_NEW_STATE_ENUM_SLEEP);
+ 118:Src/si4463/radio.c **** 	
+ 119:Src/si4463/radio.c **** 	  	/* Reset FIFO */
+ 120:Src/si4463/radio.c ****       	si446x_fifo_info(SI446X_CMD_FIFO_INFO_ARG_FIFO_RX_BIT);
+ 121:Src/si4463/radio.c ****       
+ 122:Src/si4463/radio.c **** 	  	/* State change to */
+ 123:Src/si4463/radio.c ****         si446x_change_state(SI446X_CMD_CHANGE_STATE_ARG_NEXT_STATE1_NEW_STATE_ENUM_RX);
+ 124:Src/si4463/radio.c ****       }
+ 125:Src/si4463/radio.c **** 
+ 126:Src/si4463/radio.c ****       if(Si446xCmd.GET_INT_STATUS.PH_PEND & SI446X_CMD_GET_INT_STATUS_REP_PH_PEND_PACKET_SENT_PEND_
+ 127:Src/si4463/radio.c ****       {
+ 128:Src/si4463/radio.c ****         return SI446X_CMD_GET_INT_STATUS_REP_PH_PEND_PACKET_SENT_PEND_BIT;
+ 129:Src/si4463/radio.c ****       }
+ 130:Src/si4463/radio.c **** 
+ 131:Src/si4463/radio.c ****       if(Si446xCmd.GET_INT_STATUS.PH_PEND & SI446X_CMD_GET_INT_STATUS_REP_PH_PEND_PACKET_RX_PEND_BI
+ 132:Src/si4463/radio.c ****       {
+ 133:Src/si4463/radio.c ****         /* Packet RX */
+ 134:Src/si4463/radio.c **** 
+ 135:Src/si4463/radio.c ****         /* Get payload length */
+ 136:Src/si4463/radio.c ****         si446x_fifo_info(0x00);
+ 137:Src/si4463/radio.c **** 
+ 138:Src/si4463/radio.c ****         si446x_read_rx_fifo(Si446xCmd.FIFO_INFO.RX_FIFO_COUNT, &customRadioPacket[0]);
+ 139:Src/si4463/radio.c ****         // si446x_read_rx_fifo(10, &customRadioPacket[0]);
+ 140:Src/si4463/radio.c ****         len =Si446xCmd.FIFO_INFO.RX_FIFO_COUNT;
+ 141:Src/si4463/radio.c ****         printf("the payload length is %d\n",len);
+ 142:Src/si4463/radio.c ****         // len=10;
+ 143:Src/si4463/radio.c ****         for(i=0;i<len;i++)
+ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccXFQblt.s 			page 7
+
+
+ 144:Src/si4463/radio.c ****         {
+ 145:Src/si4463/radio.c ****           printf("0x%02x, ",customRadioPacket[i]);
+ 146:Src/si4463/radio.c ****         }
+ 147:Src/si4463/radio.c **** 
+ 148:Src/si4463/radio.c ****         return SI446X_CMD_GET_INT_STATUS_REP_PH_PEND_PACKET_RX_PEND_BIT;
+ 149:Src/si4463/radio.c ****       }
+ 150:Src/si4463/radio.c ****       
+ 151:Src/si4463/radio.c **** 	  if (Si446xCmd.GET_INT_STATUS.PH_PEND & SI446X_CMD_GET_INT_STATUS_REP_PH_STATUS_CRC_ERROR_BIT)
+ 152:Src/si4463/radio.c ****       {
+ 153:Src/si4463/radio.c ****       	/* Reset FIFO */
+ 154:Src/si4463/radio.c ****         printf("-----------crc error-------------\n");
+ 155:Src/si4463/radio.c ****       	si446x_fifo_info(SI446X_CMD_FIFO_INFO_ARG_FIFO_RX_BIT);
+ 156:Src/si4463/radio.c ****       }
+ 157:Src/si4463/radio.c **** 
+ 158:Src/si4463/radio.c **** 
+ 159:Src/si4463/radio.c ****   }
+ 160:Src/si4463/radio.c **** 
+ 161:Src/si4463/radio.c ****   return 0;
+ 190              		.loc 1 161 10 view .LVU39
+ 191 0008 0020     		movs	r0, #0
+ 192              	.L15:
+ 162:Src/si4463/radio.c **** }
+ 193              		.loc 1 162 1 view .LVU40
+ 194 000a 38BD     		pop	{r3, r4, r5, pc}
+ 195              	.L23:
+ 112:Src/si4463/radio.c ****       
+ 196              		.loc 1 112 7 is_stmt 1 view .LVU41
+ 197 000c 0022     		movs	r2, #0
+ 198 000e 1146     		mov	r1, r2
+ 199 0010 1046     		mov	r0, r2
+ 200 0012 FFF7FEFF 		bl	si446x_get_int_status
+ 201              	.LVL14:
+ 114:Src/si4463/radio.c ****       {
+ 202              		.loc 1 114 4 view .LVU42
+ 114:Src/si4463/radio.c ****       {
+ 203              		.loc 1 114 32 is_stmt 0 view .LVU43
+ 204 0016 1E4B     		ldr	r3, .L26
+ 205 0018 9B79     		ldrb	r3, [r3, #6]	@ zero_extendqisi2
+ 114:Src/si4463/radio.c ****       {
+ 206              		.loc 1 114 7 view .LVU44
+ 207 001a 13F0080F 		tst	r3, #8
+ 208 001e 12D1     		bne	.L24
+ 209              	.L16:
+ 126:Src/si4463/radio.c ****       {
+ 210              		.loc 1 126 7 is_stmt 1 view .LVU45
+ 126:Src/si4463/radio.c ****       {
+ 211              		.loc 1 126 34 is_stmt 0 view .LVU46
+ 212 0020 1B4B     		ldr	r3, .L26
+ 213 0022 9878     		ldrb	r0, [r3, #2]	@ zero_extendqisi2
+ 126:Src/si4463/radio.c ****       {
+ 214              		.loc 1 126 9 view .LVU47
+ 215 0024 10F0200F 		tst	r0, #32
+ 216 0028 30D1     		bne	.L21
+ 131:Src/si4463/radio.c ****       {
+ 217              		.loc 1 131 7 is_stmt 1 view .LVU48
+ 131:Src/si4463/radio.c ****       {
+ 218              		.loc 1 131 9 is_stmt 0 view .LVU49
+ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccXFQblt.s 			page 8
+
+
+ 219 002a 10F01004 		ands	r4, r0, #16
+ 220 002e 14D1     		bne	.L25
+ 151:Src/si4463/radio.c ****       {
+ 221              		.loc 1 151 4 is_stmt 1 view .LVU50
+ 151:Src/si4463/radio.c ****       {
+ 222              		.loc 1 151 7 is_stmt 0 view .LVU51
+ 223 0030 10F00800 		ands	r0, r0, #8
+ 224 0034 E9D0     		beq	.L15
+ 154:Src/si4463/radio.c ****       	si446x_fifo_info(SI446X_CMD_FIFO_INFO_ARG_FIFO_RX_BIT);
+ 225              		.loc 1 154 9 is_stmt 1 view .LVU52
+ 226 0036 1748     		ldr	r0, .L26+4
+ 227 0038 FFF7FEFF 		bl	puts
+ 228              	.LVL15:
+ 155:Src/si4463/radio.c ****       }
+ 229              		.loc 1 155 8 view .LVU53
+ 230 003c 0220     		movs	r0, #2
+ 231 003e FFF7FEFF 		bl	si446x_fifo_info
+ 232              	.LVL16:
+ 161:Src/si4463/radio.c **** }
+ 233              		.loc 1 161 10 is_stmt 0 view .LVU54
+ 234 0042 2046     		mov	r0, r4
+ 235 0044 E1E7     		b	.L15
+ 236              	.L24:
+ 117:Src/si4463/radio.c **** 	
+ 237              		.loc 1 117 8 is_stmt 1 view .LVU55
+ 238 0046 0120     		movs	r0, #1
+ 239 0048 FFF7FEFF 		bl	si446x_change_state
+ 240              	.LVL17:
+ 120:Src/si4463/radio.c ****       
+ 241              		.loc 1 120 8 view .LVU56
+ 242 004c 0220     		movs	r0, #2
+ 243 004e FFF7FEFF 		bl	si446x_fifo_info
+ 244              	.LVL18:
+ 123:Src/si4463/radio.c ****       }
+ 245              		.loc 1 123 9 view .LVU57
+ 246 0052 0820     		movs	r0, #8
+ 247 0054 FFF7FEFF 		bl	si446x_change_state
+ 248              	.LVL19:
+ 249 0058 E2E7     		b	.L16
+ 250              	.L25:
+ 136:Src/si4463/radio.c **** 
+ 251              		.loc 1 136 9 view .LVU58
+ 252 005a 0020     		movs	r0, #0
+ 253 005c FFF7FEFF 		bl	si446x_fifo_info
+ 254              	.LVL20:
+ 138:Src/si4463/radio.c ****         // si446x_read_rx_fifo(10, &customRadioPacket[0]);
+ 255              		.loc 1 138 9 view .LVU59
+ 256 0060 0B4C     		ldr	r4, .L26
+ 257 0062 0D49     		ldr	r1, .L26+8
+ 258 0064 2078     		ldrb	r0, [r4]	@ zero_extendqisi2
+ 259 0066 FFF7FEFF 		bl	si446x_read_rx_fifo
+ 260              	.LVL21:
+ 140:Src/si4463/radio.c ****         printf("the payload length is %d\n",len);
+ 261              		.loc 1 140 9 view .LVU60
+ 140:Src/si4463/radio.c ****         printf("the payload length is %d\n",len);
+ 262              		.loc 1 140 33 is_stmt 0 view .LVU61
+ 263 006a 2578     		ldrb	r5, [r4]	@ zero_extendqisi2
+ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccXFQblt.s 			page 9
+
+
+ 264              	.LVL22:
+ 141:Src/si4463/radio.c ****         // len=10;
+ 265              		.loc 1 141 9 is_stmt 1 view .LVU62
+ 266 006c 2946     		mov	r1, r5
+ 267 006e 0B48     		ldr	r0, .L26+12
+ 268 0070 FFF7FEFF 		bl	printf
+ 269              	.LVL23:
+ 143:Src/si4463/radio.c ****         {
+ 270              		.loc 1 143 9 view .LVU63
+ 143:Src/si4463/radio.c ****         {
+ 271              		.loc 1 143 14 is_stmt 0 view .LVU64
+ 272 0074 0024     		movs	r4, #0
+ 143:Src/si4463/radio.c ****         {
+ 273              		.loc 1 143 9 view .LVU65
+ 274 0076 05E0     		b	.L18
+ 275              	.LVL24:
+ 276              	.L19:
+ 145:Src/si4463/radio.c ****         }
+ 277              		.loc 1 145 11 is_stmt 1 discriminator 3 view .LVU66
+ 278 0078 074B     		ldr	r3, .L26+8
+ 279 007a 195D     		ldrb	r1, [r3, r4]	@ zero_extendqisi2
+ 280 007c 0848     		ldr	r0, .L26+16
+ 281 007e FFF7FEFF 		bl	printf
+ 282              	.LVL25:
+ 143:Src/si4463/radio.c ****         {
+ 283              		.loc 1 143 23 discriminator 3 view .LVU67
+ 143:Src/si4463/radio.c ****         {
+ 284              		.loc 1 143 24 is_stmt 0 discriminator 3 view .LVU68
+ 285 0082 0134     		adds	r4, r4, #1
+ 286              	.LVL26:
+ 287              	.L18:
+ 143:Src/si4463/radio.c ****         {
+ 288              		.loc 1 143 17 is_stmt 1 discriminator 1 view .LVU69
+ 143:Src/si4463/radio.c ****         {
+ 289              		.loc 1 143 9 is_stmt 0 discriminator 1 view .LVU70
+ 290 0084 AC42     		cmp	r4, r5
+ 291 0086 F7DB     		blt	.L19
+ 148:Src/si4463/radio.c ****       }
+ 292              		.loc 1 148 16 view .LVU71
+ 293 0088 1020     		movs	r0, #16
+ 294 008a BEE7     		b	.L15
+ 295              	.LVL27:
+ 296              	.L21:
+ 128:Src/si4463/radio.c ****       }
+ 297              		.loc 1 128 16 view .LVU72
+ 298 008c 2020     		movs	r0, #32
+ 299 008e BCE7     		b	.L15
+ 300              	.L27:
+ 301              		.align	2
+ 302              	.L26:
+ 303 0090 00000000 		.word	Si446xCmd
+ 304 0094 28000000 		.word	.LC2
+ 305 0098 00000000 		.word	.LANCHOR1
+ 306 009c 00000000 		.word	.LC0
+ 307 00a0 1C000000 		.word	.LC1
+ 308              		.cfi_endproc
+ 309              	.LFE137:
+ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccXFQblt.s 			page 10
+
+
+ 311              		.section	.rodata.vRadio_StartRX.str1.4,"aMS",%progbits,1
+ 312              		.align	2
+ 313              	.LC3:
+ 314 0000 73746172 		.ascii	"start rx--------------------\000"
+ 314      74207278 
+ 314      2D2D2D2D 
+ 314      2D2D2D2D 
+ 314      2D2D2D2D 
+ 315              		.section	.text.vRadio_StartRX,"ax",%progbits
+ 316              		.align	1
+ 317              		.global	vRadio_StartRX
+ 318              		.syntax unified
+ 319              		.thumb
+ 320              		.thumb_func
+ 321              		.fpu fpv4-sp-d16
+ 323              	vRadio_StartRX:
+ 324              	.LVL28:
+ 325              	.LFB138:
+ 163:Src/si4463/radio.c **** 
+ 164:Src/si4463/radio.c **** /*!
+ 165:Src/si4463/radio.c ****  *  Set Radio to RX mode. .
+ 166:Src/si4463/radio.c ****  *
+ 167:Src/si4463/radio.c ****  *  @param channel Freq. Channel,  packetLength : 0 Packet handler fields are used , nonzero: only 
+ 168:Src/si4463/radio.c ****  *
+ 169:Src/si4463/radio.c ****  *  @note
+ 170:Src/si4463/radio.c ****  *
+ 171:Src/si4463/radio.c ****  */
+ 172:Src/si4463/radio.c **** void vRadio_StartRX(U8 channel, U8 packetLenght )
+ 173:Src/si4463/radio.c **** {
+ 326              		.loc 1 173 1 is_stmt 1 view -0
+ 327              		.cfi_startproc
+ 328              		@ args = 0, pretend = 0, frame = 0
+ 329              		@ frame_needed = 0, uses_anonymous_args = 0
+ 330              		.loc 1 173 1 is_stmt 0 view .LVU74
+ 331 0000 10B5     		push	{r4, lr}
+ 332              	.LCFI3:
+ 333              		.cfi_def_cfa_offset 8
+ 334              		.cfi_offset 4, -8
+ 335              		.cfi_offset 14, -4
+ 336 0002 82B0     		sub	sp, sp, #8
+ 337              	.LCFI4:
+ 338              		.cfi_def_cfa_offset 16
+ 339 0004 0446     		mov	r4, r0
+ 174:Src/si4463/radio.c ****   // Read ITs, clear pending ones
+ 175:Src/si4463/radio.c ****   si446x_get_int_status(0u, 0u, 0u);
+ 340              		.loc 1 175 3 is_stmt 1 view .LVU75
+ 341 0006 0022     		movs	r2, #0
+ 342 0008 1146     		mov	r1, r2
+ 343              	.LVL29:
+ 344              		.loc 1 175 3 is_stmt 0 view .LVU76
+ 345 000a 1046     		mov	r0, r2
+ 346              	.LVL30:
+ 347              		.loc 1 175 3 view .LVU77
+ 348 000c FFF7FEFF 		bl	si446x_get_int_status
+ 349              	.LVL31:
+ 176:Src/si4463/radio.c **** 
+ 177:Src/si4463/radio.c ****   // set the rx length
+ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccXFQblt.s 			page 11
+
+
+ 178:Src/si4463/radio.c ****   si446x_set_property(0x12,0x02,0x11,0x00,63);
+ 350              		.loc 1 178 3 is_stmt 1 view .LVU78
+ 351 0010 3F23     		movs	r3, #63
+ 352 0012 0093     		str	r3, [sp]
+ 353 0014 0023     		movs	r3, #0
+ 354 0016 1122     		movs	r2, #17
+ 355 0018 0221     		movs	r1, #2
+ 356 001a 1220     		movs	r0, #18
+ 357 001c FFF7FEFF 		bl	si446x_set_property
+ 358              	.LVL32:
+ 179:Src/si4463/radio.c ****    // Reset the Rx Fifo
+ 180:Src/si4463/radio.c ****    si446x_fifo_info(SI446X_CMD_FIFO_INFO_ARG_FIFO_RX_BIT);
+ 359              		.loc 1 180 4 view .LVU79
+ 360 0020 0220     		movs	r0, #2
+ 361 0022 FFF7FEFF 		bl	si446x_fifo_info
+ 362              	.LVL33:
+ 181:Src/si4463/radio.c **** 
+ 182:Src/si4463/radio.c ****   /* Start Receiving packet, channel 0, START immediately, Packet length used or not according to p
+ 183:Src/si4463/radio.c ****   // si446x_start_rx(channel, 0u, packetLenght,
+ 184:Src/si4463/radio.c ****   //                 SI446X_CMD_START_RX_ARG_NEXT_STATE1_RXTIMEOUT_STATE_ENUM_NOCHANGE,
+ 185:Src/si4463/radio.c ****   //                 SI446X_CMD_START_RX_ARG_NEXT_STATE2_RXVALID_STATE_ENUM_READY,
+ 186:Src/si4463/radio.c ****   //                 SI446X_CMD_START_RX_ARG_NEXT_STATE3_RXINVALID_STATE_ENUM_RX );
+ 187:Src/si4463/radio.c **** 
+ 188:Src/si4463/radio.c ****   si446x_start_rx(channel, 0u, 0,
+ 363              		.loc 1 188 3 view .LVU80
+ 364 0026 0823     		movs	r3, #8
+ 365 0028 0193     		str	r3, [sp, #4]
+ 366 002a 0323     		movs	r3, #3
+ 367 002c 0093     		str	r3, [sp]
+ 368 002e 0023     		movs	r3, #0
+ 369 0030 1A46     		mov	r2, r3
+ 370 0032 1946     		mov	r1, r3
+ 371 0034 2046     		mov	r0, r4
+ 372 0036 FFF7FEFF 		bl	si446x_start_rx
+ 373              	.LVL34:
+ 189:Src/si4463/radio.c ****                   SI446X_CMD_START_RX_ARG_NEXT_STATE1_RXTIMEOUT_STATE_ENUM_NOCHANGE,
+ 190:Src/si4463/radio.c ****                   SI446X_CMD_START_RX_ARG_NEXT_STATE2_RXVALID_STATE_ENUM_READY,
+ 191:Src/si4463/radio.c ****                   SI446X_CMD_START_RX_ARG_NEXT_STATE3_RXINVALID_STATE_ENUM_RX );
+ 192:Src/si4463/radio.c ****   printf("start rx--------------------\n");
+ 374              		.loc 1 192 3 view .LVU81
+ 375 003a 0248     		ldr	r0, .L30
+ 376 003c FFF7FEFF 		bl	puts
+ 377              	.LVL35:
+ 193:Src/si4463/radio.c **** }
+ 378              		.loc 1 193 1 is_stmt 0 view .LVU82
+ 379 0040 02B0     		add	sp, sp, #8
+ 380              	.LCFI5:
+ 381              		.cfi_def_cfa_offset 8
+ 382              		@ sp needed
+ 383 0042 10BD     		pop	{r4, pc}
+ 384              	.L31:
+ 385              		.align	2
+ 386              	.L30:
+ 387 0044 00000000 		.word	.LC3
+ 388              		.cfi_endproc
+ 389              	.LFE138:
+ 391              		.section	.rodata.vRadio_StartTx_Variable_Packet.str1.4,"aMS",%progbits,1
+ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccXFQblt.s 			page 12
+
+
+ 392              		.align	2
+ 393              	.LC4:
+ 394 0000 74686520 		.ascii	"the %d is 0x%02x \012\000"
+ 394      25642069 
+ 394      73203078 
+ 394      25303278 
+ 394      200A00
+ 395              		.section	.text.vRadio_StartTx_Variable_Packet,"ax",%progbits
+ 396              		.align	1
+ 397              		.global	vRadio_StartTx_Variable_Packet
+ 398              		.syntax unified
+ 399              		.thumb
+ 400              		.thumb_func
+ 401              		.fpu fpv4-sp-d16
+ 403              	vRadio_StartTx_Variable_Packet:
+ 404              	.LVL36:
+ 405              	.LFB139:
+ 194:Src/si4463/radio.c **** 
+ 195:Src/si4463/radio.c **** /*!
+ 196:Src/si4463/radio.c ****  *  Set Radio to TX mode, variable packet length.
+ 197:Src/si4463/radio.c ****  *
+ 198:Src/si4463/radio.c ****  *  @param channel Freq. Channel, Packet to be sent length of of the packet sent to TXFIFO
+ 199:Src/si4463/radio.c ****  *
+ 200:Src/si4463/radio.c ****  *  @note
+ 201:Src/si4463/radio.c ****  *
+ 202:Src/si4463/radio.c ****  */
+ 203:Src/si4463/radio.c **** void vRadio_StartTx_Variable_Packet(U8 channel, U8 *pioRadioPacket, U8 length)
+ 204:Src/si4463/radio.c **** {
+ 406              		.loc 1 204 1 is_stmt 1 view -0
+ 407              		.cfi_startproc
+ 408              		@ args = 0, pretend = 0, frame = 0
+ 409              		@ frame_needed = 0, uses_anonymous_args = 0
+ 410              		.loc 1 204 1 is_stmt 0 view .LVU84
+ 411 0000 F0B5     		push	{r4, r5, r6, r7, lr}
+ 412              	.LCFI6:
+ 413              		.cfi_def_cfa_offset 20
+ 414              		.cfi_offset 4, -20
+ 415              		.cfi_offset 5, -16
+ 416              		.cfi_offset 6, -12
+ 417              		.cfi_offset 7, -8
+ 418              		.cfi_offset 14, -4
+ 419 0002 83B0     		sub	sp, sp, #12
+ 420              	.LCFI7:
+ 421              		.cfi_def_cfa_offset 32
+ 422 0004 0746     		mov	r7, r0
+ 423 0006 0C46     		mov	r4, r1
+ 424 0008 1546     		mov	r5, r2
+ 205:Src/si4463/radio.c ****   int i;
+ 425              		.loc 1 205 3 is_stmt 1 view .LVU85
+ 206:Src/si4463/radio.c ****   U8 *p;
+ 426              		.loc 1 206 3 view .LVU86
+ 207:Src/si4463/radio.c ****   p= (U8*) malloc (length+1);
+ 427              		.loc 1 207 3 view .LVU87
+ 428              		.loc 1 207 12 is_stmt 0 view .LVU88
+ 429 000a 501C     		adds	r0, r2, #1
+ 430              	.LVL37:
+ 431              		.loc 1 207 12 view .LVU89
+ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccXFQblt.s 			page 13
+
+
+ 432 000c FFF7FEFF 		bl	malloc
+ 433              	.LVL38:
+ 434              		.loc 1 207 12 view .LVU90
+ 435 0010 0646     		mov	r6, r0
+ 436              	.LVL39:
+ 208:Src/si4463/radio.c ****   p[0]=length;
+ 437              		.loc 1 208 3 is_stmt 1 view .LVU91
+ 438              		.loc 1 208 7 is_stmt 0 view .LVU92
+ 439 0012 00F8015B 		strb	r5, [r0], #1
+ 440              	.LVL40:
+ 209:Src/si4463/radio.c ****   strncpy(p+1,pioRadioPacket,length);
+ 441              		.loc 1 209 3 is_stmt 1 view .LVU93
+ 442 0016 2A46     		mov	r2, r5
+ 443 0018 2146     		mov	r1, r4
+ 444 001a FFF7FEFF 		bl	strncpy
+ 445              	.LVL41:
+ 210:Src/si4463/radio.c **** 
+ 211:Src/si4463/radio.c ****   // /* Leave RX state */
+ 212:Src/si4463/radio.c ****   // si446x_change_state(SI446X_CMD_CHANGE_STATE_ARG_NEXT_STATE1_NEW_STATE_ENUM_READY);
+ 213:Src/si4463/radio.c **** 
+ 214:Src/si4463/radio.c ****   // /* Read ITs, clear pending ones */
+ 215:Src/si4463/radio.c ****   // si446x_get_int_status(0u, 0u, 0u);
+ 216:Src/si4463/radio.c **** 
+ 217:Src/si4463/radio.c ****   // /* Reset the Tx Fifo */
+ 218:Src/si4463/radio.c ****   // si446x_fifo_info(SI446X_CMD_FIFO_INFO_ARG_FIFO_TX_BIT);
+ 219:Src/si4463/radio.c **** 
+ 220:Src/si4463/radio.c ****   // // si446x_set_property(0x12,0x02,0x11,0x00,pioRadioPacket[0]);
+ 221:Src/si4463/radio.c ****   // /* Fill the TX fifo with datas */
+ 222:Src/si4463/radio.c ****   // si446x_write_tx_fifo(length,pioRadioPacket);
+ 223:Src/si4463/radio.c ****   // // si446x_write_tx_fifo(pioRadioPacket[0], &pioRadioPacket[1]);
+ 224:Src/si4463/radio.c **** 
+ 225:Src/si4463/radio.c ****   // /* Start sending packet, channel 0, START immediately */
+ 226:Src/si4463/radio.c ****   // si446x_start_tx(channel, 0x80, length);
+ 227:Src/si4463/radio.c ****   // // si446x_start_tx(channel, 0x80, 0);
+ 228:Src/si4463/radio.c ****   // printf("tx start----------------------\n");
+ 229:Src/si4463/radio.c **** 
+ 230:Src/si4463/radio.c ****   // si446x_set_property(0x12,0x02,0x11,0x00,pioRadioPacket[0]);
+ 231:Src/si4463/radio.c **** 
+ 232:Src/si4463/radio.c ****   // Read ITs, clear pending ones
+ 233:Src/si4463/radio.c ****   si446x_get_int_status(0u, 0u, 0u);
+ 446              		.loc 1 233 3 view .LVU94
+ 447 001e 0022     		movs	r2, #0
+ 448 0020 1146     		mov	r1, r2
+ 449 0022 1046     		mov	r0, r2
+ 450 0024 FFF7FEFF 		bl	si446x_get_int_status
+ 451              	.LVL42:
+ 234:Src/si4463/radio.c **** 
+ 235:Src/si4463/radio.c ****   // write the field2 length
+ 236:Src/si4463/radio.c ****   si446x_set_property(0x12,0x02,0x11,0x00,length);
+ 452              		.loc 1 236 3 view .LVU95
+ 453 0028 0095     		str	r5, [sp]
+ 454 002a 0023     		movs	r3, #0
+ 455 002c 1122     		movs	r2, #17
+ 456 002e 0221     		movs	r1, #2
+ 457 0030 1220     		movs	r0, #18
+ 458 0032 FFF7FEFF 		bl	si446x_set_property
+ 459              	.LVL43:
+ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccXFQblt.s 			page 14
+
+
+ 237:Src/si4463/radio.c **** 
+ 238:Src/si4463/radio.c ****   /* Reset TX FIFO */
+ 239:Src/si4463/radio.c ****   si446x_fifo_info(SI446X_CMD_FIFO_INFO_ARG_FIFO_TX_BIT);
+ 460              		.loc 1 239 3 view .LVU96
+ 461 0036 0120     		movs	r0, #1
+ 462 0038 FFF7FEFF 		bl	si446x_fifo_info
+ 463              	.LVL44:
+ 240:Src/si4463/radio.c **** 
+ 241:Src/si4463/radio.c ****   
+ 242:Src/si4463/radio.c **** 
+ 243:Src/si4463/radio.c ****   
+ 244:Src/si4463/radio.c **** 
+ 245:Src/si4463/radio.c ****   /* Fill the TX fifo with datas */
+ 246:Src/si4463/radio.c ****   for ( i = 0; i < length+1; i++)
+ 464              		.loc 1 246 3 view .LVU97
+ 465              		.loc 1 246 11 is_stmt 0 view .LVU98
+ 466 003c 0024     		movs	r4, #0
+ 467              	.LVL45:
+ 468              		.loc 1 246 3 view .LVU99
+ 469 003e 05E0     		b	.L33
+ 470              	.LVL46:
+ 471              	.L34:
+ 247:Src/si4463/radio.c ****   {
+ 248:Src/si4463/radio.c ****     printf("the %d is 0x%02x \n",i,p[i]);
+ 472              		.loc 1 248 5 is_stmt 1 discriminator 3 view .LVU100
+ 473 0040 325D     		ldrb	r2, [r6, r4]	@ zero_extendqisi2
+ 474 0042 2146     		mov	r1, r4
+ 475 0044 0A48     		ldr	r0, .L36
+ 476 0046 FFF7FEFF 		bl	printf
+ 477              	.LVL47:
+ 246:Src/si4463/radio.c ****   {
+ 478              		.loc 1 246 30 discriminator 3 view .LVU101
+ 246:Src/si4463/radio.c ****   {
+ 479              		.loc 1 246 31 is_stmt 0 discriminator 3 view .LVU102
+ 480 004a 0134     		adds	r4, r4, #1
+ 481              	.LVL48:
+ 482              	.L33:
+ 246:Src/si4463/radio.c ****   {
+ 483              		.loc 1 246 16 is_stmt 1 discriminator 1 view .LVU103
+ 246:Src/si4463/radio.c ****   {
+ 484              		.loc 1 246 3 is_stmt 0 discriminator 1 view .LVU104
+ 485 004c A542     		cmp	r5, r4
+ 486 004e F7DA     		bge	.L34
+ 249:Src/si4463/radio.c ****   }
+ 250:Src/si4463/radio.c ****   
+ 251:Src/si4463/radio.c ****   si446x_write_tx_fifo(length+1, p);
+ 487              		.loc 1 251 3 is_stmt 1 view .LVU105
+ 488 0050 0135     		adds	r5, r5, #1
+ 489 0052 3146     		mov	r1, r6
+ 490 0054 E8B2     		uxtb	r0, r5
+ 491 0056 FFF7FEFF 		bl	si446x_write_tx_fifo
+ 492              	.LVL49:
+ 252:Src/si4463/radio.c ****   //si446x_write_tx_fifo(length, pioRadioPacket);
+ 253:Src/si4463/radio.c ****   free(p);
+ 493              		.loc 1 253 3 view .LVU106
+ 494 005a 3046     		mov	r0, r6
+ 495 005c FFF7FEFF 		bl	free
+ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccXFQblt.s 			page 15
+
+
+ 496              	.LVL50:
+ 254:Src/si4463/radio.c **** 
+ 255:Src/si4463/radio.c ****   /* Start sending packet, channel 0, START immediately, Packet length according to PH, go READY wh
+ 256:Src/si4463/radio.c ****   si446x_start_tx(channel, 0x80,  0x00);
+ 497              		.loc 1 256 3 view .LVU107
+ 498 0060 0022     		movs	r2, #0
+ 499 0062 8021     		movs	r1, #128
+ 500 0064 3846     		mov	r0, r7
+ 501 0066 FFF7FEFF 		bl	si446x_start_tx
+ 502              	.LVL51:
+ 257:Src/si4463/radio.c ****   
+ 258:Src/si4463/radio.c **** }
+ 503              		.loc 1 258 1 is_stmt 0 view .LVU108
+ 504 006a 03B0     		add	sp, sp, #12
+ 505              	.LCFI8:
+ 506              		.cfi_def_cfa_offset 20
+ 507              		@ sp needed
+ 508 006c F0BD     		pop	{r4, r5, r6, r7, pc}
+ 509              	.LVL52:
+ 510              	.L37:
+ 511              		.loc 1 258 1 view .LVU109
+ 512 006e 00BF     		.align	2
+ 513              	.L36:
+ 514 0070 00000000 		.word	.LC4
+ 515              		.cfi_endproc
+ 516              	.LFE139:
+ 518              		.section	.text.crc16_jf,"ax",%progbits
+ 519              		.align	1
+ 520              		.global	crc16_jf
+ 521              		.syntax unified
+ 522              		.thumb
+ 523              		.thumb_func
+ 524              		.fpu fpv4-sp-d16
+ 526              	crc16_jf:
+ 527              	.LVL53:
+ 528              	.LFB140:
+ 259:Src/si4463/radio.c **** 
+ 260:Src/si4463/radio.c **** // #define POLY 0x8005 // CRC-16-MAXIM (IBM) (or 0xA001)
+ 261:Src/si4463/radio.c **** // #define POLY 0xA001
+ 262:Src/si4463/radio.c **** // unsigned int crc16(uint8_t data_p[])
+ 263:Src/si4463/radio.c **** // {
+ 264:Src/si4463/radio.c **** //     unsigned char i,j;
+ 265:Src/si4463/radio.c **** //     unsigned int data;
+ 266:Src/si4463/radio.c **** //     unsigned int crc = 0x0000;//0xFFFF;
+ 267:Src/si4463/radio.c **** //     // count = 0;
+ 268:Src/si4463/radio.c **** 
+ 269:Src/si4463/radio.c **** //     //for (j = 0; j < (sizeof(data_p)/sizeof(uint8_t)); j++)
+ 270:Src/si4463/radio.c **** //     for (j = 0; j < 7; j++)
+ 271:Src/si4463/radio.c **** //     {
+ 272:Src/si4463/radio.c **** //         for (i=0, data=(uint8_t)0xff & data_p[j];
+ 273:Src/si4463/radio.c **** //                 i < 8;
+ 274:Src/si4463/radio.c **** //                 i++, data >>= 1)
+ 275:Src/si4463/radio.c **** //         {
+ 276:Src/si4463/radio.c **** //             if ((crc & 0x0001) ^ (data & 0x0001))
+ 277:Src/si4463/radio.c **** //             {
+ 278:Src/si4463/radio.c **** //                 crc = (crc >> 1) ^ POLY;
+ 279:Src/si4463/radio.c **** //             }
+ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccXFQblt.s 			page 16
+
+
+ 280:Src/si4463/radio.c **** //             else  crc >>= 1;
+ 281:Src/si4463/radio.c **** //         }
+ 282:Src/si4463/radio.c **** //     }
+ 283:Src/si4463/radio.c **** 
+ 284:Src/si4463/radio.c **** //     crc = ~crc;
+ 285:Src/si4463/radio.c **** //     data = crc;
+ 286:Src/si4463/radio.c **** //     crc = (crc << 8) | (data >> 8 & 0xff);
+ 287:Src/si4463/radio.c **** 
+ 288:Src/si4463/radio.c **** //     return (crc);
+ 289:Src/si4463/radio.c **** // }
+ 290:Src/si4463/radio.c **** 
+ 291:Src/si4463/radio.c **** unsigned int crc16_jf(uint16_t reg_crc,unsigned char *data, unsigned char length)
+ 292:Src/si4463/radio.c **** {
+ 529              		.loc 1 292 1 is_stmt 1 view -0
+ 530              		.cfi_startproc
+ 531              		@ args = 0, pretend = 0, frame = 0
+ 532              		@ frame_needed = 0, uses_anonymous_args = 0
+ 533              		@ link register save eliminated.
+ 534              		.loc 1 292 1 is_stmt 0 view .LVU111
+ 535 0000 8C46     		mov	ip, r1
+ 293:Src/si4463/radio.c ****   int j;
+ 536              		.loc 1 293 3 is_stmt 1 view .LVU112
+ 294:Src/si4463/radio.c ****   // unsigned int reg_crc = 0xFFFF;
+ 295:Src/si4463/radio.c ****   //unsigned int reg_crc = 0x0000;
+ 296:Src/si4463/radio.c ****   //unsigned int reg_crc = 0x1111;
+ 297:Src/si4463/radio.c ****   while (length--)
+ 537              		.loc 1 297 3 view .LVU113
+ 538              	.LVL54:
+ 539              	.L39:
+ 540              		.loc 1 297 9 view .LVU114
+ 541 0002 1346     		mov	r3, r2
+ 542              		.loc 1 297 16 is_stmt 0 view .LVU115
+ 543 0004 013A     		subs	r2, r2, #1
+ 544              	.LVL55:
+ 545              		.loc 1 297 16 view .LVU116
+ 546 0006 D2B2     		uxtb	r2, r2
+ 547              	.LVL56:
+ 548              		.loc 1 297 9 view .LVU117
+ 549 0008 83B1     		cbz	r3, .L45
+ 298:Src/si4463/radio.c ****   {
+ 299:Src/si4463/radio.c **** 
+ 300:Src/si4463/radio.c ****     reg_crc ^= *data++;
+ 550              		.loc 1 300 5 is_stmt 1 view .LVU118
+ 551              	.LVL57:
+ 552              		.loc 1 300 16 is_stmt 0 view .LVU119
+ 553 000a 1CF8013B 		ldrb	r3, [ip], #1	@ zero_extendqisi2
+ 554              	.LVL58:
+ 555              		.loc 1 300 13 view .LVU120
+ 556 000e 5840     		eors	r0, r0, r3
+ 557              	.LVL59:
+ 301:Src/si4463/radio.c ****     for (j = 0; j < 8; j++)
+ 558              		.loc 1 301 5 is_stmt 1 view .LVU121
+ 559              		.loc 1 301 12 is_stmt 0 view .LVU122
+ 560 0010 0023     		movs	r3, #0
+ 561              		.loc 1 301 5 view .LVU123
+ 562 0012 01E0     		b	.L40
+ 563              	.LVL60:
+ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccXFQblt.s 			page 17
+
+
+ 564              	.L41:
+ 302:Src/si4463/radio.c ****     {
+ 303:Src/si4463/radio.c ****       if (reg_crc & 0x01)
+ 304:Src/si4463/radio.c ****       {
+ 305:Src/si4463/radio.c ****         reg_crc = (reg_crc >> 1) ^ 0xA001;
+ 306:Src/si4463/radio.c ****         // reg_crc = (reg_crc >> 1) ^ 0x8005;
+ 307:Src/si4463/radio.c ****       }
+ 308:Src/si4463/radio.c ****       else
+ 309:Src/si4463/radio.c ****       {
+ 310:Src/si4463/radio.c ****         reg_crc = reg_crc >> 1;
+ 565              		.loc 1 310 9 is_stmt 1 view .LVU124
+ 566              		.loc 1 310 17 is_stmt 0 view .LVU125
+ 567 0014 4008     		lsrs	r0, r0, #1
+ 568              	.LVL61:
+ 569              	.L42:
+ 301:Src/si4463/radio.c ****     for (j = 0; j < 8; j++)
+ 570              		.loc 1 301 24 is_stmt 1 discriminator 2 view .LVU126
+ 301:Src/si4463/radio.c ****     for (j = 0; j < 8; j++)
+ 571              		.loc 1 301 25 is_stmt 0 discriminator 2 view .LVU127
+ 572 0016 0133     		adds	r3, r3, #1
+ 573              	.LVL62:
+ 574              	.L40:
+ 301:Src/si4463/radio.c ****     for (j = 0; j < 8; j++)
+ 575              		.loc 1 301 17 is_stmt 1 discriminator 1 view .LVU128
+ 301:Src/si4463/radio.c ****     for (j = 0; j < 8; j++)
+ 576              		.loc 1 301 5 is_stmt 0 discriminator 1 view .LVU129
+ 577 0018 072B     		cmp	r3, #7
+ 578 001a F2DC     		bgt	.L39
+ 303:Src/si4463/radio.c ****       {
+ 579              		.loc 1 303 7 is_stmt 1 view .LVU130
+ 303:Src/si4463/radio.c ****       {
+ 580              		.loc 1 303 10 is_stmt 0 view .LVU131
+ 581 001c 10F0010F 		tst	r0, #1
+ 582 0020 F8D0     		beq	.L41
+ 305:Src/si4463/radio.c ****         // reg_crc = (reg_crc >> 1) ^ 0x8005;
+ 583              		.loc 1 305 9 is_stmt 1 view .LVU132
+ 305:Src/si4463/radio.c ****         // reg_crc = (reg_crc >> 1) ^ 0x8005;
+ 584              		.loc 1 305 17 is_stmt 0 view .LVU133
+ 585 0022 4AF20101 		movw	r1, #40961
+ 586 0026 81EA5000 		eor	r0, r1, r0, lsr #1
+ 587              	.LVL63:
+ 305:Src/si4463/radio.c ****         // reg_crc = (reg_crc >> 1) ^ 0x8005;
+ 588              		.loc 1 305 17 view .LVU134
+ 589 002a F4E7     		b	.L42
+ 590              	.LVL64:
+ 591              	.L45:
+ 311:Src/si4463/radio.c ****       }
+ 312:Src/si4463/radio.c ****     }
+ 313:Src/si4463/radio.c ****   }
+ 314:Src/si4463/radio.c ****   return reg_crc;
+ 592              		.loc 1 314 3 is_stmt 1 view .LVU135
+ 315:Src/si4463/radio.c **** }
+ 593              		.loc 1 315 1 is_stmt 0 view .LVU136
+ 594 002c 7047     		bx	lr
+ 595              		.cfi_endproc
+ 596              	.LFE140:
+ 598              		.section	.text.crc161,"ax",%progbits
+ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccXFQblt.s 			page 18
+
+
+ 599              		.align	1
+ 600              		.global	crc161
+ 601              		.syntax unified
+ 602              		.thumb
+ 603              		.thumb_func
+ 604              		.fpu fpv4-sp-d16
+ 606              	crc161:
+ 607              	.LVL65:
+ 608              	.LFB141:
+ 316:Src/si4463/radio.c **** 
+ 317:Src/si4463/radio.c **** unsigned int crc161(unsigned char *data, unsigned char length)
+ 318:Src/si4463/radio.c **** {
+ 609              		.loc 1 318 1 is_stmt 1 view -0
+ 610              		.cfi_startproc
+ 611              		@ args = 0, pretend = 0, frame = 0
+ 612              		@ frame_needed = 0, uses_anonymous_args = 0
+ 613              		@ link register save eliminated.
+ 614              		.loc 1 318 1 is_stmt 0 view .LVU138
+ 615 0000 8446     		mov	ip, r0
+ 319:Src/si4463/radio.c ****   int j;
+ 616              		.loc 1 319 3 is_stmt 1 view .LVU139
+ 320:Src/si4463/radio.c ****   // unsigned int reg_crc = 0xFFFF;
+ 321:Src/si4463/radio.c ****   unsigned int reg_crc = 0x0000;
+ 617              		.loc 1 321 3 view .LVU140
+ 618              	.LVL66:
+ 322:Src/si4463/radio.c ****   // unsigned int reg_crc = 0x4230;
+ 323:Src/si4463/radio.c ****   while (length--)
+ 619              		.loc 1 323 3 view .LVU141
+ 321:Src/si4463/radio.c ****   // unsigned int reg_crc = 0x4230;
+ 620              		.loc 1 321 16 is_stmt 0 view .LVU142
+ 621 0002 0020     		movs	r0, #0
+ 622              	.LVL67:
+ 623              	.L47:
+ 624              		.loc 1 323 9 is_stmt 1 view .LVU143
+ 625 0004 0B46     		mov	r3, r1
+ 626              		.loc 1 323 16 is_stmt 0 view .LVU144
+ 627 0006 0139     		subs	r1, r1, #1
+ 628              	.LVL68:
+ 629              		.loc 1 323 16 view .LVU145
+ 630 0008 C9B2     		uxtb	r1, r1
+ 631              	.LVL69:
+ 632              		.loc 1 323 9 view .LVU146
+ 633 000a 83B1     		cbz	r3, .L53
+ 324:Src/si4463/radio.c ****   {
+ 325:Src/si4463/radio.c **** 
+ 326:Src/si4463/radio.c ****     reg_crc ^= *data++;
+ 634              		.loc 1 326 5 is_stmt 1 view .LVU147
+ 635              	.LVL70:
+ 636              		.loc 1 326 16 is_stmt 0 view .LVU148
+ 637 000c 1CF8013B 		ldrb	r3, [ip], #1	@ zero_extendqisi2
+ 638              	.LVL71:
+ 639              		.loc 1 326 13 view .LVU149
+ 640 0010 5840     		eors	r0, r0, r3
+ 641              	.LVL72:
+ 327:Src/si4463/radio.c ****     for (j = 0; j < 8; j++)
+ 642              		.loc 1 327 5 is_stmt 1 view .LVU150
+ 643              		.loc 1 327 12 is_stmt 0 view .LVU151
+ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccXFQblt.s 			page 19
+
+
+ 644 0012 0023     		movs	r3, #0
+ 645              		.loc 1 327 5 view .LVU152
+ 646 0014 01E0     		b	.L48
+ 647              	.LVL73:
+ 648              	.L49:
+ 328:Src/si4463/radio.c ****     {
+ 329:Src/si4463/radio.c ****       if (reg_crc & 0x01)
+ 330:Src/si4463/radio.c ****       {
+ 331:Src/si4463/radio.c ****         reg_crc = (reg_crc >> 1) ^ 0xA001;
+ 332:Src/si4463/radio.c ****         // reg_crc = (reg_crc >> 1) ^ 0x8005;
+ 333:Src/si4463/radio.c ****       }
+ 334:Src/si4463/radio.c ****       else
+ 335:Src/si4463/radio.c ****       {
+ 336:Src/si4463/radio.c ****         reg_crc = reg_crc >> 1;
+ 649              		.loc 1 336 9 is_stmt 1 view .LVU153
+ 650              		.loc 1 336 17 is_stmt 0 view .LVU154
+ 651 0016 4008     		lsrs	r0, r0, #1
+ 652              	.LVL74:
+ 653              	.L50:
+ 327:Src/si4463/radio.c ****     for (j = 0; j < 8; j++)
+ 654              		.loc 1 327 24 is_stmt 1 discriminator 2 view .LVU155
+ 327:Src/si4463/radio.c ****     for (j = 0; j < 8; j++)
+ 655              		.loc 1 327 25 is_stmt 0 discriminator 2 view .LVU156
+ 656 0018 0133     		adds	r3, r3, #1
+ 657              	.LVL75:
+ 658              	.L48:
+ 327:Src/si4463/radio.c ****     for (j = 0; j < 8; j++)
+ 659              		.loc 1 327 17 is_stmt 1 discriminator 1 view .LVU157
+ 327:Src/si4463/radio.c ****     for (j = 0; j < 8; j++)
+ 660              		.loc 1 327 5 is_stmt 0 discriminator 1 view .LVU158
+ 661 001a 072B     		cmp	r3, #7
+ 662 001c F2DC     		bgt	.L47
+ 329:Src/si4463/radio.c ****       {
+ 663              		.loc 1 329 7 is_stmt 1 view .LVU159
+ 329:Src/si4463/radio.c ****       {
+ 664              		.loc 1 329 10 is_stmt 0 view .LVU160
+ 665 001e 10F0010F 		tst	r0, #1
+ 666 0022 F8D0     		beq	.L49
+ 331:Src/si4463/radio.c ****         // reg_crc = (reg_crc >> 1) ^ 0x8005;
+ 667              		.loc 1 331 9 is_stmt 1 view .LVU161
+ 331:Src/si4463/radio.c ****         // reg_crc = (reg_crc >> 1) ^ 0x8005;
+ 668              		.loc 1 331 17 is_stmt 0 view .LVU162
+ 669 0024 4AF20102 		movw	r2, #40961
+ 670 0028 82EA5000 		eor	r0, r2, r0, lsr #1
+ 671              	.LVL76:
+ 331:Src/si4463/radio.c ****         // reg_crc = (reg_crc >> 1) ^ 0x8005;
+ 672              		.loc 1 331 17 view .LVU163
+ 673 002c F4E7     		b	.L50
+ 674              	.LVL77:
+ 675              	.L53:
+ 337:Src/si4463/radio.c ****       }
+ 338:Src/si4463/radio.c ****     }
+ 339:Src/si4463/radio.c ****   }
+ 340:Src/si4463/radio.c ****   return reg_crc;
+ 676              		.loc 1 340 3 is_stmt 1 view .LVU164
+ 341:Src/si4463/radio.c **** }
+ 677              		.loc 1 341 1 is_stmt 0 view .LVU165
+ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccXFQblt.s 			page 20
+
+
+ 678 002e 7047     		bx	lr
+ 679              		.cfi_endproc
+ 680              	.LFE141:
+ 682              		.section	.text.crc16,"ax",%progbits
+ 683              		.align	1
+ 684              		.global	crc16
+ 685              		.syntax unified
+ 686              		.thumb
+ 687              		.thumb_func
+ 688              		.fpu fpv4-sp-d16
+ 690              	crc16:
+ 691              	.LVL78:
+ 692              	.LFB142:
+ 342:Src/si4463/radio.c **** /**
+ 343:Src/si4463/radio.c ****  * @brief crc16 for IBM
+ 344:Src/si4463/radio.c ****  * which can get the same result as si4463
+ 345:Src/si4463/radio.c ****  * the important factor is not reverse,start from the MSB
+ 346:Src/si4463/radio.c ****  * @param data
+ 347:Src/si4463/radio.c ****  * @param length 
+ 348:Src/si4463/radio.c ****  * @return unsigned int 
+ 349:Src/si4463/radio.c ****  */
+ 350:Src/si4463/radio.c **** unsigned int crc16(unsigned char *data, unsigned char length)
+ 351:Src/si4463/radio.c **** {
+ 693              		.loc 1 351 1 is_stmt 1 view -0
+ 694              		.cfi_startproc
+ 695              		@ args = 0, pretend = 0, frame = 0
+ 696              		@ frame_needed = 0, uses_anonymous_args = 0
+ 697              		@ link register save eliminated.
+ 698              		.loc 1 351 1 is_stmt 0 view .LVU167
+ 699 0000 8446     		mov	ip, r0
+ 352:Src/si4463/radio.c ****   int j;
+ 700              		.loc 1 352 3 is_stmt 1 view .LVU168
+ 353:Src/si4463/radio.c ****   // unsigned int reg_crc = 0xFFFF;
+ 354:Src/si4463/radio.c ****   unsigned int reg_crc = 0x0000;
+ 701              		.loc 1 354 3 view .LVU169
+ 702              	.LVL79:
+ 355:Src/si4463/radio.c ****   // unsigned int reg_crc = 0x4230;
+ 356:Src/si4463/radio.c ****   while (length--)
+ 703              		.loc 1 356 3 view .LVU170
+ 354:Src/si4463/radio.c ****   // unsigned int reg_crc = 0x4230;
+ 704              		.loc 1 354 16 is_stmt 0 view .LVU171
+ 705 0002 0023     		movs	r3, #0
+ 706              	.LVL80:
+ 707              	.L55:
+ 708              		.loc 1 356 9 is_stmt 1 view .LVU172
+ 709 0004 0A46     		mov	r2, r1
+ 710              		.loc 1 356 16 is_stmt 0 view .LVU173
+ 711 0006 0139     		subs	r1, r1, #1
+ 712              	.LVL81:
+ 713              		.loc 1 356 16 view .LVU174
+ 714 0008 C9B2     		uxtb	r1, r1
+ 715              	.LVL82:
+ 716              		.loc 1 356 9 view .LVU175
+ 717 000a 8AB1     		cbz	r2, .L61
+ 357:Src/si4463/radio.c ****   {
+ 358:Src/si4463/radio.c **** 
+ 359:Src/si4463/radio.c ****     reg_crc ^= (*data++<<8);
+ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccXFQblt.s 			page 21
+
+
+ 718              		.loc 1 359 5 is_stmt 1 view .LVU176
+ 719              	.LVL83:
+ 720              		.loc 1 359 17 is_stmt 0 view .LVU177
+ 721 000c 1CF8012B 		ldrb	r2, [ip], #1	@ zero_extendqisi2
+ 722              	.LVL84:
+ 723              		.loc 1 359 13 view .LVU178
+ 724 0010 83EA0223 		eor	r3, r3, r2, lsl #8
+ 725              	.LVL85:
+ 360:Src/si4463/radio.c ****     for (j = 0; j < 8; j++)
+ 726              		.loc 1 360 5 is_stmt 1 view .LVU179
+ 727              		.loc 1 360 12 is_stmt 0 view .LVU180
+ 728 0014 0022     		movs	r2, #0
+ 729              		.loc 1 360 5 view .LVU181
+ 730 0016 01E0     		b	.L56
+ 731              	.LVL86:
+ 732              	.L57:
+ 361:Src/si4463/radio.c ****     {
+ 362:Src/si4463/radio.c ****       if (reg_crc & 0x8000)
+ 363:Src/si4463/radio.c ****       {
+ 364:Src/si4463/radio.c ****         // reg_crc = (reg_crc >> 1) ^ 0xA001;
+ 365:Src/si4463/radio.c ****         reg_crc = (reg_crc << 1) ^ 0x8005;
+ 366:Src/si4463/radio.c ****       }
+ 367:Src/si4463/radio.c ****       else
+ 368:Src/si4463/radio.c ****       {
+ 369:Src/si4463/radio.c ****         reg_crc = reg_crc << 1;
+ 733              		.loc 1 369 9 is_stmt 1 view .LVU182
+ 734              		.loc 1 369 17 is_stmt 0 view .LVU183
+ 735 0018 5B00     		lsls	r3, r3, #1
+ 736              	.LVL87:
+ 737              	.L58:
+ 360:Src/si4463/radio.c ****     for (j = 0; j < 8; j++)
+ 738              		.loc 1 360 24 is_stmt 1 discriminator 2 view .LVU184
+ 360:Src/si4463/radio.c ****     for (j = 0; j < 8; j++)
+ 739              		.loc 1 360 25 is_stmt 0 discriminator 2 view .LVU185
+ 740 001a 0132     		adds	r2, r2, #1
+ 741              	.LVL88:
+ 742              	.L56:
+ 360:Src/si4463/radio.c ****     for (j = 0; j < 8; j++)
+ 743              		.loc 1 360 17 is_stmt 1 discriminator 1 view .LVU186
+ 360:Src/si4463/radio.c ****     for (j = 0; j < 8; j++)
+ 744              		.loc 1 360 5 is_stmt 0 discriminator 1 view .LVU187
+ 745 001c 072A     		cmp	r2, #7
+ 746 001e F1DC     		bgt	.L55
+ 362:Src/si4463/radio.c ****       {
+ 747              		.loc 1 362 7 is_stmt 1 view .LVU188
+ 362:Src/si4463/radio.c ****       {
+ 748              		.loc 1 362 10 is_stmt 0 view .LVU189
+ 749 0020 13F4004F 		tst	r3, #32768
+ 750 0024 F8D0     		beq	.L57
+ 365:Src/si4463/radio.c ****       }
+ 751              		.loc 1 365 9 is_stmt 1 view .LVU190
+ 365:Src/si4463/radio.c ****       }
+ 752              		.loc 1 365 17 is_stmt 0 view .LVU191
+ 753 0026 48F20500 		movw	r0, #32773
+ 754 002a 80EA4303 		eor	r3, r0, r3, lsl #1
+ 755              	.LVL89:
+ 365:Src/si4463/radio.c ****       }
+ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccXFQblt.s 			page 22
+
+
+ 756              		.loc 1 365 17 view .LVU192
+ 757 002e F4E7     		b	.L58
+ 758              	.LVL90:
+ 759              	.L61:
+ 370:Src/si4463/radio.c ****       }
+ 371:Src/si4463/radio.c ****     }
+ 372:Src/si4463/radio.c ****   }
+ 373:Src/si4463/radio.c ****   reg_crc&=0xffff;
+ 760              		.loc 1 373 3 is_stmt 1 view .LVU193
+ 374:Src/si4463/radio.c ****   return reg_crc;
+ 761              		.loc 1 374 3 view .LVU194
+ 375:Src/si4463/radio.c **** }
+ 762              		.loc 1 375 1 is_stmt 0 view .LVU195
+ 763 0030 98B2     		uxth	r0, r3
+ 764              	.LVL91:
+ 765              		.loc 1 375 1 view .LVU196
+ 766 0032 7047     		bx	lr
+ 767              		.cfi_endproc
+ 768              	.LFE142:
+ 770              		.section	.text.crc16_table,"ax",%progbits
+ 771              		.align	1
+ 772              		.global	crc16_table
+ 773              		.syntax unified
+ 774              		.thumb
+ 775              		.thumb_func
+ 776              		.fpu fpv4-sp-d16
+ 778              	crc16_table:
+ 779              	.LVL92:
+ 780              	.LFB143:
+ 376:Src/si4463/radio.c **** 
+ 377:Src/si4463/radio.c **** uint16_t crc16_tab[256] = {
+ 378:Src/si4463/radio.c **** 	0x0000, 0xc0c1, 0xc181, 0x0140, 0xc301, 0x03c0, 0x0280, 0xc241,
+ 379:Src/si4463/radio.c **** 	0xc601, 0x06c0, 0x0780, 0xc741, 0x0500, 0xc5c1, 0xc481, 0x0440,
+ 380:Src/si4463/radio.c **** 	0xcc01, 0x0cc0, 0x0d80, 0xcd41, 0x0f00, 0xcfc1, 0xce81, 0x0e40,
+ 381:Src/si4463/radio.c **** 	0x0a00, 0xcac1, 0xcb81, 0x0b40, 0xc901, 0x09c0, 0x0880, 0xc841,
+ 382:Src/si4463/radio.c **** 	0xd801, 0x18c0, 0x1980, 0xd941, 0x1b00, 0xdbc1, 0xda81, 0x1a40,
+ 383:Src/si4463/radio.c **** 	0x1e00, 0xdec1, 0xdf81, 0x1f40, 0xdd01, 0x1dc0, 0x1c80, 0xdc41,
+ 384:Src/si4463/radio.c **** 	0x1400, 0xd4c1, 0xd581, 0x1540, 0xd701, 0x17c0, 0x1680, 0xd641,
+ 385:Src/si4463/radio.c **** 	0xd201, 0x12c0, 0x1380, 0xd341, 0x1100, 0xd1c1, 0xd081, 0x1040,
+ 386:Src/si4463/radio.c **** 	0xf001, 0x30c0, 0x3180, 0xf141, 0x3300, 0xf3c1, 0xf281, 0x3240,
+ 387:Src/si4463/radio.c **** 	0x3600, 0xf6c1, 0xf781, 0x3740, 0xf501, 0x35c0, 0x3480, 0xf441,
+ 388:Src/si4463/radio.c **** 	0x3c00, 0xfcc1, 0xfd81, 0x3d40, 0xff01, 0x3fc0, 0x3e80, 0xfe41,
+ 389:Src/si4463/radio.c **** 	0xfa01, 0x3ac0, 0x3b80, 0xfb41, 0x3900, 0xf9c1, 0xf881, 0x3840,
+ 390:Src/si4463/radio.c **** 	0x2800, 0xe8c1, 0xe981, 0x2940, 0xeb01, 0x2bc0, 0x2a80, 0xea41,
+ 391:Src/si4463/radio.c **** 	0xee01, 0x2ec0, 0x2f80, 0xef41, 0x2d00, 0xedc1, 0xec81, 0x2c40,
+ 392:Src/si4463/radio.c **** 	0xe401, 0x24c0, 0x2580, 0xe541, 0x2700, 0xe7c1, 0xe681, 0x2640,
+ 393:Src/si4463/radio.c **** 	0x2200, 0xe2c1, 0xe381, 0x2340, 0xe101, 0x21c0, 0x2080, 0xe041,
+ 394:Src/si4463/radio.c **** 	0xa001, 0x60c0, 0x6180, 0xa141, 0x6300, 0xa3c1, 0xa281, 0x6240,
+ 395:Src/si4463/radio.c **** 	0x6600, 0xa6c1, 0xa781, 0x6740, 0xa501, 0x65c0, 0x6480, 0xa441,
+ 396:Src/si4463/radio.c **** 	0x6c00, 0xacc1, 0xad81, 0x6d40, 0xaf01, 0x6fc0, 0x6e80, 0xae41,
+ 397:Src/si4463/radio.c **** 	0xaa01, 0x6ac0, 0x6b80, 0xab41, 0x6900, 0xa9c1, 0xa881, 0x6840,
+ 398:Src/si4463/radio.c **** 	0x7800, 0xb8c1, 0xb981, 0x7940, 0xbb01, 0x7bc0, 0x7a80, 0xba41,
+ 399:Src/si4463/radio.c **** 	0xbe01, 0x7ec0, 0x7f80, 0xbf41, 0x7d00, 0xbdc1, 0xbc81, 0x7c40,
+ 400:Src/si4463/radio.c **** 	0xb401, 0x74c0, 0x7580, 0xb541, 0x7700, 0xb7c1, 0xb681, 0x7640,
+ 401:Src/si4463/radio.c **** 	0x7200, 0xb2c1, 0xb381, 0x7340, 0xb101, 0x71c0, 0x7080, 0xb041,
+ 402:Src/si4463/radio.c **** 	0x5000, 0x90c1, 0x9181, 0x5140, 0x9301, 0x53c0, 0x5280, 0x9241,
+ 403:Src/si4463/radio.c **** 	0x9601, 0x56c0, 0x5780, 0x9741, 0x5500, 0x95c1, 0x9481, 0x5440,
+ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccXFQblt.s 			page 23
+
+
+ 404:Src/si4463/radio.c **** 	0x9c01, 0x5cc0, 0x5d80, 0x9d41, 0x5f00, 0x9fc1, 0x9e81, 0x5e40,
+ 405:Src/si4463/radio.c **** 	0x5a00, 0x9ac1, 0x9b81, 0x5b40, 0x9901, 0x59c0, 0x5880, 0x9841,
+ 406:Src/si4463/radio.c **** 	0x8801, 0x48c0, 0x4980, 0x8941, 0x4b00, 0x8bc1, 0x8a81, 0x4a40,
+ 407:Src/si4463/radio.c **** 	0x4e00, 0x8ec1, 0x8f81, 0x4f40, 0x8d01, 0x4dc0, 0x4c80, 0x8c41,
+ 408:Src/si4463/radio.c **** 	0x4400, 0x84c1, 0x8581, 0x4540, 0x8701, 0x47c0, 0x4680, 0x8641,
+ 409:Src/si4463/radio.c **** 	0x8201, 0x42c0, 0x4380, 0x8341, 0x4100, 0x81c1, 0x8081, 0x4040
+ 410:Src/si4463/radio.c **** };
+ 411:Src/si4463/radio.c **** 
+ 412:Src/si4463/radio.c **** uint16_t crc16_table(uint16_t crc, const void *buf, size_t size)
+ 413:Src/si4463/radio.c **** {
+ 781              		.loc 1 413 1 is_stmt 1 view -0
+ 782              		.cfi_startproc
+ 783              		@ args = 0, pretend = 0, frame = 0
+ 784              		@ frame_needed = 0, uses_anonymous_args = 0
+ 785              		@ link register save eliminated.
+ 414:Src/si4463/radio.c ****   const uint8_t *p;
+ 786              		.loc 1 414 3 view .LVU198
+ 415:Src/si4463/radio.c **** 
+ 416:Src/si4463/radio.c ****   p = buf;
+ 787              		.loc 1 416 3 view .LVU199
+ 417:Src/si4463/radio.c **** 
+ 418:Src/si4463/radio.c ****   while (size--)
+ 788              		.loc 1 418 3 view .LVU200
+ 789              		.loc 1 418 9 is_stmt 0 view .LVU201
+ 790 0000 09E0     		b	.L63
+ 791              	.LVL93:
+ 792              	.L64:
+ 419:Src/si4463/radio.c ****     crc = crc16_tab[(crc ^ (*p++)) & 0xFF] ^ (crc >> 8);
+ 793              		.loc 1 419 5 is_stmt 1 view .LVU202
+ 794              		.loc 1 419 29 is_stmt 0 view .LVU203
+ 795 0002 11F8013B 		ldrb	r3, [r1], #1	@ zero_extendqisi2
+ 796              	.LVL94:
+ 797              		.loc 1 419 26 view .LVU204
+ 798 0006 4340     		eors	r3, r3, r0
+ 799              		.loc 1 419 36 view .LVU205
+ 800 0008 DBB2     		uxtb	r3, r3
+ 801              		.loc 1 419 20 view .LVU206
+ 802 000a 054A     		ldr	r2, .L65
+ 803 000c 32F81330 		ldrh	r3, [r2, r3, lsl #1]
+ 804              		.loc 1 419 9 view .LVU207
+ 805 0010 83EA1020 		eor	r0, r3, r0, lsr #8
+ 806              	.LVL95:
+ 418:Src/si4463/radio.c ****     crc = crc16_tab[(crc ^ (*p++)) & 0xFF] ^ (crc >> 8);
+ 807              		.loc 1 418 14 view .LVU208
+ 808 0014 6246     		mov	r2, ip
+ 809              	.LVL96:
+ 810              	.L63:
+ 418:Src/si4463/radio.c ****     crc = crc16_tab[(crc ^ (*p++)) & 0xFF] ^ (crc >> 8);
+ 811              		.loc 1 418 9 is_stmt 1 view .LVU209
+ 418:Src/si4463/radio.c ****     crc = crc16_tab[(crc ^ (*p++)) & 0xFF] ^ (crc >> 8);
+ 812              		.loc 1 418 14 is_stmt 0 view .LVU210
+ 813 0016 02F1FF3C 		add	ip, r2, #-1
+ 814              	.LVL97:
+ 418:Src/si4463/radio.c ****     crc = crc16_tab[(crc ^ (*p++)) & 0xFF] ^ (crc >> 8);
+ 815              		.loc 1 418 9 view .LVU211
+ 816 001a 002A     		cmp	r2, #0
+ 817 001c F1D1     		bne	.L64
+ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccXFQblt.s 			page 24
+
+
+ 420:Src/si4463/radio.c **** 
+ 421:Src/si4463/radio.c ****   return crc;
+ 818              		.loc 1 421 3 is_stmt 1 view .LVU212
+ 422:Src/si4463/radio.c **** }
+ 819              		.loc 1 422 1 is_stmt 0 view .LVU213
+ 820 001e 7047     		bx	lr
+ 821              	.L66:
+ 822              		.align	2
+ 823              	.L65:
+ 824 0020 00000000 		.word	.LANCHOR2
+ 825              		.cfi_endproc
+ 826              	.LFE143:
+ 828              		.section	.text.GetCRC16,"ax",%progbits
+ 829              		.align	1
+ 830              		.global	GetCRC16
+ 831              		.syntax unified
+ 832              		.thumb
+ 833              		.thumb_func
+ 834              		.fpu fpv4-sp-d16
+ 836              	GetCRC16:
+ 837              	.LVL98:
+ 838              	.LFB144:
+ 423:Src/si4463/radio.c **** 
+ 424:Src/si4463/radio.c **** uint16_t GetCRC16(uint16_t CRC16, unsigned char cur_byte)
+ 425:Src/si4463/radio.c **** {
+ 839              		.loc 1 425 1 is_stmt 1 view -0
+ 840              		.cfi_startproc
+ 841              		@ args = 0, pretend = 0, frame = 0
+ 842              		@ frame_needed = 0, uses_anonymous_args = 0
+ 843              		@ link register save eliminated.
+ 426:Src/si4463/radio.c ****   unsigned char uIndex = 8;
+ 844              		.loc 1 426 3 view .LVU215
+ 427:Src/si4463/radio.c ****   uint16_t Carry;
+ 845              		.loc 1 427 3 view .LVU216
+ 428:Src/si4463/radio.c ****   CRC16 = CRC16 ^ cur_byte;
+ 846              		.loc 1 428 3 view .LVU217
+ 847              		.loc 1 428 9 is_stmt 0 view .LVU218
+ 848 0000 4840     		eors	r0, r0, r1
+ 849              	.LVL99:
+ 426:Src/si4463/radio.c ****   unsigned char uIndex = 8;
+ 850              		.loc 1 426 17 view .LVU219
+ 851 0002 0823     		movs	r3, #8
+ 852 0004 08E0     		b	.L69
+ 853              	.LVL100:
+ 854              	.L71:
+ 429:Src/si4463/radio.c ****   do
+ 430:Src/si4463/radio.c ****   {
+ 431:Src/si4463/radio.c ****     Carry = CRC16 & 0x0001;
+ 432:Src/si4463/radio.c ****     CRC16 = CRC16 >> 1;
+ 433:Src/si4463/radio.c ****     CRC16 &= 0x7fff;
+ 434:Src/si4463/radio.c ****     if (Carry == 1)
+ 435:Src/si4463/radio.c ****     {
+ 436:Src/si4463/radio.c ****       CRC16 = CRC16 ^ 0xA001;
+ 855              		.loc 1 436 7 is_stmt 1 view .LVU220
+ 856              		.loc 1 436 13 is_stmt 0 view .LVU221
+ 857 0006 80F42040 		eor	r0, r0, #40960
+ 858              	.LVL101:
+ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccXFQblt.s 			page 25
+
+
+ 859              		.loc 1 436 13 view .LVU222
+ 860 000a 80F00100 		eor	r0, r0, #1
+ 861              	.LVL102:
+ 862              		.loc 1 436 13 view .LVU223
+ 863 000e 80B2     		uxth	r0, r0
+ 864              	.LVL103:
+ 865              	.L68:
+ 437:Src/si4463/radio.c ****     }
+ 438:Src/si4463/radio.c ****   } while (--uIndex); // pass through message buffer
+ 866              		.loc 1 438 11 is_stmt 1 view .LVU224
+ 867              		.loc 1 438 3 is_stmt 0 view .LVU225
+ 868 0010 013B     		subs	r3, r3, #1
+ 869              	.LVL104:
+ 870              		.loc 1 438 3 view .LVU226
+ 871 0012 13F0FF03 		ands	r3, r3, #255
+ 872              	.LVL105:
+ 873              		.loc 1 438 3 view .LVU227
+ 874 0016 05D0     		beq	.L70
+ 875              	.LVL106:
+ 876              	.L69:
+ 429:Src/si4463/radio.c ****   do
+ 877              		.loc 1 429 3 is_stmt 1 view .LVU228
+ 431:Src/si4463/radio.c ****     CRC16 = CRC16 >> 1;
+ 878              		.loc 1 431 5 view .LVU229
+ 431:Src/si4463/radio.c ****     CRC16 = CRC16 >> 1;
+ 879              		.loc 1 431 11 is_stmt 0 view .LVU230
+ 880 0018 00F00102 		and	r2, r0, #1
+ 881              	.LVL107:
+ 432:Src/si4463/radio.c ****     CRC16 &= 0x7fff;
+ 882              		.loc 1 432 5 is_stmt 1 view .LVU231
+ 432:Src/si4463/radio.c ****     CRC16 &= 0x7fff;
+ 883              		.loc 1 432 11 is_stmt 0 view .LVU232
+ 884 001c 4008     		lsrs	r0, r0, #1
+ 885              	.LVL108:
+ 433:Src/si4463/radio.c ****     if (Carry == 1)
+ 886              		.loc 1 433 5 is_stmt 1 view .LVU233
+ 434:Src/si4463/radio.c ****     {
+ 887              		.loc 1 434 5 view .LVU234
+ 434:Src/si4463/radio.c ****     {
+ 888              		.loc 1 434 8 is_stmt 0 view .LVU235
+ 889 001e 002A     		cmp	r2, #0
+ 890 0020 F6D0     		beq	.L68
+ 891 0022 F0E7     		b	.L71
+ 892              	.LVL109:
+ 893              	.L70:
+ 439:Src/si4463/radio.c ****   return CRC16;
+ 894              		.loc 1 439 3 is_stmt 1 view .LVU236
+ 440:Src/si4463/radio.c **** }
+ 895              		.loc 1 440 1 is_stmt 0 view .LVU237
+ 896 0024 7047     		bx	lr
+ 897              		.cfi_endproc
+ 898              	.LFE144:
+ 900              		.section	.text.CRC16,"ax",%progbits
+ 901              		.align	1
+ 902              		.global	CRC16
+ 903              		.syntax unified
+ 904              		.thumb
+ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccXFQblt.s 			page 26
+
+
+ 905              		.thumb_func
+ 906              		.fpu fpv4-sp-d16
+ 908              	CRC16:
+ 909              	.LVL110:
+ 910              	.LFB145:
+ 441:Src/si4463/radio.c **** 
+ 442:Src/si4463/radio.c **** uint16_t CRC16(unsigned char *data_array, uint16_t length)
+ 443:Src/si4463/radio.c **** {
+ 911              		.loc 1 443 1 is_stmt 1 view -0
+ 912              		.cfi_startproc
+ 913              		@ args = 0, pretend = 0, frame = 0
+ 914              		@ frame_needed = 0, uses_anonymous_args = 0
+ 915              		.loc 1 443 1 is_stmt 0 view .LVU239
+ 916 0000 70B5     		push	{r4, r5, r6, lr}
+ 917              	.LCFI9:
+ 918              		.cfi_def_cfa_offset 16
+ 919              		.cfi_offset 4, -16
+ 920              		.cfi_offset 5, -12
+ 921              		.cfi_offset 6, -8
+ 922              		.cfi_offset 14, -4
+ 923 0002 0646     		mov	r6, r0
+ 924 0004 0D46     		mov	r5, r1
+ 444:Src/si4463/radio.c ****   uint16_t CalcCRC16;
+ 925              		.loc 1 444 3 is_stmt 1 view .LVU240
+ 445:Src/si4463/radio.c ****   uint16_t cnt1, cnt2;
+ 926              		.loc 1 445 3 view .LVU241
+ 446:Src/si4463/radio.c ****   // CalcCRC16 = 0xFFFF;
+ 447:Src/si4463/radio.c ****   CalcCRC16 = 0x0000;
+ 927              		.loc 1 447 3 view .LVU242
+ 928              	.LVL111:
+ 448:Src/si4463/radio.c ****   cnt1 = length;
+ 929              		.loc 1 448 3 view .LVU243
+ 449:Src/si4463/radio.c ****   cnt2 = 0;
+ 930              		.loc 1 449 3 view .LVU244
+ 450:Src/si4463/radio.c ****   while (cnt2 < cnt1)
+ 931              		.loc 1 450 3 view .LVU245
+ 449:Src/si4463/radio.c ****   cnt2 = 0;
+ 932              		.loc 1 449 8 is_stmt 0 view .LVU246
+ 933 0006 0023     		movs	r3, #0
+ 447:Src/si4463/radio.c ****   cnt1 = length;
+ 934              		.loc 1 447 13 view .LVU247
+ 935 0008 1846     		mov	r0, r3
+ 936              	.LVL112:
+ 937              		.loc 1 450 9 view .LVU248
+ 938 000a 05E0     		b	.L73
+ 939              	.LVL113:
+ 940              	.L74:
+ 451:Src/si4463/radio.c ****   {
+ 452:Src/si4463/radio.c ****     CalcCRC16 = GetCRC16(CalcCRC16, data_array[cnt2++]);
+ 941              		.loc 1 452 5 is_stmt 1 view .LVU249
+ 942              		.loc 1 452 52 is_stmt 0 view .LVU250
+ 943 000c 5C1C     		adds	r4, r3, #1
+ 944 000e A4B2     		uxth	r4, r4
+ 945              	.LVL114:
+ 946              		.loc 1 452 17 view .LVU251
+ 947 0010 F15C     		ldrb	r1, [r6, r3]	@ zero_extendqisi2
+ 948 0012 FFF7FEFF 		bl	GetCRC16
+ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccXFQblt.s 			page 27
+
+
+ 949              	.LVL115:
+ 950              		.loc 1 452 52 view .LVU252
+ 951 0016 2346     		mov	r3, r4
+ 952              	.LVL116:
+ 953              	.L73:
+ 450:Src/si4463/radio.c ****   {
+ 954              		.loc 1 450 9 is_stmt 1 view .LVU253
+ 955 0018 AB42     		cmp	r3, r5
+ 956 001a F7D3     		bcc	.L74
+ 453:Src/si4463/radio.c ****   }
+ 454:Src/si4463/radio.c ****   return CalcCRC16;
+ 957              		.loc 1 454 3 view .LVU254
+ 455:Src/si4463/radio.c **** }
+ 958              		.loc 1 455 1 is_stmt 0 view .LVU255
+ 959 001c 70BD     		pop	{r4, r5, r6, pc}
+ 960              		.loc 1 455 1 view .LVU256
+ 961              		.cfi_endproc
+ 962              	.LFE145:
+ 964              		.global	crc16_tab
+ 965              		.global	customRadioPacket
+ 966              		.global	pRadioConfiguration
+ 967              		.global	RadioConfiguration
+ 968              		.global	Radio_Configuration_Data_Array
+ 969              		.section	.bss.customRadioPacket,"aw",%nobits
+ 970              		.align	2
+ 971              		.set	.LANCHOR1,. + 0
+ 974              	customRadioPacket:
+ 975 0000 00000000 		.space	64
+ 975      00000000 
+ 975      00000000 
+ 975      00000000 
+ 975      00000000 
+ 976              		.section	.data.RadioConfiguration,"aw"
+ 977              		.align	2
+ 980              	RadioConfiguration:
+ 981 0000 00000000 		.word	Radio_Configuration_Data_Array
+ 982 0004 00       		.byte	0
+ 983 0005 07       		.byte	7
+ 984 0006 03       		.byte	3
+ 985 0007 00       		.space	1
+ 986 0008 00F0     		.short	-4096
+ 987 000a 00000000 		.space	66
+ 987      00000000 
+ 987      00000000 
+ 987      00000000 
+ 987      00000000 
+ 988              		.section	.data.Radio_Configuration_Data_Array,"aw"
+ 989              		.align	2
+ 992              	Radio_Configuration_Data_Array:
+ 993 0000 08042171 		.ascii	"\010\004!qK\000\000\334\225\010\005\246\"!\360A[&\010"
+ 993      4B0000DC 
+ 993      950805A6 
+ 993      2221F041 
+ 993      5B2608
+ 994 0013 E22F1CBB 		.ascii	"\342/\034\273\012\250\224(\010\005\207g\342X\032\007"
+ 994      0AA89428 
+ 994      08058767 
+ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccXFQblt.s 			page 28
+
+
+ 994      E2581A07 
+ 995 0023 5B08E1D0 		.ascii	"[\010\341\320r\330\212\270[}\010\005\021\354\236(#\033"
+ 995      72D88AB8 
+ 995      5B7D0805 
+ 995      11EC9E28 
+ 995      231B
+ 996 0035 6D08E24F 		.ascii	"m\010\342O\212\262\251)\024\023\010\005\321.qjQL,\010"
+ 996      8AB2A929 
+ 996      14130805 
+ 996      D12E716A 
+ 996      514C2C08 
+ 997 0049 E5802742 		.ascii	"\345\200'B\244i\260\177\010\005\252\201*\275E\350\250"
+ 997      A469B07F 
+ 997      0805AA81 
+ 997      2ABD45E8 
+ 997      A8
+ 998 005a 08EAE4F0 		.ascii	"\010\352\344\360$\311\237\314<\010\005\010\365\005\004"
+ 998      24C99FCC 
+ 998      3C080508 
+ 998      F50504
+ 999 0069 27629808 		.ascii	"'b\230\010\352kb\204\241\371J\342\010\005\351w\005O"
+ 999      EA6B6284 
+ 999      A1F94AE2 
+ 999      0805E977 
+ 999      054F
+ 1000 007b 84EE3508 		.ascii	"\204\3565\010\342C\303\215\373\255T%\010\005\024\006"
+ 1000      E243C38D 
+ 1000      FBAD5425 
+ 1000      08051406 
+ 1001 008b 5E39362F 		.ascii	"^96/E\010\352\014\034t\320\021\3742\010\005\3328\272"
+ 1001      4508EA0C 
+ 1001      1C74D011 
+ 1001      FC320805 
+ 1001      DA38BA
+ 1002 009e 0E3CE78B 		.ascii	"\016<\347\213\010\352\260\011\346\377\224\273\251\010"
+ 1002      08EAB009 
+ 1002      E6FF94BB 
+ 1002      A908
+ 1003 00ac 05D71129 		.ascii	"\005\327\021)\376\334q\325\010\352\177\203\247`\220"
+ 1003      FEDC71D5 
+ 1003      08EA7F83 
+ 1003      A76090
+ 1004 00bb 62180805 		.ascii	"b\030\010\005\204\177j\321\221\306R\010\352*\330{\216"
+ 1004      847F6AD1 
+ 1004      91C65208 
+ 1004      EA2AD87B 
+ 1004      8E
+ 1005 00cc 4A9F9108 		.ascii	"J\237\221\010\005\275\252\235\026\030\006\025\010\342"
+ 1005      05BDAA9D 
+ 1005      16180615 
+ 1005      08E2
+ 1006 00da 55AD2D0A 		.ascii	"U\255-\012\024\037]\010\005\323\340|9\317\001\360\010"
+ 1006      141F5D08 
+ 1006      05D3E07C 
+ 1006      39CF01F0 
+ 1006      08
+ 1007 00eb EF3A9172 		.ascii	"\357:\221rj\003\273\226\010\347\203m\244\222\374\023"
+ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccXFQblt.s 			page 29
+
+
+ 1007      6A03BB96 
+ 1007      08E7836D 
+ 1007      A492FC13 
+ 1008 00fb A708EFF8 		.ascii	"\247\010\357\370\375\317b\007o\036\010\347L\352JuO\326"
+ 1008      FDCF6207 
+ 1008      6F1E08E7 
+ 1008      4CEA4A75 
+ 1008      4FD6
+ 1009 010d CF08E2F6 		.ascii	"\317\010\342\366\021\344&\015M\306\010\005\373\277\350"
+ 1009      11E4260D 
+ 1009      4DC60805 
+ 1009      FBBFE8
+ 1010 011c 0789C351 		.ascii	"\007\211\303Q\010\357\202'\004?\226\250X\010\347A)<"
+ 1010      08EF8227 
+ 1010      043F96A8 
+ 1010      5808E741 
+ 1010      293C
+ 1011 012e 752A031C 		.ascii	"u*\003\034\010\357\257Y\2306\252\017\006\010\346\366"
+ 1011      08EFAF59 
+ 1011      9836AA0F 
+ 1011      0608E6F6 
+ 1012 013e 93412DEC 		.ascii	"\223A-\354\016\231\010\005)\031\220\345\2526@\010\347"
+ 1012      0E990805 
+ 1012      291990E5 
+ 1012      AA364008 
+ 1012      E7
+ 1013 014f FB68107D 		.ascii	"\373h\020}w]\300\010\347\313\264\335\316\220T\276\010"
+ 1013      775DC008 
+ 1013      E7CBB4DD 
+ 1013      CE9054BE 
+ 1013      08
+ 1014 0160 E7728AD6 		.ascii	"\347r\212\326\002\364\335\314\010\347j!\013\002\206"
+ 1014      02F4DDCC 
+ 1014      08E76A21 
+ 1014      0B0286
+ 1015 016f EC1508E7 		.ascii	"\354\025\010\347{|=k\201\003\320\010\357}a6\224|\240"
+ 1015      7B7C3D6B 
+ 1015      8103D008 
+ 1015      EF7D6136 
+ 1015      947CA0
+ 1016 0182 DF08EFCC 		.ascii	"\337\010\357\314\205;\332\340\\\034\010\347\343u\273"
+ 1016      853BDAE0 
+ 1016      5C1C08E7 
+ 1016      E375BB
+ 1017 0191 39224BA8 		.ascii	"9\"K\250\010\357\371\316\340^\353\035\313\010\347\275"
+ 1017      08EFF9CE 
+ 1017      E05EEB1D 
+ 1017      CB08E7BD 
+ 1018 01a1 E270D5AB 		.ascii	"\342p\325\253N?\010\347\267\215 hk\011R\010\357\241"
+ 1018      4E3F08E7 
+ 1018      B78D2068 
+ 1018      6B095208 
+ 1018      EFA1
+ 1019 01b3 1B90CD98 		.ascii	"\033\220\315\230\000c\010\357Tg]\234\021\374E\010\347"
+ 1019      006308EF 
+ 1019      54675D9C 
+ 1019      11FC4508 
+ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccXFQblt.s 			page 30
+
+
+ 1019      E7
+ 1020 01c4 D49BC897 		.ascii	"\324\233\310\227\276\212\007\010\357R\215\220cs\325"
+ 1020      BE8A0708 
+ 1020      EF528D90 
+ 1020      6373D5
+ 1021 01d3 2A08EF03 		.ascii	"*\010\357\003\274n\034v\276J\010\347\302\355g\272^f"
+ 1021      BC6E1C76 
+ 1021      BE4A08E7 
+ 1021      C2ED67BA 
+ 1021      5E66
+ 1022 01e5 2108EFE7 		.ascii	"!\010\357\347?\207\276\340zm\010\347\311p\223\035d\365"
+ 1022      3F87BEE0 
+ 1022      7A6D08E7 
+ 1022      C970931D 
+ 1022      64F5
+ 1023 01f7 6C08EFF5 		.ascii	"l\010\357\365(\0104\263\266,\010\357:\012\354\017\333"
+ 1023      280834B3 
+ 1023      B62C08EF 
+ 1023      3A0AEC0F 
+ 1023      DB
+ 1024 0208 56CA08EF 		.ascii	"V\312\010\3579\240n\355y\320$\010\347l\013\257\251N"
+ 1024      39A06EED 
+ 1024      79D02408 
+ 1024      E76C0BAF 
+ 1024      A94E
+ 1025 021a 40B508E9 		.ascii	"@\265\010\351\271\257\277%P\3217\010\005\236\333\336"
+ 1025      B9AFBF25 
+ 1025      50D13708 
+ 1025      059EDBDE 
+ 1026 022a 3F94E96B 		.ascii	"?\224\351k\010\354\305\005\252W\334\212^\010\005p\332"
+ 1026      08ECC505 
+ 1026      AA57DC8A 
+ 1026      5E080570 
+ 1026      DA
+ 1027 023b 8484DDCA 		.ascii	"\204\204\335\312\220\007\002\201\001\001\214\272\200"
+ 1027      90070281 
+ 1027      01018CBA 
+ 1027      80
+ 1028 0248 08132000 		.ascii	"\010\023 \000\000\000\000\000\000\006\021\000\002\000"
+ 1028      00000000 
+ 1028      00061100 
+ 1028      0200
+ 1029 0256 00000511 		.ascii	"\000\000\005\021\000\001\003 \006\021\001\002\000\001"
+ 1029      00010320 
+ 1029      06110102 
+ 1029      0001
+ 1030 0264 38081102 		.ascii	"8\010\021\002\004\000\000\000\000\000\015\021\020\011"
+ 1030      04000000 
+ 1030      00000D11 
+ 1030      1009
+ 1031 0272 00081400 		.ascii	"\000\010\024\000\0171\000\000\000\000\012\021\021\006"
+ 1031      0F310000 
+ 1031      00000A11 
+ 1031      1106
+ 1032 0280 0001B42B 		.ascii	"\000\001\264+\000\000\000\020\021\022\014\000\004\001"
+ 1032      00000010 
+ 1032      11120C00 
+ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccXFQblt.s 			page 31
+
+
+ 1032      0401
+ 1033 028e 08FFFF20 		.ascii	"\010\377\377 \002\000*\001\0000\020\021\022\014\014"
+ 1033      02002A01 
+ 1033      00301011 
+ 1033      120C0C
+ 1034 029d 30000106 		.ascii	"0\000\001\006\202\000?\002*\000\000\000\020\021\022"
+ 1034      82003F02 
+ 1034      2A000000 
+ 1034      101112
+ 1035 02ac 0C180000 		.ascii	"\014\030\000\000\000\000\000\000\000\000\000\000\000"
+ 1035      00000000 
+ 1035      00000000 
+ 1035      00
+ 1036 02b9 00101112 		.ascii	"\000\020\021\022\014$\000\000\000\000\000\000\000\000"
+ 1036      0C240000 
+ 1036      00000000 
+ 1036      0000
+ 1037 02c7 00000000 		.ascii	"\000\000\000\000\011\021\022\0050\000\000\000\000\000"
+ 1037      09111205 
+ 1037      30000000 
+ 1037      0000
+ 1038 02d5 08111204 		.ascii	"\010\021\022\0046\377\377\377\377\020\021 \014\000\003"
+ 1038      36FFFFFF 
+ 1038      FF101120 
+ 1038      0C0003
+ 1039 02e4 00070C35 		.ascii	"\000\007\0145\000\005\214\272\200\000\000\005\021 \001"
+ 1039      00058CBA 
+ 1039      80000005 
+ 1039      112001
+ 1040 02f3 0CCA1011 		.ascii	"\014\312\020\021 \014\030\001\000\010\003\300\0000 "
+ 1040      200C1801 
+ 1040      000803C0 
+ 1040      003020
+ 1041 0302 00E80051 		.ascii	"\000\350\000Q\020\021 \014$\006M2\007\377\002\000\000"
+ 1041      1011200C 
+ 1041      24064D32 
+ 1041      07FF0200 
+ 1041      00
+ 1042 0313 00128065 		.ascii	"\000\022\200e\007\021 \0030\001h\340\005\021 \0015\340"
+ 1042      07112003 
+ 1042      300168E0 
+ 1042      05112001 
+ 1042      35E0
+ 1043 0325 1011200C 		.ascii	"\020\021 \0148\021\022\022\200\032 \000\000(\014\244"
+ 1043      38111212 
+ 1043      801A2000 
+ 1043      00280CA4 
+ 1044 0335 230E1120 		.ascii	"#\016\021 \012E\003\000\200\002\000\377\006\000\030"
+ 1044      0A450300 
+ 1044      800200FF 
+ 1044      060018
+ 1045 0344 40061120 		.ascii	"@\006\021 \002P\204\010\006\021 \002T\003\007\005\021"
+ 1045      02508408 
+ 1045      06112002 
+ 1045      54030705 
+ 1045      11
+ 1046 0355 20015700 		.ascii	" \001W\000\011\021 \005[@\004\004x \020\021!\014\000"
+ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccXFQblt.s 			page 32
+
+
+ 1046      09112005 
+ 1046      5B400404 
+ 1046      78201011 
+ 1046      210C00
+ 1047 0368 7E641BBA 		.ascii	"~d\033\272X\013\335\316\326\346\366\000\020\021!\014"
+ 1047      580BDDCE 
+ 1047      D6E6F600 
+ 1047      1011210C 
+ 1048 0378 0C030315 		.ascii	"\014\003\003\025\360?\000~d\033\272X\013\020\021!\014"
+ 1048      F03F007E 
+ 1048      641BBA58 
+ 1048      0B101121 
+ 1048      0C
+ 1049 0389 18DDCED6 		.ascii	"\030\335\316\326\346\366\000\003\003\025\360?\000\010"
+ 1049      E6F60003 
+ 1049      0315F03F 
+ 1049      0008
+ 1050 0397 11220400 		.ascii	"\021\"\004\000\010\177\000\035\013\021#\007\000,\016"
+ 1050      087F001D 
+ 1050      0B112307 
+ 1050      002C0E
+ 1051 03a6 0B040C73 		.ascii	"\013\004\014s\003\020\0210\014\000\000\000\000\000\000"
+ 1051      03101130 
+ 1051      0C000000 
+ 1051      000000
+ 1052 03b5 00000000 		.ascii	"\000\000\000\000\000\000\000\014\021@\010\000@\016\245"
+ 1052      0000000C 
+ 1052      11400800 
+ 1052      400EA5
+ 1053 03c4 6A0FC120 		.ascii	"j\017\301 \377\000"
+ 1053      FF00
+ 1054              		.section	.data.crc16_tab,"aw"
+ 1055              		.align	2
+ 1056              		.set	.LANCHOR2,. + 0
+ 1059              	crc16_tab:
+ 1060 0000 0000     		.short	0
+ 1061 0002 C1C0     		.short	-16191
+ 1062 0004 81C1     		.short	-15999
+ 1063 0006 4001     		.short	320
+ 1064 0008 01C3     		.short	-15615
+ 1065 000a C003     		.short	960
+ 1066 000c 8002     		.short	640
+ 1067 000e 41C2     		.short	-15807
+ 1068 0010 01C6     		.short	-14847
+ 1069 0012 C006     		.short	1728
+ 1070 0014 8007     		.short	1920
+ 1071 0016 41C7     		.short	-14527
+ 1072 0018 0005     		.short	1280
+ 1073 001a C1C5     		.short	-14911
+ 1074 001c 81C4     		.short	-15231
+ 1075 001e 4004     		.short	1088
+ 1076 0020 01CC     		.short	-13311
+ 1077 0022 C00C     		.short	3264
+ 1078 0024 800D     		.short	3456
+ 1079 0026 41CD     		.short	-12991
+ 1080 0028 000F     		.short	3840
+ 1081 002a C1CF     		.short	-12351
+ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccXFQblt.s 			page 33
+
+
+ 1082 002c 81CE     		.short	-12671
+ 1083 002e 400E     		.short	3648
+ 1084 0030 000A     		.short	2560
+ 1085 0032 C1CA     		.short	-13631
+ 1086 0034 81CB     		.short	-13439
+ 1087 0036 400B     		.short	2880
+ 1088 0038 01C9     		.short	-14079
+ 1089 003a C009     		.short	2496
+ 1090 003c 8008     		.short	2176
+ 1091 003e 41C8     		.short	-14271
+ 1092 0040 01D8     		.short	-10239
+ 1093 0042 C018     		.short	6336
+ 1094 0044 8019     		.short	6528
+ 1095 0046 41D9     		.short	-9919
+ 1096 0048 001B     		.short	6912
+ 1097 004a C1DB     		.short	-9279
+ 1098 004c 81DA     		.short	-9599
+ 1099 004e 401A     		.short	6720
+ 1100 0050 001E     		.short	7680
+ 1101 0052 C1DE     		.short	-8511
+ 1102 0054 81DF     		.short	-8319
+ 1103 0056 401F     		.short	8000
+ 1104 0058 01DD     		.short	-8959
+ 1105 005a C01D     		.short	7616
+ 1106 005c 801C     		.short	7296
+ 1107 005e 41DC     		.short	-9151
+ 1108 0060 0014     		.short	5120
+ 1109 0062 C1D4     		.short	-11071
+ 1110 0064 81D5     		.short	-10879
+ 1111 0066 4015     		.short	5440
+ 1112 0068 01D7     		.short	-10495
+ 1113 006a C017     		.short	6080
+ 1114 006c 8016     		.short	5760
+ 1115 006e 41D6     		.short	-10687
+ 1116 0070 01D2     		.short	-11775
+ 1117 0072 C012     		.short	4800
+ 1118 0074 8013     		.short	4992
+ 1119 0076 41D3     		.short	-11455
+ 1120 0078 0011     		.short	4352
+ 1121 007a C1D1     		.short	-11839
+ 1122 007c 81D0     		.short	-12159
+ 1123 007e 4010     		.short	4160
+ 1124 0080 01F0     		.short	-4095
+ 1125 0082 C030     		.short	12480
+ 1126 0084 8031     		.short	12672
+ 1127 0086 41F1     		.short	-3775
+ 1128 0088 0033     		.short	13056
+ 1129 008a C1F3     		.short	-3135
+ 1130 008c 81F2     		.short	-3455
+ 1131 008e 4032     		.short	12864
+ 1132 0090 0036     		.short	13824
+ 1133 0092 C1F6     		.short	-2367
+ 1134 0094 81F7     		.short	-2175
+ 1135 0096 4037     		.short	14144
+ 1136 0098 01F5     		.short	-2815
+ 1137 009a C035     		.short	13760
+ 1138 009c 8034     		.short	13440
+ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccXFQblt.s 			page 34
+
+
+ 1139 009e 41F4     		.short	-3007
+ 1140 00a0 003C     		.short	15360
+ 1141 00a2 C1FC     		.short	-831
+ 1142 00a4 81FD     		.short	-639
+ 1143 00a6 403D     		.short	15680
+ 1144 00a8 01FF     		.short	-255
+ 1145 00aa C03F     		.short	16320
+ 1146 00ac 803E     		.short	16000
+ 1147 00ae 41FE     		.short	-447
+ 1148 00b0 01FA     		.short	-1535
+ 1149 00b2 C03A     		.short	15040
+ 1150 00b4 803B     		.short	15232
+ 1151 00b6 41FB     		.short	-1215
+ 1152 00b8 0039     		.short	14592
+ 1153 00ba C1F9     		.short	-1599
+ 1154 00bc 81F8     		.short	-1919
+ 1155 00be 4038     		.short	14400
+ 1156 00c0 0028     		.short	10240
+ 1157 00c2 C1E8     		.short	-5951
+ 1158 00c4 81E9     		.short	-5759
+ 1159 00c6 4029     		.short	10560
+ 1160 00c8 01EB     		.short	-5375
+ 1161 00ca C02B     		.short	11200
+ 1162 00cc 802A     		.short	10880
+ 1163 00ce 41EA     		.short	-5567
+ 1164 00d0 01EE     		.short	-4607
+ 1165 00d2 C02E     		.short	11968
+ 1166 00d4 802F     		.short	12160
+ 1167 00d6 41EF     		.short	-4287
+ 1168 00d8 002D     		.short	11520
+ 1169 00da C1ED     		.short	-4671
+ 1170 00dc 81EC     		.short	-4991
+ 1171 00de 402C     		.short	11328
+ 1172 00e0 01E4     		.short	-7167
+ 1173 00e2 C024     		.short	9408
+ 1174 00e4 8025     		.short	9600
+ 1175 00e6 41E5     		.short	-6847
+ 1176 00e8 0027     		.short	9984
+ 1177 00ea C1E7     		.short	-6207
+ 1178 00ec 81E6     		.short	-6527
+ 1179 00ee 4026     		.short	9792
+ 1180 00f0 0022     		.short	8704
+ 1181 00f2 C1E2     		.short	-7487
+ 1182 00f4 81E3     		.short	-7295
+ 1183 00f6 4023     		.short	9024
+ 1184 00f8 01E1     		.short	-7935
+ 1185 00fa C021     		.short	8640
+ 1186 00fc 8020     		.short	8320
+ 1187 00fe 41E0     		.short	-8127
+ 1188 0100 01A0     		.short	-24575
+ 1189 0102 C060     		.short	24768
+ 1190 0104 8061     		.short	24960
+ 1191 0106 41A1     		.short	-24255
+ 1192 0108 0063     		.short	25344
+ 1193 010a C1A3     		.short	-23615
+ 1194 010c 81A2     		.short	-23935
+ 1195 010e 4062     		.short	25152
+ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccXFQblt.s 			page 35
+
+
+ 1196 0110 0066     		.short	26112
+ 1197 0112 C1A6     		.short	-22847
+ 1198 0114 81A7     		.short	-22655
+ 1199 0116 4067     		.short	26432
+ 1200 0118 01A5     		.short	-23295
+ 1201 011a C065     		.short	26048
+ 1202 011c 8064     		.short	25728
+ 1203 011e 41A4     		.short	-23487
+ 1204 0120 006C     		.short	27648
+ 1205 0122 C1AC     		.short	-21311
+ 1206 0124 81AD     		.short	-21119
+ 1207 0126 406D     		.short	27968
+ 1208 0128 01AF     		.short	-20735
+ 1209 012a C06F     		.short	28608
+ 1210 012c 806E     		.short	28288
+ 1211 012e 41AE     		.short	-20927
+ 1212 0130 01AA     		.short	-22015
+ 1213 0132 C06A     		.short	27328
+ 1214 0134 806B     		.short	27520
+ 1215 0136 41AB     		.short	-21695
+ 1216 0138 0069     		.short	26880
+ 1217 013a C1A9     		.short	-22079
+ 1218 013c 81A8     		.short	-22399
+ 1219 013e 4068     		.short	26688
+ 1220 0140 0078     		.short	30720
+ 1221 0142 C1B8     		.short	-18239
+ 1222 0144 81B9     		.short	-18047
+ 1223 0146 4079     		.short	31040
+ 1224 0148 01BB     		.short	-17663
+ 1225 014a C07B     		.short	31680
+ 1226 014c 807A     		.short	31360
+ 1227 014e 41BA     		.short	-17855
+ 1228 0150 01BE     		.short	-16895
+ 1229 0152 C07E     		.short	32448
+ 1230 0154 807F     		.short	32640
+ 1231 0156 41BF     		.short	-16575
+ 1232 0158 007D     		.short	32000
+ 1233 015a C1BD     		.short	-16959
+ 1234 015c 81BC     		.short	-17279
+ 1235 015e 407C     		.short	31808
+ 1236 0160 01B4     		.short	-19455
+ 1237 0162 C074     		.short	29888
+ 1238 0164 8075     		.short	30080
+ 1239 0166 41B5     		.short	-19135
+ 1240 0168 0077     		.short	30464
+ 1241 016a C1B7     		.short	-18495
+ 1242 016c 81B6     		.short	-18815
+ 1243 016e 4076     		.short	30272
+ 1244 0170 0072     		.short	29184
+ 1245 0172 C1B2     		.short	-19775
+ 1246 0174 81B3     		.short	-19583
+ 1247 0176 4073     		.short	29504
+ 1248 0178 01B1     		.short	-20223
+ 1249 017a C071     		.short	29120
+ 1250 017c 8070     		.short	28800
+ 1251 017e 41B0     		.short	-20415
+ 1252 0180 0050     		.short	20480
+ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccXFQblt.s 			page 36
+
+
+ 1253 0182 C190     		.short	-28479
+ 1254 0184 8191     		.short	-28287
+ 1255 0186 4051     		.short	20800
+ 1256 0188 0193     		.short	-27903
+ 1257 018a C053     		.short	21440
+ 1258 018c 8052     		.short	21120
+ 1259 018e 4192     		.short	-28095
+ 1260 0190 0196     		.short	-27135
+ 1261 0192 C056     		.short	22208
+ 1262 0194 8057     		.short	22400
+ 1263 0196 4197     		.short	-26815
+ 1264 0198 0055     		.short	21760
+ 1265 019a C195     		.short	-27199
+ 1266 019c 8194     		.short	-27519
+ 1267 019e 4054     		.short	21568
+ 1268 01a0 019C     		.short	-25599
+ 1269 01a2 C05C     		.short	23744
+ 1270 01a4 805D     		.short	23936
+ 1271 01a6 419D     		.short	-25279
+ 1272 01a8 005F     		.short	24320
+ 1273 01aa C19F     		.short	-24639
+ 1274 01ac 819E     		.short	-24959
+ 1275 01ae 405E     		.short	24128
+ 1276 01b0 005A     		.short	23040
+ 1277 01b2 C19A     		.short	-25919
+ 1278 01b4 819B     		.short	-25727
+ 1279 01b6 405B     		.short	23360
+ 1280 01b8 0199     		.short	-26367
+ 1281 01ba C059     		.short	22976
+ 1282 01bc 8058     		.short	22656
+ 1283 01be 4198     		.short	-26559
+ 1284 01c0 0188     		.short	-30719
+ 1285 01c2 C048     		.short	18624
+ 1286 01c4 8049     		.short	18816
+ 1287 01c6 4189     		.short	-30399
+ 1288 01c8 004B     		.short	19200
+ 1289 01ca C18B     		.short	-29759
+ 1290 01cc 818A     		.short	-30079
+ 1291 01ce 404A     		.short	19008
+ 1292 01d0 004E     		.short	19968
+ 1293 01d2 C18E     		.short	-28991
+ 1294 01d4 818F     		.short	-28799
+ 1295 01d6 404F     		.short	20288
+ 1296 01d8 018D     		.short	-29439
+ 1297 01da C04D     		.short	19904
+ 1298 01dc 804C     		.short	19584
+ 1299 01de 418C     		.short	-29631
+ 1300 01e0 0044     		.short	17408
+ 1301 01e2 C184     		.short	-31551
+ 1302 01e4 8185     		.short	-31359
+ 1303 01e6 4045     		.short	17728
+ 1304 01e8 0187     		.short	-30975
+ 1305 01ea C047     		.short	18368
+ 1306 01ec 8046     		.short	18048
+ 1307 01ee 4186     		.short	-31167
+ 1308 01f0 0182     		.short	-32255
+ 1309 01f2 C042     		.short	17088
+ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccXFQblt.s 			page 37
+
+
+ 1310 01f4 8043     		.short	17280
+ 1311 01f6 4183     		.short	-31935
+ 1312 01f8 0041     		.short	16640
+ 1313 01fa C181     		.short	-32319
+ 1314 01fc 8180     		.short	-32639
+ 1315 01fe 4040     		.short	16448
+ 1316              		.section	.data.pRadioConfiguration,"aw"
+ 1317              		.align	2
+ 1318              		.set	.LANCHOR0,. + 0
+ 1321              	pRadioConfiguration:
+ 1322 0000 00000000 		.word	RadioConfiguration
+ 1323              		.text
+ 1324              	.Letext0:
+ 1325              		.file 2 "c:\\program files (x86)\\gnu arm embedded toolchain\\10 2020-q4-major\\arm-none-eabi\\inc
+ 1326              		.file 3 "c:\\program files (x86)\\gnu arm embedded toolchain\\10 2020-q4-major\\arm-none-eabi\\inc
+ 1327              		.file 4 "c:\\program files (x86)\\gnu arm embedded toolchain\\10 2020-q4-major\\lib\\gcc\\arm-none
+ 1328              		.file 5 "Inc/bsp.h"
+ 1329              		.file 6 "Drivers/radio/Si446x/si446x_cmd.h"
+ 1330              		.file 7 "Src/si4463/radio.h"
+ 1331              		.file 8 "Drivers/radio/Si446x/si446x_api_lib.h"
+ 1332              		.file 9 "<built-in>"
+ 1333              		.file 10 "c:\\program files (x86)\\gnu arm embedded toolchain\\10 2020-q4-major\\arm-none-eabi\\in
+ 1334              		.file 11 "Drivers/radio/radio_hal.h"
+ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccXFQblt.s 			page 38
+
+
+DEFINED SYMBOLS
+                            *ABS*:00000000 radio.c
+C:\Users\andywei\AppData\Local\Temp\ccXFQblt.s:18     .text.vRadio_PowerUp:00000000 $t
+C:\Users\andywei\AppData\Local\Temp\ccXFQblt.s:26     .text.vRadio_PowerUp:00000000 vRadio_PowerUp
+C:\Users\andywei\AppData\Local\Temp\ccXFQblt.s:74     .text.vRadio_PowerUp:0000001c $d
+C:\Users\andywei\AppData\Local\Temp\ccXFQblt.s:79     .text.vRadio_Init:00000000 $t
+C:\Users\andywei\AppData\Local\Temp\ccXFQblt.s:86     .text.vRadio_Init:00000000 vRadio_Init
+C:\Users\andywei\AppData\Local\Temp\ccXFQblt.s:147    .text.vRadio_Init:00000034 $d
+C:\Users\andywei\AppData\Local\Temp\ccXFQblt.s:152    .rodata.bRadio_Check_Tx_RX.str1.4:00000000 $d
+C:\Users\andywei\AppData\Local\Temp\ccXFQblt.s:162    .text.bRadio_Check_Tx_RX:00000000 $t
+C:\Users\andywei\AppData\Local\Temp\ccXFQblt.s:169    .text.bRadio_Check_Tx_RX:00000000 bRadio_Check_Tx_RX
+C:\Users\andywei\AppData\Local\Temp\ccXFQblt.s:303    .text.bRadio_Check_Tx_RX:00000090 $d
+C:\Users\andywei\AppData\Local\Temp\ccXFQblt.s:312    .rodata.vRadio_StartRX.str1.4:00000000 $d
+C:\Users\andywei\AppData\Local\Temp\ccXFQblt.s:316    .text.vRadio_StartRX:00000000 $t
+C:\Users\andywei\AppData\Local\Temp\ccXFQblt.s:323    .text.vRadio_StartRX:00000000 vRadio_StartRX
+C:\Users\andywei\AppData\Local\Temp\ccXFQblt.s:387    .text.vRadio_StartRX:00000044 $d
+C:\Users\andywei\AppData\Local\Temp\ccXFQblt.s:392    .rodata.vRadio_StartTx_Variable_Packet.str1.4:00000000 $d
+C:\Users\andywei\AppData\Local\Temp\ccXFQblt.s:396    .text.vRadio_StartTx_Variable_Packet:00000000 $t
+C:\Users\andywei\AppData\Local\Temp\ccXFQblt.s:403    .text.vRadio_StartTx_Variable_Packet:00000000 vRadio_StartTx_Variable_Packet
+C:\Users\andywei\AppData\Local\Temp\ccXFQblt.s:514    .text.vRadio_StartTx_Variable_Packet:00000070 $d
+C:\Users\andywei\AppData\Local\Temp\ccXFQblt.s:519    .text.crc16_jf:00000000 $t
+C:\Users\andywei\AppData\Local\Temp\ccXFQblt.s:526    .text.crc16_jf:00000000 crc16_jf
+C:\Users\andywei\AppData\Local\Temp\ccXFQblt.s:599    .text.crc161:00000000 $t
+C:\Users\andywei\AppData\Local\Temp\ccXFQblt.s:606    .text.crc161:00000000 crc161
+C:\Users\andywei\AppData\Local\Temp\ccXFQblt.s:683    .text.crc16:00000000 $t
+C:\Users\andywei\AppData\Local\Temp\ccXFQblt.s:690    .text.crc16:00000000 crc16
+C:\Users\andywei\AppData\Local\Temp\ccXFQblt.s:771    .text.crc16_table:00000000 $t
+C:\Users\andywei\AppData\Local\Temp\ccXFQblt.s:778    .text.crc16_table:00000000 crc16_table
+C:\Users\andywei\AppData\Local\Temp\ccXFQblt.s:824    .text.crc16_table:00000020 $d
+C:\Users\andywei\AppData\Local\Temp\ccXFQblt.s:829    .text.GetCRC16:00000000 $t
+C:\Users\andywei\AppData\Local\Temp\ccXFQblt.s:836    .text.GetCRC16:00000000 GetCRC16
+C:\Users\andywei\AppData\Local\Temp\ccXFQblt.s:901    .text.CRC16:00000000 $t
+C:\Users\andywei\AppData\Local\Temp\ccXFQblt.s:908    .text.CRC16:00000000 CRC16
+C:\Users\andywei\AppData\Local\Temp\ccXFQblt.s:1059   .data.crc16_tab:00000000 crc16_tab
+C:\Users\andywei\AppData\Local\Temp\ccXFQblt.s:974    .bss.customRadioPacket:00000000 customRadioPacket
+C:\Users\andywei\AppData\Local\Temp\ccXFQblt.s:1321   .data.pRadioConfiguration:00000000 pRadioConfiguration
+C:\Users\andywei\AppData\Local\Temp\ccXFQblt.s:980    .data.RadioConfiguration:00000000 RadioConfiguration
+C:\Users\andywei\AppData\Local\Temp\ccXFQblt.s:992    .data.Radio_Configuration_Data_Array:00000000 Radio_Configuration_Data_Array
+C:\Users\andywei\AppData\Local\Temp\ccXFQblt.s:970    .bss.customRadioPacket:00000000 $d
+C:\Users\andywei\AppData\Local\Temp\ccXFQblt.s:977    .data.RadioConfiguration:00000000 $d
+C:\Users\andywei\AppData\Local\Temp\ccXFQblt.s:989    .data.Radio_Configuration_Data_Array:00000000 $d
+C:\Users\andywei\AppData\Local\Temp\ccXFQblt.s:1055   .data.crc16_tab:00000000 $d
+C:\Users\andywei\AppData\Local\Temp\ccXFQblt.s:1317   .data.pRadioConfiguration:00000000 $d
+
+UNDEFINED SYMBOLS
+si446x_reset
+si446x_configuration_init
+si446x_get_int_status
+radio_hal_NirqLevel
+puts
+si446x_fifo_info
+si446x_change_state
+si446x_read_rx_fifo
+printf
+Si446xCmd
+si446x_set_property
+si446x_start_rx
+ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccXFQblt.s 			page 39
+
+
+malloc
+strncpy
+si446x_write_tx_fifo
+free
+si446x_start_tx

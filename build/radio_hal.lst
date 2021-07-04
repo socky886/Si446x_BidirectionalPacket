@@ -1,0 +1,713 @@
+ARM GAS  C:\Users\andywei\AppData\Local\Temp\cctEOufr.s 			page 1
+
+
+   1              		.cpu cortex-m4
+   2              		.eabi_attribute 27, 1
+   3              		.eabi_attribute 28, 1
+   4              		.eabi_attribute 20, 1
+   5              		.eabi_attribute 21, 1
+   6              		.eabi_attribute 23, 3
+   7              		.eabi_attribute 24, 1
+   8              		.eabi_attribute 25, 1
+   9              		.eabi_attribute 26, 1
+  10              		.eabi_attribute 30, 1
+  11              		.eabi_attribute 34, 1
+  12              		.eabi_attribute 18, 4
+  13              		.file	"radio_hal.c"
+  14              		.text
+  15              	.Ltext0:
+  16              		.cfi_sections	.debug_frame
+  17              		.section	.text.radio_hal_AssertShutdown,"ax",%progbits
+  18              		.align	1
+  19              		.global	radio_hal_AssertShutdown
+  20              		.arch armv7e-m
+  21              		.syntax unified
+  22              		.thumb
+  23              		.thumb_func
+  24              		.fpu fpv4-sp-d16
+  26              	radio_hal_AssertShutdown:
+  27              	.LFB135:
+  28              		.file 1 "Drivers/radio/radio_hal.c"
+   1:Drivers/radio/radio_hal.c **** /*!
+   2:Drivers/radio/radio_hal.c ****  * File:
+   3:Drivers/radio/radio_hal.c ****  *  radio_hal.c
+   4:Drivers/radio/radio_hal.c ****  *
+   5:Drivers/radio/radio_hal.c ****  * Description:
+   6:Drivers/radio/radio_hal.c ****  *  This file contains RADIO HAL.
+   7:Drivers/radio/radio_hal.c ****  *
+   8:Drivers/radio/radio_hal.c ****  * Silicon Laboratories Confidential
+   9:Drivers/radio/radio_hal.c ****  * Copyright 2011 Silicon Laboratories, Inc.
+  10:Drivers/radio/radio_hal.c ****  */
+  11:Drivers/radio/radio_hal.c **** 
+  12:Drivers/radio/radio_hal.c ****                 /* ======================================= *
+  13:Drivers/radio/radio_hal.c ****                  *              I N C L U D E              *
+  14:Drivers/radio/radio_hal.c ****                  * ======================================= */
+  15:Drivers/radio/radio_hal.c **** 
+  16:Drivers/radio/radio_hal.c **** #include "bsp.h"
+  17:Drivers/radio/radio_hal.c **** 
+  18:Drivers/radio/radio_hal.c **** 
+  19:Drivers/radio/radio_hal.c ****                 /* ======================================= *
+  20:Drivers/radio/radio_hal.c ****                  *          D E F I N I T I O N S          *
+  21:Drivers/radio/radio_hal.c ****                  * ======================================= */
+  22:Drivers/radio/radio_hal.c **** 
+  23:Drivers/radio/radio_hal.c ****                 /* ======================================= *
+  24:Drivers/radio/radio_hal.c ****                  *     G L O B A L   V A R I A B L E S     *
+  25:Drivers/radio/radio_hal.c ****                  * ======================================= */
+  26:Drivers/radio/radio_hal.c **** 
+  27:Drivers/radio/radio_hal.c ****                 /* ======================================= *
+  28:Drivers/radio/radio_hal.c ****                  *      L O C A L   F U N C T I O N S      *
+  29:Drivers/radio/radio_hal.c ****                  * ======================================= */
+  30:Drivers/radio/radio_hal.c **** 
+ARM GAS  C:\Users\andywei\AppData\Local\Temp\cctEOufr.s 			page 2
+
+
+  31:Drivers/radio/radio_hal.c ****                 /* ======================================= *
+  32:Drivers/radio/radio_hal.c ****                  *     P U B L I C   F U N C T I O N S     *
+  33:Drivers/radio/radio_hal.c ****                  * ======================================= */
+  34:Drivers/radio/radio_hal.c **** 
+  35:Drivers/radio/radio_hal.c **** void radio_hal_AssertShutdown(void)
+  36:Drivers/radio/radio_hal.c **** {
+  29              		.loc 1 36 1 view -0
+  30              		.cfi_startproc
+  31              		@ args = 0, pretend = 0, frame = 0
+  32              		@ frame_needed = 0, uses_anonymous_args = 0
+  33 0000 08B5     		push	{r3, lr}
+  34              	.LCFI0:
+  35              		.cfi_def_cfa_offset 8
+  36              		.cfi_offset 3, -8
+  37              		.cfi_offset 14, -4
+  37:Drivers/radio/radio_hal.c **** // #if (defined SILABS_PLATFORM_RFSTICK) || (defined SILABS_PLATFORM_LCDBB) || (defined SILABS_PLAT
+  38:Drivers/radio/radio_hal.c **** //   RF_PWRDN = 1;
+  39:Drivers/radio/radio_hal.c **** // #else
+  40:Drivers/radio/radio_hal.c **** //   PWRDN = 1;
+  41:Drivers/radio/radio_hal.c **** // #endif
+  42:Drivers/radio/radio_hal.c ****     HAL_GPIO_WritePin(SX_NRST_GPIO_Port,SX_NRST_Pin,1);
+  38              		.loc 1 42 5 view .LVU1
+  39 0002 0122     		movs	r2, #1
+  40 0004 1146     		mov	r1, r2
+  41 0006 4FF09040 		mov	r0, #1207959552
+  42 000a FFF7FEFF 		bl	HAL_GPIO_WritePin
+  43              	.LVL0:
+  43:Drivers/radio/radio_hal.c **** }
+  44              		.loc 1 43 1 is_stmt 0 view .LVU2
+  45 000e 08BD     		pop	{r3, pc}
+  46              		.cfi_endproc
+  47              	.LFE135:
+  49              		.section	.text.radio_hal_DeassertShutdown,"ax",%progbits
+  50              		.align	1
+  51              		.global	radio_hal_DeassertShutdown
+  52              		.syntax unified
+  53              		.thumb
+  54              		.thumb_func
+  55              		.fpu fpv4-sp-d16
+  57              	radio_hal_DeassertShutdown:
+  58              	.LFB136:
+  44:Drivers/radio/radio_hal.c **** 
+  45:Drivers/radio/radio_hal.c **** void radio_hal_DeassertShutdown(void)
+  46:Drivers/radio/radio_hal.c **** {
+  59              		.loc 1 46 1 is_stmt 1 view -0
+  60              		.cfi_startproc
+  61              		@ args = 0, pretend = 0, frame = 0
+  62              		@ frame_needed = 0, uses_anonymous_args = 0
+  63 0000 08B5     		push	{r3, lr}
+  64              	.LCFI1:
+  65              		.cfi_def_cfa_offset 8
+  66              		.cfi_offset 3, -8
+  67              		.cfi_offset 14, -4
+  47:Drivers/radio/radio_hal.c **** // #if (defined SILABS_PLATFORM_RFSTICK) || (defined SILABS_PLATFORM_LCDBB) || (defined SILABS_PLAT
+  48:Drivers/radio/radio_hal.c **** //   RF_PWRDN = 0;
+  49:Drivers/radio/radio_hal.c **** // #else
+  50:Drivers/radio/radio_hal.c **** //   PWRDN = 0;
+ARM GAS  C:\Users\andywei\AppData\Local\Temp\cctEOufr.s 			page 3
+
+
+  51:Drivers/radio/radio_hal.c **** // #endif
+  52:Drivers/radio/radio_hal.c ****   HAL_GPIO_WritePin(SX_NRST_GPIO_Port,SX_NRST_Pin,0);
+  68              		.loc 1 52 3 view .LVU4
+  69 0002 0022     		movs	r2, #0
+  70 0004 0121     		movs	r1, #1
+  71 0006 4FF09040 		mov	r0, #1207959552
+  72 000a FFF7FEFF 		bl	HAL_GPIO_WritePin
+  73              	.LVL1:
+  53:Drivers/radio/radio_hal.c **** }
+  74              		.loc 1 53 1 is_stmt 0 view .LVU5
+  75 000e 08BD     		pop	{r3, pc}
+  76              		.cfi_endproc
+  77              	.LFE136:
+  79              		.section	.text.radio_hal_ClearNsel,"ax",%progbits
+  80              		.align	1
+  81              		.global	radio_hal_ClearNsel
+  82              		.syntax unified
+  83              		.thumb
+  84              		.thumb_func
+  85              		.fpu fpv4-sp-d16
+  87              	radio_hal_ClearNsel:
+  88              	.LFB137:
+  54:Drivers/radio/radio_hal.c **** 
+  55:Drivers/radio/radio_hal.c **** void radio_hal_ClearNsel(void)
+  56:Drivers/radio/radio_hal.c **** {
+  89              		.loc 1 56 1 is_stmt 1 view -0
+  90              		.cfi_startproc
+  91              		@ args = 0, pretend = 0, frame = 0
+  92              		@ frame_needed = 0, uses_anonymous_args = 0
+  93 0000 08B5     		push	{r3, lr}
+  94              	.LCFI2:
+  95              		.cfi_def_cfa_offset 8
+  96              		.cfi_offset 3, -8
+  97              		.cfi_offset 14, -4
+  57:Drivers/radio/radio_hal.c ****     // RF_NSEL = 0;
+  58:Drivers/radio/radio_hal.c ****     HAL_GPIO_WritePin(SPI1_NSS_GPIO_Port,SPI1_NSS_Pin,0);
+  98              		.loc 1 58 5 view .LVU7
+  99 0002 0022     		movs	r2, #0
+ 100 0004 4FF48071 		mov	r1, #256
+ 101 0008 4FF09040 		mov	r0, #1207959552
+ 102 000c FFF7FEFF 		bl	HAL_GPIO_WritePin
+ 103              	.LVL2:
+  59:Drivers/radio/radio_hal.c **** }
+ 104              		.loc 1 59 1 is_stmt 0 view .LVU8
+ 105 0010 08BD     		pop	{r3, pc}
+ 106              		.cfi_endproc
+ 107              	.LFE137:
+ 109              		.section	.text.radio_hal_SetNsel,"ax",%progbits
+ 110              		.align	1
+ 111              		.global	radio_hal_SetNsel
+ 112              		.syntax unified
+ 113              		.thumb
+ 114              		.thumb_func
+ 115              		.fpu fpv4-sp-d16
+ 117              	radio_hal_SetNsel:
+ 118              	.LFB138:
+  60:Drivers/radio/radio_hal.c **** 
+ARM GAS  C:\Users\andywei\AppData\Local\Temp\cctEOufr.s 			page 4
+
+
+  61:Drivers/radio/radio_hal.c **** void radio_hal_SetNsel(void)
+  62:Drivers/radio/radio_hal.c **** {
+ 119              		.loc 1 62 1 is_stmt 1 view -0
+ 120              		.cfi_startproc
+ 121              		@ args = 0, pretend = 0, frame = 0
+ 122              		@ frame_needed = 0, uses_anonymous_args = 0
+ 123 0000 08B5     		push	{r3, lr}
+ 124              	.LCFI3:
+ 125              		.cfi_def_cfa_offset 8
+ 126              		.cfi_offset 3, -8
+ 127              		.cfi_offset 14, -4
+  63:Drivers/radio/radio_hal.c ****     // RF_NSEL = 1;
+  64:Drivers/radio/radio_hal.c ****     HAL_GPIO_WritePin(SPI1_NSS_GPIO_Port,SPI1_NSS_Pin,1);
+ 128              		.loc 1 64 5 view .LVU10
+ 129 0002 0122     		movs	r2, #1
+ 130 0004 4FF48071 		mov	r1, #256
+ 131 0008 4FF09040 		mov	r0, #1207959552
+ 132 000c FFF7FEFF 		bl	HAL_GPIO_WritePin
+ 133              	.LVL3:
+  65:Drivers/radio/radio_hal.c **** }
+ 134              		.loc 1 65 1 is_stmt 0 view .LVU11
+ 135 0010 08BD     		pop	{r3, pc}
+ 136              		.cfi_endproc
+ 137              	.LFE138:
+ 139              		.section	.text.radio_hal_NirqLevel,"ax",%progbits
+ 140              		.align	1
+ 141              		.global	radio_hal_NirqLevel
+ 142              		.syntax unified
+ 143              		.thumb
+ 144              		.thumb_func
+ 145              		.fpu fpv4-sp-d16
+ 147              	radio_hal_NirqLevel:
+ 148              	.LFB139:
+  66:Drivers/radio/radio_hal.c **** 
+  67:Drivers/radio/radio_hal.c **** BIT radio_hal_NirqLevel(void)
+  68:Drivers/radio/radio_hal.c **** {
+ 149              		.loc 1 68 1 is_stmt 1 view -0
+ 150              		.cfi_startproc
+ 151              		@ args = 0, pretend = 0, frame = 0
+ 152              		@ frame_needed = 0, uses_anonymous_args = 0
+ 153 0000 08B5     		push	{r3, lr}
+ 154              	.LCFI4:
+ 155              		.cfi_def_cfa_offset 8
+ 156              		.cfi_offset 3, -8
+ 157              		.cfi_offset 14, -4
+  69:Drivers/radio/radio_hal.c ****     // return RF_NIRQ;
+  70:Drivers/radio/radio_hal.c ****     return HAL_GPIO_ReadPin(NIRQ_GPIO_Port,NIRQ_Pin);
+ 158              		.loc 1 70 5 view .LVU13
+ 159              		.loc 1 70 12 is_stmt 0 view .LVU14
+ 160 0002 1021     		movs	r1, #16
+ 161 0004 0148     		ldr	r0, .L11
+ 162 0006 FFF7FEFF 		bl	HAL_GPIO_ReadPin
+ 163              	.LVL4:
+  71:Drivers/radio/radio_hal.c ****     
+  72:Drivers/radio/radio_hal.c **** }
+ 164              		.loc 1 72 1 view .LVU15
+ 165 000a 08BD     		pop	{r3, pc}
+ARM GAS  C:\Users\andywei\AppData\Local\Temp\cctEOufr.s 			page 5
+
+
+ 166              	.L12:
+ 167              		.align	2
+ 168              	.L11:
+ 169 000c 00040048 		.word	1207960576
+ 170              		.cfi_endproc
+ 171              	.LFE139:
+ 173              		.section	.text.radio_hal_SpiWriteByte,"ax",%progbits
+ 174              		.align	1
+ 175              		.global	radio_hal_SpiWriteByte
+ 176              		.syntax unified
+ 177              		.thumb
+ 178              		.thumb_func
+ 179              		.fpu fpv4-sp-d16
+ 181              	radio_hal_SpiWriteByte:
+ 182              	.LVL5:
+ 183              	.LFB140:
+  73:Drivers/radio/radio_hal.c **** 
+  74:Drivers/radio/radio_hal.c **** void radio_hal_SpiWriteByte(U8 byteToWrite)
+  75:Drivers/radio/radio_hal.c **** {
+ 184              		.loc 1 75 1 is_stmt 1 view -0
+ 185              		.cfi_startproc
+ 186              		@ args = 0, pretend = 0, frame = 0
+ 187              		@ frame_needed = 0, uses_anonymous_args = 0
+ 188              		.loc 1 75 1 is_stmt 0 view .LVU17
+ 189 0000 08B5     		push	{r3, lr}
+ 190              	.LCFI5:
+ 191              		.cfi_def_cfa_offset 8
+ 192              		.cfi_offset 3, -8
+ 193              		.cfi_offset 14, -4
+  76:Drivers/radio/radio_hal.c **** // #if (defined SILABS_PLATFORM_RFSTICK) || (defined SILABS_PLATFORM_LCDBB) || (defined SILABS_PLAT
+  77:Drivers/radio/radio_hal.c **** //   bSpi_ReadWriteSpi1(byteToWrite);
+  78:Drivers/radio/radio_hal.c **** // #else
+  79:Drivers/radio/radio_hal.c **** //   SpiReadWrite(byteToWrite);
+  80:Drivers/radio/radio_hal.c **** // #endif
+  81:Drivers/radio/radio_hal.c ****   SpiInOut(  byteToWrite );
+ 194              		.loc 1 81 3 is_stmt 1 view .LVU18
+ 195 0002 FFF7FEFF 		bl	SpiInOut
+ 196              	.LVL6:
+  82:Drivers/radio/radio_hal.c **** }
+ 197              		.loc 1 82 1 is_stmt 0 view .LVU19
+ 198 0006 08BD     		pop	{r3, pc}
+ 199              		.cfi_endproc
+ 200              	.LFE140:
+ 202              		.section	.text.radio_hal_SpiReadByte,"ax",%progbits
+ 203              		.align	1
+ 204              		.global	radio_hal_SpiReadByte
+ 205              		.syntax unified
+ 206              		.thumb
+ 207              		.thumb_func
+ 208              		.fpu fpv4-sp-d16
+ 210              	radio_hal_SpiReadByte:
+ 211              	.LFB141:
+  83:Drivers/radio/radio_hal.c **** 
+  84:Drivers/radio/radio_hal.c **** U8 radio_hal_SpiReadByte(void)
+  85:Drivers/radio/radio_hal.c **** {
+ 212              		.loc 1 85 1 is_stmt 1 view -0
+ 213              		.cfi_startproc
+ARM GAS  C:\Users\andywei\AppData\Local\Temp\cctEOufr.s 			page 6
+
+
+ 214              		@ args = 0, pretend = 0, frame = 0
+ 215              		@ frame_needed = 0, uses_anonymous_args = 0
+ 216 0000 08B5     		push	{r3, lr}
+ 217              	.LCFI6:
+ 218              		.cfi_def_cfa_offset 8
+ 219              		.cfi_offset 3, -8
+ 220              		.cfi_offset 14, -4
+  86:Drivers/radio/radio_hal.c **** // #if (defined SILABS_PLATFORM_RFSTICK) || (defined SILABS_PLATFORM_LCDBB) || (defined SILABS_PLAT
+  87:Drivers/radio/radio_hal.c **** //   return bSpi_ReadWriteSpi1(0xFF);
+  88:Drivers/radio/radio_hal.c **** // #else
+  89:Drivers/radio/radio_hal.c **** //   return SpiReadWrite(0xFF);
+  90:Drivers/radio/radio_hal.c **** // #endif
+  91:Drivers/radio/radio_hal.c ****    U8 rs=SpiInOut(0x00);
+ 221              		.loc 1 91 4 view .LVU21
+ 222              		.loc 1 91 10 is_stmt 0 view .LVU22
+ 223 0002 0020     		movs	r0, #0
+ 224 0004 FFF7FEFF 		bl	SpiInOut
+ 225              	.LVL7:
+  92:Drivers/radio/radio_hal.c ****    return rs;
+ 226              		.loc 1 92 4 is_stmt 1 view .LVU23
+  93:Drivers/radio/radio_hal.c **** }
+ 227              		.loc 1 93 1 is_stmt 0 view .LVU24
+ 228 0008 C0B2     		uxtb	r0, r0
+ 229              		.loc 1 93 1 view .LVU25
+ 230 000a 08BD     		pop	{r3, pc}
+ 231              		.cfi_endproc
+ 232              	.LFE141:
+ 234              		.section	.text.radio_hal_SpiWriteData,"ax",%progbits
+ 235              		.align	1
+ 236              		.global	radio_hal_SpiWriteData
+ 237              		.syntax unified
+ 238              		.thumb
+ 239              		.thumb_func
+ 240              		.fpu fpv4-sp-d16
+ 242              	radio_hal_SpiWriteData:
+ 243              	.LVL8:
+ 244              	.LFB142:
+  94:Drivers/radio/radio_hal.c **** 
+  95:Drivers/radio/radio_hal.c **** void radio_hal_SpiWriteData(U8 byteCount, U8* pData)
+  96:Drivers/radio/radio_hal.c **** {
+ 245              		.loc 1 96 1 is_stmt 1 view -0
+ 246              		.cfi_startproc
+ 247              		@ args = 0, pretend = 0, frame = 0
+ 248              		@ frame_needed = 0, uses_anonymous_args = 0
+ 249              		.loc 1 96 1 is_stmt 0 view .LVU27
+ 250 0000 70B5     		push	{r4, r5, r6, lr}
+ 251              	.LCFI7:
+ 252              		.cfi_def_cfa_offset 16
+ 253              		.cfi_offset 4, -16
+ 254              		.cfi_offset 5, -12
+ 255              		.cfi_offset 6, -8
+ 256              		.cfi_offset 14, -4
+ 257 0002 0546     		mov	r5, r0
+ 258 0004 0E46     		mov	r6, r1
+  97:Drivers/radio/radio_hal.c **** // #if (defined SILABS_PLATFORM_RFSTICK) || (defined SILABS_PLATFORM_LCDBB) || (defined SILABS_PLAT
+  98:Drivers/radio/radio_hal.c **** //   vSpi_WriteDataSpi1(byteCount, pData);
+  99:Drivers/radio/radio_hal.c **** // #else
+ARM GAS  C:\Users\andywei\AppData\Local\Temp\cctEOufr.s 			page 7
+
+
+ 100:Drivers/radio/radio_hal.c **** //   SpiWriteData(byteCount, pData);
+ 101:Drivers/radio/radio_hal.c **** // #endif
+ 102:Drivers/radio/radio_hal.c ****    int i;
+ 259              		.loc 1 102 4 is_stmt 1 view .LVU28
+ 103:Drivers/radio/radio_hal.c ****    for ( i = 0; i < byteCount; i++)
+ 260              		.loc 1 103 4 view .LVU29
+ 261              	.LVL9:
+ 262              		.loc 1 103 12 is_stmt 0 view .LVU30
+ 263 0006 0024     		movs	r4, #0
+ 264              		.loc 1 103 4 view .LVU31
+ 265 0008 03E0     		b	.L18
+ 266              	.LVL10:
+ 267              	.L19:
+ 104:Drivers/radio/radio_hal.c ****    {
+ 105:Drivers/radio/radio_hal.c ****       SpiInOut(  pData[i] );
+ 268              		.loc 1 105 7 is_stmt 1 discriminator 3 view .LVU32
+ 269 000a 305D     		ldrb	r0, [r6, r4]	@ zero_extendqisi2
+ 270 000c FFF7FEFF 		bl	SpiInOut
+ 271              	.LVL11:
+ 103:Drivers/radio/radio_hal.c ****    for ( i = 0; i < byteCount; i++)
+ 272              		.loc 1 103 32 discriminator 3 view .LVU33
+ 103:Drivers/radio/radio_hal.c ****    for ( i = 0; i < byteCount; i++)
+ 273              		.loc 1 103 33 is_stmt 0 discriminator 3 view .LVU34
+ 274 0010 0134     		adds	r4, r4, #1
+ 275              	.LVL12:
+ 276              	.L18:
+ 103:Drivers/radio/radio_hal.c ****    for ( i = 0; i < byteCount; i++)
+ 277              		.loc 1 103 17 is_stmt 1 discriminator 1 view .LVU35
+ 103:Drivers/radio/radio_hal.c ****    for ( i = 0; i < byteCount; i++)
+ 278              		.loc 1 103 4 is_stmt 0 discriminator 1 view .LVU36
+ 279 0012 A542     		cmp	r5, r4
+ 280 0014 F9DC     		bgt	.L19
+ 106:Drivers/radio/radio_hal.c ****    }
+ 107:Drivers/radio/radio_hal.c ****    
+ 108:Drivers/radio/radio_hal.c **** }
+ 281              		.loc 1 108 1 view .LVU37
+ 282 0016 70BD     		pop	{r4, r5, r6, pc}
+ 283              		.loc 1 108 1 view .LVU38
+ 284              		.cfi_endproc
+ 285              	.LFE142:
+ 287              		.section	.text.radio_hal_SpiReadData,"ax",%progbits
+ 288              		.align	1
+ 289              		.global	radio_hal_SpiReadData
+ 290              		.syntax unified
+ 291              		.thumb
+ 292              		.thumb_func
+ 293              		.fpu fpv4-sp-d16
+ 295              	radio_hal_SpiReadData:
+ 296              	.LVL13:
+ 297              	.LFB143:
+ 109:Drivers/radio/radio_hal.c **** 
+ 110:Drivers/radio/radio_hal.c **** void radio_hal_SpiReadData(U8 byteCount, U8* pData)
+ 111:Drivers/radio/radio_hal.c **** {
+ 298              		.loc 1 111 1 is_stmt 1 view -0
+ 299              		.cfi_startproc
+ 300              		@ args = 0, pretend = 0, frame = 0
+ 301              		@ frame_needed = 0, uses_anonymous_args = 0
+ARM GAS  C:\Users\andywei\AppData\Local\Temp\cctEOufr.s 			page 8
+
+
+ 302              		.loc 1 111 1 is_stmt 0 view .LVU40
+ 303 0000 70B5     		push	{r4, r5, r6, lr}
+ 304              	.LCFI8:
+ 305              		.cfi_def_cfa_offset 16
+ 306              		.cfi_offset 4, -16
+ 307              		.cfi_offset 5, -12
+ 308              		.cfi_offset 6, -8
+ 309              		.cfi_offset 14, -4
+ 310 0002 0546     		mov	r5, r0
+ 311 0004 0E46     		mov	r6, r1
+ 112:Drivers/radio/radio_hal.c **** // #if (defined SILABS_PLATFORM_RFSTICK) || (defined SILABS_PLATFORM_LCDBB) || (defined SILABS_PLAT
+ 113:Drivers/radio/radio_hal.c **** //   vSpi_ReadDataSpi1(byteCount, pData);
+ 114:Drivers/radio/radio_hal.c **** // #else
+ 115:Drivers/radio/radio_hal.c **** //   SpiReadData(byteCount, pData);
+ 116:Drivers/radio/radio_hal.c **** // #endif
+ 117:Drivers/radio/radio_hal.c ****   int i;
+ 312              		.loc 1 117 3 is_stmt 1 view .LVU41
+ 118:Drivers/radio/radio_hal.c ****   for ( i = 0; i < byteCount; i++)
+ 313              		.loc 1 118 3 view .LVU42
+ 314              	.LVL14:
+ 315              		.loc 1 118 11 is_stmt 0 view .LVU43
+ 316 0006 0024     		movs	r4, #0
+ 317              		.loc 1 118 3 view .LVU44
+ 318 0008 04E0     		b	.L22
+ 319              	.LVL15:
+ 320              	.L23:
+ 119:Drivers/radio/radio_hal.c ****   {
+ 120:Drivers/radio/radio_hal.c ****       pData[i]=SpiInOut(0x00);
+ 321              		.loc 1 120 7 is_stmt 1 discriminator 3 view .LVU45
+ 322              		.loc 1 120 16 is_stmt 0 discriminator 3 view .LVU46
+ 323 000a 0020     		movs	r0, #0
+ 324 000c FFF7FEFF 		bl	SpiInOut
+ 325              	.LVL16:
+ 326              		.loc 1 120 15 discriminator 3 view .LVU47
+ 327 0010 3055     		strb	r0, [r6, r4]
+ 118:Drivers/radio/radio_hal.c ****   for ( i = 0; i < byteCount; i++)
+ 328              		.loc 1 118 31 is_stmt 1 discriminator 3 view .LVU48
+ 118:Drivers/radio/radio_hal.c ****   for ( i = 0; i < byteCount; i++)
+ 329              		.loc 1 118 32 is_stmt 0 discriminator 3 view .LVU49
+ 330 0012 0134     		adds	r4, r4, #1
+ 331              	.LVL17:
+ 332              	.L22:
+ 118:Drivers/radio/radio_hal.c ****   for ( i = 0; i < byteCount; i++)
+ 333              		.loc 1 118 16 is_stmt 1 discriminator 1 view .LVU50
+ 118:Drivers/radio/radio_hal.c ****   for ( i = 0; i < byteCount; i++)
+ 334              		.loc 1 118 3 is_stmt 0 discriminator 1 view .LVU51
+ 335 0014 A542     		cmp	r5, r4
+ 336 0016 F8DC     		bgt	.L23
+ 121:Drivers/radio/radio_hal.c ****   }
+ 122:Drivers/radio/radio_hal.c ****   
+ 123:Drivers/radio/radio_hal.c **** }
+ 337              		.loc 1 123 1 view .LVU52
+ 338 0018 70BD     		pop	{r4, r5, r6, pc}
+ 339              		.loc 1 123 1 view .LVU53
+ 340              		.cfi_endproc
+ 341              	.LFE143:
+ 343              		.section	.text.radio_hal_Gpio0Level,"ax",%progbits
+ARM GAS  C:\Users\andywei\AppData\Local\Temp\cctEOufr.s 			page 9
+
+
+ 344              		.align	1
+ 345              		.global	radio_hal_Gpio0Level
+ 346              		.syntax unified
+ 347              		.thumb
+ 348              		.thumb_func
+ 349              		.fpu fpv4-sp-d16
+ 351              	radio_hal_Gpio0Level:
+ 352              	.LFB144:
+ 124:Drivers/radio/radio_hal.c **** 
+ 125:Drivers/radio/radio_hal.c **** #ifdef RADIO_DRIVER_EXTENDED_SUPPORT
+ 126:Drivers/radio/radio_hal.c **** BIT radio_hal_Gpio0Level(void)
+ 127:Drivers/radio/radio_hal.c **** {
+ 353              		.loc 1 127 1 is_stmt 1 view -0
+ 354              		.cfi_startproc
+ 355              		@ args = 0, pretend = 0, frame = 0
+ 356              		@ frame_needed = 0, uses_anonymous_args = 0
+ 357              		@ link register save eliminated.
+ 128:Drivers/radio/radio_hal.c ****   BIT retVal = FALSE;
+ 358              		.loc 1 128 3 view .LVU55
+ 359              	.LVL18:
+ 129:Drivers/radio/radio_hal.c **** 
+ 130:Drivers/radio/radio_hal.c **** #ifdef SILABS_PLATFORM_DKMB
+ 131:Drivers/radio/radio_hal.c ****   retVal = FALSE;
+ 132:Drivers/radio/radio_hal.c **** #endif
+ 133:Drivers/radio/radio_hal.c **** #ifdef SILABS_PLATFORM_UDP
+ 134:Drivers/radio/radio_hal.c ****   retVal = EZRP_RX_DOUT;
+ 135:Drivers/radio/radio_hal.c **** #endif
+ 136:Drivers/radio/radio_hal.c **** #if (defined SILABS_PLATFORM_RFSTICK) || (defined SILABS_PLATFORM_LCDBB)
+ 137:Drivers/radio/radio_hal.c ****   retVal = RF_GPIO0;
+ 138:Drivers/radio/radio_hal.c **** #endif
+ 139:Drivers/radio/radio_hal.c **** #if (defined SILABS_PLATFORM_WMB930)
+ 140:Drivers/radio/radio_hal.c ****   retVal = FALSE;
+ 141:Drivers/radio/radio_hal.c **** #endif
+ 142:Drivers/radio/radio_hal.c **** #if defined (SILABS_PLATFORM_WMB912)
+ 143:Drivers/radio/radio_hal.c ****   #ifdef SILABS_IO_WITH_EXTENDER
+ 144:Drivers/radio/radio_hal.c ****     //TODO
+ 145:Drivers/radio/radio_hal.c ****     retVal = FALSE;
+ 146:Drivers/radio/radio_hal.c ****   #endif
+ 147:Drivers/radio/radio_hal.c **** #endif
+ 148:Drivers/radio/radio_hal.c **** 
+ 149:Drivers/radio/radio_hal.c ****   return retVal;
+ 360              		.loc 1 149 3 view .LVU56
+ 150:Drivers/radio/radio_hal.c **** }
+ 361              		.loc 1 150 1 is_stmt 0 view .LVU57
+ 362 0000 0020     		movs	r0, #0
+ 363 0002 7047     		bx	lr
+ 364              		.cfi_endproc
+ 365              	.LFE144:
+ 367              		.section	.text.radio_hal_Gpio1Level,"ax",%progbits
+ 368              		.align	1
+ 369              		.global	radio_hal_Gpio1Level
+ 370              		.syntax unified
+ 371              		.thumb
+ 372              		.thumb_func
+ 373              		.fpu fpv4-sp-d16
+ 375              	radio_hal_Gpio1Level:
+ 376              	.LFB145:
+ARM GAS  C:\Users\andywei\AppData\Local\Temp\cctEOufr.s 			page 10
+
+
+ 151:Drivers/radio/radio_hal.c **** 
+ 152:Drivers/radio/radio_hal.c **** BIT radio_hal_Gpio1Level(void)
+ 153:Drivers/radio/radio_hal.c **** {
+ 377              		.loc 1 153 1 is_stmt 1 view -0
+ 378              		.cfi_startproc
+ 379              		@ args = 0, pretend = 0, frame = 0
+ 380              		@ frame_needed = 0, uses_anonymous_args = 0
+ 381              		@ link register save eliminated.
+ 154:Drivers/radio/radio_hal.c ****   BIT retVal = FALSE;
+ 382              		.loc 1 154 3 view .LVU59
+ 383              	.LVL19:
+ 155:Drivers/radio/radio_hal.c **** 
+ 156:Drivers/radio/radio_hal.c **** #ifdef SILABS_PLATFORM_DKMB
+ 157:Drivers/radio/radio_hal.c ****   retVal = FSK_CLK_OUT;
+ 158:Drivers/radio/radio_hal.c **** #endif
+ 159:Drivers/radio/radio_hal.c **** #ifdef SILABS_PLATFORM_UDP
+ 160:Drivers/radio/radio_hal.c ****   retVal = FALSE; //No Pop
+ 161:Drivers/radio/radio_hal.c **** #endif
+ 162:Drivers/radio/radio_hal.c **** #if (defined SILABS_PLATFORM_RFSTICK) || (defined SILABS_PLATFORM_LCDBB) || (defined SILABS_PLATFOR
+ 163:Drivers/radio/radio_hal.c ****   retVal = RF_GPIO1;
+ 164:Drivers/radio/radio_hal.c **** #endif
+ 165:Drivers/radio/radio_hal.c **** #if defined (SILABS_PLATFORM_WMB912)
+ 166:Drivers/radio/radio_hal.c ****   #ifdef SILABS_IO_WITH_EXTENDER
+ 167:Drivers/radio/radio_hal.c ****     //TODO
+ 168:Drivers/radio/radio_hal.c ****     retVal = FALSE;
+ 169:Drivers/radio/radio_hal.c ****   #endif
+ 170:Drivers/radio/radio_hal.c **** #endif
+ 171:Drivers/radio/radio_hal.c **** 
+ 172:Drivers/radio/radio_hal.c ****   return retVal;
+ 384              		.loc 1 172 3 view .LVU60
+ 173:Drivers/radio/radio_hal.c **** }
+ 385              		.loc 1 173 1 is_stmt 0 view .LVU61
+ 386 0000 0020     		movs	r0, #0
+ 387 0002 7047     		bx	lr
+ 388              		.cfi_endproc
+ 389              	.LFE145:
+ 391              		.section	.text.radio_hal_Gpio2Level,"ax",%progbits
+ 392              		.align	1
+ 393              		.global	radio_hal_Gpio2Level
+ 394              		.syntax unified
+ 395              		.thumb
+ 396              		.thumb_func
+ 397              		.fpu fpv4-sp-d16
+ 399              	radio_hal_Gpio2Level:
+ 400              	.LFB146:
+ 174:Drivers/radio/radio_hal.c **** 
+ 175:Drivers/radio/radio_hal.c **** BIT radio_hal_Gpio2Level(void)
+ 176:Drivers/radio/radio_hal.c **** {
+ 401              		.loc 1 176 1 is_stmt 1 view -0
+ 402              		.cfi_startproc
+ 403              		@ args = 0, pretend = 0, frame = 0
+ 404              		@ frame_needed = 0, uses_anonymous_args = 0
+ 405              		@ link register save eliminated.
+ 177:Drivers/radio/radio_hal.c ****   BIT retVal = FALSE;
+ 406              		.loc 1 177 3 view .LVU63
+ 407              	.LVL20:
+ 178:Drivers/radio/radio_hal.c **** 
+ARM GAS  C:\Users\andywei\AppData\Local\Temp\cctEOufr.s 			page 11
+
+
+ 179:Drivers/radio/radio_hal.c **** #ifdef SILABS_PLATFORM_DKMB
+ 180:Drivers/radio/radio_hal.c ****   retVal = DATA_NFFS;
+ 181:Drivers/radio/radio_hal.c **** #endif
+ 182:Drivers/radio/radio_hal.c **** #ifdef SILABS_PLATFORM_UDP
+ 183:Drivers/radio/radio_hal.c ****   retVal = FALSE; //No Pop
+ 184:Drivers/radio/radio_hal.c **** #endif
+ 185:Drivers/radio/radio_hal.c **** #if (defined SILABS_PLATFORM_RFSTICK) || (defined SILABS_PLATFORM_LCDBB) || (defined SILABS_PLATFOR
+ 186:Drivers/radio/radio_hal.c ****   retVal = RF_GPIO2;
+ 187:Drivers/radio/radio_hal.c **** #endif
+ 188:Drivers/radio/radio_hal.c **** #if defined (SILABS_PLATFORM_WMB912)
+ 189:Drivers/radio/radio_hal.c ****   #ifdef SILABS_IO_WITH_EXTENDER
+ 190:Drivers/radio/radio_hal.c ****     //TODO
+ 191:Drivers/radio/radio_hal.c ****     retVal = FALSE;
+ 192:Drivers/radio/radio_hal.c ****   #endif
+ 193:Drivers/radio/radio_hal.c **** #endif
+ 194:Drivers/radio/radio_hal.c **** 
+ 195:Drivers/radio/radio_hal.c ****   return retVal;
+ 408              		.loc 1 195 3 view .LVU64
+ 196:Drivers/radio/radio_hal.c **** }
+ 409              		.loc 1 196 1 is_stmt 0 view .LVU65
+ 410 0000 0020     		movs	r0, #0
+ 411 0002 7047     		bx	lr
+ 412              		.cfi_endproc
+ 413              	.LFE146:
+ 415              		.section	.text.radio_hal_Gpio3Level,"ax",%progbits
+ 416              		.align	1
+ 417              		.global	radio_hal_Gpio3Level
+ 418              		.syntax unified
+ 419              		.thumb
+ 420              		.thumb_func
+ 421              		.fpu fpv4-sp-d16
+ 423              	radio_hal_Gpio3Level:
+ 424              	.LFB147:
+ 197:Drivers/radio/radio_hal.c **** 
+ 198:Drivers/radio/radio_hal.c **** BIT radio_hal_Gpio3Level(void)
+ 199:Drivers/radio/radio_hal.c **** {
+ 425              		.loc 1 199 1 is_stmt 1 view -0
+ 426              		.cfi_startproc
+ 427              		@ args = 0, pretend = 0, frame = 0
+ 428              		@ frame_needed = 0, uses_anonymous_args = 0
+ 429              		@ link register save eliminated.
+ 200:Drivers/radio/radio_hal.c ****   BIT retVal = FALSE;
+ 430              		.loc 1 200 3 view .LVU67
+ 431              	.LVL21:
+ 201:Drivers/radio/radio_hal.c **** 
+ 202:Drivers/radio/radio_hal.c **** #if (defined SILABS_PLATFORM_RFSTICK) || (defined SILABS_PLATFORM_LCDBB) || (defined SILABS_PLATFOR
+ 203:Drivers/radio/radio_hal.c ****   retVal = RF_GPIO3;
+ 204:Drivers/radio/radio_hal.c **** #elif defined (SILABS_PLATFORM_WMB912)
+ 205:Drivers/radio/radio_hal.c ****   #ifdef SILABS_IO_WITH_EXTENDER
+ 206:Drivers/radio/radio_hal.c ****     //TODO
+ 207:Drivers/radio/radio_hal.c ****     retVal = FALSE;
+ 208:Drivers/radio/radio_hal.c ****   #endif
+ 209:Drivers/radio/radio_hal.c **** #endif
+ 210:Drivers/radio/radio_hal.c **** 
+ 211:Drivers/radio/radio_hal.c ****   return retVal;
+ 432              		.loc 1 211 3 view .LVU68
+ 212:Drivers/radio/radio_hal.c **** }
+ARM GAS  C:\Users\andywei\AppData\Local\Temp\cctEOufr.s 			page 12
+
+
+ 433              		.loc 1 212 1 is_stmt 0 view .LVU69
+ 434 0000 0020     		movs	r0, #0
+ 435 0002 7047     		bx	lr
+ 436              		.cfi_endproc
+ 437              	.LFE147:
+ 439              		.text
+ 440              	.Letext0:
+ 441              		.file 2 "c:\\program files (x86)\\gnu arm embedded toolchain\\10 2020-q4-major\\arm-none-eabi\\inc
+ 442              		.file 3 "c:\\program files (x86)\\gnu arm embedded toolchain\\10 2020-q4-major\\arm-none-eabi\\inc
+ 443              		.file 4 "Drivers/CMSIS/Device/ST/STM32L4xx/Include/stm32l476xx.h"
+ 444              		.file 5 "Inc/bsp.h"
+ 445              		.file 6 "Inc/main.h"
+ 446              		.file 7 "Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_gpio.h"
+ARM GAS  C:\Users\andywei\AppData\Local\Temp\cctEOufr.s 			page 13
+
+
+DEFINED SYMBOLS
+                            *ABS*:00000000 radio_hal.c
+C:\Users\andywei\AppData\Local\Temp\cctEOufr.s:18     .text.radio_hal_AssertShutdown:00000000 $t
+C:\Users\andywei\AppData\Local\Temp\cctEOufr.s:26     .text.radio_hal_AssertShutdown:00000000 radio_hal_AssertShutdown
+C:\Users\andywei\AppData\Local\Temp\cctEOufr.s:50     .text.radio_hal_DeassertShutdown:00000000 $t
+C:\Users\andywei\AppData\Local\Temp\cctEOufr.s:57     .text.radio_hal_DeassertShutdown:00000000 radio_hal_DeassertShutdown
+C:\Users\andywei\AppData\Local\Temp\cctEOufr.s:80     .text.radio_hal_ClearNsel:00000000 $t
+C:\Users\andywei\AppData\Local\Temp\cctEOufr.s:87     .text.radio_hal_ClearNsel:00000000 radio_hal_ClearNsel
+C:\Users\andywei\AppData\Local\Temp\cctEOufr.s:110    .text.radio_hal_SetNsel:00000000 $t
+C:\Users\andywei\AppData\Local\Temp\cctEOufr.s:117    .text.radio_hal_SetNsel:00000000 radio_hal_SetNsel
+C:\Users\andywei\AppData\Local\Temp\cctEOufr.s:140    .text.radio_hal_NirqLevel:00000000 $t
+C:\Users\andywei\AppData\Local\Temp\cctEOufr.s:147    .text.radio_hal_NirqLevel:00000000 radio_hal_NirqLevel
+C:\Users\andywei\AppData\Local\Temp\cctEOufr.s:169    .text.radio_hal_NirqLevel:0000000c $d
+C:\Users\andywei\AppData\Local\Temp\cctEOufr.s:174    .text.radio_hal_SpiWriteByte:00000000 $t
+C:\Users\andywei\AppData\Local\Temp\cctEOufr.s:181    .text.radio_hal_SpiWriteByte:00000000 radio_hal_SpiWriteByte
+C:\Users\andywei\AppData\Local\Temp\cctEOufr.s:203    .text.radio_hal_SpiReadByte:00000000 $t
+C:\Users\andywei\AppData\Local\Temp\cctEOufr.s:210    .text.radio_hal_SpiReadByte:00000000 radio_hal_SpiReadByte
+C:\Users\andywei\AppData\Local\Temp\cctEOufr.s:235    .text.radio_hal_SpiWriteData:00000000 $t
+C:\Users\andywei\AppData\Local\Temp\cctEOufr.s:242    .text.radio_hal_SpiWriteData:00000000 radio_hal_SpiWriteData
+C:\Users\andywei\AppData\Local\Temp\cctEOufr.s:288    .text.radio_hal_SpiReadData:00000000 $t
+C:\Users\andywei\AppData\Local\Temp\cctEOufr.s:295    .text.radio_hal_SpiReadData:00000000 radio_hal_SpiReadData
+C:\Users\andywei\AppData\Local\Temp\cctEOufr.s:344    .text.radio_hal_Gpio0Level:00000000 $t
+C:\Users\andywei\AppData\Local\Temp\cctEOufr.s:351    .text.radio_hal_Gpio0Level:00000000 radio_hal_Gpio0Level
+C:\Users\andywei\AppData\Local\Temp\cctEOufr.s:368    .text.radio_hal_Gpio1Level:00000000 $t
+C:\Users\andywei\AppData\Local\Temp\cctEOufr.s:375    .text.radio_hal_Gpio1Level:00000000 radio_hal_Gpio1Level
+C:\Users\andywei\AppData\Local\Temp\cctEOufr.s:392    .text.radio_hal_Gpio2Level:00000000 $t
+C:\Users\andywei\AppData\Local\Temp\cctEOufr.s:399    .text.radio_hal_Gpio2Level:00000000 radio_hal_Gpio2Level
+C:\Users\andywei\AppData\Local\Temp\cctEOufr.s:416    .text.radio_hal_Gpio3Level:00000000 $t
+C:\Users\andywei\AppData\Local\Temp\cctEOufr.s:423    .text.radio_hal_Gpio3Level:00000000 radio_hal_Gpio3Level
+
+UNDEFINED SYMBOLS
+HAL_GPIO_WritePin
+HAL_GPIO_ReadPin
+SpiInOut
