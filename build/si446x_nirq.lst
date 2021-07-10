@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccP56ncB.s 			page 1
+ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccLLFnei.s 			page 1
 
 
    1              		.cpu cortex-m4
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccP56ncB.s 			page 1
   28:Drivers/radio/Si446x/si446x_nirq.c **** #define Si446xDummyPhPend7                      Si446xPhPend7
   29:Drivers/radio/Si446x/si446x_nirq.c **** 
   30:Drivers/radio/Si446x/si446x_nirq.c **** #define Si446xSyncDetectPend                    Si446xModemPend0
-ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccP56ncB.s 			page 2
+ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccLLFnei.s 			page 2
 
 
   31:Drivers/radio/Si446x/si446x_nirq.c **** #define Si446xPreambleDetectPend                Si446xModemPend1
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccP56ncB.s 			page 1
   85:Drivers/radio/Si446x/si446x_nirq.c ****  * This function is used to handle the assertion of nIRQ of the si446x chip.
   86:Drivers/radio/Si446x/si446x_nirq.c ****  *
   87:Drivers/radio/Si446x/si446x_nirq.c ****  * @note This function can take up to 6 ms depending on the startup time of the
-ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccP56ncB.s 			page 3
+ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccLLFnei.s 			page 3
 
 
   88:Drivers/radio/Si446x/si446x_nirq.c ****  * si446x chip.
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccP56ncB.s 			page 1
   68 003c 2C49     		ldr	r1, .L3+24
   69 003e 0870     		strb	r0, [r1]
   70              		.loc 1 102 5 view .LVU8
-ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccP56ncB.s 			page 4
+ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccLLFnei.s 			page 4
 
 
   71 0040 03F04000 		and	r0, r3, #64
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccP56ncB.s 			page 1
  123 00a4 03F00401 		and	r1, r3, #4
  124 00a8 1E4A     		ldr	r2, .L3+76
  125 00aa 1170     		strb	r1, [r2]
-ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccP56ncB.s 			page 5
+ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccLLFnei.s 			page 5
 
 
  126              		.loc 1 104 5 view .LVU23
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccP56ncB.s 			page 1
  178              	.LFE135:
  180              		.global	Si446xChipPend7
  181              		.global	Si446xChipPend6
-ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccP56ncB.s 			page 6
+ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccLLFnei.s 			page 6
 
 
  182              		.global	Si446xChipPend5
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccP56ncB.s 			page 1
  252              		.section	.bss.Si446xModemPend0,"aw",%nobits
  253              		.set	.LANCHOR8,. + 0
  256              	Si446xModemPend0:
-ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccP56ncB.s 			page 7
+ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccLLFnei.s 			page 7
 
 
  257 0000 00       		.space	1
@@ -418,7 +418,7 @@ ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccP56ncB.s 			page 1
  337              		.set	.LANCHOR6,. + 0
  340              	Si446xPhPend6:
  341 0000 00       		.space	1
-ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccP56ncB.s 			page 8
+ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccLLFnei.s 			page 8
 
 
  342              		.section	.bss.Si446xPhPend7,"aw",%nobits
@@ -427,71 +427,71 @@ ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccP56ncB.s 			page 1
  347 0000 00       		.space	1
  348              		.text
  349              	.Letext0:
- 350              		.file 2 "c:\\program files (x86)\\gnu arm embedded toolchain\\10 2020-q4-major\\arm-none-eabi\\inc
- 351              		.file 3 "c:\\program files (x86)\\gnu arm embedded toolchain\\10 2020-q4-major\\arm-none-eabi\\inc
+ 350              		.file 2 "c:\\gnu arm embedded toolchain\\10 2020-q4-major\\arm-none-eabi\\include\\machine\\_defau
+ 351              		.file 3 "c:\\gnu arm embedded toolchain\\10 2020-q4-major\\arm-none-eabi\\include\\sys\\_stdint.h"
  352              		.file 4 "Inc/bsp.h"
  353              		.file 5 "Drivers/radio/Si446x/si446x_cmd.h"
  354              		.file 6 "Drivers/radio/Si446x/si446x_api_lib.h"
-ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccP56ncB.s 			page 9
+ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccLLFnei.s 			page 9
 
 
 DEFINED SYMBOLS
                             *ABS*:00000000 si446x_nirq.c
-C:\Users\andywei\AppData\Local\Temp\ccP56ncB.s:18     .text.si446x_nirq_process:00000000 $t
-C:\Users\andywei\AppData\Local\Temp\ccP56ncB.s:26     .text.si446x_nirq_process:00000000 si446x_nirq_process
-C:\Users\andywei\AppData\Local\Temp\ccP56ncB.s:152    .text.si446x_nirq_process:000000d8 $d
-C:\Users\andywei\AppData\Local\Temp\ccP56ncB.s:250    .bss.Si446xChipPend7:00000000 Si446xChipPend7
-C:\Users\andywei\AppData\Local\Temp\ccP56ncB.s:244    .bss.Si446xChipPend6:00000000 Si446xChipPend6
-C:\Users\andywei\AppData\Local\Temp\ccP56ncB.s:238    .bss.Si446xChipPend5:00000000 Si446xChipPend5
-C:\Users\andywei\AppData\Local\Temp\ccP56ncB.s:232    .bss.Si446xChipPend4:00000000 Si446xChipPend4
-C:\Users\andywei\AppData\Local\Temp\ccP56ncB.s:226    .bss.Si446xChipPend3:00000000 Si446xChipPend3
-C:\Users\andywei\AppData\Local\Temp\ccP56ncB.s:220    .bss.Si446xChipPend2:00000000 Si446xChipPend2
-C:\Users\andywei\AppData\Local\Temp\ccP56ncB.s:214    .bss.Si446xChipPend1:00000000 Si446xChipPend1
-C:\Users\andywei\AppData\Local\Temp\ccP56ncB.s:208    .bss.Si446xChipPend0:00000000 Si446xChipPend0
-C:\Users\andywei\AppData\Local\Temp\ccP56ncB.s:298    .bss.Si446xModemPend7:00000000 Si446xModemPend7
-C:\Users\andywei\AppData\Local\Temp\ccP56ncB.s:292    .bss.Si446xModemPend6:00000000 Si446xModemPend6
-C:\Users\andywei\AppData\Local\Temp\ccP56ncB.s:286    .bss.Si446xModemPend5:00000000 Si446xModemPend5
-C:\Users\andywei\AppData\Local\Temp\ccP56ncB.s:280    .bss.Si446xModemPend4:00000000 Si446xModemPend4
-C:\Users\andywei\AppData\Local\Temp\ccP56ncB.s:274    .bss.Si446xModemPend3:00000000 Si446xModemPend3
-C:\Users\andywei\AppData\Local\Temp\ccP56ncB.s:268    .bss.Si446xModemPend2:00000000 Si446xModemPend2
-C:\Users\andywei\AppData\Local\Temp\ccP56ncB.s:262    .bss.Si446xModemPend1:00000000 Si446xModemPend1
-C:\Users\andywei\AppData\Local\Temp\ccP56ncB.s:256    .bss.Si446xModemPend0:00000000 Si446xModemPend0
-C:\Users\andywei\AppData\Local\Temp\ccP56ncB.s:346    .bss.Si446xPhPend7:00000000 Si446xPhPend7
-C:\Users\andywei\AppData\Local\Temp\ccP56ncB.s:340    .bss.Si446xPhPend6:00000000 Si446xPhPend6
-C:\Users\andywei\AppData\Local\Temp\ccP56ncB.s:334    .bss.Si446xPhPend5:00000000 Si446xPhPend5
-C:\Users\andywei\AppData\Local\Temp\ccP56ncB.s:328    .bss.Si446xPhPend4:00000000 Si446xPhPend4
-C:\Users\andywei\AppData\Local\Temp\ccP56ncB.s:322    .bss.Si446xPhPend3:00000000 Si446xPhPend3
-C:\Users\andywei\AppData\Local\Temp\ccP56ncB.s:316    .bss.Si446xPhPend2:00000000 Si446xPhPend2
-C:\Users\andywei\AppData\Local\Temp\ccP56ncB.s:310    .bss.Si446xPhPend1:00000000 Si446xPhPend1
-C:\Users\andywei\AppData\Local\Temp\ccP56ncB.s:304    .bss.Si446xPhPend0:00000000 Si446xPhPend0
-C:\Users\andywei\AppData\Local\Temp\ccP56ncB.s:209    .bss.Si446xChipPend0:00000000 $d
-C:\Users\andywei\AppData\Local\Temp\ccP56ncB.s:215    .bss.Si446xChipPend1:00000000 $d
-C:\Users\andywei\AppData\Local\Temp\ccP56ncB.s:221    .bss.Si446xChipPend2:00000000 $d
-C:\Users\andywei\AppData\Local\Temp\ccP56ncB.s:227    .bss.Si446xChipPend3:00000000 $d
-C:\Users\andywei\AppData\Local\Temp\ccP56ncB.s:233    .bss.Si446xChipPend4:00000000 $d
-C:\Users\andywei\AppData\Local\Temp\ccP56ncB.s:239    .bss.Si446xChipPend5:00000000 $d
-C:\Users\andywei\AppData\Local\Temp\ccP56ncB.s:245    .bss.Si446xChipPend6:00000000 $d
-C:\Users\andywei\AppData\Local\Temp\ccP56ncB.s:251    .bss.Si446xChipPend7:00000000 $d
-C:\Users\andywei\AppData\Local\Temp\ccP56ncB.s:257    .bss.Si446xModemPend0:00000000 $d
-C:\Users\andywei\AppData\Local\Temp\ccP56ncB.s:263    .bss.Si446xModemPend1:00000000 $d
-C:\Users\andywei\AppData\Local\Temp\ccP56ncB.s:269    .bss.Si446xModemPend2:00000000 $d
-C:\Users\andywei\AppData\Local\Temp\ccP56ncB.s:275    .bss.Si446xModemPend3:00000000 $d
-C:\Users\andywei\AppData\Local\Temp\ccP56ncB.s:281    .bss.Si446xModemPend4:00000000 $d
-C:\Users\andywei\AppData\Local\Temp\ccP56ncB.s:287    .bss.Si446xModemPend5:00000000 $d
-C:\Users\andywei\AppData\Local\Temp\ccP56ncB.s:293    .bss.Si446xModemPend6:00000000 $d
-C:\Users\andywei\AppData\Local\Temp\ccP56ncB.s:299    .bss.Si446xModemPend7:00000000 $d
-C:\Users\andywei\AppData\Local\Temp\ccP56ncB.s:305    .bss.Si446xPhPend0:00000000 $d
-C:\Users\andywei\AppData\Local\Temp\ccP56ncB.s:311    .bss.Si446xPhPend1:00000000 $d
-C:\Users\andywei\AppData\Local\Temp\ccP56ncB.s:317    .bss.Si446xPhPend2:00000000 $d
-C:\Users\andywei\AppData\Local\Temp\ccP56ncB.s:323    .bss.Si446xPhPend3:00000000 $d
-C:\Users\andywei\AppData\Local\Temp\ccP56ncB.s:329    .bss.Si446xPhPend4:00000000 $d
-C:\Users\andywei\AppData\Local\Temp\ccP56ncB.s:335    .bss.Si446xPhPend5:00000000 $d
-C:\Users\andywei\AppData\Local\Temp\ccP56ncB.s:341    .bss.Si446xPhPend6:00000000 $d
-C:\Users\andywei\AppData\Local\Temp\ccP56ncB.s:347    .bss.Si446xPhPend7:00000000 $d
+C:\Users\andywei\AppData\Local\Temp\ccLLFnei.s:18     .text.si446x_nirq_process:00000000 $t
+C:\Users\andywei\AppData\Local\Temp\ccLLFnei.s:26     .text.si446x_nirq_process:00000000 si446x_nirq_process
+C:\Users\andywei\AppData\Local\Temp\ccLLFnei.s:152    .text.si446x_nirq_process:000000d8 $d
+C:\Users\andywei\AppData\Local\Temp\ccLLFnei.s:250    .bss.Si446xChipPend7:00000000 Si446xChipPend7
+C:\Users\andywei\AppData\Local\Temp\ccLLFnei.s:244    .bss.Si446xChipPend6:00000000 Si446xChipPend6
+C:\Users\andywei\AppData\Local\Temp\ccLLFnei.s:238    .bss.Si446xChipPend5:00000000 Si446xChipPend5
+C:\Users\andywei\AppData\Local\Temp\ccLLFnei.s:232    .bss.Si446xChipPend4:00000000 Si446xChipPend4
+C:\Users\andywei\AppData\Local\Temp\ccLLFnei.s:226    .bss.Si446xChipPend3:00000000 Si446xChipPend3
+C:\Users\andywei\AppData\Local\Temp\ccLLFnei.s:220    .bss.Si446xChipPend2:00000000 Si446xChipPend2
+C:\Users\andywei\AppData\Local\Temp\ccLLFnei.s:214    .bss.Si446xChipPend1:00000000 Si446xChipPend1
+C:\Users\andywei\AppData\Local\Temp\ccLLFnei.s:208    .bss.Si446xChipPend0:00000000 Si446xChipPend0
+C:\Users\andywei\AppData\Local\Temp\ccLLFnei.s:298    .bss.Si446xModemPend7:00000000 Si446xModemPend7
+C:\Users\andywei\AppData\Local\Temp\ccLLFnei.s:292    .bss.Si446xModemPend6:00000000 Si446xModemPend6
+C:\Users\andywei\AppData\Local\Temp\ccLLFnei.s:286    .bss.Si446xModemPend5:00000000 Si446xModemPend5
+C:\Users\andywei\AppData\Local\Temp\ccLLFnei.s:280    .bss.Si446xModemPend4:00000000 Si446xModemPend4
+C:\Users\andywei\AppData\Local\Temp\ccLLFnei.s:274    .bss.Si446xModemPend3:00000000 Si446xModemPend3
+C:\Users\andywei\AppData\Local\Temp\ccLLFnei.s:268    .bss.Si446xModemPend2:00000000 Si446xModemPend2
+C:\Users\andywei\AppData\Local\Temp\ccLLFnei.s:262    .bss.Si446xModemPend1:00000000 Si446xModemPend1
+C:\Users\andywei\AppData\Local\Temp\ccLLFnei.s:256    .bss.Si446xModemPend0:00000000 Si446xModemPend0
+C:\Users\andywei\AppData\Local\Temp\ccLLFnei.s:346    .bss.Si446xPhPend7:00000000 Si446xPhPend7
+C:\Users\andywei\AppData\Local\Temp\ccLLFnei.s:340    .bss.Si446xPhPend6:00000000 Si446xPhPend6
+C:\Users\andywei\AppData\Local\Temp\ccLLFnei.s:334    .bss.Si446xPhPend5:00000000 Si446xPhPend5
+C:\Users\andywei\AppData\Local\Temp\ccLLFnei.s:328    .bss.Si446xPhPend4:00000000 Si446xPhPend4
+C:\Users\andywei\AppData\Local\Temp\ccLLFnei.s:322    .bss.Si446xPhPend3:00000000 Si446xPhPend3
+C:\Users\andywei\AppData\Local\Temp\ccLLFnei.s:316    .bss.Si446xPhPend2:00000000 Si446xPhPend2
+C:\Users\andywei\AppData\Local\Temp\ccLLFnei.s:310    .bss.Si446xPhPend1:00000000 Si446xPhPend1
+C:\Users\andywei\AppData\Local\Temp\ccLLFnei.s:304    .bss.Si446xPhPend0:00000000 Si446xPhPend0
+C:\Users\andywei\AppData\Local\Temp\ccLLFnei.s:209    .bss.Si446xChipPend0:00000000 $d
+C:\Users\andywei\AppData\Local\Temp\ccLLFnei.s:215    .bss.Si446xChipPend1:00000000 $d
+C:\Users\andywei\AppData\Local\Temp\ccLLFnei.s:221    .bss.Si446xChipPend2:00000000 $d
+C:\Users\andywei\AppData\Local\Temp\ccLLFnei.s:227    .bss.Si446xChipPend3:00000000 $d
+C:\Users\andywei\AppData\Local\Temp\ccLLFnei.s:233    .bss.Si446xChipPend4:00000000 $d
+C:\Users\andywei\AppData\Local\Temp\ccLLFnei.s:239    .bss.Si446xChipPend5:00000000 $d
+C:\Users\andywei\AppData\Local\Temp\ccLLFnei.s:245    .bss.Si446xChipPend6:00000000 $d
+C:\Users\andywei\AppData\Local\Temp\ccLLFnei.s:251    .bss.Si446xChipPend7:00000000 $d
+C:\Users\andywei\AppData\Local\Temp\ccLLFnei.s:257    .bss.Si446xModemPend0:00000000 $d
+C:\Users\andywei\AppData\Local\Temp\ccLLFnei.s:263    .bss.Si446xModemPend1:00000000 $d
+C:\Users\andywei\AppData\Local\Temp\ccLLFnei.s:269    .bss.Si446xModemPend2:00000000 $d
+C:\Users\andywei\AppData\Local\Temp\ccLLFnei.s:275    .bss.Si446xModemPend3:00000000 $d
+C:\Users\andywei\AppData\Local\Temp\ccLLFnei.s:281    .bss.Si446xModemPend4:00000000 $d
+C:\Users\andywei\AppData\Local\Temp\ccLLFnei.s:287    .bss.Si446xModemPend5:00000000 $d
+C:\Users\andywei\AppData\Local\Temp\ccLLFnei.s:293    .bss.Si446xModemPend6:00000000 $d
+C:\Users\andywei\AppData\Local\Temp\ccLLFnei.s:299    .bss.Si446xModemPend7:00000000 $d
+C:\Users\andywei\AppData\Local\Temp\ccLLFnei.s:305    .bss.Si446xPhPend0:00000000 $d
+C:\Users\andywei\AppData\Local\Temp\ccLLFnei.s:311    .bss.Si446xPhPend1:00000000 $d
+C:\Users\andywei\AppData\Local\Temp\ccLLFnei.s:317    .bss.Si446xPhPend2:00000000 $d
+C:\Users\andywei\AppData\Local\Temp\ccLLFnei.s:323    .bss.Si446xPhPend3:00000000 $d
+C:\Users\andywei\AppData\Local\Temp\ccLLFnei.s:329    .bss.Si446xPhPend4:00000000 $d
+C:\Users\andywei\AppData\Local\Temp\ccLLFnei.s:335    .bss.Si446xPhPend5:00000000 $d
+C:\Users\andywei\AppData\Local\Temp\ccLLFnei.s:341    .bss.Si446xPhPend6:00000000 $d
+C:\Users\andywei\AppData\Local\Temp\ccLLFnei.s:347    .bss.Si446xPhPend7:00000000 $d
 
 UNDEFINED SYMBOLS
 si446x_get_int_status
 Si446xCmd
-ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccP56ncB.s 			page 10
+ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccLLFnei.s 			page 10
 
 

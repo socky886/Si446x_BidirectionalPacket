@@ -33,7 +33,7 @@ build/main.o: Src/main.c Inc/main.h \
  Drivers/radio/radio_comm.h Drivers/radio/Si446x/si446x_api_lib.h \
  Drivers/radio/Si446x/si446x_defs.h Drivers/radio/Si446x/si446x_cmd.h \
  Drivers/radio/Si446x/si446x_prop.h Drivers/radio/Si446x/si446x_nirq.h \
- Drivers/radio/Si446x/si446x_patch.h Src/si4463/radio_config.h \
+ Drivers/radio/Si446x/si446x_patch.h Src/si4463/radio_config_whiten.h \
  Inc/..\drivers\radio\Si446x\si446x_patch.h
 Inc/main.h:
 Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal.h:
@@ -79,5 +79,5 @@ Drivers/radio/Si446x/si446x_cmd.h:
 Drivers/radio/Si446x/si446x_prop.h:
 Drivers/radio/Si446x/si446x_nirq.h:
 Drivers/radio/Si446x/si446x_patch.h:
-Src/si4463/radio_config.h:
+Src/si4463/radio_config_whiten.h:
 Inc/..\drivers\radio\Si446x\si446x_patch.h:

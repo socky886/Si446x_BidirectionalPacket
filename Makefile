@@ -114,10 +114,13 @@ MCU = $(CPU) -mthumb $(FPU) $(FLOAT-ABI)
 # AS defines
 AS_DEFS = 
 
+# -DWHITEN_YES \
 # C defines
 C_DEFS =  \
+-DWHITEN_YES \
 -DUSE_HAL_DRIVER \
--DSTM32L476xx
+-DSTM32L476xx 
+
 
 
 # AS includes

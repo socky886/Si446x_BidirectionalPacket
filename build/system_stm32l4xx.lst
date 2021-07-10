@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\andywei\AppData\Local\Temp\cczvlhLo.s 			page 1
+ARM GAS  C:\Users\andywei\AppData\Local\Temp\cc9Jlnma.s 			page 1
 
 
    1              		.cpu cortex-m4
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\andywei\AppData\Local\Temp\cczvlhLo.s 			page 1
   28:Src/system_stm32l4xx.c ****   *        System Clock source                    | MSI
   29:Src/system_stm32l4xx.c ****   *-----------------------------------------------------------------------------
   30:Src/system_stm32l4xx.c ****   *        SYSCLK(Hz)                             | 4000000
-ARM GAS  C:\Users\andywei\AppData\Local\Temp\cczvlhLo.s 			page 2
+ARM GAS  C:\Users\andywei\AppData\Local\Temp\cc9Jlnma.s 			page 2
 
 
   31:Src/system_stm32l4xx.c ****   *-----------------------------------------------------------------------------
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\andywei\AppData\Local\Temp\cczvlhLo.s 			page 1
   85:Src/system_stm32l4xx.c ****   * @{
   86:Src/system_stm32l4xx.c ****   */
   87:Src/system_stm32l4xx.c **** 
-ARM GAS  C:\Users\andywei\AppData\Local\Temp\cczvlhLo.s 			page 3
+ARM GAS  C:\Users\andywei\AppData\Local\Temp\cc9Jlnma.s 			page 3
 
 
   88:Src/system_stm32l4xx.c **** /** @addtogroup STM32L4xx_System_Private_Includes
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\andywei\AppData\Local\Temp\cczvlhLo.s 			page 1
  142:Src/system_stm32l4xx.c **** #define VECT_TAB_OFFSET         0x00000000U     /*!< Vector Table base offset field.
  143:Src/system_stm32l4xx.c ****                                                      This value must be a multiple of 0x200. */
  144:Src/system_stm32l4xx.c **** #endif /* VECT_TAB_SRAM */
-ARM GAS  C:\Users\andywei\AppData\Local\Temp\cczvlhLo.s 			page 4
+ARM GAS  C:\Users\andywei\AppData\Local\Temp\cc9Jlnma.s 			page 4
 
 
  145:Src/system_stm32l4xx.c **** #endif /* USER_VECT_TAB_ADDRESS */
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\andywei\AppData\Local\Temp\cczvlhLo.s 			page 1
  199:Src/system_stm32l4xx.c **** {
   29              		.loc 1 199 1 view -0
   30              		.cfi_startproc
-ARM GAS  C:\Users\andywei\AppData\Local\Temp\cczvlhLo.s 			page 5
+ARM GAS  C:\Users\andywei\AppData\Local\Temp\cc9Jlnma.s 			page 5
 
 
   31              		@ args = 0, pretend = 0, frame = 0
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\andywei\AppData\Local\Temp\cczvlhLo.s 			page 1
   60              		.loc 1 224 3 is_stmt 1 view .LVU11
   61              		.loc 1 224 11 is_stmt 0 view .LVU12
   62 002e 1A68     		ldr	r2, [r3]
-ARM GAS  C:\Users\andywei\AppData\Local\Temp\cczvlhLo.s 			page 6
+ARM GAS  C:\Users\andywei\AppData\Local\Temp\cc9Jlnma.s 			page 6
 
 
   63 0030 22F48022 		bic	r2, r2, #262144
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\andywei\AppData\Local\Temp\cczvlhLo.s 			page 1
  256:Src/system_stm32l4xx.c ****   *
  257:Src/system_stm32l4xx.c ****   *         (**) HSI_VALUE is a constant defined in stm32l4xx_hal.h file (default value
  258:Src/system_stm32l4xx.c ****   *              16 MHz) but the real value may vary depending on the variations
-ARM GAS  C:\Users\andywei\AppData\Local\Temp\cczvlhLo.s 			page 7
+ARM GAS  C:\Users\andywei\AppData\Local\Temp\cc9Jlnma.s 			page 7
 
 
  259:Src/system_stm32l4xx.c ****   *              in voltage and temperature.
@@ -418,7 +418,7 @@ ARM GAS  C:\Users\andywei\AppData\Local\Temp\cczvlhLo.s 			page 1
  287:Src/system_stm32l4xx.c ****   /* Get SYSCLK source -------------------------------------------------------*/
  288:Src/system_stm32l4xx.c ****   switch (RCC->CFGR & RCC_CFGR_SWS)
  114              		.loc 1 288 3 is_stmt 1 view .LVU26
-ARM GAS  C:\Users\andywei\AppData\Local\Temp\cczvlhLo.s 			page 8
+ARM GAS  C:\Users\andywei\AppData\Local\Temp\cc9Jlnma.s 			page 8
 
 
  115              		.loc 1 288 14 is_stmt 0 view .LVU27
@@ -478,7 +478,7 @@ ARM GAS  C:\Users\andywei\AppData\Local\Temp\cczvlhLo.s 			page 1
  158              		.loc 1 295 7 view .LVU36
  159              		.loc 1 295 23 is_stmt 0 view .LVU37
  160 0048 1F4B     		ldr	r3, .L19+8
-ARM GAS  C:\Users\andywei\AppData\Local\Temp\cczvlhLo.s 			page 9
+ARM GAS  C:\Users\andywei\AppData\Local\Temp\cc9Jlnma.s 			page 9
 
 
  161 004a 204A     		ldr	r2, .L19+12
@@ -538,7 +538,7 @@ ARM GAS  C:\Users\andywei\AppData\Local\Temp\cczvlhLo.s 			page 1
  311:Src/system_stm32l4xx.c ****         case 0x02:  /* HSI used as PLL clock source */
  312:Src/system_stm32l4xx.c ****           pllvco = (HSI_VALUE / pllm);
  313:Src/system_stm32l4xx.c ****           break;
-ARM GAS  C:\Users\andywei\AppData\Local\Temp\cczvlhLo.s 			page 10
+ARM GAS  C:\Users\andywei\AppData\Local\Temp\cc9Jlnma.s 			page 10
 
 
  314:Src/system_stm32l4xx.c **** 
@@ -598,7 +598,7 @@ ARM GAS  C:\Users\andywei\AppData\Local\Temp\cczvlhLo.s 			page 1
  325:Src/system_stm32l4xx.c ****       SystemCoreClock = pllvco/pllr;
  239              		.loc 1 325 7 is_stmt 1 view .LVU69
  240              		.loc 1 325 31 is_stmt 0 view .LVU70
-ARM GAS  C:\Users\andywei\AppData\Local\Temp\cczvlhLo.s 			page 11
+ARM GAS  C:\Users\andywei\AppData\Local\Temp\cc9Jlnma.s 			page 11
 
 
  241 0092 B3FBF2F3 		udiv	r3, r3, r2
@@ -658,7 +658,7 @@ ARM GAS  C:\Users\andywei\AppData\Local\Temp\cczvlhLo.s 			page 1
  279              	.LVL25:
  280              	.L7:
  329:Src/system_stm32l4xx.c ****       break;
-ARM GAS  C:\Users\andywei\AppData\Local\Temp\cczvlhLo.s 			page 12
+ARM GAS  C:\Users\andywei\AppData\Local\Temp\cc9Jlnma.s 			page 12
 
 
  281              		.loc 1 329 7 view .LVU85
@@ -718,38 +718,38 @@ ARM GAS  C:\Users\andywei\AppData\Local\Temp\cczvlhLo.s 			page 1
  338 0020 0024F400 		.word	16000000
  339 0024 00366E01 		.word	24000000
  340 0028 0048E801 		.word	32000000
-ARM GAS  C:\Users\andywei\AppData\Local\Temp\cczvlhLo.s 			page 13
+ARM GAS  C:\Users\andywei\AppData\Local\Temp\cc9Jlnma.s 			page 13
 
 
  341 002c 006CDC02 		.word	48000000
  342              		.text
  343              	.Letext0:
- 344              		.file 2 "c:\\program files (x86)\\gnu arm embedded toolchain\\10 2020-q4-major\\arm-none-eabi\\inc
- 345              		.file 3 "c:\\program files (x86)\\gnu arm embedded toolchain\\10 2020-q4-major\\arm-none-eabi\\inc
+ 344              		.file 2 "c:\\gnu arm embedded toolchain\\10 2020-q4-major\\arm-none-eabi\\include\\machine\\_defau
+ 345              		.file 3 "c:\\gnu arm embedded toolchain\\10 2020-q4-major\\arm-none-eabi\\include\\sys\\_stdint.h"
  346              		.file 4 "Drivers/CMSIS/Include/core_cm4.h"
  347              		.file 5 "Drivers/CMSIS/Device/ST/STM32L4xx/Include/system_stm32l4xx.h"
  348              		.file 6 "Drivers/CMSIS/Device/ST/STM32L4xx/Include/stm32l476xx.h"
-ARM GAS  C:\Users\andywei\AppData\Local\Temp\cczvlhLo.s 			page 14
+ARM GAS  C:\Users\andywei\AppData\Local\Temp\cc9Jlnma.s 			page 14
 
 
 DEFINED SYMBOLS
                             *ABS*:00000000 system_stm32l4xx.c
-C:\Users\andywei\AppData\Local\Temp\cczvlhLo.s:18     .text.SystemInit:00000000 $t
-C:\Users\andywei\AppData\Local\Temp\cczvlhLo.s:26     .text.SystemInit:00000000 SystemInit
-C:\Users\andywei\AppData\Local\Temp\cczvlhLo.s:73     .text.SystemInit:0000003c $d
-C:\Users\andywei\AppData\Local\Temp\cczvlhLo.s:79     .text.SystemCoreClockUpdate:00000000 $t
-C:\Users\andywei\AppData\Local\Temp\cczvlhLo.s:86     .text.SystemCoreClockUpdate:00000000 SystemCoreClockUpdate
-C:\Users\andywei\AppData\Local\Temp\cczvlhLo.s:124    .text.SystemCoreClockUpdate:0000002a $d
-C:\Users\andywei\AppData\Local\Temp\cczvlhLo.s:290    .text.SystemCoreClockUpdate:000000c0 $d
-C:\Users\andywei\AppData\Local\Temp\cczvlhLo.s:329    .rodata.MSIRangeTable:00000000 MSIRangeTable
-C:\Users\andywei\AppData\Local\Temp\cczvlhLo.s:322    .rodata.APBPrescTable:00000000 APBPrescTable
-C:\Users\andywei\AppData\Local\Temp\cczvlhLo.s:315    .rodata.AHBPrescTable:00000000 AHBPrescTable
-C:\Users\andywei\AppData\Local\Temp\cczvlhLo.s:308    .data.SystemCoreClock:00000000 SystemCoreClock
-C:\Users\andywei\AppData\Local\Temp\cczvlhLo.s:304    .data.SystemCoreClock:00000000 $d
-C:\Users\andywei\AppData\Local\Temp\cczvlhLo.s:311    .rodata.AHBPrescTable:00000000 $d
-C:\Users\andywei\AppData\Local\Temp\cczvlhLo.s:319    .rodata.APBPrescTable:00000000 $d
-C:\Users\andywei\AppData\Local\Temp\cczvlhLo.s:325    .rodata.MSIRangeTable:00000000 $d
-C:\Users\andywei\AppData\Local\Temp\cczvlhLo.s:138    .text.SystemCoreClockUpdate:00000037 $d
-C:\Users\andywei\AppData\Local\Temp\cczvlhLo.s:138    .text.SystemCoreClockUpdate:00000038 $t
+C:\Users\andywei\AppData\Local\Temp\cc9Jlnma.s:18     .text.SystemInit:00000000 $t
+C:\Users\andywei\AppData\Local\Temp\cc9Jlnma.s:26     .text.SystemInit:00000000 SystemInit
+C:\Users\andywei\AppData\Local\Temp\cc9Jlnma.s:73     .text.SystemInit:0000003c $d
+C:\Users\andywei\AppData\Local\Temp\cc9Jlnma.s:79     .text.SystemCoreClockUpdate:00000000 $t
+C:\Users\andywei\AppData\Local\Temp\cc9Jlnma.s:86     .text.SystemCoreClockUpdate:00000000 SystemCoreClockUpdate
+C:\Users\andywei\AppData\Local\Temp\cc9Jlnma.s:124    .text.SystemCoreClockUpdate:0000002a $d
+C:\Users\andywei\AppData\Local\Temp\cc9Jlnma.s:290    .text.SystemCoreClockUpdate:000000c0 $d
+C:\Users\andywei\AppData\Local\Temp\cc9Jlnma.s:329    .rodata.MSIRangeTable:00000000 MSIRangeTable
+C:\Users\andywei\AppData\Local\Temp\cc9Jlnma.s:322    .rodata.APBPrescTable:00000000 APBPrescTable
+C:\Users\andywei\AppData\Local\Temp\cc9Jlnma.s:315    .rodata.AHBPrescTable:00000000 AHBPrescTable
+C:\Users\andywei\AppData\Local\Temp\cc9Jlnma.s:308    .data.SystemCoreClock:00000000 SystemCoreClock
+C:\Users\andywei\AppData\Local\Temp\cc9Jlnma.s:304    .data.SystemCoreClock:00000000 $d
+C:\Users\andywei\AppData\Local\Temp\cc9Jlnma.s:311    .rodata.AHBPrescTable:00000000 $d
+C:\Users\andywei\AppData\Local\Temp\cc9Jlnma.s:319    .rodata.APBPrescTable:00000000 $d
+C:\Users\andywei\AppData\Local\Temp\cc9Jlnma.s:325    .rodata.MSIRangeTable:00000000 $d
+C:\Users\andywei\AppData\Local\Temp\cc9Jlnma.s:138    .text.SystemCoreClockUpdate:00000037 $d
+C:\Users\andywei\AppData\Local\Temp\cc9Jlnma.s:138    .text.SystemCoreClockUpdate:00000038 $t
 
 NO UNDEFINED SYMBOLS

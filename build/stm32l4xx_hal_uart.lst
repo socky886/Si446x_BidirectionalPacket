@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s 			page 1
+ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccnxPJT6.s 			page 1
 
 
    1              		.cpu cortex-m4
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s 			page 1
   28:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.c ****             (+++) Configure the USARTx interrupt priority.
   29:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.c ****             (+++) Enable the NVIC USART IRQ handle.
   30:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.c ****         (++) UART interrupts handling:
-ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s 			page 2
+ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccnxPJT6.s 			page 2
 
 
   31:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.c ****               -@@-  The specific UART interrupts (Transmission complete interrupt,
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s 			page 1
   85:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.c ****     (+) ErrorCallback             : Error Callback.
   86:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.c ****     (+) AbortCpltCallback         : Abort Complete Callback.
   87:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.c ****     (+) AbortTransmitCpltCallback : Abort Transmit Complete Callback.
-ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s 			page 3
+ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccnxPJT6.s 			page 3
 
 
   88:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.c ****     (+) AbortReceiveCpltCallback  : Abort Receive Complete Callback.
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s 			page 1
  142:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.c ****     or @ref HAL_UART_Init() function.
  143:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.c **** 
  144:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.c ****     [..]
-ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s 			page 4
+ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccnxPJT6.s 			page 4
 
 
  145:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.c ****     When The compilation define USE_HAL_UART_REGISTER_CALLBACKS is set to 0 or
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s 			page 1
  199:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.c **** 
  200:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.c **** #define LPUART_BRR_MIN  0x00000300U  /* LPUART BRR minimum authorized value */
  201:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.c **** #define LPUART_BRR_MAX  0x000FFFFFU  /* LPUART BRR maximum authorized value */
-ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s 			page 5
+ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccnxPJT6.s 			page 5
 
 
  202:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.c **** 
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s 			page 1
  256:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.c ****   *  @brief    Initialization and Configuration functions
  257:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.c ****   *
  258:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.c **** @verbatim
-ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s 			page 6
+ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccnxPJT6.s 			page 6
 
 
  259:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.c **** ===============================================================================
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s 			page 1
  313:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.c ****   */
  314:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.c **** 
  315:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.c **** /**
-ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s 			page 7
+ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccnxPJT6.s 			page 7
 
 
  316:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.c ****   * @brief Initialize the UART mode according to the specified
@@ -418,7 +418,7 @@ ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s 			page 1
  370:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.c **** 
  371:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.c ****   if (huart->AdvancedInit.AdvFeatureInit != UART_ADVFEATURE_NO_INIT)
  372:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.c ****   {
-ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s 			page 8
+ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccnxPJT6.s 			page 8
 
 
  373:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.c ****     UART_AdvFeatureConfig(huart);
@@ -478,7 +478,7 @@ ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s 			page 1
  427:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.c **** 
  428:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.c ****   __HAL_UART_DISABLE(huart);
  429:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.c **** 
-ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s 			page 9
+ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccnxPJT6.s 			page 9
 
 
  430:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.c ****   /* Set the UART Communication parameters */
@@ -538,7 +538,7 @@ ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s 			page 1
  484:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.c ****   }
  485:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.c ****   /* LIN mode limited to 8-bit data length */
  486:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.c ****   if (huart->Init.WordLength != UART_WORDLENGTH_8B)
-ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s 			page 10
+ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccnxPJT6.s 			page 10
 
 
  487:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.c ****   {
@@ -598,7 +598,7 @@ ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s 			page 1
  541:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.c ****   /* TEACK and/or REACK to check before moving huart->gState and huart->RxState to Ready */
  542:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.c ****   return (UART_CheckIdleState(huart));
  543:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.c **** }
-ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s 			page 11
+ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccnxPJT6.s 			page 11
 
 
  544:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.c **** 
@@ -658,7 +658,7 @@ ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s 			page 1
  598:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.c ****   __HAL_UART_DISABLE(huart);
  599:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.c **** 
  600:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.c ****   /* Set the UART Communication parameters */
-ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s 			page 12
+ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccnxPJT6.s 			page 12
 
 
  601:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.c ****   if (UART_SetConfig(huart) == HAL_ERROR)
@@ -718,7 +718,7 @@ ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s 			page 1
  655:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.c ****   huart->Instance->CR3 = 0x0U;
  656:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.c **** 
  657:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.c **** #if (USE_HAL_UART_REGISTER_CALLBACKS == 1)
-ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s 			page 13
+ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccnxPJT6.s 			page 13
 
 
  658:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.c ****   if (huart->MspDeInitCallback == NULL)
@@ -778,7 +778,7 @@ ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s 			page 1
  712:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.c ****   *         To be used instead of the weak predefined callback
  713:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.c ****   * @param  huart uart handle
  714:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.c ****   * @param  CallbackID ID of the callback to be registered
-ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s 			page 14
+ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccnxPJT6.s 			page 14
 
 
  715:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.c ****   *         This parameter can be one of the following values:
@@ -838,7 +838,7 @@ ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s 			page 1
  769:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.c ****         huart->ErrorCallback = pCallback;
  770:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.c ****         break;
  771:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.c **** 
-ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s 			page 15
+ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccnxPJT6.s 			page 15
 
 
  772:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.c ****       case HAL_UART_ABORT_COMPLETE_CB_ID :
@@ -898,7 +898,7 @@ ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s 			page 1
  826:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.c ****         huart->ErrorCode |= HAL_UART_ERROR_INVALID_CALLBACK;
  827:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.c **** 
  828:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.c ****         status =  HAL_ERROR;
-ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s 			page 16
+ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccnxPJT6.s 			page 16
 
 
  829:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.c ****         break;
@@ -958,7 +958,7 @@ ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s 			page 1
  883:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.c ****         break;
  884:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.c **** 
  885:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.c ****       case HAL_UART_RX_HALFCOMPLETE_CB_ID :
-ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s 			page 17
+ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccnxPJT6.s 			page 17
 
 
  886:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.c ****         huart->RxHalfCpltCallback = HAL_UART_RxHalfCpltCallback;               /* Legacy weak RxHal
@@ -1018,7 +1018,7 @@ ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s 			page 1
  940:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.c ****   else if (HAL_UART_STATE_RESET == huart->gState)
  941:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.c ****   {
  942:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.c ****     switch (CallbackID)
-ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s 			page 18
+ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccnxPJT6.s 			page 18
 
 
  943:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.c ****     {
@@ -1078,7 +1078,7 @@ ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s 			page 1
  997:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.c ****   {
  998:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.c ****     huart->ErrorCode |= HAL_UART_ERROR_INVALID_CALLBACK;
  999:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.c **** 
-ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s 			page 19
+ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccnxPJT6.s 			page 19
 
 
 1000:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.c ****     status =  HAL_ERROR;
@@ -1138,7 +1138,7 @@ ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s 			page 1
 1054:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.c ****     (#) There are two mode of transfer:
 1055:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.c ****        (+) Blocking mode: The communication is performed in polling mode.
 1056:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.c ****            The HAL status of all data processing is returned by the same function
-ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s 			page 20
+ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccnxPJT6.s 			page 20
 
 
 1057:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.c ****            after finishing transfer.
@@ -1198,7 +1198,7 @@ ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s 			page 1
 1111:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.c ****            Received character is then retrieved and stored in Rx buffer, Error code is set to allow
 1112:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.c ****            to identify error type, and HAL_UART_ErrorCallback() user callback is executed.
 1113:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.c ****            Transfer is kept ongoing on UART side.
-ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s 			page 21
+ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccnxPJT6.s 			page 21
 
 
 1114:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.c ****            If user wants to abort it, Abort services should be called by user.
@@ -1258,7 +1258,7 @@ ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s 			page 1
 1168:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.c ****     if ((huart->Init.WordLength == UART_WORDLENGTH_9B) && (huart->Init.Parity == UART_PARITY_NONE))
 1169:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.c ****     {
 1170:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.c ****       pdata8bits  = NULL;
-ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s 			page 22
+ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccnxPJT6.s 			page 22
 
 
 1171:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.c ****       pdata16bits = (uint16_t *) pData;
@@ -1318,7 +1318,7 @@ ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s 			page 1
 1225:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.c ****   * @param huart   UART handle.
 1226:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.c ****   * @param pData   Pointer to data buffer (u8 or u16 data elements).
 1227:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.c ****   * @param Size    Amount of data elements (u8 or u16) to be received.
-ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s 			page 23
+ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccnxPJT6.s 			page 23
 
 
 1228:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.c ****   * @param Timeout Timeout duration.
@@ -1378,7 +1378,7 @@ ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s 			page 1
 1282:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.c ****       }
 1283:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.c ****       if (pdata8bits == NULL)
 1284:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.c ****       {
-ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s 			page 24
+ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccnxPJT6.s 			page 24
 
 
 1285:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.c ****         *pdata16bits = (uint16_t)(huart->Instance->RDR & uhMask);
@@ -1438,7 +1438,7 @@ ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s 			page 1
 1339:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.c ****     if (huart->FifoMode == UART_FIFOMODE_ENABLE)
 1340:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.c ****     {
 1341:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.c ****       /* Set the Tx ISR function pointer according to the data word length */
-ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s 			page 25
+ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccnxPJT6.s 			page 25
 
 
 1342:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.c ****       if ((huart->Init.WordLength == UART_WORDLENGTH_9B) && (huart->Init.Parity == UART_PARITY_NONE
@@ -1498,7 +1498,7 @@ ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s 			page 1
 1396:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.c **** }
 1397:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.c **** 
 1398:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.c **** /**
-ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s 			page 26
+ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccnxPJT6.s 			page 26
 
 
 1399:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.c ****   * @brief Receive an amount of data in interrupt mode.
@@ -1558,7 +1558,7 @@ ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s 			page 1
 1453:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.c ****   /* Check that a Tx process is not already ongoing */
 1454:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.c ****   if (huart->gState == HAL_UART_STATE_READY)
 1455:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.c ****   {
-ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s 			page 27
+ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccnxPJT6.s 			page 27
 
 
 1456:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.c ****     if ((pData == NULL) || (Size == 0U))
@@ -1618,7 +1618,7 @@ ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s 			page 1
 1510:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.c ****   {
 1511:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.c ****     return HAL_BUSY;
 1512:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.c ****   }
-ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s 			page 28
+ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccnxPJT6.s 			page 28
 
 
 1513:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.c **** }
@@ -1678,7 +1678,7 @@ ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s 			page 1
 1567:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.c ****   const HAL_UART_StateTypeDef gstate = huart->gState;
 1568:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.c ****   const HAL_UART_StateTypeDef rxstate = huart->RxState;
 1569:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.c **** 
-ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s 			page 29
+ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccnxPJT6.s 			page 29
 
 
 1570:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.c ****   __HAL_LOCK(huart);
@@ -1738,7 +1738,7 @@ ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s 			page 1
 1624:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.c **** }
 1625:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.c **** 
 1626:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.c **** /**
-ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s 			page 30
+ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccnxPJT6.s 			page 30
 
 
 1627:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.c ****   * @brief Stop the DMA Transfer.
@@ -1798,7 +1798,7 @@ ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s 			page 1
 1681:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.c ****           huart->ErrorCode = HAL_UART_ERROR_DMA;
 1682:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.c **** 
 1683:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.c ****           return HAL_TIMEOUT;
-ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s 			page 31
+ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccnxPJT6.s 			page 31
 
 
 1684:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.c ****         }
@@ -1858,7 +1858,7 @@ ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s 			page 1
 1738:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.c ****       {
 1739:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.c ****         if (HAL_DMA_GetError(huart->hdmatx) == HAL_DMA_ERROR_TIMEOUT)
 1740:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.c ****         {
-ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s 			page 32
+ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccnxPJT6.s 			page 32
 
 
 1741:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.c ****           /* Set error code to DMA */
@@ -1918,7 +1918,7 @@ ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s 			page 1
 1795:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.c ****   huart->RxState = HAL_UART_STATE_READY;
 1796:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.c ****   huart->ReceptionType = HAL_UART_RECEPTION_STANDARD;
 1797:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.c **** 
-ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s 			page 33
+ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccnxPJT6.s 			page 33
 
 
 1798:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.c ****   huart->ErrorCode = HAL_UART_ERROR_NONE;
@@ -1978,7 +1978,7 @@ ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s 			page 1
 1852:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.c ****   huart->TxXferCount = 0U;
 1853:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.c **** 
 1854:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.c **** #if defined(USART_CR1_FIFOEN)
-ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s 			page 34
+ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccnxPJT6.s 			page 34
 
 
 1855:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.c ****   /* Flush the whole TX FIFO (if needed) */
@@ -2038,7 +2038,7 @@ ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s 			page 1
 1909:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.c **** 
 1910:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.c ****       if (HAL_DMA_Abort(huart->hdmarx) != HAL_OK)
 1911:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.c ****       {
-ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s 			page 35
+ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccnxPJT6.s 			page 35
 
 
 1912:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.c ****         if (HAL_DMA_GetError(huart->hdmarx) == HAL_DMA_ERROR_TIMEOUT)
@@ -2098,7 +2098,7 @@ ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s 			page 1
 1966:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.c **** 
 1967:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.c ****   /* If Reception till IDLE event was ongoing, disable IDLEIE interrupt */
 1968:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.c ****   if (huart->ReceptionType == HAL_UART_RECEPTION_TOIDLE)
-ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s 			page 36
+ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccnxPJT6.s 			page 36
 
 
 1969:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.c ****   {
@@ -2158,7 +2158,7 @@ ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s 			page 1
 2023:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.c ****         abortcplt = 0U;
 2024:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.c ****       }
 2025:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.c ****     }
-ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s 			page 37
+ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccnxPJT6.s 			page 37
 
 
 2026:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.c ****   }
@@ -2218,7 +2218,7 @@ ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s 			page 1
 2080:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.c ****     /* Restore huart->gState and huart->RxState to Ready */
 2081:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.c ****     huart->gState  = HAL_UART_STATE_READY;
 2082:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.c ****     huart->RxState = HAL_UART_STATE_READY;
-ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s 			page 38
+ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccnxPJT6.s 			page 38
 
 
 2083:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.c ****     huart->ReceptionType = HAL_UART_RECEPTION_STANDARD;
@@ -2278,7 +2278,7 @@ ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s 			page 1
 2137:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.c ****         /* Call Directly huart->hdmatx->XferAbortCallback function in case of error */
 2138:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.c ****         huart->hdmatx->XferAbortCallback(huart->hdmatx);
 2139:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.c ****       }
-ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s 			page 39
+ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccnxPJT6.s 			page 39
 
 
 2140:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.c ****     }
@@ -2338,7 +2338,7 @@ ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s 			page 1
 2194:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.c **** /**
 2195:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.c ****   * @brief  Abort ongoing Receive transfer (Interrupt mode).
 2196:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.c ****   * @param  huart UART handle.
-ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s 			page 40
+ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccnxPJT6.s 			page 40
 
 
 2197:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.c ****   * @note   This procedure could be used for aborting any ongoing Rx transfer started in Interrupt 
@@ -2398,7 +2398,7 @@ ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s 			page 1
 2251:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.c **** 
 2252:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.c ****       /* Clear the Error flags in the ICR register */
 2253:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.c ****       __HAL_UART_CLEAR_FLAG(huart, UART_CLEAR_OREF | UART_CLEAR_NEF | UART_CLEAR_PEF | UART_CLEAR_F
-ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s 			page 41
+ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccnxPJT6.s 			page 41
 
 
 2254:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.c **** 
@@ -2458,7 +2458,7 @@ ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s 			page 1
 2308:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.c ****   uint32_t cr1its     = READ_REG(huart->Instance->CR1);
 2309:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.c ****   uint32_t cr3its     = READ_REG(huart->Instance->CR3);
 2310:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.c **** 
-ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s 			page 42
+ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccnxPJT6.s 			page 42
 
 
 2311:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.c ****   uint32_t errorflags;
@@ -2518,7 +2518,7 @@ ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s 			page 1
 2365:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.c ****     {
 2366:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.c ****       __HAL_UART_CLEAR_FLAG(huart, UART_CLEAR_NEF);
 2367:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.c **** 
-ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s 			page 43
+ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccnxPJT6.s 			page 43
 
 
 2368:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.c ****       huart->ErrorCode |= HAL_UART_ERROR_NE;
@@ -2578,7 +2578,7 @@ ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s 			page 1
 2422:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.c ****       {
 2423:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.c ****         /* Blocking error : transfer is aborted
 2424:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.c ****            Set the UART state ready to be able to start again the process,
-ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s 			page 44
+ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccnxPJT6.s 			page 44
 
 
 2425:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.c ****            Disable Rx Interrupts, and disable Rx DMA request, if ongoing */
@@ -2638,7 +2638,7 @@ ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s 			page 1
 2479:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.c **** #else
 2480:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.c ****         /*Call legacy weak error callback*/
 2481:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.c ****         HAL_UART_ErrorCallback(huart);
-ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s 			page 45
+ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccnxPJT6.s 			page 45
 
 
 2482:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.c **** #endif /* USE_HAL_UART_REGISTER_CALLBACKS */
@@ -2698,7 +2698,7 @@ ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s 			page 1
 2536:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.c ****         /*Call legacy weak Rx Event callback*/
 2537:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.c ****         HAL_UARTEx_RxEventCallback(huart, (huart->RxXferSize - huart->RxXferCount));
 2538:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.c **** #endif
-ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s 			page 46
+ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccnxPJT6.s 			page 46
 
 
 2539:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.c ****       }
@@ -2758,7 +2758,7 @@ ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s 			page 1
 2593:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.c **** #if (USE_HAL_UART_REGISTER_CALLBACKS == 1)
 2594:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.c ****     /* Call registered Wakeup Callback */
 2595:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.c ****     huart->WakeupCallback(huart);
-ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s 			page 47
+ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccnxPJT6.s 			page 47
 
 
 2596:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.c **** #else
@@ -2818,7 +2818,7 @@ ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s 			page 1
 2650:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.c **** #endif /* USE_HAL_UART_REGISTER_CALLBACKS */
 2651:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.c ****     return;
 2652:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.c ****   }
-ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s 			page 48
+ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccnxPJT6.s 			page 48
 
 
 2653:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.c **** #endif /* USART_CR1_FIFOEN */
@@ -2878,7 +2878,7 @@ ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s 			page 1
 2707:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.c **** {
 2708:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.c ****   /* Prevent unused argument(s) compilation warning */
 2709:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.c ****   UNUSED(huart);
-ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s 			page 49
+ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccnxPJT6.s 			page 49
 
 
 2710:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.c **** 
@@ -2938,7 +2938,7 @@ ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s 			page 1
 2764:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.c ****   * @retval None
 2765:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.c ****   */
 2766:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.c **** __weak void HAL_UART_AbortReceiveCpltCallback(UART_HandleTypeDef *huart)
-ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s 			page 50
+ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccnxPJT6.s 			page 50
 
 
 2767:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.c **** {
@@ -2998,7 +2998,7 @@ ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s 			page 1
 2821:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.c ****   */
 2822:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.c **** 
 2823:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.c **** /**
-ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s 			page 51
+ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccnxPJT6.s 			page 51
 
 
 2824:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.c ****   * @brief  Update on the fly the receiver timeout value in RTOR register.
@@ -3058,7 +3058,7 @@ ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s 			page 1
 2878:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.c **** /**
 2879:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.c ****   * @brief  Disable the UART receiver timeout feature.
 2880:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.c ****   * @param  huart Pointer to a UART_HandleTypeDef structure that contains
-ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s 			page 52
+ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccnxPJT6.s 			page 52
 
 
 2881:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.c ****   *                    the configuration information for the specified UART module.
@@ -3118,7 +3118,7 @@ ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s 			page 1
 2935:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.c **** 
 2936:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.c **** /**
 2937:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.c ****   * @brief  Disable UART mute mode (does not mean the UART actually exits mute mode
-ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s 			page 53
+ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccnxPJT6.s 			page 53
 
 
 2938:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.c ****   *         as it may not have been in mute mode at this very moment).
@@ -3178,7 +3178,7 @@ ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s 			page 1
 2992:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.c ****   * @param  huart UART handle.
 2993:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.c ****   * @retval HAL status.
 2994:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.c ****   */
-ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s 			page 54
+ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccnxPJT6.s 			page 54
 
 
 2995:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.c **** HAL_StatusTypeDef HAL_HalfDuplex_EnableReceiver(UART_HandleTypeDef *huart)
@@ -3238,7 +3238,7 @@ ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s 			page 1
 3049:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.c ****     [..]
 3050:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.c ****     This subsection provides functions allowing to :
 3051:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.c ****       (+) Return the UART handle state.
-ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s 			page 55
+ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccnxPJT6.s 			page 55
 
 
 3052:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.c ****       (+) Return the UART handle error code
@@ -3298,7 +3298,7 @@ ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s 			page 1
 3106:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.c ****   huart->TxCpltCallback            = HAL_UART_TxCpltCallback;            /* Legacy weak TxCpltCallb
 3107:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.c ****   huart->RxHalfCpltCallback        = HAL_UART_RxHalfCpltCallback;        /* Legacy weak RxHalfCpltC
 3108:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.c ****   huart->RxCpltCallback            = HAL_UART_RxCpltCallback;            /* Legacy weak RxCpltCallb
-ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s 			page 56
+ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccnxPJT6.s 			page 56
 
 
 3109:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.c ****   huart->ErrorCallback             = HAL_UART_ErrorCallback;             /* Legacy weak ErrorCallba
@@ -3358,7 +3358,7 @@ ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s 			page 1
 3163:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.c ****   *  the UART Word Length, Parity, Mode and oversampling:
 3164:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.c ****   *  set the M bits according to huart->Init.WordLength value
 3165:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.c ****   *  set PCE and PS bits according to huart->Init.Parity value
-ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s 			page 57
+ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccnxPJT6.s 			page 57
 
 
 3166:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.c ****   *  set TE and RE bits according to huart->Init.Mode value
@@ -3418,7 +3418,7 @@ ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s 			page 1
 3220:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.c ****         ret = HAL_ERROR;
 3221:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.c ****         break;
 3222:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.c ****     }
-ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s 			page 58
+ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccnxPJT6.s 			page 58
 
 
 3223:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.c **** 
@@ -3478,7 +3478,7 @@ ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s 			page 1
 3277:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.c ****   {
 3278:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.c ****     switch (clocksource)
 3279:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.c ****     {
-ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s 			page 59
+ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccnxPJT6.s 			page 59
 
 
 3280:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.c ****       case UART_CLOCKSOURCE_PCLK1:
@@ -3538,7 +3538,7 @@ ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s 			page 1
 3334:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.c ****       case UART_CLOCKSOURCE_SYSCLK:
 3335:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.c ****         pclk = HAL_RCC_GetSysClockFreq();
 3336:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.c ****         break;
-ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s 			page 60
+ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccnxPJT6.s 			page 60
 
 
 3337:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.c ****       case UART_CLOCKSOURCE_LSE:
@@ -3598,7 +3598,7 @@ ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s 			page 1
 3391:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.c ****     assert_param(IS_UART_ADVFEATURE_TXINV(huart->AdvancedInit.TxPinLevelInvert));
 3392:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.c ****     MODIFY_REG(huart->Instance->CR2, USART_CR2_TXINV, huart->AdvancedInit.TxPinLevelInvert);
 3393:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.c ****   }
-ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s 			page 61
+ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccnxPJT6.s 			page 61
 
 
 3394:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.c **** 
@@ -3658,7 +3658,7 @@ ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s 			page 1
 3448:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.c ****     MODIFY_REG(huart->Instance->CR2, USART_CR2_MSBFIRST, huart->AdvancedInit.MSBFirst);
 3449:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.c ****   }
 3450:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.c **** }
-ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s 			page 62
+ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccnxPJT6.s 			page 62
 
 
 3451:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.c **** 
@@ -3718,7 +3718,7 @@ ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s 			page 1
 3505:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.c ****   * @param Timeout   Timeout duration
 3506:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.c ****   * @retval HAL status
 3507:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.c ****   */
-ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s 			page 63
+ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccnxPJT6.s 			page 63
 
 
 3508:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.c **** HAL_StatusTypeDef UART_WaitOnFlagUntilTimeout(UART_HandleTypeDef *huart, uint32_t Flag, FlagStatus 
@@ -3778,7 +3778,7 @@ ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s 			page 1
 3562:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.c ****     }
 3563:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.c ****   }
 3564:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.c ****   return HAL_OK;
-ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s 			page 64
+ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccnxPJT6.s 			page 64
 
 
 3565:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.c **** }
@@ -3838,7 +3838,7 @@ ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s 			page 1
 3619:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.c ****       huart->RxISR = UART_RxISR_16BIT;
 3620:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.c ****     }
 3621:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.c ****     else
-ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s 			page 65
+ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccnxPJT6.s 			page 65
 
 
 3622:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.c ****     {
@@ -3898,7 +3898,7 @@ ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s 			page 1
 3676:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.c **** 
 3677:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.c ****     /* Set the DMA error callback */
 3678:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.c ****     huart->hdmarx->XferErrorCallback = UART_DMAError;
-ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s 			page 66
+ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccnxPJT6.s 			page 66
 
 
 3679:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.c **** 
@@ -3958,7 +3958,7 @@ ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s 			page 1
   35 0000 0268     		ldr	r2, [r0]
   36 0002 1368     		ldr	r3, [r2]
   37 0004 23F0C003 		bic	r3, r3, #192
-ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s 			page 67
+ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccnxPJT6.s 			page 67
 
 
   38 0008 1360     		str	r3, [r2]
@@ -4018,7 +4018,7 @@ ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s 			page 1
 3748:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.c **** #endif /* USART_CR1_FIFOEN */
 3749:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.c **** 
 3750:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.c ****   /* In case of reception waiting for IDLE event, disable also the IDLE IE interrupt source */
-ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s 			page 68
+ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccnxPJT6.s 			page 68
 
 
 3751:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.c ****   if (huart->ReceptionType == HAL_UART_RECEPTION_TOIDLE)
@@ -4078,7 +4078,7 @@ ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s 			page 1
 3766:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.c ****   * @brief DMA UART transmit process complete callback.
 3767:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.c ****   * @param hdma DMA handle.
 3768:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.c ****   * @retval None
-ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s 			page 69
+ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccnxPJT6.s 			page 69
 
 
 3769:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.c ****   */
@@ -4138,7 +4138,7 @@ ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s 			page 1
 3823:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.c **** {
 3824:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.c ****   UART_HandleTypeDef *huart = (UART_HandleTypeDef *)(hdma->Parent);
 3825:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.c **** 
-ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s 			page 70
+ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccnxPJT6.s 			page 70
 
 
 3826:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.c ****   /* DMA Normal mode */
@@ -4198,7 +4198,7 @@ ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s 			page 1
 3880:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.c **** {
 3881:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.c ****   UART_HandleTypeDef *huart = (UART_HandleTypeDef *)(hdma->Parent);
 3882:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.c **** 
-ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s 			page 71
+ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccnxPJT6.s 			page 71
 
 
 3883:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.c ****   /* Check current reception Mode :
@@ -4258,7 +4258,7 @@ ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s 			page 1
 3937:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.c **** 
 3938:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.c **** #if (USE_HAL_UART_REGISTER_CALLBACKS == 1)
 3939:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.c ****   /*Call registered error callback*/
-ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s 			page 72
+ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccnxPJT6.s 			page 72
 
 
 3940:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.c ****   huart->ErrorCallback(huart);
@@ -4318,7 +4318,7 @@ ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s 			page 1
 3994:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.c **** 
 3995:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.c ****   /* Reset errorCode */
 3996:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.c ****   huart->ErrorCode = HAL_UART_ERROR_NONE;
-ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s 			page 73
+ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccnxPJT6.s 			page 73
 
 
 3997:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.c **** 
@@ -4378,7 +4378,7 @@ ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s 			page 1
 4051:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.c **** 
 4052:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.c ****   /* Reset errorCode */
 4053:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.c ****   huart->ErrorCode = HAL_UART_ERROR_NONE;
-ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s 			page 74
+ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccnxPJT6.s 			page 74
 
 
 4054:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.c **** 
@@ -4438,7 +4438,7 @@ ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s 			page 1
 4108:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.c ****   HAL_UART_AbortTransmitCpltCallback(huart);
 4109:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.c **** #endif /* USE_HAL_UART_REGISTER_CALLBACKS */
 4110:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.c **** }
-ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s 			page 75
+ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccnxPJT6.s 			page 75
 
 
 4111:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.c **** 
@@ -4498,7 +4498,7 @@ ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s 			page 1
  121              		.loc 1 4156 6 view .LVU22
  122 0002 212B     		cmp	r3, #33
  123 0004 00D0     		beq	.L8
-ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s 			page 76
+ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccnxPJT6.s 			page 76
 
 
  124              	.L5:
@@ -4558,7 +4558,7 @@ ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s 			page 1
  149              		.loc 1 4172 12 view .LVU31
  150 0028 0368     		ldr	r3, [r0]
 4172:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.c ****       huart->pTxBuffPtr++;
-ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s 			page 77
+ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccnxPJT6.s 			page 77
 
 
  151              		.loc 1 4172 30 view .LVU32
@@ -4618,7 +4618,7 @@ ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s 			page 1
  189              		.loc 1 4188 3 view .LVU42
 4189:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.c **** 
 4190:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.c ****   /* Check that a Tx process is ongoing */
-ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s 			page 78
+ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccnxPJT6.s 			page 78
 
 
 4191:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.c ****   if (huart->gState == HAL_UART_STATE_BUSY_TX)
@@ -4678,7 +4678,7 @@ ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s 			page 1
  216 0024 7047     		bx	lr
  217              	.L11:
 4207:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.c ****       huart->Instance->TDR = (((uint32_t)(*tmp)) & 0x01FFUL);
-ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s 			page 79
+ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccnxPJT6.s 			page 79
 
 
  218              		.loc 1 4207 7 view .LVU52
@@ -4738,7 +4738,7 @@ ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s 			page 1
  262              		.loc 1 685 1 is_stmt 1 view -0
  263              		.cfi_startproc
  264              		@ args = 0, pretend = 0, frame = 0
-ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s 			page 80
+ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccnxPJT6.s 			page 80
 
 
  265              		@ frame_needed = 0, uses_anonymous_args = 0
@@ -4798,7 +4798,7 @@ ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s 			page 1
  314 0002 38B5     		push	{r3, r4, r5, lr}
  315              	.LCFI0:
  316              		.cfi_def_cfa_offset 16
-ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s 			page 81
+ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccnxPJT6.s 			page 81
 
 
  317              		.cfi_offset 3, -16
@@ -4858,7 +4858,7 @@ ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s 			page 1
  354              		.loc 1 670 3 is_stmt 1 view .LVU91
  670:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.c ****   huart->RxState = HAL_UART_STATE_RESET;
  355              		.loc 1 670 17 is_stmt 0 view .LVU92
-ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s 			page 82
+ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccnxPJT6.s 			page 82
 
 
  356 002a AC67     		str	r4, [r5, #120]
@@ -4918,7 +4918,7 @@ ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s 			page 1
  399              		.loc 1 1318 1 is_stmt 1 view -0
  400              		.cfi_startproc
  401              		@ args = 0, pretend = 0, frame = 0
-ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s 			page 83
+ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccnxPJT6.s 			page 83
 
 
  402              		@ frame_needed = 0, uses_anonymous_args = 0
@@ -4978,7 +4978,7 @@ ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s 			page 1
  437              		.loc 1 1334 5 is_stmt 1 discriminator 2 view .LVU124
 1334:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.c ****     huart->gState = HAL_UART_STATE_BUSY_TX;
  438              		.loc 1 1334 22 is_stmt 0 discriminator 2 view .LVU125
-ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s 			page 84
+ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccnxPJT6.s 			page 84
 
 
  439 0026 C0F88030 		str	r3, [r0, #128]
@@ -5038,7 +5038,7 @@ ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s 			page 1
  477              	.LVL18:
  478              	.L30:
 1375:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.c ****     {
-ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s 			page 85
+ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccnxPJT6.s 			page 85
 
 
  479              		.loc 1 1375 71 discriminator 1 view .LVU142
@@ -5098,7 +5098,7 @@ ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s 			page 1
  522              	.LFE141:
  524              		.section	.text.HAL_UART_Transmit_DMA,"ax",%progbits
  525              		.align	1
-ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s 			page 86
+ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccnxPJT6.s 			page 86
 
 
  526              		.global	HAL_UART_Transmit_DMA
@@ -5158,7 +5158,7 @@ ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s 			page 1
  568              		.loc 1 1463 5 discriminator 2 view .LVU166
 1463:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.c ****     huart->TxXferSize  = Size;
  569              		.loc 1 1463 24 is_stmt 0 discriminator 2 view .LVU167
-ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s 			page 87
+ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccnxPJT6.s 			page 87
 
 
  570 0020 C164     		str	r1, [r0, #76]
@@ -5218,7 +5218,7 @@ ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s 			page 1
  605 0042 C36E     		ldr	r3, [r0, #108]
 1479:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.c **** 
  606              		.loc 1 1479 40 view .LVU187
-ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s 			page 88
+ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccnxPJT6.s 			page 88
 
 
  607 0044 1749     		ldr	r1, .L44+8
@@ -5278,7 +5278,7 @@ ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s 			page 1
  644              		.loc 1 1495 9 is_stmt 1 view .LVU204
 1495:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.c ****       }
  645              		.loc 1 1495 16 is_stmt 0 view .LVU205
-ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s 			page 89
+ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccnxPJT6.s 			page 89
 
 
  646 0070 0120     		movs	r0, #1
@@ -5338,7 +5338,7 @@ ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s 			page 1
  689              	.LVL36:
  690              	.L38:
 1458:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.c ****     }
-ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s 			page 90
+ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccnxPJT6.s 			page 90
 
 
  691              		.loc 1 1458 14 view .LVU217
@@ -5398,7 +5398,7 @@ ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s 			page 1
  738              		.loc 1 1568 31 is_stmt 0 view .LVU226
  739 0004 C16F     		ldr	r1, [r0, #124]
  740              	.LVL42:
-ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s 			page 91
+ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccnxPJT6.s 			page 91
 
 
 1570:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.c **** 
@@ -5458,7 +5458,7 @@ ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s 			page 1
  778              		.loc 1 1591 10 is_stmt 0 view .LVU243
  779 0036 1846     		mov	r0, r3
  780              	.LVL43:
-ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s 			page 92
+ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccnxPJT6.s 			page 92
 
 
  781              	.L47:
@@ -5518,7 +5518,7 @@ ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s 			page 1
  828              		.syntax unified
  829              		.thumb
  830              		.thumb_func
-ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s 			page 93
+ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccnxPJT6.s 			page 93
 
 
  831              		.fpu fpv4-sp-d16
@@ -5578,7 +5578,7 @@ ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s 			page 1
  870              		.loc 1 1623 10 is_stmt 0 view .LVU267
  871 0020 1846     		mov	r0, r3
  872              	.LVL48:
-ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s 			page 94
+ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccnxPJT6.s 			page 94
 
 
 1623:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.c **** }
@@ -5638,7 +5638,7 @@ ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s 			page 1
  921              	HAL_UART_DMAStop:
  922              	.LVL51:
  923              	.LFB147:
-ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s 			page 95
+ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccnxPJT6.s 			page 95
 
 
 1632:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.c ****   /* The Lock is not implemented on this API to allow the user application
@@ -5698,7 +5698,7 @@ ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s 			page 1
  964              		.loc 1 1668 62 discriminator 1 view .LVU289
  965 0020 222D     		cmp	r5, #34
  966 0022 18D0     		beq	.L70
-ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s 			page 96
+ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccnxPJT6.s 			page 96
 
 
 1691:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.c **** }
@@ -5758,7 +5758,7 @@ ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s 			page 1
 1659:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.c ****         }
  1007              		.loc 1 1659 11 is_stmt 1 view .LVU304
 1659:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.c ****         }
-ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s 			page 97
+ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccnxPJT6.s 			page 97
 
 
  1008              		.loc 1 1659 18 is_stmt 0 view .LVU305
@@ -5818,7 +5818,7 @@ ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s 			page 1
 1683:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.c ****         }
  1048              		.loc 1 1683 11 is_stmt 1 view .LVU320
 1683:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.c ****         }
-ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s 			page 98
+ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccnxPJT6.s 			page 98
 
 
  1049              		.loc 1 1683 18 is_stmt 0 view .LVU321
@@ -5878,7 +5878,7 @@ ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s 			page 1
  1096 0018 036E     		ldr	r3, [r0, #96]
 1720:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.c ****   {
  1097              		.loc 1 1720 6 view .LVU331
-ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s 			page 99
+ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccnxPJT6.s 			page 99
 
 
  1098 001a 012B     		cmp	r3, #1
@@ -5938,7 +5938,7 @@ ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s 			page 1
  1136 0044 12F0400F 		tst	r2, #64
  1137 0048 0BD0     		beq	.L77
 1753:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.c **** 
-ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s 			page 100
+ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccnxPJT6.s 			page 100
 
 
  1138              		.loc 1 1753 5 is_stmt 1 view .LVU348
@@ -5998,7 +5998,7 @@ ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s 			page 1
 1794:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.c ****   huart->RxState = HAL_UART_STATE_READY;
  1177              		.loc 1 1794 18 is_stmt 0 view .LVU364
  1178 007e 2023     		movs	r3, #32
-ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s 			page 101
+ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccnxPJT6.s 			page 101
 
 
  1179 0080 A367     		str	r3, [r4, #120]
@@ -6058,7 +6058,7 @@ ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s 			page 1
  1217 00a8 0320     		movs	r0, #3
  1218 00aa EEE7     		b	.L76
  1219              	.L81:
-ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s 			page 102
+ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccnxPJT6.s 			page 102
 
 
 1764:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.c ****         {
@@ -6118,7 +6118,7 @@ ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s 			page 1
 1827:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.c ****   {
  1266              		.loc 1 1827 3 view .LVU391
 1827:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.c ****   {
-ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s 			page 103
+ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccnxPJT6.s 			page 103
 
 
  1267              		.loc 1 1827 7 is_stmt 0 view .LVU392
@@ -6178,7 +6178,7 @@ ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s 			page 1
  1305              	.L84:
 1866:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.c **** 
  1306              		.loc 1 1866 1 is_stmt 0 view .LVU409
-ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s 			page 104
+ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccnxPJT6.s 			page 104
 
 
  1307 003a 10BD     		pop	{r4, pc}
@@ -6238,7 +6238,7 @@ ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s 			page 1
  1353 0006 1368     		ldr	r3, [r2]
  1354 0008 23F49073 		bic	r3, r3, #288
  1355 000c 1360     		str	r3, [r2]
-ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s 			page 105
+ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccnxPJT6.s 			page 105
 
 
 1889:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.c **** #endif /* USART_CR1_FIFOEN */
@@ -6298,7 +6298,7 @@ ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s 			page 1
  1394              	.LVL78:
 1910:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.c ****       {
  1395              		.loc 1 1910 10 view .LVU436
-ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s 			page 106
+ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccnxPJT6.s 			page 106
 
 
  1396 003e A8B9     		cbnz	r0, .L93
@@ -6358,7 +6358,7 @@ ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s 			page 1
  1437              	.LVL81:
 1912:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.c ****         {
  1438              		.loc 1 1912 12 view .LVU450
-ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s 			page 107
+ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccnxPJT6.s 			page 107
 
 
  1439 0072 2028     		cmp	r0, #32
@@ -6418,7 +6418,7 @@ ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s 			page 1
  1488              		.loc 1 3771 1 is_stmt 0 view .LVU459
  1489 0000 08B5     		push	{r3, lr}
  1490              	.LCFI12:
-ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s 			page 108
+ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccnxPJT6.s 			page 108
 
 
  1491              		.cfi_def_cfa_offset 8
@@ -6478,7 +6478,7 @@ ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s 			page 1
  1532 0030 FBE7     		b	.L95
  1533              		.cfi_endproc
  1534              	.LFE183:
-ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s 			page 109
+ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccnxPJT6.s 			page 109
 
 
  1536              		.section	.text.UART_EndTransmit_IT,"ax",%progbits
@@ -6538,7 +6538,7 @@ ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s 			page 1
 4259:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.c ****   *         interruptions have been enabled by HAL_UART_Transmit_IT().
 4260:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.c ****   * @param huart UART handle.
 4261:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.c ****   * @retval None
-ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s 			page 110
+ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccnxPJT6.s 			page 110
 
 
 4262:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.c ****   */
@@ -6598,7 +6598,7 @@ ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s 			page 1
  1555              		.cfi_offset 14, -4
 4307:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.c ****   /* Disable the UART Transmit Complete Interrupt */
 4308:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.c ****   CLEAR_BIT(huart->Instance->CR1, USART_CR1_TCIE);
-ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s 			page 111
+ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccnxPJT6.s 			page 111
 
 
  1556              		.loc 1 4308 3 is_stmt 1 view .LVU475
@@ -6658,7 +6658,7 @@ ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s 			page 1
  1594              		.loc 1 2684 1 is_stmt 0 view .LVU484
  1595 0000 7047     		bx	lr
  1596              		.cfi_endproc
-ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s 			page 112
+ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccnxPJT6.s 			page 112
 
 
  1597              	.LFE156:
@@ -6718,7 +6718,7 @@ ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s 			page 1
 2694:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.c **** 
  1648              		.loc 1 2694 3 view .LVU492
 2699:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.c **** 
-ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s 			page 113
+ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccnxPJT6.s 			page 113
 
 
  1649              		.loc 1 2699 1 is_stmt 0 view .LVU493
@@ -6778,7 +6778,7 @@ ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s 			page 1
  1702              		.thumb_func
  1703              		.fpu fpv4-sp-d16
  1705              	UART_DMAError:
-ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s 			page 114
+ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccnxPJT6.s 			page 114
 
 
  1706              	.LVL99:
@@ -6838,7 +6838,7 @@ ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s 			page 1
  1746 0016 2368     		ldr	r3, [r4]
  1747 0018 9B68     		ldr	r3, [r3, #8]
 3929:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.c ****       (rxstate == HAL_UART_STATE_BUSY_RX))
-ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s 			page 115
+ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccnxPJT6.s 			page 115
 
 
  1748              		.loc 1 3929 6 view .LVU514
@@ -6898,7 +6898,7 @@ ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s 			page 1
  1789 0052 E7E7     		b	.L109
  1790              		.cfi_endproc
  1791              	.LFE187:
-ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s 			page 116
+ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccnxPJT6.s 			page 116
 
 
  1793              		.section	.text.UART_DMAAbortOnError,"ax",%progbits
@@ -6958,7 +6958,7 @@ ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s 			page 1
  1840              	HAL_UART_AbortCpltCallback:
  1841              	.LVL112:
  1842              	.LFB160:
-ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s 			page 117
+ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccnxPJT6.s 			page 117
 
 
 2737:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.c ****   /* Prevent unused argument(s) compilation warning */
@@ -7018,7 +7018,7 @@ ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s 			page 1
  1889              		.loc 1 1968 12 is_stmt 0 view .LVU547
  1890 0018 036E     		ldr	r3, [r0, #96]
 1968:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.c ****   {
-ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s 			page 118
+ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccnxPJT6.s 			page 118
 
 
  1891              		.loc 1 1968 6 view .LVU548
@@ -7078,7 +7078,7 @@ ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s 			page 1
 2005:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.c ****   {
  1929              		.loc 1 2005 3 is_stmt 1 view .LVU565
 2005:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.c ****   {
-ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s 			page 119
+ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccnxPJT6.s 			page 119
 
 
  1930              		.loc 1 2005 7 is_stmt 0 view .LVU566
@@ -7138,7 +7138,7 @@ ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s 			page 1
  1971              	.L119:
 1986:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.c ****     }
  1972              		.loc 1 1986 7 view .LVU580
-ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s 			page 120
+ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccnxPJT6.s 			page 120
 
 
 1986:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.c ****     }
@@ -7198,7 +7198,7 @@ ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s 			page 1
  2011              		.loc 1 2042 14 is_stmt 0 view .LVU596
  2012 00a2 236F     		ldr	r3, [r4, #112]
 2042:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.c ****         abortcplt = 1U;
-ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s 			page 121
+ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccnxPJT6.s 			page 121
 
 
  2013              		.loc 1 2042 42 view .LVU597
@@ -7258,7 +7258,7 @@ ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s 			page 1
  2050              		.loc 1 2082 5 is_stmt 1 view .LVU614
 2082:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.c ****     huart->ReceptionType = HAL_UART_RECEPTION_STANDARD;
  2051              		.loc 1 2082 20 is_stmt 0 view .LVU615
-ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s 			page 122
+ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccnxPJT6.s 			page 122
 
 
  2052 00d0 E267     		str	r2, [r4, #124]
@@ -7318,7 +7318,7 @@ ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s 			page 1
  2097              		.fpu fpv4-sp-d16
  2099              	UART_DMARxAbortCallback:
  2100              	.LVL126:
-ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s 			page 123
+ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccnxPJT6.s 			page 123
 
 
  2101              	.LFB190:
@@ -7378,7 +7378,7 @@ ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s 			page 1
  2138              		.loc 1 4050 22 is_stmt 0 view .LVU642
  2139 0018 A0F85A20 		strh	r2, [r0, #90]	@ movhi
 4053:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.c **** 
-ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s 			page 124
+ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccnxPJT6.s 			page 124
 
 
  2140              		.loc 1 4053 3 is_stmt 1 view .LVU643
@@ -7438,7 +7438,7 @@ ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s 			page 1
  2184              		@ args = 0, pretend = 0, frame = 0
  2185              		@ frame_needed = 0, uses_anonymous_args = 0
 3977:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.c ****   UART_HandleTypeDef *huart = (UART_HandleTypeDef *)(hdma->Parent);
-ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s 			page 125
+ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccnxPJT6.s 			page 125
 
 
  2186              		.loc 1 3977 1 is_stmt 0 view .LVU656
@@ -7498,7 +7498,7 @@ ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s 			page 1
 3999:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.c **** 
  2223              		.loc 1 3999 3 is_stmt 1 view .LVU674
  2224 0020 0268     		ldr	r2, [r0]
-ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s 			page 126
+ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccnxPJT6.s 			page 126
 
 
  2225 0022 0F21     		movs	r1, #15
@@ -7558,7 +7558,7 @@ ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s 			page 1
  2271              		.syntax unified
  2272              		.thumb
  2273              		.thumb_func
-ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s 			page 127
+ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccnxPJT6.s 			page 127
 
 
  2274              		.fpu fpv4-sp-d16
@@ -7618,7 +7618,7 @@ ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s 			page 1
 2135:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.c ****       {
  2316              		.loc 1 2135 11 is_stmt 0 view .LVU699
  2317 0028 C06E     		ldr	r0, [r0, #108]
-ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s 			page 128
+ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccnxPJT6.s 			page 128
 
 
  2318              	.LVL134:
@@ -7678,7 +7678,7 @@ ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s 			page 1
  2356 004c A0F85230 		strh	r3, [r0, #82]	@ movhi
 2168:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.c **** 
  2357              		.loc 1 2168 5 is_stmt 1 view .LVU716
-ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s 			page 129
+ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccnxPJT6.s 			page 129
 
 
 2168:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.c **** 
@@ -7738,7 +7738,7 @@ ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s 			page 1
  2403 0002 806A     		ldr	r0, [r0, #40]
  2404              	.LVL143:
 4089:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.c **** 
-ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s 			page 130
+ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccnxPJT6.s 			page 130
 
 
  2405              		.loc 1 4089 3 is_stmt 1 view .LVU728
@@ -7798,7 +7798,7 @@ ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s 			page 1
  2454              		.loc 1 2209 1 is_stmt 1 view -0
  2455              		.cfi_startproc
  2456              		@ args = 0, pretend = 0, frame = 0
-ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s 			page 131
+ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccnxPJT6.s 			page 131
 
 
  2457              		@ frame_needed = 0, uses_anonymous_args = 0
@@ -7858,7 +7858,7 @@ ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s 			page 1
 2235:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.c **** 
  2498              		.loc 1 2235 7 is_stmt 1 view .LVU751
 2235:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.c **** 
-ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s 			page 132
+ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccnxPJT6.s 			page 132
 
 
  2499              		.loc 1 2235 40 is_stmt 0 view .LVU752
@@ -7918,7 +7918,7 @@ ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s 			page 1
  2539 0060 1962     		str	r1, [r3, #32]
 2256:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.c **** 
  2540              		.loc 1 2256 7 view .LVU767
-ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s 			page 133
+ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccnxPJT6.s 			page 133
 
 
  2541 0062 2168     		ldr	r1, [r4]
@@ -7978,7 +7978,7 @@ ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s 			page 1
  2579              		.loc 1 2293 5 is_stmt 1 view .LVU783
  2580 008e 2046     		mov	r0, r4
  2581              	.LVL154:
-ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s 			page 134
+ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccnxPJT6.s 			page 134
 
 
 2293:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.c **** #endif /* USE_HAL_UART_REGISTER_CALLBACKS */
@@ -8038,7 +8038,7 @@ ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s 			page 1
  2627              		.loc 1 4127 3 is_stmt 1 view .LVU794
  2628 000a 0368     		ldr	r3, [r0]
  2629 000c 0F21     		movs	r1, #15
-ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s 			page 135
+ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccnxPJT6.s 			page 135
 
 
  2630 000e 1962     		str	r1, [r3, #32]
@@ -8098,7 +8098,7 @@ ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s 			page 1
  2676              		.align	1
  2677              		.global	HAL_UART_IRQHandler
  2678              		.syntax unified
-ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s 			page 136
+ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccnxPJT6.s 			page 136
 
 
  2679              		.thumb
@@ -8158,7 +8158,7 @@ ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s 			page 1
 2316:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.c ****   {
  2720              		.loc 1 2316 6 is_stmt 0 view .LVU820
  2721 0010 1A40     		ands	r2, r3, r2
-ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s 			page 137
+ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccnxPJT6.s 			page 137
 
 
  2722              	.LVL166:
@@ -8218,7 +8218,7 @@ ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s 			page 1
 2609:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.c ****       && ((cr1its & USART_CR1_TXEIE) != 0U))
  2761              		.loc 1 2609 3 is_stmt 1 view .LVU836
 2609:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.c ****       && ((cr1its & USART_CR1_TXEIE) != 0U))
-ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s 			page 138
+ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccnxPJT6.s 			page 138
 
 
  2762              		.loc 1 2609 6 is_stmt 0 view .LVU837
@@ -8278,7 +8278,7 @@ ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s 			page 1
 2348:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.c ****     {
  2803              		.loc 1 2348 43 discriminator 1 view .LVU851
  2804 0074 10F4807F 		tst	r0, #256
-ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s 			page 139
+ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccnxPJT6.s 			page 139
 
 
  2805 0078 06D0     		beq	.L170
@@ -8338,7 +8338,7 @@ ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s 			page 1
 2368:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.c ****     }
  2844              		.loc 1 2368 24 is_stmt 0 view .LVU867
  2845 00b0 D4F88010 		ldr	r1, [r4, #128]
-ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s 			page 140
+ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccnxPJT6.s 			page 140
 
 
  2846 00b4 41F00201 		orr	r1, r1, #2
@@ -8398,7 +8398,7 @@ ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s 			page 1
  2886              		.loc 1 2396 5 is_stmt 1 view .LVU881
 2396:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.c ****     {
  2887              		.loc 1 2396 14 is_stmt 0 view .LVU882
-ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s 			page 141
+ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccnxPJT6.s 			page 141
 
 
  2888 00fa D4F88020 		ldr	r2, [r4, #128]
@@ -8458,7 +8458,7 @@ ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s 			page 1
 2426:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.c **** 
  2927              		.loc 1 2426 9 is_stmt 1 view .LVU898
  2928 012a 2046     		mov	r0, r4
-ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s 			page 142
+ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccnxPJT6.s 			page 142
 
 
  2929 012c FFF7FEFF 		bl	UART_EndRxTransfer
@@ -8518,7 +8518,7 @@ ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s 			page 1
  2967 015a 81E7     		b	.L164
  2968              	.L181:
 2455:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.c **** #endif /* USE_HAL_UART_REGISTER_CALLBACKS */
-ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s 			page 143
+ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccnxPJT6.s 			page 143
 
 
  2969              		.loc 1 2455 13 is_stmt 1 view .LVU915
@@ -8578,7 +8578,7 @@ ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s 			page 1
  3011 0196 38D0     		beq	.L183
  3012              	.LBB2:
 2505:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.c ****       if (  (nb_remaining_rx_data > 0U)
-ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s 			page 144
+ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccnxPJT6.s 			page 144
 
 
  3013              		.loc 1 2505 7 is_stmt 1 view .LVU928
@@ -8638,7 +8638,7 @@ ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s 			page 1
  3051              		.loc 1 2537 9 view .LVU944
  3052 01c8 C91A     		subs	r1, r1, r3
  3053 01ca 89B2     		uxth	r1, r1
-ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s 			page 145
+ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccnxPJT6.s 			page 145
 
 
  3054 01cc 2046     		mov	r0, r4
@@ -8698,7 +8698,7 @@ ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s 			page 1
 2530:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.c ****         }
  3097              		.loc 1 2530 17 view .LVU956
  3098              	.LBE2:
-ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s 			page 146
+ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccnxPJT6.s 			page 146
 
 
  3099              	.LBB3:
@@ -8758,7 +8758,7 @@ ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s 			page 1
 2570:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.c **** 
  3138              		.loc 1 2570 22 is_stmt 0 view .LVU972
  3139 0244 6366     		str	r3, [r4, #100]
-ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s 			page 147
+ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccnxPJT6.s 			page 147
 
 
 2572:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.c **** #if (USE_HAL_UART_REGISTER_CALLBACKS == 1)
@@ -8818,7 +8818,7 @@ ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s 			page 1
  3180 026e 2046     		mov	r0, r4
  3181              	.LVL206:
 2615:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.c ****     }
-ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s 			page 148
+ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccnxPJT6.s 			page 148
 
 
  3182              		.loc 1 2615 7 is_stmt 0 view .LVU987
@@ -8878,7 +8878,7 @@ ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s 			page 1
 4332:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.c ****   uint16_t uhMask = huart->Mask;
  3226              		.loc 1 4332 3 is_stmt 1 view .LVU994
  3227              		.loc 1 4332 12 is_stmt 0 view .LVU995
-ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s 			page 149
+ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccnxPJT6.s 			page 149
 
 
  3228 0004 B0F85C30 		ldrh	r3, [r0, #92]
@@ -8938,7 +8938,7 @@ ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s 			page 1
 4378:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.c ****         /* Standard reception API called */
 4379:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.c **** #if (USE_HAL_UART_REGISTER_CALLBACKS == 1)
 4380:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.c ****         /*Call registered Rx complete callback*/
-ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s 			page 150
+ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccnxPJT6.s 			page 150
 
 
 4381:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.c ****         huart->RxCpltCallback(huart);
@@ -8998,7 +8998,7 @@ ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s 			page 1
 4340:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.c ****     huart->RxXferCount--;
  3268              		.loc 1 4340 5 is_stmt 1 view .LVU1011
 4340:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.c ****     huart->RxXferCount--;
-ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s 			page 151
+ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccnxPJT6.s 			page 151
 
 
  3269              		.loc 1 4340 10 is_stmt 0 view .LVU1012
@@ -9058,7 +9058,7 @@ ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s 			page 1
  3308              		.loc 1 4363 16 is_stmt 0 view .LVU1027
  3309 0062 036E     		ldr	r3, [r0, #96]
 4363:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.c ****       {
-ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s 			page 152
+ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccnxPJT6.s 			page 152
 
 
  3310              		.loc 1 4363 10 view .LVU1028
@@ -9118,7 +9118,7 @@ ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s 			page 1
 4405:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.c **** {
  3350              		.loc 1 4405 1 is_stmt 1 view -0
  3351              		.cfi_startproc
-ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s 			page 153
+ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccnxPJT6.s 			page 153
 
 
  3352              		@ args = 0, pretend = 0, frame = 0
@@ -9178,7 +9178,7 @@ ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s 			page 1
 4439:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.c ****       if (huart->ReceptionType == HAL_UART_RECEPTION_TOIDLE)
 4440:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.c ****       {
 4441:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.c ****         /* Disable IDLE interrupt */
-ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s 			page 154
+ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccnxPJT6.s 			page 154
 
 
 4442:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.c ****         CLEAR_BIT(huart->Instance->CR1, USART_CR1_IDLEIE);
@@ -9238,7 +9238,7 @@ ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s 			page 1
  3393              		.loc 1 4414 5 is_stmt 1 view .LVU1051
 4414:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.c ****     *tmp = (uint16_t)(uhdata & uhMask);
  3394              		.loc 1 4414 9 is_stmt 0 view .LVU1052
-ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s 			page 155
+ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccnxPJT6.s 			page 155
 
 
  3395 0020 426D     		ldr	r2, [r0, #84]
@@ -9298,7 +9298,7 @@ ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s 			page 1
  3435 0056 9360     		str	r3, [r2, #8]
 4432:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.c **** 
  3436              		.loc 1 4432 7 view .LVU1067
-ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s 			page 156
+ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccnxPJT6.s 			page 156
 
 
 4432:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.c **** 
@@ -9358,7 +9358,7 @@ ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s 			page 1
  3479              		.syntax unified
  3480              		.thumb
  3481              		.thumb_func
-ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s 			page 157
+ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccnxPJT6.s 			page 157
 
 
  3482              		.fpu fpv4-sp-d16
@@ -9418,7 +9418,7 @@ ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s 			page 1
  3524              		.cfi_endproc
  3525              	.LFE186:
  3527              		.section	.text.UART_DMAReceiveCplt,"ax",%progbits
-ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s 			page 158
+ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccnxPJT6.s 			page 158
 
 
  3528              		.align	1
@@ -9478,7 +9478,7 @@ ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s 			page 1
  3571 0020 0268     		ldr	r2, [r0]
  3572 0022 9368     		ldr	r3, [r2, #8]
  3573 0024 23F00103 		bic	r3, r3, #1
-ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s 			page 159
+ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccnxPJT6.s 			page 159
 
 
  3574 0028 9360     		str	r3, [r2, #8]
@@ -9538,7 +9538,7 @@ ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s 			page 1
  3615              	.LVL247:
 3858:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.c **** #endif /* USE_HAL_UART_REGISTER_CALLBACKS */
  3616              		.loc 1 3858 5 is_stmt 0 view .LVU1119
-ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s 			page 160
+ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccnxPJT6.s 			page 160
 
 
  3617 005e F3E7     		b	.L220
@@ -9598,7 +9598,7 @@ ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s 			page 1
  3666              		.thumb
  3667              		.thumb_func
  3668              		.fpu fpv4-sp-d16
-ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s 			page 161
+ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccnxPJT6.s 			page 161
 
 
  3670              	HAL_UART_EnableReceiverTimeout:
@@ -9658,7 +9658,7 @@ ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s 			page 1
 2860:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.c **** 
  3709              		.loc 1 2860 21 is_stmt 0 discriminator 2 view .LVU1143
  3710 0028 2023     		movs	r3, #32
-ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s 			page 162
+ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccnxPJT6.s 			page 162
 
 
  3711 002a 8367     		str	r3, [r0, #120]
@@ -9718,7 +9718,7 @@ ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s 			page 1
  3754              		.syntax unified
  3755              		.thumb
  3756              		.thumb_func
-ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s 			page 163
+ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccnxPJT6.s 			page 163
 
 
  3757              		.fpu fpv4-sp-d16
@@ -9778,7 +9778,7 @@ ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s 			page 1
  3797              		.loc 1 2898 7 discriminator 2 view .LVU1170
 2898:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.c **** 
  3798              		.loc 1 2898 21 is_stmt 0 discriminator 2 view .LVU1171
-ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s 			page 164
+ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccnxPJT6.s 			page 164
 
 
  3799 0028 2023     		movs	r3, #32
@@ -9838,7 +9838,7 @@ ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s 			page 1
  3842              		.global	HAL_MultiProcessor_EnterMuteMode
  3843              		.syntax unified
  3844              		.thumb
-ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s 			page 165
+ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccnxPJT6.s 			page 165
 
 
  3845              		.thumb_func
@@ -9898,7 +9898,7 @@ ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s 			page 1
 2975:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.c **** 
  3893              		.loc 1 2975 17 is_stmt 0 discriminator 2 view .LVU1193
  3894 000e 2423     		movs	r3, #36
-ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s 			page 166
+ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccnxPJT6.s 			page 166
 
 
  3895 0010 8367     		str	r3, [r0, #120]
@@ -9958,7 +9958,7 @@ ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s 			page 1
  3939              	HAL_HalfDuplex_EnableReceiver:
  3940              	.LVL271:
  3941              	.LFB171:
-ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s 			page 167
+ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccnxPJT6.s 			page 167
 
 
 2996:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.c ****   __HAL_LOCK(huart);
@@ -10018,7 +10018,7 @@ ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s 			page 1
  3980              		.loc 1 3010 10 is_stmt 0 discriminator 2 view .LVU1221
  3981 0030 1846     		mov	r0, r3
  3982              	.LVL272:
-ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s 			page 168
+ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccnxPJT6.s 			page 168
 
 
 3010:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.c **** }
@@ -10078,7 +10078,7 @@ ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s 			page 1
  4027 0014 138B     		ldrh	r3, [r2, #24]
  4028 0016 9BB2     		uxth	r3, r3
  4029 0018 43F00203 		orr	r3, r3, #2
-ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s 			page 169
+ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccnxPJT6.s 			page 169
 
 
  4030 001c 1383     		strh	r3, [r2, #24]	@ movhi
@@ -10138,7 +10138,7 @@ ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s 			page 1
  4073              		.loc 1 3067 3 view .LVU1246
 3068:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.c ****   temp2 = huart->RxState;
  4074              		.loc 1 3068 3 view .LVU1247
-ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s 			page 170
+ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccnxPJT6.s 			page 170
 
 
 3068:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.c ****   temp2 = huart->RxState;
@@ -10198,7 +10198,7 @@ ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s 			page 1
  4122              		.thumb_func
  4123              		.fpu fpv4-sp-d16
  4125              	UART_SetConfig:
-ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s 			page 171
+ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccnxPJT6.s 			page 171
 
 
  4126              	.LVL285:
@@ -10258,7 +10258,7 @@ ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s 			page 1
 3168:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.c ****   MODIFY_REG(huart->Instance->CR1, USART_CR1_FIELDS, tmpreg);
  4160              		.loc 1 3168 58 view .LVU1278
  4161 0008 0269     		ldr	r2, [r0, #16]
-ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s 			page 172
+ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccnxPJT6.s 			page 172
 
 
 3168:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.c ****   MODIFY_REG(huart->Instance->CR1, USART_CR1_FIELDS, tmpreg);
@@ -10318,7 +10318,7 @@ ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s 			page 1
 3186:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.c ****   }
  4202              		.loc 1 3186 5 is_stmt 1 view .LVU1293
 3186:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.c ****   }
-ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s 			page 173
+ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccnxPJT6.s 			page 173
 
 
  4203              		.loc 1 3186 26 is_stmt 0 view .LVU1294
@@ -10378,7 +10378,7 @@ ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s 			page 1
  4246 0072 D2F88820 		ldr	r2, [r2, #136]
  4247 0076 02F00302 		and	r2, r2, #3
  4248 007a 032A     		cmp	r2, #3
-ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s 			page 174
+ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccnxPJT6.s 			page 174
 
 
  4249 007c 09D8     		bhi	.L260
@@ -10438,7 +10438,7 @@ ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s 			page 1
  4295 00ae 09       		.byte	(.L270-.L269)/2
  4296 00af 0D       		.byte	(.L267-.L269)/2
  4297 00b0 0D       		.byte	(.L267-.L269)/2
-ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s 			page 175
+ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccnxPJT6.s 			page 175
 
 
  4298 00b1 0D       		.byte	(.L267-.L269)/2
@@ -10498,7 +10498,7 @@ ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s 			page 1
  4343              	.L263:
 3198:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.c **** 
  4344              		.loc 1 3198 3 is_stmt 1 discriminator 79 view .LVU1323
-ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s 			page 176
+ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccnxPJT6.s 			page 176
 
 
 3201:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.c ****   {
@@ -10558,7 +10558,7 @@ ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s 			page 1
  4390 0130 0422     		movs	r2, #4
  4391 0132 D7E7     		b	.L263
  4392              	.L275:
-ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s 			page 177
+ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccnxPJT6.s 			page 177
 
 
  4393 0134 C02A     		cmp	r2, #192
@@ -10618,7 +10618,7 @@ ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s 			page 1
  4442 0196 A5E7     		b	.L263
  4443              	.LVL306:
  4444              	.L304:
-ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s 			page 178
+ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccnxPJT6.s 			page 178
 
 
 3198:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.c **** 
@@ -10678,7 +10678,7 @@ ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s 			page 1
  4497 01da 00F28C80 		bhi	.L321
  4498 01de DFE802F0 		tbb	[pc, r2]
  4499              	.L282:
-ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s 			page 179
+ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccnxPJT6.s 			page 179
 
 
  4500 01e2 08       		.byte	(.L285-.L282)/2
@@ -10738,7 +10738,7 @@ ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s 			page 1
  4541 020c 0002     		lsls	r0, r0, #8
  4542 020e 5308     		lsrs	r3, r2, #1
  4543 0210 C018     		adds	r0, r0, r3
-ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s 			page 180
+ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccnxPJT6.s 			page 180
 
 
  4544 0212 4FF00003 		mov	r3, #0
@@ -10798,7 +10798,7 @@ ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s 			page 1
  4586 0245 64       		.byte	(.L327-.L289)/2
  4587 0246 36       		.byte	(.L290-.L289)/2
  4588 0247 64       		.byte	(.L327-.L289)/2
-ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s 			page 181
+ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccnxPJT6.s 			page 181
 
 
  4589 0248 64       		.byte	(.L327-.L289)/2
@@ -10858,7 +10858,7 @@ ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s 			page 1
  4632              		.loc 1 3309 38 is_stmt 0 view .LVU1375
  4633 028a A0F11002 		sub	r2, r0, #16
 3309:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.c ****       {
-ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s 			page 182
+ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccnxPJT6.s 			page 182
 
 
  4634              		.loc 1 3309 10 view .LVU1376
@@ -10918,7 +10918,7 @@ ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s 			page 1
  4673 02b2 E1E7     		b	.L294
  4674              	.LVL326:
  4675              	.L298:
-ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s 			page 183
+ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccnxPJT6.s 			page 183
 
 
 3276:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.c ****   {
@@ -10978,7 +10978,7 @@ ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s 			page 1
  4714              		.loc 1 3372 16 is_stmt 0 view .LVU1407
  4715 02dc 0023     		movs	r3, #0
  4716 02de 6366     		str	r3, [r4, #100]
-ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s 			page 184
+ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccnxPJT6.s 			page 184
 
 
 3373:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.c **** 
@@ -11038,7 +11038,7 @@ ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s 			page 1
 3258:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.c ****       }
  4757              		.loc 1 3258 13 view .LVU1422
  4758 02fe 0120     		movs	r0, #1
-ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s 			page 185
+ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccnxPJT6.s 			page 185
 
 
  4759 0300 ECE7     		b	.L280
@@ -11098,7 +11098,7 @@ ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s 			page 1
 3360:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.c ****       }
  4803              		.loc 1 3360 13 view .LVU1433
  4804 031e 0120     		movs	r0, #1
-ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s 			page 186
+ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccnxPJT6.s 			page 186
 
 
  4805              	.LVL350:
@@ -11158,7 +11158,7 @@ ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s 			page 1
  4850              		.loc 1 3396 6 view .LVU1444
  4851 0018 13F0020F 		tst	r3, #2
  4852 001c 06D0     		beq	.L349
-ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s 			page 187
+ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccnxPJT6.s 			page 187
 
 
 3398:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.c ****     MODIFY_REG(huart->Instance->CR2, USART_CR2_RXINV, huart->AdvancedInit.RxPinLevelInvert);
@@ -11218,7 +11218,7 @@ ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s 			page 1
  4893              		.loc 1 3417 7 is_stmt 0 view .LVU1458
  4894 0058 436A     		ldr	r3, [r0, #36]
 3417:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.c ****   {
-ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s 			page 188
+ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccnxPJT6.s 			page 188
 
 
  4895              		.loc 1 3417 6 view .LVU1459
@@ -11278,7 +11278,7 @@ ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s 			page 1
  4936 0098 5360     		str	r3, [r2, #4]
 3437:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.c ****     {
  4937              		.loc 1 3437 5 view .LVU1473
-ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s 			page 189
+ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccnxPJT6.s 			page 189
 
 
 3437:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.c ****     {
@@ -11338,7 +11338,7 @@ ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s 			page 1
  4984              	.LFB178:
 3510:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.c ****   /* Wait until flag is set */
  4985              		.loc 1 3510 1 view -0
-ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s 			page 190
+ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccnxPJT6.s 			page 190
 
 
  4986              		.cfi_startproc
@@ -11398,7 +11398,7 @@ ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s 			page 1
  5029              		.loc 1 3517 27 view .LVU1495
  5030 0030 A0EB0900 		sub	r0, r0, r9
 3517:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.c ****       {
-ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s 			page 191
+ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccnxPJT6.s 			page 191
 
 
  5031              		.loc 1 3517 10 view .LVU1496
@@ -11458,7 +11458,7 @@ ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s 			page 1
  5070              		.loc 1 3554 11 is_stmt 1 view .LVU1511
 3554:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.c **** 
  5071              		.loc 1 3554 28 is_stmt 0 view .LVU1512
-ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s 			page 192
+ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccnxPJT6.s 			page 192
 
 
  5072 0070 C5F88030 		str	r3, [r5, #128]
@@ -11518,7 +11518,7 @@ ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s 			page 1
 3564:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.c **** }
  5110              		.loc 1 3564 10 view .LVU1529
  5111 00a2 0020     		movs	r0, #0
-ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s 			page 193
+ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccnxPJT6.s 			page 193
 
 
  5112              	.L362:
@@ -11578,7 +11578,7 @@ ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s 			page 1
  5158 000e 0446     		mov	r4, r0
  5159 0010 0D46     		mov	r5, r1
  5160 0012 9046     		mov	r8, r2
-ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s 			page 194
+ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccnxPJT6.s 			page 194
 
 
 1151:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.c ****     {
@@ -11638,7 +11638,7 @@ ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s 			page 1
  5197 003e A4F85280 		strh	r8, [r4, #82]	@ movhi
 1168:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.c ****     {
  5198              		.loc 1 1168 5 is_stmt 1 discriminator 2 view .LVU1558
-ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s 			page 195
+ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccnxPJT6.s 			page 195
 
 
 1168:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.c ****     {
@@ -11698,7 +11698,7 @@ ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s 			page 1
  5237 0066 38F8023B 		ldrh	r3, [r8], #2
  5238              	.LVL363:
 1189:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.c ****         pdata16bits++;
-ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s 			page 196
+ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccnxPJT6.s 			page 196
 
 
  5239              		.loc 1 1189 14 view .LVU1575
@@ -11758,7 +11758,7 @@ ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s 			page 1
  5278              		.loc 1 1194 9 is_stmt 1 view .LVU1590
 1194:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.c ****         pdata8bits++;
  5279              		.loc 1 1194 14 is_stmt 0 view .LVU1591
-ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s 			page 197
+ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccnxPJT6.s 			page 197
 
 
  5280 009c 2368     		ldr	r3, [r4]
@@ -11818,7 +11818,7 @@ ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s 			page 1
  5321 00c0 BDE8F081 		pop	{r4, r5, r6, r7, r8, pc}
  5322              	.LVL371:
  5323              	.L374:
-ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s 			page 198
+ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccnxPJT6.s 			page 198
 
 
  5324              	.LCFI34:
@@ -11878,7 +11878,7 @@ ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s 			page 1
  5371              		@ frame_needed = 0, uses_anonymous_args = 0
 1232:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.c ****   uint8_t  *pdata8bits;
  5372              		.loc 1 1232 1 is_stmt 0 view .LVU1614
-ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s 			page 199
+ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccnxPJT6.s 			page 199
 
 
  5373 0000 2DE9F043 		push	{r4, r5, r6, r7, r8, r9, lr}
@@ -11938,7 +11938,7 @@ ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s 			page 1
  5414 0024 0123     		movs	r3, #1
  5415 0026 80F87430 		strb	r3, [r0, #116]
 1246:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.c **** 
-ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s 			page 200
+ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccnxPJT6.s 			page 200
 
 
  5416              		.loc 1 1246 5 discriminator 2 view .LVU1628
@@ -11998,7 +11998,7 @@ ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s 			page 1
  5452 0050 72B9     		cbnz	r2, .L391
 1259:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.c ****     uhMask = huart->Mask;
  5453              		.loc 1 1259 5 discriminator 7 view .LVU1647
-ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s 			page 201
+ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccnxPJT6.s 			page 201
 
 
  5454 0052 FF22     		movs	r2, #255
@@ -12058,7 +12058,7 @@ ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s 			page 1
 1274:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.c **** 
  5496              		.loc 1 1274 5 is_stmt 1 view .LVU1660
 1274:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.c **** 
-ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s 			page 202
+ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccnxPJT6.s 			page 202
 
 
  5497              		.loc 1 1274 5 view .LVU1661
@@ -12118,7 +12118,7 @@ ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s 			page 1
 1285:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.c ****         pdata16bits++;
  5538              		.loc 1 1285 40 is_stmt 0 view .LVU1675
  5539 00be 2368     		ldr	r3, [r4]
-ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s 			page 203
+ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccnxPJT6.s 			page 203
 
 
 1285:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.c ****         pdata16bits++;
@@ -12178,7 +12178,7 @@ ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s 			page 1
 1290:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.c ****         pdata8bits++;
  5579              		.loc 1 1290 9 is_stmt 1 view .LVU1691
 1290:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.c ****         pdata8bits++;
-ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s 			page 204
+ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccnxPJT6.s 			page 204
 
 
  5580              		.loc 1 1290 38 is_stmt 0 view .LVU1692
@@ -12238,7 +12238,7 @@ ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s 			page 1
  5621 0114 0120     		movs	r0, #1
  5622              	.LVL395:
 1243:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.c ****     }
-ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s 			page 205
+ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccnxPJT6.s 			page 205
 
 
  5623              		.loc 1 1243 15 view .LVU1706
@@ -12298,7 +12298,7 @@ ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s 			page 1
  5672 0004 0446     		mov	r4, r0
 3459:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.c **** 
  5673              		.loc 1 3459 3 is_stmt 1 view .LVU1714
-ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s 			page 206
+ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccnxPJT6.s 			page 206
 
 
 3462:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.c **** 
@@ -12358,7 +12358,7 @@ ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s 			page 1
 3492:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.c **** 
  5711              		.loc 1 3492 3 is_stmt 1 view .LVU1732
 3492:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.c **** 
-ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s 			page 207
+ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccnxPJT6.s 			page 207
 
 
  5712              		.loc 1 3492 24 is_stmt 0 view .LVU1733
@@ -12418,7 +12418,7 @@ ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s 			page 1
  5754 0058 0093     		str	r3, [sp]
  5755 005a 2B46     		mov	r3, r5
  5756 005c 0022     		movs	r2, #0
-ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s 			page 208
+ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccnxPJT6.s 			page 208
 
 
  5757 005e 4FF48001 		mov	r1, #4194304
@@ -12478,7 +12478,7 @@ ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s 			page 1
  5802              	.LVL410:
  5803              	.L423:
  361:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.c **** 
-ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s 			page 209
+ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccnxPJT6.s 			page 209
 
 
  5804              		.loc 1 361 3 is_stmt 1 view .LVU1757
@@ -12538,7 +12538,7 @@ ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s 			page 1
  5845 0046 FFF7FEFF 		bl	UART_CheckIdleState
  5846              	.LVL412:
  5847              	.L422:
-ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s 			page 210
+ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccnxPJT6.s 			page 210
 
 
  386:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.c **** 
@@ -12598,7 +12598,7 @@ ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s 			page 1
  397:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.c ****   {
  5895              		.loc 1 397 3 view .LVU1780
  397:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.c ****   {
-ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s 			page 211
+ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccnxPJT6.s 			page 211
 
 
  5896              		.loc 1 397 6 is_stmt 0 view .LVU1781
@@ -12658,7 +12658,7 @@ ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s 			page 1
  5936              	.L435:
  444:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.c ****   CLEAR_BIT(huart->Instance->CR3, (USART_CR3_IREN | USART_CR3_SCEN));
  5937              		.loc 1 444 3 is_stmt 1 view .LVU1796
-ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s 			page 212
+ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccnxPJT6.s 			page 212
 
 
  5938 0028 2268     		ldr	r2, [r4]
@@ -12718,7 +12718,7 @@ ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s 			page 1
  5981              	.LVL425:
  5982              	.L436:
  5983              	.LCFI46:
-ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s 			page 213
+ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccnxPJT6.s 			page 213
 
 
  5984              		.cfi_def_cfa_offset 0
@@ -12778,7 +12778,7 @@ ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s 			page 1
  6029              		.loc 1 481 6 view .LVU1818
  6030 000c B3F5004F 		cmp	r3, #32768
  6031 0010 3BD0     		beq	.L448
-ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s 			page 214
+ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccnxPJT6.s 			page 214
 
 
  486:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.c ****   {
@@ -12838,7 +12838,7 @@ ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s 			page 1
  6070 003a 5368     		ldr	r3, [r2, #4]
  6071 003c 23F40063 		bic	r3, r3, #2048
  6072 0040 5360     		str	r3, [r2, #4]
-ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s 			page 215
+ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccnxPJT6.s 			page 215
 
 
  531:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.c **** 
@@ -12898,7 +12898,7 @@ ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s 			page 1
  6115 0080 FFF7FEFF 		bl	UART_AdvFeatureConfig
  6116              	.LVL433:
  6117 0084 D8E7     		b	.L446
-ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s 			page 216
+ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccnxPJT6.s 			page 216
 
 
  6118              	.LVL434:
@@ -12958,7 +12958,7 @@ ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s 			page 1
  6167              		@ args = 0, pretend = 0, frame = 0
  6168              		@ frame_needed = 0, uses_anonymous_args = 0
  567:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.c ****   {
-ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s 			page 217
+ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccnxPJT6.s 			page 217
 
 
  6169              		.loc 1 567 3 view .LVU1854
@@ -13018,7 +13018,7 @@ ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s 			page 1
  606:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.c ****   {
  6210              		.loc 1 606 26 is_stmt 0 view .LVU1868
  6211 0028 636A     		ldr	r3, [r4, #36]
-ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s 			page 218
+ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccnxPJT6.s 			page 218
 
 
  606:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.c ****   {
@@ -13078,7 +13078,7 @@ ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s 			page 1
  578:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.c **** 
  6254              		.loc 1 578 17 is_stmt 0 view .LVU1881
  6255 0064 80F87430 		strb	r3, [r0, #116]
-ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s 			page 219
+ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccnxPJT6.s 			page 219
 
 
  592:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.c **** #endif /* (USE_HAL_UART_REGISTER_CALLBACKS) */
@@ -13138,7 +13138,7 @@ ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s 			page 1
  6305              		@ frame_needed = 0, uses_anonymous_args = 0
 2923:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.c ****   __HAL_LOCK(huart);
  6306              		.loc 1 2923 1 is_stmt 0 view .LVU1889
-ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s 			page 220
+ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccnxPJT6.s 			page 220
 
 
  6307 0000 08B5     		push	{r3, lr}
@@ -13198,7 +13198,7 @@ ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s 			page 1
  6347 002a FCE7     		b	.L470
  6348              		.cfi_endproc
  6349              	.LFE167:
-ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s 			page 221
+ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccnxPJT6.s 			page 221
 
 
  6351              		.section	.text.HAL_MultiProcessor_DisableMuteMode,"ax",%progbits
@@ -13258,7 +13258,7 @@ ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s 			page 1
  6394              		.loc 1 2953 3 is_stmt 1 discriminator 2 view .LVU1915
 2953:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.c **** }
  6395              		.loc 1 2953 11 is_stmt 0 discriminator 2 view .LVU1916
-ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s 			page 222
+ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccnxPJT6.s 			page 222
 
 
  6396 0022 FFF7FEFF 		bl	UART_CheckIdleState
@@ -13318,7 +13318,7 @@ ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s 			page 1
  6439              		.loc 1 3583 22 is_stmt 0 view .LVU1929
  6440 000c 0022     		movs	r2, #0
  6441              	.LVL459:
-ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s 			page 223
+ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccnxPJT6.s 			page 223
 
 
 3583:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.c **** 
@@ -13378,7 +13378,7 @@ ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s 			page 1
 3586:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.c **** 
  6484              		.loc 1 3586 3 discriminator 13 view .LVU1942
 3588:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.c ****   huart->RxState = HAL_UART_STATE_BUSY_RX;
-ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s 			page 224
+ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccnxPJT6.s 			page 224
 
 
  6485              		.loc 1 3588 3 discriminator 13 view .LVU1943
@@ -13438,7 +13438,7 @@ ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s 			page 1
 3645:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.c **** #endif /* USART_CR1_FIFOEN */
  6524              		.loc 1 3645 3 is_stmt 0 view .LVU1959
  6525 007a 43F49073 		orr	r3, r3, #288
-ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s 			page 225
+ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccnxPJT6.s 			page 225
 
 
  6526 007e 1360     		str	r3, [r2]
@@ -13498,7 +13498,7 @@ ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s 			page 1
  6573              	.LVL466:
  6574              	.LFB142:
 1409:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.c ****   /* Check that a Rx process is not already ongoing */
-ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s 			page 226
+ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccnxPJT6.s 			page 226
 
 
  6575              		.loc 1 1409 1 is_stmt 1 view -0
@@ -13558,7 +13558,7 @@ ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s 			page 1
  6613 0020 0A4C     		ldr	r4, .L503
  6614 0022 A342     		cmp	r3, r4
  6615 0024 07D0     		beq	.L494
-ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s 			page 227
+ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccnxPJT6.s 			page 227
 
 
 1426:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.c ****       {
@@ -13618,7 +13618,7 @@ ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s 			page 1
  6657 0046 7047     		bx	lr
  6658              	.LVL474:
  6659              	.L498:
-ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s 			page 228
+ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccnxPJT6.s 			page 228
 
 
 1418:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.c **** 
@@ -13678,7 +13678,7 @@ ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s 			page 1
  6705              		.loc 1 3666 20 view .LVU2009
  6706 000e C0F88020 		str	r2, [r0, #128]
 3667:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.c **** 
-ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s 			page 229
+ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccnxPJT6.s 			page 229
 
 
  6707              		.loc 1 3667 3 is_stmt 1 view .LVU2010
@@ -13738,7 +13738,7 @@ ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s 			page 1
  6743 0030 0168     		ldr	r1, [r0]
 3684:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.c ****     {
  6744              		.loc 1 3684 9 view .LVU2029
-ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s 			page 230
+ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccnxPJT6.s 			page 230
 
 
  6745 0032 426D     		ldr	r2, [r0, #84]
@@ -13798,7 +13798,7 @@ ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s 			page 1
 3689:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.c **** 
  6786              		.loc 1 3689 7 view .LVU2043
  6787 006a 0023     		movs	r3, #0
-ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s 			page 231
+ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccnxPJT6.s 			page 231
 
 
  6788 006c 84F87430 		strb	r3, [r4, #116]
@@ -13858,7 +13858,7 @@ ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s 			page 1
  6832 0008 E2B1     		cbz	r2, .L517
 1537:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.c **** 
  6833              		.loc 1 1537 5 is_stmt 1 view .LVU2056
-ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s 			page 232
+ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccnxPJT6.s 			page 232
 
 
 1537:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.c **** 
@@ -13918,7 +13918,7 @@ ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s 			page 1
  6873              	.LVL484:
 1558:Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.c **** 
  6874              		.loc 1 1558 1 view .LVU2072
-ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s 			page 233
+ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccnxPJT6.s 			page 233
 
 
  6875 003a 10BD     		pop	{r4, pc}
@@ -13970,191 +13970,191 @@ ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s 			page 1
  6913              	.LFE144:
  6915              		.text
  6916              	.Letext0:
- 6917              		.file 2 "c:\\program files (x86)\\gnu arm embedded toolchain\\10 2020-q4-major\\arm-none-eabi\\inc
- 6918              		.file 3 "c:\\program files (x86)\\gnu arm embedded toolchain\\10 2020-q4-major\\arm-none-eabi\\inc
+ 6917              		.file 2 "c:\\gnu arm embedded toolchain\\10 2020-q4-major\\arm-none-eabi\\include\\machine\\_defau
+ 6918              		.file 3 "c:\\gnu arm embedded toolchain\\10 2020-q4-major\\arm-none-eabi\\include\\sys\\_stdint.h"
  6919              		.file 4 "Drivers/CMSIS/Device/ST/STM32L4xx/Include/stm32l476xx.h"
  6920              		.file 5 "Drivers/CMSIS/Device/ST/STM32L4xx/Include/stm32l4xx.h"
  6921              		.file 6 "Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_def.h"
  6922              		.file 7 "Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_dma.h"
  6923              		.file 8 "Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_uart.h"
  6924              		.file 9 "Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal.h"
-ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s 			page 234
+ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccnxPJT6.s 			page 234
 
 
  6925              		.file 10 "Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_rcc.h"
  6926              		.file 11 "Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_uart_ex.h"
-ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s 			page 235
+ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccnxPJT6.s 			page 235
 
 
 DEFINED SYMBOLS
                             *ABS*:00000000 stm32l4xx_hal_uart.c
-C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s:18     .text.UART_EndTxTransfer:00000000 $t
-C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s:25     .text.UART_EndTxTransfer:00000000 UART_EndTxTransfer
-C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s:49     .text.UART_EndRxTransfer:00000000 $t
-C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s:55     .text.UART_EndRxTransfer:00000000 UART_EndRxTransfer
-C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s:104    .text.UART_TxISR_8BIT:00000000 $t
-C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s:110    .text.UART_TxISR_8BIT:00000000 UART_TxISR_8BIT
-C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s:175    .text.UART_TxISR_16BIT:00000000 $t
-C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s:181    .text.UART_TxISR_16BIT:00000000 UART_TxISR_16BIT
-C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s:252    .text.HAL_UART_MspInit:00000000 $t
-C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s:259    .text.HAL_UART_MspInit:00000000 HAL_UART_MspInit
-C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s:274    .text.HAL_UART_MspDeInit:00000000 $t
-C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s:281    .text.HAL_UART_MspDeInit:00000000 HAL_UART_MspDeInit
-C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s:296    .text.HAL_UART_DeInit:00000000 $t
-C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s:303    .text.HAL_UART_DeInit:00000000 HAL_UART_DeInit
-C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s:389    .text.HAL_UART_Transmit_IT:00000000 $t
-C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s:396    .text.HAL_UART_Transmit_IT:00000000 HAL_UART_Transmit_IT
-C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s:519    .text.HAL_UART_Transmit_IT:0000006c $d
-C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s:525    .text.HAL_UART_Transmit_DMA:00000000 $t
-C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s:532    .text.HAL_UART_Transmit_DMA:00000000 HAL_UART_Transmit_DMA
-C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s:706    .text.HAL_UART_Transmit_DMA:0000009c $d
-C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s:1481   .text.UART_DMATransmitCplt:00000000 UART_DMATransmitCplt
-C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s:1606   .text.UART_DMATxHalfCplt:00000000 UART_DMATxHalfCplt
-C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s:1705   .text.UART_DMAError:00000000 UART_DMAError
-C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s:713    .text.HAL_UART_DMAPause:00000000 $t
-C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s:720    .text.HAL_UART_DMAPause:00000000 HAL_UART_DMAPause
-C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s:826    .text.HAL_UART_DMAResume:00000000 $t
-C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s:833    .text.HAL_UART_DMAResume:00000000 HAL_UART_DMAResume
-C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s:914    .text.HAL_UART_DMAStop:00000000 $t
-C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s:921    .text.HAL_UART_DMAStop:00000000 HAL_UART_DMAStop
-C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s:1063   .text.HAL_UART_Abort:00000000 $t
-C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s:1070   .text.HAL_UART_Abort:00000000 HAL_UART_Abort
-C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s:1240   .text.HAL_UART_AbortTransmit:00000000 $t
-C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s:1247   .text.HAL_UART_AbortTransmit:00000000 HAL_UART_AbortTransmit
-C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s:1330   .text.HAL_UART_AbortReceive:00000000 $t
-C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s:1337   .text.HAL_UART_AbortReceive:00000000 HAL_UART_AbortReceive
-C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s:1453   .text.HAL_UART_TxCpltCallback:00000000 $t
-C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s:1460   .text.HAL_UART_TxCpltCallback:00000000 HAL_UART_TxCpltCallback
-C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s:1475   .text.UART_DMATransmitCplt:00000000 $t
-C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s:1537   .text.UART_EndTransmit_IT:00000000 $t
-C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s:1543   .text.UART_EndTransmit_IT:00000000 UART_EndTransmit_IT
-C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s:1578   .text.HAL_UART_TxHalfCpltCallback:00000000 $t
-C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s:1585   .text.HAL_UART_TxHalfCpltCallback:00000000 HAL_UART_TxHalfCpltCallback
-C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s:1600   .text.UART_DMATxHalfCplt:00000000 $t
-C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s:1633   .text.HAL_UART_RxCpltCallback:00000000 $t
-C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s:1640   .text.HAL_UART_RxCpltCallback:00000000 HAL_UART_RxCpltCallback
-C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s:1655   .text.HAL_UART_RxHalfCpltCallback:00000000 $t
-C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s:1662   .text.HAL_UART_RxHalfCpltCallback:00000000 HAL_UART_RxHalfCpltCallback
-C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s:1677   .text.HAL_UART_ErrorCallback:00000000 $t
-C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s:1684   .text.HAL_UART_ErrorCallback:00000000 HAL_UART_ErrorCallback
-C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s:1699   .text.UART_DMAError:00000000 $t
-C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s:1794   .text.UART_DMAAbortOnError:00000000 $t
-C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s:1800   .text.UART_DMAAbortOnError:00000000 UART_DMAAbortOnError
-C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s:1833   .text.HAL_UART_AbortCpltCallback:00000000 $t
-C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s:1840   .text.HAL_UART_AbortCpltCallback:00000000 HAL_UART_AbortCpltCallback
-C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s:1855   .text.HAL_UART_Abort_IT:00000000 $t
-ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s 			page 236
+C:\Users\andywei\AppData\Local\Temp\ccnxPJT6.s:18     .text.UART_EndTxTransfer:00000000 $t
+C:\Users\andywei\AppData\Local\Temp\ccnxPJT6.s:25     .text.UART_EndTxTransfer:00000000 UART_EndTxTransfer
+C:\Users\andywei\AppData\Local\Temp\ccnxPJT6.s:49     .text.UART_EndRxTransfer:00000000 $t
+C:\Users\andywei\AppData\Local\Temp\ccnxPJT6.s:55     .text.UART_EndRxTransfer:00000000 UART_EndRxTransfer
+C:\Users\andywei\AppData\Local\Temp\ccnxPJT6.s:104    .text.UART_TxISR_8BIT:00000000 $t
+C:\Users\andywei\AppData\Local\Temp\ccnxPJT6.s:110    .text.UART_TxISR_8BIT:00000000 UART_TxISR_8BIT
+C:\Users\andywei\AppData\Local\Temp\ccnxPJT6.s:175    .text.UART_TxISR_16BIT:00000000 $t
+C:\Users\andywei\AppData\Local\Temp\ccnxPJT6.s:181    .text.UART_TxISR_16BIT:00000000 UART_TxISR_16BIT
+C:\Users\andywei\AppData\Local\Temp\ccnxPJT6.s:252    .text.HAL_UART_MspInit:00000000 $t
+C:\Users\andywei\AppData\Local\Temp\ccnxPJT6.s:259    .text.HAL_UART_MspInit:00000000 HAL_UART_MspInit
+C:\Users\andywei\AppData\Local\Temp\ccnxPJT6.s:274    .text.HAL_UART_MspDeInit:00000000 $t
+C:\Users\andywei\AppData\Local\Temp\ccnxPJT6.s:281    .text.HAL_UART_MspDeInit:00000000 HAL_UART_MspDeInit
+C:\Users\andywei\AppData\Local\Temp\ccnxPJT6.s:296    .text.HAL_UART_DeInit:00000000 $t
+C:\Users\andywei\AppData\Local\Temp\ccnxPJT6.s:303    .text.HAL_UART_DeInit:00000000 HAL_UART_DeInit
+C:\Users\andywei\AppData\Local\Temp\ccnxPJT6.s:389    .text.HAL_UART_Transmit_IT:00000000 $t
+C:\Users\andywei\AppData\Local\Temp\ccnxPJT6.s:396    .text.HAL_UART_Transmit_IT:00000000 HAL_UART_Transmit_IT
+C:\Users\andywei\AppData\Local\Temp\ccnxPJT6.s:519    .text.HAL_UART_Transmit_IT:0000006c $d
+C:\Users\andywei\AppData\Local\Temp\ccnxPJT6.s:525    .text.HAL_UART_Transmit_DMA:00000000 $t
+C:\Users\andywei\AppData\Local\Temp\ccnxPJT6.s:532    .text.HAL_UART_Transmit_DMA:00000000 HAL_UART_Transmit_DMA
+C:\Users\andywei\AppData\Local\Temp\ccnxPJT6.s:706    .text.HAL_UART_Transmit_DMA:0000009c $d
+C:\Users\andywei\AppData\Local\Temp\ccnxPJT6.s:1481   .text.UART_DMATransmitCplt:00000000 UART_DMATransmitCplt
+C:\Users\andywei\AppData\Local\Temp\ccnxPJT6.s:1606   .text.UART_DMATxHalfCplt:00000000 UART_DMATxHalfCplt
+C:\Users\andywei\AppData\Local\Temp\ccnxPJT6.s:1705   .text.UART_DMAError:00000000 UART_DMAError
+C:\Users\andywei\AppData\Local\Temp\ccnxPJT6.s:713    .text.HAL_UART_DMAPause:00000000 $t
+C:\Users\andywei\AppData\Local\Temp\ccnxPJT6.s:720    .text.HAL_UART_DMAPause:00000000 HAL_UART_DMAPause
+C:\Users\andywei\AppData\Local\Temp\ccnxPJT6.s:826    .text.HAL_UART_DMAResume:00000000 $t
+C:\Users\andywei\AppData\Local\Temp\ccnxPJT6.s:833    .text.HAL_UART_DMAResume:00000000 HAL_UART_DMAResume
+C:\Users\andywei\AppData\Local\Temp\ccnxPJT6.s:914    .text.HAL_UART_DMAStop:00000000 $t
+C:\Users\andywei\AppData\Local\Temp\ccnxPJT6.s:921    .text.HAL_UART_DMAStop:00000000 HAL_UART_DMAStop
+C:\Users\andywei\AppData\Local\Temp\ccnxPJT6.s:1063   .text.HAL_UART_Abort:00000000 $t
+C:\Users\andywei\AppData\Local\Temp\ccnxPJT6.s:1070   .text.HAL_UART_Abort:00000000 HAL_UART_Abort
+C:\Users\andywei\AppData\Local\Temp\ccnxPJT6.s:1240   .text.HAL_UART_AbortTransmit:00000000 $t
+C:\Users\andywei\AppData\Local\Temp\ccnxPJT6.s:1247   .text.HAL_UART_AbortTransmit:00000000 HAL_UART_AbortTransmit
+C:\Users\andywei\AppData\Local\Temp\ccnxPJT6.s:1330   .text.HAL_UART_AbortReceive:00000000 $t
+C:\Users\andywei\AppData\Local\Temp\ccnxPJT6.s:1337   .text.HAL_UART_AbortReceive:00000000 HAL_UART_AbortReceive
+C:\Users\andywei\AppData\Local\Temp\ccnxPJT6.s:1453   .text.HAL_UART_TxCpltCallback:00000000 $t
+C:\Users\andywei\AppData\Local\Temp\ccnxPJT6.s:1460   .text.HAL_UART_TxCpltCallback:00000000 HAL_UART_TxCpltCallback
+C:\Users\andywei\AppData\Local\Temp\ccnxPJT6.s:1475   .text.UART_DMATransmitCplt:00000000 $t
+C:\Users\andywei\AppData\Local\Temp\ccnxPJT6.s:1537   .text.UART_EndTransmit_IT:00000000 $t
+C:\Users\andywei\AppData\Local\Temp\ccnxPJT6.s:1543   .text.UART_EndTransmit_IT:00000000 UART_EndTransmit_IT
+C:\Users\andywei\AppData\Local\Temp\ccnxPJT6.s:1578   .text.HAL_UART_TxHalfCpltCallback:00000000 $t
+C:\Users\andywei\AppData\Local\Temp\ccnxPJT6.s:1585   .text.HAL_UART_TxHalfCpltCallback:00000000 HAL_UART_TxHalfCpltCallback
+C:\Users\andywei\AppData\Local\Temp\ccnxPJT6.s:1600   .text.UART_DMATxHalfCplt:00000000 $t
+C:\Users\andywei\AppData\Local\Temp\ccnxPJT6.s:1633   .text.HAL_UART_RxCpltCallback:00000000 $t
+C:\Users\andywei\AppData\Local\Temp\ccnxPJT6.s:1640   .text.HAL_UART_RxCpltCallback:00000000 HAL_UART_RxCpltCallback
+C:\Users\andywei\AppData\Local\Temp\ccnxPJT6.s:1655   .text.HAL_UART_RxHalfCpltCallback:00000000 $t
+C:\Users\andywei\AppData\Local\Temp\ccnxPJT6.s:1662   .text.HAL_UART_RxHalfCpltCallback:00000000 HAL_UART_RxHalfCpltCallback
+C:\Users\andywei\AppData\Local\Temp\ccnxPJT6.s:1677   .text.HAL_UART_ErrorCallback:00000000 $t
+C:\Users\andywei\AppData\Local\Temp\ccnxPJT6.s:1684   .text.HAL_UART_ErrorCallback:00000000 HAL_UART_ErrorCallback
+C:\Users\andywei\AppData\Local\Temp\ccnxPJT6.s:1699   .text.UART_DMAError:00000000 $t
+C:\Users\andywei\AppData\Local\Temp\ccnxPJT6.s:1794   .text.UART_DMAAbortOnError:00000000 $t
+C:\Users\andywei\AppData\Local\Temp\ccnxPJT6.s:1800   .text.UART_DMAAbortOnError:00000000 UART_DMAAbortOnError
+C:\Users\andywei\AppData\Local\Temp\ccnxPJT6.s:1833   .text.HAL_UART_AbortCpltCallback:00000000 $t
+C:\Users\andywei\AppData\Local\Temp\ccnxPJT6.s:1840   .text.HAL_UART_AbortCpltCallback:00000000 HAL_UART_AbortCpltCallback
+C:\Users\andywei\AppData\Local\Temp\ccnxPJT6.s:1855   .text.HAL_UART_Abort_IT:00000000 $t
+ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccnxPJT6.s 			page 236
 
 
-C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s:1862   .text.HAL_UART_Abort_IT:00000000 HAL_UART_Abort_IT
-C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s:2087   .text.HAL_UART_Abort_IT:000000ec $d
-C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s:2179   .text.UART_DMATxAbortCallback:00000000 UART_DMATxAbortCallback
-C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s:2099   .text.UART_DMARxAbortCallback:00000000 UART_DMARxAbortCallback
-C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s:2093   .text.UART_DMARxAbortCallback:00000000 $t
-C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s:2173   .text.UART_DMATxAbortCallback:00000000 $t
-C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s:2247   .text.HAL_UART_AbortTransmitCpltCallback:00000000 $t
-C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s:2254   .text.HAL_UART_AbortTransmitCpltCallback:00000000 HAL_UART_AbortTransmitCpltCallback
-C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s:2269   .text.HAL_UART_AbortTransmit_IT:00000000 $t
-C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s:2276   .text.HAL_UART_AbortTransmit_IT:00000000 HAL_UART_AbortTransmit_IT
-C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s:2377   .text.HAL_UART_AbortTransmit_IT:00000060 $d
-C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s:2388   .text.UART_DMATxOnlyAbortCallback:00000000 UART_DMATxOnlyAbortCallback
-C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s:2382   .text.UART_DMATxOnlyAbortCallback:00000000 $t
-C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s:2422   .text.HAL_UART_AbortReceiveCpltCallback:00000000 $t
-C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s:2429   .text.HAL_UART_AbortReceiveCpltCallback:00000000 HAL_UART_AbortReceiveCpltCallback
-C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s:2444   .text.HAL_UART_AbortReceive_IT:00000000 $t
-C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s:2451   .text.HAL_UART_AbortReceive_IT:00000000 HAL_UART_AbortReceive_IT
-C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s:2595   .text.HAL_UART_AbortReceive_IT:00000098 $d
-C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s:2606   .text.UART_DMARxOnlyAbortCallback:00000000 UART_DMARxOnlyAbortCallback
-C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s:2600   .text.UART_DMARxOnlyAbortCallback:00000000 $t
-C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s:2653   .text.HAL_UARTEx_RxEventCallback:00000000 $t
-C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s:2660   .text.HAL_UARTEx_RxEventCallback:00000000 HAL_UARTEx_RxEventCallback
-C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s:2676   .text.HAL_UART_IRQHandler:00000000 $t
-C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s:2683   .text.HAL_UART_IRQHandler:00000000 HAL_UART_IRQHandler
-C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s:3200   .text.HAL_UART_IRQHandler:0000027c $d
-C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s:3206   .text.UART_RxISR_8BIT:00000000 $t
-C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s:3212   .text.UART_RxISR_8BIT:00000000 UART_RxISR_8BIT
-C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s:3341   .text.UART_RxISR_16BIT:00000000 $t
-C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s:3347   .text.UART_RxISR_16BIT:00000000 UART_RxISR_16BIT
-C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s:3478   .text.UART_DMARxHalfCplt:00000000 $t
-C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s:3484   .text.UART_DMARxHalfCplt:00000000 UART_DMARxHalfCplt
-C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s:3528   .text.UART_DMAReceiveCplt:00000000 $t
-C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s:3534   .text.UART_DMAReceiveCplt:00000000 UART_DMAReceiveCplt
-C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s:3622   .text.HAL_UART_ReceiverTimeout_Config:00000000 $t
-C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s:3629   .text.HAL_UART_ReceiverTimeout_Config:00000000 HAL_UART_ReceiverTimeout_Config
-C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s:3658   .text.HAL_UART_ReceiverTimeout_Config:00000014 $d
-C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s:3663   .text.HAL_UART_EnableReceiverTimeout:00000000 $t
-C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s:3670   .text.HAL_UART_EnableReceiverTimeout:00000000 HAL_UART_EnableReceiverTimeout
-C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s:3747   .text.HAL_UART_EnableReceiverTimeout:00000044 $d
-C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s:3752   .text.HAL_UART_DisableReceiverTimeout:00000000 $t
-C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s:3759   .text.HAL_UART_DisableReceiverTimeout:00000000 HAL_UART_DisableReceiverTimeout
-C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s:3836   .text.HAL_UART_DisableReceiverTimeout:00000044 $d
-C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s:3841   .text.HAL_MultiProcessor_EnterMuteMode:00000000 $t
-C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s:3848   .text.HAL_MultiProcessor_EnterMuteMode:00000000 HAL_MultiProcessor_EnterMuteMode
-C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s:3868   .text.HAL_HalfDuplex_EnableTransmitter:00000000 $t
-C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s:3875   .text.HAL_HalfDuplex_EnableTransmitter:00000000 HAL_HalfDuplex_EnableTransmitter
-C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s:3932   .text.HAL_HalfDuplex_EnableReceiver:00000000 $t
-C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s:3939   .text.HAL_HalfDuplex_EnableReceiver:00000000 HAL_HalfDuplex_EnableReceiver
-C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s:3996   .text.HAL_LIN_SendBreak:00000000 $t
-C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s:4003   .text.HAL_LIN_SendBreak:00000000 HAL_LIN_SendBreak
-C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s:4057   .text.HAL_UART_GetState:00000000 $t
-C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s:4064   .text.HAL_UART_GetState:00000000 HAL_UART_GetState
-C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s:4092   .text.HAL_UART_GetError:00000000 $t
-C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s:4099   .text.HAL_UART_GetError:00000000 HAL_UART_GetError
-C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s:4118   .text.UART_SetConfig:00000000 $t
-C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s:4125   .text.UART_SetConfig:00000000 UART_SetConfig
-C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s:4253   .text.UART_SetConfig:00000082 $d
-ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s 			page 237
+C:\Users\andywei\AppData\Local\Temp\ccnxPJT6.s:1862   .text.HAL_UART_Abort_IT:00000000 HAL_UART_Abort_IT
+C:\Users\andywei\AppData\Local\Temp\ccnxPJT6.s:2087   .text.HAL_UART_Abort_IT:000000ec $d
+C:\Users\andywei\AppData\Local\Temp\ccnxPJT6.s:2179   .text.UART_DMATxAbortCallback:00000000 UART_DMATxAbortCallback
+C:\Users\andywei\AppData\Local\Temp\ccnxPJT6.s:2099   .text.UART_DMARxAbortCallback:00000000 UART_DMARxAbortCallback
+C:\Users\andywei\AppData\Local\Temp\ccnxPJT6.s:2093   .text.UART_DMARxAbortCallback:00000000 $t
+C:\Users\andywei\AppData\Local\Temp\ccnxPJT6.s:2173   .text.UART_DMATxAbortCallback:00000000 $t
+C:\Users\andywei\AppData\Local\Temp\ccnxPJT6.s:2247   .text.HAL_UART_AbortTransmitCpltCallback:00000000 $t
+C:\Users\andywei\AppData\Local\Temp\ccnxPJT6.s:2254   .text.HAL_UART_AbortTransmitCpltCallback:00000000 HAL_UART_AbortTransmitCpltCallback
+C:\Users\andywei\AppData\Local\Temp\ccnxPJT6.s:2269   .text.HAL_UART_AbortTransmit_IT:00000000 $t
+C:\Users\andywei\AppData\Local\Temp\ccnxPJT6.s:2276   .text.HAL_UART_AbortTransmit_IT:00000000 HAL_UART_AbortTransmit_IT
+C:\Users\andywei\AppData\Local\Temp\ccnxPJT6.s:2377   .text.HAL_UART_AbortTransmit_IT:00000060 $d
+C:\Users\andywei\AppData\Local\Temp\ccnxPJT6.s:2388   .text.UART_DMATxOnlyAbortCallback:00000000 UART_DMATxOnlyAbortCallback
+C:\Users\andywei\AppData\Local\Temp\ccnxPJT6.s:2382   .text.UART_DMATxOnlyAbortCallback:00000000 $t
+C:\Users\andywei\AppData\Local\Temp\ccnxPJT6.s:2422   .text.HAL_UART_AbortReceiveCpltCallback:00000000 $t
+C:\Users\andywei\AppData\Local\Temp\ccnxPJT6.s:2429   .text.HAL_UART_AbortReceiveCpltCallback:00000000 HAL_UART_AbortReceiveCpltCallback
+C:\Users\andywei\AppData\Local\Temp\ccnxPJT6.s:2444   .text.HAL_UART_AbortReceive_IT:00000000 $t
+C:\Users\andywei\AppData\Local\Temp\ccnxPJT6.s:2451   .text.HAL_UART_AbortReceive_IT:00000000 HAL_UART_AbortReceive_IT
+C:\Users\andywei\AppData\Local\Temp\ccnxPJT6.s:2595   .text.HAL_UART_AbortReceive_IT:00000098 $d
+C:\Users\andywei\AppData\Local\Temp\ccnxPJT6.s:2606   .text.UART_DMARxOnlyAbortCallback:00000000 UART_DMARxOnlyAbortCallback
+C:\Users\andywei\AppData\Local\Temp\ccnxPJT6.s:2600   .text.UART_DMARxOnlyAbortCallback:00000000 $t
+C:\Users\andywei\AppData\Local\Temp\ccnxPJT6.s:2653   .text.HAL_UARTEx_RxEventCallback:00000000 $t
+C:\Users\andywei\AppData\Local\Temp\ccnxPJT6.s:2660   .text.HAL_UARTEx_RxEventCallback:00000000 HAL_UARTEx_RxEventCallback
+C:\Users\andywei\AppData\Local\Temp\ccnxPJT6.s:2676   .text.HAL_UART_IRQHandler:00000000 $t
+C:\Users\andywei\AppData\Local\Temp\ccnxPJT6.s:2683   .text.HAL_UART_IRQHandler:00000000 HAL_UART_IRQHandler
+C:\Users\andywei\AppData\Local\Temp\ccnxPJT6.s:3200   .text.HAL_UART_IRQHandler:0000027c $d
+C:\Users\andywei\AppData\Local\Temp\ccnxPJT6.s:3206   .text.UART_RxISR_8BIT:00000000 $t
+C:\Users\andywei\AppData\Local\Temp\ccnxPJT6.s:3212   .text.UART_RxISR_8BIT:00000000 UART_RxISR_8BIT
+C:\Users\andywei\AppData\Local\Temp\ccnxPJT6.s:3341   .text.UART_RxISR_16BIT:00000000 $t
+C:\Users\andywei\AppData\Local\Temp\ccnxPJT6.s:3347   .text.UART_RxISR_16BIT:00000000 UART_RxISR_16BIT
+C:\Users\andywei\AppData\Local\Temp\ccnxPJT6.s:3478   .text.UART_DMARxHalfCplt:00000000 $t
+C:\Users\andywei\AppData\Local\Temp\ccnxPJT6.s:3484   .text.UART_DMARxHalfCplt:00000000 UART_DMARxHalfCplt
+C:\Users\andywei\AppData\Local\Temp\ccnxPJT6.s:3528   .text.UART_DMAReceiveCplt:00000000 $t
+C:\Users\andywei\AppData\Local\Temp\ccnxPJT6.s:3534   .text.UART_DMAReceiveCplt:00000000 UART_DMAReceiveCplt
+C:\Users\andywei\AppData\Local\Temp\ccnxPJT6.s:3622   .text.HAL_UART_ReceiverTimeout_Config:00000000 $t
+C:\Users\andywei\AppData\Local\Temp\ccnxPJT6.s:3629   .text.HAL_UART_ReceiverTimeout_Config:00000000 HAL_UART_ReceiverTimeout_Config
+C:\Users\andywei\AppData\Local\Temp\ccnxPJT6.s:3658   .text.HAL_UART_ReceiverTimeout_Config:00000014 $d
+C:\Users\andywei\AppData\Local\Temp\ccnxPJT6.s:3663   .text.HAL_UART_EnableReceiverTimeout:00000000 $t
+C:\Users\andywei\AppData\Local\Temp\ccnxPJT6.s:3670   .text.HAL_UART_EnableReceiverTimeout:00000000 HAL_UART_EnableReceiverTimeout
+C:\Users\andywei\AppData\Local\Temp\ccnxPJT6.s:3747   .text.HAL_UART_EnableReceiverTimeout:00000044 $d
+C:\Users\andywei\AppData\Local\Temp\ccnxPJT6.s:3752   .text.HAL_UART_DisableReceiverTimeout:00000000 $t
+C:\Users\andywei\AppData\Local\Temp\ccnxPJT6.s:3759   .text.HAL_UART_DisableReceiverTimeout:00000000 HAL_UART_DisableReceiverTimeout
+C:\Users\andywei\AppData\Local\Temp\ccnxPJT6.s:3836   .text.HAL_UART_DisableReceiverTimeout:00000044 $d
+C:\Users\andywei\AppData\Local\Temp\ccnxPJT6.s:3841   .text.HAL_MultiProcessor_EnterMuteMode:00000000 $t
+C:\Users\andywei\AppData\Local\Temp\ccnxPJT6.s:3848   .text.HAL_MultiProcessor_EnterMuteMode:00000000 HAL_MultiProcessor_EnterMuteMode
+C:\Users\andywei\AppData\Local\Temp\ccnxPJT6.s:3868   .text.HAL_HalfDuplex_EnableTransmitter:00000000 $t
+C:\Users\andywei\AppData\Local\Temp\ccnxPJT6.s:3875   .text.HAL_HalfDuplex_EnableTransmitter:00000000 HAL_HalfDuplex_EnableTransmitter
+C:\Users\andywei\AppData\Local\Temp\ccnxPJT6.s:3932   .text.HAL_HalfDuplex_EnableReceiver:00000000 $t
+C:\Users\andywei\AppData\Local\Temp\ccnxPJT6.s:3939   .text.HAL_HalfDuplex_EnableReceiver:00000000 HAL_HalfDuplex_EnableReceiver
+C:\Users\andywei\AppData\Local\Temp\ccnxPJT6.s:3996   .text.HAL_LIN_SendBreak:00000000 $t
+C:\Users\andywei\AppData\Local\Temp\ccnxPJT6.s:4003   .text.HAL_LIN_SendBreak:00000000 HAL_LIN_SendBreak
+C:\Users\andywei\AppData\Local\Temp\ccnxPJT6.s:4057   .text.HAL_UART_GetState:00000000 $t
+C:\Users\andywei\AppData\Local\Temp\ccnxPJT6.s:4064   .text.HAL_UART_GetState:00000000 HAL_UART_GetState
+C:\Users\andywei\AppData\Local\Temp\ccnxPJT6.s:4092   .text.HAL_UART_GetError:00000000 $t
+C:\Users\andywei\AppData\Local\Temp\ccnxPJT6.s:4099   .text.HAL_UART_GetError:00000000 HAL_UART_GetError
+C:\Users\andywei\AppData\Local\Temp\ccnxPJT6.s:4118   .text.UART_SetConfig:00000000 $t
+C:\Users\andywei\AppData\Local\Temp\ccnxPJT6.s:4125   .text.UART_SetConfig:00000000 UART_SetConfig
+C:\Users\andywei\AppData\Local\Temp\ccnxPJT6.s:4253   .text.UART_SetConfig:00000082 $d
+ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccnxPJT6.s 			page 237
 
 
-C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s:4257   .text.UART_SetConfig:00000086 $t
-C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s:4291   .text.UART_SetConfig:000000aa $d
-C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s:4361   .text.UART_SetConfig:000000fe $d
-C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s:4371   .text.UART_SetConfig:00000110 $t
-C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s:4500   .text.UART_SetConfig:000001e2 $d
-C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s:4583   .text.UART_SetConfig:00000242 $d
-C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s:4600   .text.UART_SetConfig:00000250 $d
-C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s:4612   .text.UART_SetConfig:00000274 $t
-C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s:4811   .text.UART_SetConfig:00000324 $d
-C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s:4816   .text.UART_AdvFeatureConfig:00000000 $t
-C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s:4823   .text.UART_AdvFeatureConfig:00000000 UART_AdvFeatureConfig
-C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s:4975   .text.UART_WaitOnFlagUntilTimeout:00000000 $t
-C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s:4982   .text.UART_WaitOnFlagUntilTimeout:00000000 UART_WaitOnFlagUntilTimeout
-C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s:5120   .text.HAL_UART_Transmit:00000000 $t
-C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s:5127   .text.HAL_UART_Transmit:00000000 HAL_UART_Transmit
-C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s:5358   .text.HAL_UART_Receive:00000000 $t
-C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s:5365   .text.HAL_UART_Receive:00000000 HAL_UART_Receive
-C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s:5648   .text.UART_CheckIdleState:00000000 $t
-C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s:5655   .text.UART_CheckIdleState:00000000 UART_CheckIdleState
-C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s:5771   .text.HAL_UART_Init:00000000 $t
-C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s:5778   .text.HAL_UART_Init:00000000 HAL_UART_Init
-C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s:5881   .text.HAL_HalfDuplex_Init:00000000 $t
-C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s:5888   .text.HAL_HalfDuplex_Init:00000000 HAL_HalfDuplex_Init
-C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s:5996   .text.HAL_LIN_Init:00000000 $t
-C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s:6003   .text.HAL_LIN_Init:00000000 HAL_LIN_Init
-C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s:6155   .text.HAL_MultiProcessor_Init:00000000 $t
-C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s:6162   .text.HAL_MultiProcessor_Init:00000000 HAL_MultiProcessor_Init
-C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s:6292   .text.HAL_MultiProcessor_EnableMuteMode:00000000 $t
-C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s:6299   .text.HAL_MultiProcessor_EnableMuteMode:00000000 HAL_MultiProcessor_EnableMuteMode
-C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s:6352   .text.HAL_MultiProcessor_DisableMuteMode:00000000 $t
-C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s:6359   .text.HAL_MultiProcessor_DisableMuteMode:00000000 HAL_MultiProcessor_DisableMuteMode
-C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s:6412   .text.UART_Start_Receive_IT:00000000 $t
-C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s:6419   .text.UART_Start_Receive_IT:00000000 UART_Start_Receive_IT
-C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s:6559   .text.UART_Start_Receive_IT:000000a4 $d
-C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s:6565   .text.HAL_UART_Receive_IT:00000000 $t
-C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s:6572   .text.HAL_UART_Receive_IT:00000000 HAL_UART_Receive_IT
-C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s:6668   .text.HAL_UART_Receive_IT:0000004c $d
-C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s:6673   .text.UART_Start_Receive_DMA:00000000 $t
-C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s:6680   .text.UART_Start_Receive_DMA:00000000 UART_Start_Receive_DMA
-C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s:6801   .text.UART_Start_Receive_DMA:00000078 $d
-C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s:6808   .text.HAL_UART_Receive_DMA:00000000 $t
-C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s:6815   .text.HAL_UART_Receive_DMA:00000000 HAL_UART_Receive_DMA
-C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s:6911   .text.HAL_UART_Receive_DMA:0000004c $d
-C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s:4304   .text.UART_SetConfig:000000b7 $d
-C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s:4304   .text.UART_SetConfig:000000b8 $t
-C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s:4509   .text.UART_SetConfig:000001eb $d
-C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s:4509   .text.UART_SetConfig:000001ec $t
-C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s:4592   .text.UART_SetConfig:0000024b $d
-C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s:4592   .text.UART_SetConfig:0000024c $t
+C:\Users\andywei\AppData\Local\Temp\ccnxPJT6.s:4257   .text.UART_SetConfig:00000086 $t
+C:\Users\andywei\AppData\Local\Temp\ccnxPJT6.s:4291   .text.UART_SetConfig:000000aa $d
+C:\Users\andywei\AppData\Local\Temp\ccnxPJT6.s:4361   .text.UART_SetConfig:000000fe $d
+C:\Users\andywei\AppData\Local\Temp\ccnxPJT6.s:4371   .text.UART_SetConfig:00000110 $t
+C:\Users\andywei\AppData\Local\Temp\ccnxPJT6.s:4500   .text.UART_SetConfig:000001e2 $d
+C:\Users\andywei\AppData\Local\Temp\ccnxPJT6.s:4583   .text.UART_SetConfig:00000242 $d
+C:\Users\andywei\AppData\Local\Temp\ccnxPJT6.s:4600   .text.UART_SetConfig:00000250 $d
+C:\Users\andywei\AppData\Local\Temp\ccnxPJT6.s:4612   .text.UART_SetConfig:00000274 $t
+C:\Users\andywei\AppData\Local\Temp\ccnxPJT6.s:4811   .text.UART_SetConfig:00000324 $d
+C:\Users\andywei\AppData\Local\Temp\ccnxPJT6.s:4816   .text.UART_AdvFeatureConfig:00000000 $t
+C:\Users\andywei\AppData\Local\Temp\ccnxPJT6.s:4823   .text.UART_AdvFeatureConfig:00000000 UART_AdvFeatureConfig
+C:\Users\andywei\AppData\Local\Temp\ccnxPJT6.s:4975   .text.UART_WaitOnFlagUntilTimeout:00000000 $t
+C:\Users\andywei\AppData\Local\Temp\ccnxPJT6.s:4982   .text.UART_WaitOnFlagUntilTimeout:00000000 UART_WaitOnFlagUntilTimeout
+C:\Users\andywei\AppData\Local\Temp\ccnxPJT6.s:5120   .text.HAL_UART_Transmit:00000000 $t
+C:\Users\andywei\AppData\Local\Temp\ccnxPJT6.s:5127   .text.HAL_UART_Transmit:00000000 HAL_UART_Transmit
+C:\Users\andywei\AppData\Local\Temp\ccnxPJT6.s:5358   .text.HAL_UART_Receive:00000000 $t
+C:\Users\andywei\AppData\Local\Temp\ccnxPJT6.s:5365   .text.HAL_UART_Receive:00000000 HAL_UART_Receive
+C:\Users\andywei\AppData\Local\Temp\ccnxPJT6.s:5648   .text.UART_CheckIdleState:00000000 $t
+C:\Users\andywei\AppData\Local\Temp\ccnxPJT6.s:5655   .text.UART_CheckIdleState:00000000 UART_CheckIdleState
+C:\Users\andywei\AppData\Local\Temp\ccnxPJT6.s:5771   .text.HAL_UART_Init:00000000 $t
+C:\Users\andywei\AppData\Local\Temp\ccnxPJT6.s:5778   .text.HAL_UART_Init:00000000 HAL_UART_Init
+C:\Users\andywei\AppData\Local\Temp\ccnxPJT6.s:5881   .text.HAL_HalfDuplex_Init:00000000 $t
+C:\Users\andywei\AppData\Local\Temp\ccnxPJT6.s:5888   .text.HAL_HalfDuplex_Init:00000000 HAL_HalfDuplex_Init
+C:\Users\andywei\AppData\Local\Temp\ccnxPJT6.s:5996   .text.HAL_LIN_Init:00000000 $t
+C:\Users\andywei\AppData\Local\Temp\ccnxPJT6.s:6003   .text.HAL_LIN_Init:00000000 HAL_LIN_Init
+C:\Users\andywei\AppData\Local\Temp\ccnxPJT6.s:6155   .text.HAL_MultiProcessor_Init:00000000 $t
+C:\Users\andywei\AppData\Local\Temp\ccnxPJT6.s:6162   .text.HAL_MultiProcessor_Init:00000000 HAL_MultiProcessor_Init
+C:\Users\andywei\AppData\Local\Temp\ccnxPJT6.s:6292   .text.HAL_MultiProcessor_EnableMuteMode:00000000 $t
+C:\Users\andywei\AppData\Local\Temp\ccnxPJT6.s:6299   .text.HAL_MultiProcessor_EnableMuteMode:00000000 HAL_MultiProcessor_EnableMuteMode
+C:\Users\andywei\AppData\Local\Temp\ccnxPJT6.s:6352   .text.HAL_MultiProcessor_DisableMuteMode:00000000 $t
+C:\Users\andywei\AppData\Local\Temp\ccnxPJT6.s:6359   .text.HAL_MultiProcessor_DisableMuteMode:00000000 HAL_MultiProcessor_DisableMuteMode
+C:\Users\andywei\AppData\Local\Temp\ccnxPJT6.s:6412   .text.UART_Start_Receive_IT:00000000 $t
+C:\Users\andywei\AppData\Local\Temp\ccnxPJT6.s:6419   .text.UART_Start_Receive_IT:00000000 UART_Start_Receive_IT
+C:\Users\andywei\AppData\Local\Temp\ccnxPJT6.s:6559   .text.UART_Start_Receive_IT:000000a4 $d
+C:\Users\andywei\AppData\Local\Temp\ccnxPJT6.s:6565   .text.HAL_UART_Receive_IT:00000000 $t
+C:\Users\andywei\AppData\Local\Temp\ccnxPJT6.s:6572   .text.HAL_UART_Receive_IT:00000000 HAL_UART_Receive_IT
+C:\Users\andywei\AppData\Local\Temp\ccnxPJT6.s:6668   .text.HAL_UART_Receive_IT:0000004c $d
+C:\Users\andywei\AppData\Local\Temp\ccnxPJT6.s:6673   .text.UART_Start_Receive_DMA:00000000 $t
+C:\Users\andywei\AppData\Local\Temp\ccnxPJT6.s:6680   .text.UART_Start_Receive_DMA:00000000 UART_Start_Receive_DMA
+C:\Users\andywei\AppData\Local\Temp\ccnxPJT6.s:6801   .text.UART_Start_Receive_DMA:00000078 $d
+C:\Users\andywei\AppData\Local\Temp\ccnxPJT6.s:6808   .text.HAL_UART_Receive_DMA:00000000 $t
+C:\Users\andywei\AppData\Local\Temp\ccnxPJT6.s:6815   .text.HAL_UART_Receive_DMA:00000000 HAL_UART_Receive_DMA
+C:\Users\andywei\AppData\Local\Temp\ccnxPJT6.s:6911   .text.HAL_UART_Receive_DMA:0000004c $d
+C:\Users\andywei\AppData\Local\Temp\ccnxPJT6.s:4304   .text.UART_SetConfig:000000b7 $d
+C:\Users\andywei\AppData\Local\Temp\ccnxPJT6.s:4304   .text.UART_SetConfig:000000b8 $t
+C:\Users\andywei\AppData\Local\Temp\ccnxPJT6.s:4509   .text.UART_SetConfig:000001eb $d
+C:\Users\andywei\AppData\Local\Temp\ccnxPJT6.s:4509   .text.UART_SetConfig:000001ec $t
+C:\Users\andywei\AppData\Local\Temp\ccnxPJT6.s:4592   .text.UART_SetConfig:0000024b $d
+C:\Users\andywei\AppData\Local\Temp\ccnxPJT6.s:4592   .text.UART_SetConfig:0000024c $t
 
 UNDEFINED SYMBOLS
 HAL_DMA_Start_IT
@@ -14163,7 +14163,7 @@ HAL_DMA_GetError
 HAL_DMA_Abort_IT
 HAL_UARTEx_WakeupCallback
 __aeabi_uldivmod
-ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccaxja4d.s 			page 238
+ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccnxPJT6.s 			page 238
 
 
 HAL_RCC_GetPCLK1Freq

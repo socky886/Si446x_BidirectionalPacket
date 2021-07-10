@@ -68,6 +68,10 @@ typedef uint32_t U32;
 #include "si446x_patch.h"
 #endif
 
-#include "radio_config.h"
+#ifdef WHITEN_YES
+#include "radio_config_whiten.h"
+#else
+#include "radio_config_no_whiten.h"
+#endif
 
 #endif
