@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccR8H12q.s 			page 1
+ARM GAS  C:\Users\andywei\AppData\Local\Temp\cc9d6ONx.s 			page 1
 
 
    1              		.cpu cortex-m4
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccR8H12q.s 			page 1
   29:Src/main.c    **** 
   30:Src/main.c    **** /* Private typedef -----------------------------------------------------------*/
   31:Src/main.c    **** /* USER CODE BEGIN PTD */
-ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccR8H12q.s 			page 2
+ARM GAS  C:\Users\andywei\AppData\Local\Temp\cc9d6ONx.s 			page 2
 
 
   32:Src/main.c    **** 
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccR8H12q.s 			page 1
   86:Src/main.c    **** //   return ch;
   87:Src/main.c    **** // }
   88:Src/main.c    **** 
-ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccR8H12q.s 			page 3
+ARM GAS  C:\Users\andywei\AppData\Local\Temp\cc9d6ONx.s 			page 3
 
 
   89:Src/main.c    **** int _write(int fd, char *pBuffer, int size)
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccR8H12q.s 			page 1
  143:Src/main.c    ****     tx_buf1[i]=i+1;
  144:Src/main.c    ****   }
  145:Src/main.c    ****   /* USER CODE END 2 */
-ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccR8H12q.s 			page 4
+ARM GAS  C:\Users\andywei\AppData\Local\Temp\cc9d6ONx.s 			page 4
 
 
  146:Src/main.c    **** 
@@ -187,22 +187,22 @@ ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccR8H12q.s 			page 1
  149:Src/main.c    ****   while (1)
  150:Src/main.c    ****   {
  151:Src/main.c    **** 
- 152:Src/main.c    ****     vRadio_StartTx_Variable_Packet(0,tx_buf,9);
- 153:Src/main.c    ****     // vRadio_StartTx_Variable_Packet(0,tx_buf1,60);
- 154:Src/main.c    ****     while (1)
- 155:Src/main.c    ****     {
- 156:Src/main.c    ****       if(bRadio_Check_Tx_RX()==0x20)
- 157:Src/main.c    ****       {
- 158:Src/main.c    ****         printf("transmit packet successfully\n");
- 159:Src/main.c    ****         break;
- 160:Src/main.c    ****       }
- 161:Src/main.c    ****       else
- 162:Src/main.c    ****       {
- 163:Src/main.c    ****         // printf("transmit packet is going\n");
- 164:Src/main.c    ****         ;
- 165:Src/main.c    ****       }
- 166:Src/main.c    ****     }
- 167:Src/main.c    ****     HAL_Delay(200);
+ 152:Src/main.c    ****     // vRadio_StartTx_Variable_Packet(0,tx_buf,9);
+ 153:Src/main.c    ****     // // vRadio_StartTx_Variable_Packet(0,tx_buf1,60);
+ 154:Src/main.c    ****     // while (1)
+ 155:Src/main.c    ****     // {
+ 156:Src/main.c    ****     //   if(bRadio_Check_Tx_RX()==0x20)
+ 157:Src/main.c    ****     //   {
+ 158:Src/main.c    ****     //     printf("transmit packet successfully\n");
+ 159:Src/main.c    ****     //     break;
+ 160:Src/main.c    ****     //   }
+ 161:Src/main.c    ****     //   else
+ 162:Src/main.c    ****     //   {
+ 163:Src/main.c    ****     //     // printf("transmit packet is going\n");
+ 164:Src/main.c    ****     //     ;
+ 165:Src/main.c    ****     //   }
+ 166:Src/main.c    ****     // }
+ 167:Src/main.c    ****     // HAL_Delay(200);
  168:Src/main.c    **** 
  169:Src/main.c    ****   //   count=crc16(tx_buf,7);
  170:Src/main.c    ****   //   printf("the crc16 is 0x%04x\n",count);
@@ -213,37 +213,37 @@ ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccR8H12q.s 			page 1
  175:Src/main.c    ****     // count=CRC16(tx_buf,10);
  176:Src/main.c    ****     // printf("the crc16  is 0x%04x\n",count);
  177:Src/main.c    ****     
- 178:Src/main.c    ****     // vRadio_StartRX(0,0);
- 179:Src/main.c    ****     // // printf("the receive packet length is %d\n",no);
- 180:Src/main.c    ****     // // no++;
- 181:Src/main.c    ****     // // if(no==11)
- 182:Src/main.c    ****     // // no=0;
+ 178:Src/main.c    ****     vRadio_StartRX(0,0);
+ 179:Src/main.c    ****     // printf("the receive packet length is %d\n",no);
+ 180:Src/main.c    ****     // no++;
+ 181:Src/main.c    ****     // if(no==11)
+ 182:Src/main.c    ****     // no=0;
  183:Src/main.c    **** 
- 184:Src/main.c    ****     // count = 0;
- 185:Src/main.c    ****     // while (1)
- 186:Src/main.c    ****     // {
- 187:Src/main.c    ****     //   if (bRadio_Check_Tx_RX() == 0x10)
- 188:Src/main.c    ****     //   {
- 189:Src/main.c    ****     //     printf("\nreceive packet successfully\n");
- 190:Src/main.c    ****     //     si446x_change_state(SI446X_CMD_CHANGE_STATE_ARG_NEXT_STATE1_NEW_STATE_ENUM_READY);
- 191:Src/main.c    ****     //     break;
- 192:Src/main.c    ****     //   }
- 193:Src/main.c    ****     //   else
- 194:Src/main.c    ****     //   {
- 195:Src/main.c    ****     //     // printf("receive packet is going\n");
- 196:Src/main.c    ****     //     HAL_Delay(1);
- 197:Src/main.c    ****     //     count++;
- 198:Src/main.c    ****     //     if (count >= 1000)
- 199:Src/main.c    ****     //     {
- 200:Src/main.c    ****     //       printf("rx timeout\n");
+ 184:Src/main.c    ****     count = 0;
+ 185:Src/main.c    ****     while (1)
+ 186:Src/main.c    ****     {
+ 187:Src/main.c    ****       if (bRadio_Check_Tx_RX() == 0x10)
+ 188:Src/main.c    ****       {
+ 189:Src/main.c    ****         printf("\nreceive packet successfully\n");
+ 190:Src/main.c    ****         si446x_change_state(SI446X_CMD_CHANGE_STATE_ARG_NEXT_STATE1_NEW_STATE_ENUM_READY);
+ 191:Src/main.c    ****         break;
+ 192:Src/main.c    ****       }
+ 193:Src/main.c    ****       else
+ 194:Src/main.c    ****       {
+ 195:Src/main.c    ****         // printf("receive packet is going\n");
+ 196:Src/main.c    ****         HAL_Delay(1);
+ 197:Src/main.c    ****         count++;
+ 198:Src/main.c    ****         if (count >= 1000)
+ 199:Src/main.c    ****         {
+ 200:Src/main.c    ****           printf("rx timeout\n");
  201:Src/main.c    **** 
- 202:Src/main.c    ****     //       break;
-ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccR8H12q.s 			page 5
+ 202:Src/main.c    ****           break;
+ARM GAS  C:\Users\andywei\AppData\Local\Temp\cc9d6ONx.s 			page 5
 
 
- 203:Src/main.c    ****     //     }
- 204:Src/main.c    ****     //   }
- 205:Src/main.c    ****     // }
+ 203:Src/main.c    ****         }
+ 204:Src/main.c    ****       }
+ 205:Src/main.c    ****     }
  206:Src/main.c    ****     /* USER CODE END WHILE */
  207:Src/main.c    **** 
  208:Src/main.c    ****     /* USER CODE BEGIN 3 */
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccR8H12q.s 			page 1
  257:Src/main.c    ****   if (HAL_RCCEx_PeriphCLKConfig(&PeriphClkInit) != HAL_OK)
  258:Src/main.c    ****   {
  259:Src/main.c    ****     Error_Handler();
-ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccR8H12q.s 			page 6
+ARM GAS  C:\Users\andywei\AppData\Local\Temp\cc9d6ONx.s 			page 6
 
 
  260:Src/main.c    ****   }
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccR8H12q.s 			page 1
  314:Src/main.c    ****   if (HAL_RTC_SetTime(&hrtc, &sTime, RTC_FORMAT_BIN) != HAL_OK)
  315:Src/main.c    ****   {
  316:Src/main.c    ****     Error_Handler();
-ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccR8H12q.s 			page 7
+ARM GAS  C:\Users\andywei\AppData\Local\Temp\cc9d6ONx.s 			page 7
 
 
  317:Src/main.c    ****   }
@@ -418,7 +418,7 @@ ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccR8H12q.s 			page 1
  371:Src/main.c    ****   hspi1.Init.CLKPolarity = SPI_POLARITY_LOW;
  372:Src/main.c    ****   hspi1.Init.CLKPhase = SPI_PHASE_1EDGE;
  373:Src/main.c    ****   hspi1.Init.NSS = SPI_NSS_SOFT;
-ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccR8H12q.s 			page 8
+ARM GAS  C:\Users\andywei\AppData\Local\Temp\cc9d6ONx.s 			page 8
 
 
  374:Src/main.c    ****   hspi1.Init.BaudRatePrescaler = SPI_BAUDRATEPRESCALER_128;
@@ -478,7 +478,7 @@ ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccR8H12q.s 			page 1
  428:Src/main.c    ****   * @param None
  429:Src/main.c    ****   * @retval None
  430:Src/main.c    ****   */
-ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccR8H12q.s 			page 9
+ARM GAS  C:\Users\andywei\AppData\Local\Temp\cc9d6ONx.s 			page 9
 
 
  431:Src/main.c    **** static void MX_GPIO_Init(void)
@@ -538,7 +538,7 @@ ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccR8H12q.s 			page 1
   75 002e 02F00102 		and	r2, r2, #1
   76 0032 0192     		str	r2, [sp, #4]
   77              		.loc 1 437 3 view .LVU13
-ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccR8H12q.s 			page 10
+ARM GAS  C:\Users\andywei\AppData\Local\Temp\cc9d6ONx.s 			page 10
 
 
   78 0034 019A     		ldr	r2, [sp, #4]
@@ -598,7 +598,7 @@ ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccR8H12q.s 			page 1
  451:Src/main.c    ****   GPIO_InitStruct.Mode = GPIO_MODE_IT_FALLING;
  119              		.loc 1 451 3 is_stmt 1 view .LVU26
  120              		.loc 1 451 24 is_stmt 0 view .LVU27
-ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccR8H12q.s 			page 11
+ARM GAS  C:\Users\andywei\AppData\Local\Temp\cc9d6ONx.s 			page 11
 
 
  121 0076 194B     		ldr	r3, .L3+8
@@ -658,7 +658,7 @@ ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccR8H12q.s 			page 1
  160              		.loc 1 466 3 is_stmt 1 view .LVU46
  161              		.loc 1 466 25 is_stmt 0 view .LVU47
  162 00a2 0694     		str	r4, [sp, #24]
-ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccR8H12q.s 			page 12
+ARM GAS  C:\Users\andywei\AppData\Local\Temp\cc9d6ONx.s 			page 12
 
 
  467:Src/main.c    ****   HAL_GPIO_Init(GPIOA, &GPIO_InitStruct);
@@ -718,7 +718,7 @@ ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccR8H12q.s 			page 1
  204 00dc 00002110 		.word	270598144
  205 00e0 00040048 		.word	1207960576
  206              		.cfi_endproc
-ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccR8H12q.s 			page 13
+ARM GAS  C:\Users\andywei\AppData\Local\Temp\cc9d6ONx.s 			page 13
 
 
  207              	.LFE142:
@@ -778,7 +778,7 @@ ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccR8H12q.s 			page 1
  255 002a 5DF804FB 		ldr	pc, [sp], #4
  256              	.L8:
  257 002e 00BF     		.align	2
-ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccR8H12q.s 			page 14
+ARM GAS  C:\Users\andywei\AppData\Local\Temp\cc9d6ONx.s 			page 14
 
 
  258              	.L7:
@@ -838,7 +838,7 @@ ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccR8H12q.s 			page 1
   91:Src/main.c    ****   {
  306              		.loc 1 91 30 is_stmt 0 discriminator 3 view .LVU75
  307 0018 0134     		adds	r4, r4, #1
-ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccR8H12q.s 			page 15
+ARM GAS  C:\Users\andywei\AppData\Local\Temp\cc9d6ONx.s 			page 15
 
 
  308              	.LVL16:
@@ -898,7 +898,7 @@ ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccR8H12q.s 			page 1
  345              	.LBB8:
  346              	.LBI8:
  347              		.file 2 "Drivers/CMSIS/Include/cmsis_gcc.h"
-ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccR8H12q.s 			page 16
+ARM GAS  C:\Users\andywei\AppData\Local\Temp\cc9d6ONx.s 			page 16
 
 
    1:Drivers/CMSIS/Include/cmsis_gcc.h **** /**************************************************************************//**
@@ -958,7 +958,7 @@ ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccR8H12q.s 			page 1
   55:Drivers/CMSIS/Include/cmsis_gcc.h **** #ifndef   __USED
   56:Drivers/CMSIS/Include/cmsis_gcc.h ****   #define __USED                                 __attribute__((used))
   57:Drivers/CMSIS/Include/cmsis_gcc.h **** #endif
-ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccR8H12q.s 			page 17
+ARM GAS  C:\Users\andywei\AppData\Local\Temp\cc9d6ONx.s 			page 17
 
 
   58:Drivers/CMSIS/Include/cmsis_gcc.h **** #ifndef   __WEAK
@@ -1018,7 +1018,7 @@ ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccR8H12q.s 			page 1
  112:Drivers/CMSIS/Include/cmsis_gcc.h **** #endif
  113:Drivers/CMSIS/Include/cmsis_gcc.h **** #ifndef   __RESTRICT
  114:Drivers/CMSIS/Include/cmsis_gcc.h ****   #define __RESTRICT                             __restrict
-ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccR8H12q.s 			page 18
+ARM GAS  C:\Users\andywei\AppData\Local\Temp\cc9d6ONx.s 			page 18
 
 
  115:Drivers/CMSIS/Include/cmsis_gcc.h **** #endif
@@ -1078,7 +1078,7 @@ ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccR8H12q.s 			page 1
  169:Drivers/CMSIS/Include/cmsis_gcc.h **** #ifndef __INITIAL_SP
  170:Drivers/CMSIS/Include/cmsis_gcc.h **** #define __INITIAL_SP              __StackTop
  171:Drivers/CMSIS/Include/cmsis_gcc.h **** #endif
-ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccR8H12q.s 			page 19
+ARM GAS  C:\Users\andywei\AppData\Local\Temp\cc9d6ONx.s 			page 19
 
 
  172:Drivers/CMSIS/Include/cmsis_gcc.h **** 
@@ -1138,7 +1138,7 @@ ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccR8H12q.s 			page 1
  361              		.loc 1 496 3 discriminator 1 view .LVU86
  494:Src/main.c    ****   while (1)
  362              		.loc 1 494 9 discriminator 1 view .LVU87
-ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccR8H12q.s 			page 20
+ARM GAS  C:\Users\andywei\AppData\Local\Temp\cc9d6ONx.s 			page 20
 
 
  363 0002 FEE7     		b	.L16
@@ -1198,7 +1198,7 @@ ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccR8H12q.s 			page 1
  410 0020 0360     		str	r3, [r0]
  291:Src/main.c    ****   hrtc.Init.AsynchPrediv = 31;
  411              		.loc 1 291 3 is_stmt 1 view .LVU97
-ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccR8H12q.s 			page 21
+ARM GAS  C:\Users\andywei\AppData\Local\Temp\cc9d6ONx.s 			page 21
 
 
  291:Src/main.c    ****   hrtc.Init.AsynchPrediv = 31;
@@ -1258,7 +1258,7 @@ ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccR8H12q.s 			page 1
  446              		.loc 1 310 17 is_stmt 0 view .LVU117
  447 0044 8DF83520 		strb	r2, [sp, #53]
  311:Src/main.c    ****   sTime.DayLightSaving = RTC_DAYLIGHTSAVING_NONE;
-ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccR8H12q.s 			page 22
+ARM GAS  C:\Users\andywei\AppData\Local\Temp\cc9d6ONx.s 			page 22
 
 
  448              		.loc 1 311 3 is_stmt 1 view .LVU118
@@ -1318,7 +1318,7 @@ ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccR8H12q.s 			page 1
  484              	.LVL21:
  323:Src/main.c    ****   {
  485              		.loc 1 323 6 view .LVU137
-ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccR8H12q.s 			page 23
+ARM GAS  C:\Users\andywei\AppData\Local\Temp\cc9d6ONx.s 			page 23
 
 
  486 0076 10BB     		cbnz	r0, .L25
@@ -1378,7 +1378,7 @@ ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccR8H12q.s 			page 1
  520 009c 0123     		movs	r3, #1
  521 009e 8DF82830 		strb	r3, [sp, #40]
  340:Src/main.c    ****   if (HAL_RTC_SetAlarm(&hrtc, &sAlarm, RTC_FORMAT_BIN) != HAL_OK)
-ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccR8H12q.s 			page 24
+ARM GAS  C:\Users\andywei\AppData\Local\Temp\cc9d6ONx.s 			page 24
 
 
  522              		.loc 1 340 3 is_stmt 1 view .LVU158
@@ -1438,7 +1438,7 @@ ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccR8H12q.s 			page 1
  568              		.section	.text.MX_SPI1_Init,"ax",%progbits
  569              		.align	1
  570              		.syntax unified
-ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccR8H12q.s 			page 25
+ARM GAS  C:\Users\andywei\AppData\Local\Temp\cc9d6ONx.s 			page 25
 
 
  571              		.thumb
@@ -1498,7 +1498,7 @@ ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccR8H12q.s 			page 1
  611 001c 4FF40072 		mov	r2, #512
  612 0020 8261     		str	r2, [r0, #24]
  374:Src/main.c    ****   hspi1.Init.FirstBit = SPI_FIRSTBIT_MSB;
-ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccR8H12q.s 			page 26
+ARM GAS  C:\Users\andywei\AppData\Local\Temp\cc9d6ONx.s 			page 26
 
 
  613              		.loc 1 374 3 is_stmt 1 view .LVU183
@@ -1558,7 +1558,7 @@ ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccR8H12q.s 			page 1
  649              	.L34:
  650 0042 00BF     		.align	2
  651              	.L33:
-ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccR8H12q.s 			page 27
+ARM GAS  C:\Users\andywei\AppData\Local\Temp\cc9d6ONx.s 			page 27
 
 
  652 0044 00000000 		.word	.LANCHOR0
@@ -1618,7 +1618,7 @@ ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccR8H12q.s 			page 1
  695              		.loc 1 411 20 is_stmt 0 view .LVU214
  696 0016 0C22     		movs	r2, #12
  697 0018 4261     		str	r2, [r0, #20]
-ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccR8H12q.s 			page 28
+ARM GAS  C:\Users\andywei\AppData\Local\Temp\cc9d6ONx.s 			page 28
 
 
  412:Src/main.c    ****   huart2.Init.OverSampling = UART_OVERSAMPLING_16;
@@ -1678,7 +1678,7 @@ ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccR8H12q.s 			page 1
  740              		.loc 1 218 1 view -0
  741              		.cfi_startproc
  742              		@ args = 0, pretend = 0, frame = 224
-ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccR8H12q.s 			page 29
+ARM GAS  C:\Users\andywei\AppData\Local\Temp\cc9d6ONx.s 			page 29
 
 
  743              		@ frame_needed = 0, uses_anonymous_args = 0
@@ -1738,7 +1738,7 @@ ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccR8H12q.s 			page 1
  784              		.loc 1 229 3 is_stmt 1 view .LVU241
  229:Src/main.c    ****   RCC_OscInitStruct.PLL.PLLState = RCC_PLL_ON;
  785              		.loc 1 229 30 is_stmt 0 view .LVU242
-ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccR8H12q.s 			page 30
+ARM GAS  C:\Users\andywei\AppData\Local\Temp\cc9d6ONx.s 			page 30
 
 
  786 0030 0121     		movs	r1, #1
@@ -1798,7 +1798,7 @@ ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccR8H12q.s 			page 1
  821 0050 2293     		str	r3, [sp, #136]
  245:Src/main.c    ****   RCC_ClkInitStruct.AHBCLKDivider = RCC_SYSCLK_DIV1;
  822              		.loc 1 245 3 is_stmt 1 view .LVU262
-ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccR8H12q.s 			page 31
+ARM GAS  C:\Users\andywei\AppData\Local\Temp\cc9d6ONx.s 			page 31
 
 
  245:Src/main.c    ****   RCC_ClkInitStruct.AHBCLKDivider = RCC_SYSCLK_DIV1;
@@ -1858,7 +1858,7 @@ ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccR8H12q.s 			page 1
  859 007a FFF7FEFF 		bl	HAL_RCCEx_PeriphCLKConfig
  860              	.LVL35:
  257:Src/main.c    ****   {
-ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccR8H12q.s 			page 32
+ARM GAS  C:\Users\andywei\AppData\Local\Temp\cc9d6ONx.s 			page 32
 
 
  861              		.loc 1 257 6 view .LVU281
@@ -1908,261 +1908,299 @@ ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccR8H12q.s 			page 1
  898              		.section	.rodata.main.str1.4,"aMS",%progbits,1
  899              		.align	2
  900              	.LC1:
- 901 0000 7472616E 		.ascii	"transmit packet successfully\000"
- 901      736D6974 
+ 901 0000 0A726563 		.ascii	"\012receive packet successfully\000"
+ 901      65697665 
  901      20706163 
  901      6B657420 
  901      73756363 
  902 001d 000000   		.align	2
- 903              	.LC0:
- 904 0020 12223242 		.ascii	"\022\"2BRbr\202\222\212.\242\000"
- 904      52627282 
- 904      928A2EA2 
-ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccR8H12q.s 			page 33
+ 903              	.LC2:
+ 904 0020 72782074 		.ascii	"rx timeout\000"
+ 904      696D656F 
+ 904      757400
+ARM GAS  C:\Users\andywei\AppData\Local\Temp\cc9d6ONx.s 			page 33
 
 
- 904      00
- 905              		.section	.text.main,"ax",%progbits
- 906              		.align	1
- 907              		.global	main
- 908              		.syntax unified
- 909              		.thumb
- 910              		.thumb_func
- 911              		.fpu fpv4-sp-d16
- 913              	main:
- 914              	.LFB137:
+ 905 002b 00       		.align	2
+ 906              	.LC0:
+ 907 002c 12223242 		.ascii	"\022\"2BRbr\202\222\212.\242\000"
+ 907      52627282 
+ 907      928A2EA2 
+ 907      00
+ 908              		.section	.text.main,"ax",%progbits
+ 909              		.align	1
+ 910              		.global	main
+ 911              		.syntax unified
+ 912              		.thumb
+ 913              		.thumb_func
+ 914              		.fpu fpv4-sp-d16
+ 916              	main:
+ 917              	.LFB137:
  105:Src/main.c    ****   /* USER CODE BEGIN 1 */
- 915              		.loc 1 105 1 view -0
- 916              		.cfi_startproc
- 917              		@ args = 0, pretend = 0, frame = 72
- 918              		@ frame_needed = 0, uses_anonymous_args = 0
- 919 0000 00B5     		push	{lr}
- 920              	.LCFI17:
- 921              		.cfi_def_cfa_offset 4
- 922              		.cfi_offset 14, -4
- 923 0002 93B0     		sub	sp, sp, #76
- 924              	.LCFI18:
- 925              		.cfi_def_cfa_offset 80
+ 918              		.loc 1 105 1 view -0
+ 919              		.cfi_startproc
+ 920              		@ args = 0, pretend = 0, frame = 72
+ 921              		@ frame_needed = 0, uses_anonymous_args = 0
+ 922 0000 10B5     		push	{r4, lr}
+ 923              	.LCFI17:
+ 924              		.cfi_def_cfa_offset 8
+ 925              		.cfi_offset 4, -8
+ 926              		.cfi_offset 14, -4
+ 927 0002 92B0     		sub	sp, sp, #72
+ 928              	.LCFI18:
+ 929              		.cfi_def_cfa_offset 80
  109:Src/main.c    ****   uint8_t tx_buf1[60];
- 926              		.loc 1 109 3 view .LVU291
+ 930              		.loc 1 109 3 view .LVU291
  109:Src/main.c    ****   uint8_t tx_buf1[60];
- 927              		.loc 1 109 11 is_stmt 0 view .LVU292
- 928 0004 164B     		ldr	r3, .L57
- 929 0006 93E80700 		ldm	r3, {r0, r1, r2}
- 930 000a 12AB     		add	r3, sp, #72
- 931 000c 03E90700 		stmdb	r3, {r0, r1, r2}
+ 931              		.loc 1 109 11 is_stmt 0 view .LVU292
+ 932 0004 1C4B     		ldr	r3, .L60
+ 933 0006 93E80700 		ldm	r3, {r0, r1, r2}
+ 934 000a 12AB     		add	r3, sp, #72
+ 935 000c 03E90700 		stmdb	r3, {r0, r1, r2}
  110:Src/main.c    ****   int i;
- 932              		.loc 1 110 3 is_stmt 1 view .LVU293
+ 936              		.loc 1 110 3 is_stmt 1 view .LVU293
  111:Src/main.c    ****   // uint8_t tx_buf[]={0x48,0x44,0x4c,0x42,0x4A,0x46,0x4E,0x8a,0x2e,0xa2};
- 933              		.loc 1 111 3 view .LVU294
+ 937              		.loc 1 111 3 view .LVU294
  114:Src/main.c    ****   int no;
- 934              		.loc 1 114 3 view .LVU295
- 935              	.LVL41:
+ 938              		.loc 1 114 3 view .LVU295
+ 939              	.LVL41:
  115:Src/main.c    ****   /* USER CODE END 1 */
- 936              		.loc 1 115 3 view .LVU296
+ 940              		.loc 1 115 3 view .LVU296
  121:Src/main.c    **** 
- 937              		.loc 1 121 3 view .LVU297
- 938 0010 FFF7FEFF 		bl	HAL_Init
- 939              	.LVL42:
+ 941              		.loc 1 121 3 view .LVU297
+ 942 0010 FFF7FEFF 		bl	HAL_Init
+ 943              	.LVL42:
  128:Src/main.c    **** 
- 940              		.loc 1 128 3 view .LVU298
- 941 0014 FFF7FEFF 		bl	SystemClock_Config
- 942              	.LVL43:
+ 944              		.loc 1 128 3 view .LVU298
+ 945 0014 FFF7FEFF 		bl	SystemClock_Config
+ 946              	.LVL43:
  135:Src/main.c    ****   MX_RTC_Init();
- 943              		.loc 1 135 3 view .LVU299
- 944 0018 FFF7FEFF 		bl	MX_GPIO_Init
- 945              	.LVL44:
+ 947              		.loc 1 135 3 view .LVU299
+ 948 0018 FFF7FEFF 		bl	MX_GPIO_Init
+ 949              	.LVL44:
+ARM GAS  C:\Users\andywei\AppData\Local\Temp\cc9d6ONx.s 			page 34
+
+
  136:Src/main.c    ****   MX_SPI1_Init();
- 946              		.loc 1 136 3 view .LVU300
- 947 001c FFF7FEFF 		bl	MX_RTC_Init
- 948              	.LVL45:
+ 950              		.loc 1 136 3 view .LVU300
+ 951 001c FFF7FEFF 		bl	MX_RTC_Init
+ 952              	.LVL45:
  137:Src/main.c    ****   MX_USART2_UART_Init();
- 949              		.loc 1 137 3 view .LVU301
-ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccR8H12q.s 			page 34
-
-
- 950 0020 FFF7FEFF 		bl	MX_SPI1_Init
- 951              	.LVL46:
+ 953              		.loc 1 137 3 view .LVU301
+ 954 0020 FFF7FEFF 		bl	MX_SPI1_Init
+ 955              	.LVL46:
  138:Src/main.c    ****   /* USER CODE BEGIN 2 */
- 952              		.loc 1 138 3 view .LVU302
- 953 0024 FFF7FEFF 		bl	MX_USART2_UART_Init
- 954              	.LVL47:
+ 956              		.loc 1 138 3 view .LVU302
+ 957 0024 FFF7FEFF 		bl	MX_USART2_UART_Init
+ 958              	.LVL47:
  140:Src/main.c    ****   for(i=0;i<60;i++)
- 955              		.loc 1 140 3 view .LVU303
- 956 0028 FFF7FEFF 		bl	vRadio_Init
- 957              	.LVL48:
+ 959              		.loc 1 140 3 view .LVU303
+ 960 0028 FFF7FEFF 		bl	vRadio_Init
+ 961              	.LVL48:
  141:Src/main.c    ****   {
- 958              		.loc 1 141 3 view .LVU304
+ 962              		.loc 1 141 3 view .LVU304
  141:Src/main.c    ****   {
- 959              		.loc 1 141 8 is_stmt 0 view .LVU305
- 960 002c 0023     		movs	r3, #0
+ 963              		.loc 1 141 8 is_stmt 0 view .LVU305
+ 964 002c 0023     		movs	r3, #0
  141:Src/main.c    ****   {
- 961              		.loc 1 141 3 view .LVU306
- 962 002e 05E0     		b	.L52
- 963              	.LVL49:
- 964              	.L53:
+ 965              		.loc 1 141 3 view .LVU306
+ 966 002e 05E0     		b	.L52
+ 967              	.LVL49:
+ 968              	.L53:
  143:Src/main.c    ****   }
- 965              		.loc 1 143 5 is_stmt 1 discriminator 3 view .LVU307
+ 969              		.loc 1 143 5 is_stmt 1 discriminator 3 view .LVU307
  143:Src/main.c    ****   }
- 966              		.loc 1 143 17 is_stmt 0 discriminator 3 view .LVU308
- 967 0030 591C     		adds	r1, r3, #1
+ 970              		.loc 1 143 17 is_stmt 0 discriminator 3 view .LVU308
+ 971 0030 591C     		adds	r1, r3, #1
  143:Src/main.c    ****   }
- 968              		.loc 1 143 15 discriminator 3 view .LVU309
- 969 0032 12AA     		add	r2, sp, #72
- 970 0034 1A44     		add	r2, r2, r3
- 971 0036 02F8481C 		strb	r1, [r2, #-72]
+ 972              		.loc 1 143 15 discriminator 3 view .LVU309
+ 973 0032 12AA     		add	r2, sp, #72
+ 974 0034 1A44     		add	r2, r2, r3
+ 975 0036 02F8481C 		strb	r1, [r2, #-72]
  141:Src/main.c    ****   {
- 972              		.loc 1 141 16 is_stmt 1 discriminator 3 view .LVU310
+ 976              		.loc 1 141 16 is_stmt 1 discriminator 3 view .LVU310
  141:Src/main.c    ****   {
- 973              		.loc 1 141 17 is_stmt 0 discriminator 3 view .LVU311
- 974 003a 0B46     		mov	r3, r1
- 975              	.LVL50:
- 976              	.L52:
+ 977              		.loc 1 141 17 is_stmt 0 discriminator 3 view .LVU311
+ 978 003a 0B46     		mov	r3, r1
+ 979              	.LVL50:
+ 980              	.L52:
  141:Src/main.c    ****   {
- 977              		.loc 1 141 11 is_stmt 1 discriminator 1 view .LVU312
+ 981              		.loc 1 141 11 is_stmt 1 discriminator 1 view .LVU312
  141:Src/main.c    ****   {
- 978              		.loc 1 141 3 is_stmt 0 discriminator 1 view .LVU313
- 979 003c 3B2B     		cmp	r3, #59
- 980 003e F7DD     		ble	.L53
- 981              	.LVL51:
- 982              	.L55:
- 149:Src/main.c    ****   {
- 983              		.loc 1 149 3 is_stmt 1 view .LVU314
- 152:Src/main.c    ****     // vRadio_StartTx_Variable_Packet(0,tx_buf1,60);
- 984              		.loc 1 152 5 view .LVU315
- 985 0040 0922     		movs	r2, #9
- 986 0042 0FA9     		add	r1, sp, #60
- 987 0044 0020     		movs	r0, #0
- 988 0046 FFF7FEFF 		bl	vRadio_StartTx_Variable_Packet
- 989              	.LVL52:
- 990              	.L54:
- 154:Src/main.c    ****     {
- 991              		.loc 1 154 5 view .LVU316
-ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccR8H12q.s 			page 35
+ 982              		.loc 1 141 3 is_stmt 0 discriminator 1 view .LVU313
+ 983 003c 3B2B     		cmp	r3, #59
+ 984 003e F7DD     		ble	.L53
+ 985 0040 05E0     		b	.L54
+ 986              	.LVL51:
+ 987              	.L59:
+ 189:Src/main.c    ****         si446x_change_state(SI446X_CMD_CHANGE_STATE_ARG_NEXT_STATE1_NEW_STATE_ENUM_READY);
+ 988              		.loc 1 189 9 is_stmt 1 view .LVU314
+ 989 0042 0E48     		ldr	r0, .L60+4
+ 990 0044 FFF7FEFF 		bl	puts
+ 991              	.LVL52:
+ARM GAS  C:\Users\andywei\AppData\Local\Temp\cc9d6ONx.s 			page 35
 
 
- 156:Src/main.c    ****       {
- 992              		.loc 1 156 7 view .LVU317
- 156:Src/main.c    ****       {
- 993              		.loc 1 156 10 is_stmt 0 view .LVU318
- 994 004a FFF7FEFF 		bl	bRadio_Check_Tx_RX
+ 190:Src/main.c    ****         break;
+ 992              		.loc 1 190 9 view .LVU315
+ 993 0048 0320     		movs	r0, #3
+ 994 004a FFF7FEFF 		bl	si446x_change_state
  995              	.LVL53:
- 156:Src/main.c    ****       {
- 996              		.loc 1 156 9 view .LVU319
- 997 004e 2028     		cmp	r0, #32
- 998 0050 FBD1     		bne	.L54
- 158:Src/main.c    ****         break;
- 999              		.loc 1 158 9 is_stmt 1 view .LVU320
- 1000 0052 0448     		ldr	r0, .L57+4
- 1001 0054 FFF7FEFF 		bl	puts
- 1002              	.LVL54:
- 159:Src/main.c    ****       }
- 1003              		.loc 1 159 9 view .LVU321
- 167:Src/main.c    **** 
- 1004              		.loc 1 167 5 view .LVU322
- 1005 0058 C820     		movs	r0, #200
- 1006 005a FFF7FEFF 		bl	HAL_Delay
- 1007              	.LVL55:
+ 191:Src/main.c    ****       }
+ 996              		.loc 1 191 9 view .LVU316
+ 997              	.L54:
  149:Src/main.c    ****   {
- 1008              		.loc 1 149 9 view .LVU323
- 152:Src/main.c    ****     // vRadio_StartTx_Variable_Packet(0,tx_buf1,60);
- 1009              		.loc 1 152 5 is_stmt 0 view .LVU324
- 1010 005e EFE7     		b	.L55
- 1011              	.L58:
- 1012              		.align	2
- 1013              	.L57:
- 1014 0060 20000000 		.word	.LC0
- 1015 0064 00000000 		.word	.LC1
- 1016              		.cfi_endproc
- 1017              	.LFE137:
- 1019              		.global	huart2
- 1020              		.global	hspi1
- 1021              		.global	hrtc
- 1022              		.section	.bss.hrtc,"aw",%nobits
- 1023              		.align	2
- 1024              		.set	.LANCHOR2,. + 0
- 1027              	hrtc:
- 1028 0000 00000000 		.space	36
- 1028      00000000 
- 1028      00000000 
- 1028      00000000 
- 1028      00000000 
- 1029              		.section	.bss.hspi1,"aw",%nobits
- 1030              		.align	2
- 1031              		.set	.LANCHOR0,. + 0
- 1034              	hspi1:
- 1035 0000 00000000 		.space	100
- 1035      00000000 
- 1035      00000000 
- 1035      00000000 
- 1035      00000000 
- 1036              		.section	.bss.huart2,"aw",%nobits
- 1037              		.align	2
-ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccR8H12q.s 			page 36
+ 998              		.loc 1 149 3 view .LVU317
+ 178:Src/main.c    ****     // printf("the receive packet length is %d\n",no);
+ 999              		.loc 1 178 5 view .LVU318
+ 1000 004e 0021     		movs	r1, #0
+ 1001 0050 0846     		mov	r0, r1
+ 1002 0052 FFF7FEFF 		bl	vRadio_StartRX
+ 1003              	.LVL54:
+ 184:Src/main.c    ****     while (1)
+ 1004              		.loc 1 184 5 view .LVU319
+ 184:Src/main.c    ****     while (1)
+ 1005              		.loc 1 184 11 is_stmt 0 view .LVU320
+ 1006 0056 0024     		movs	r4, #0
+ 1007              	.LVL55:
+ 1008              	.L57:
+ 185:Src/main.c    ****     {
+ 1009              		.loc 1 185 5 is_stmt 1 view .LVU321
+ 187:Src/main.c    ****       {
+ 1010              		.loc 1 187 7 view .LVU322
+ 187:Src/main.c    ****       {
+ 1011              		.loc 1 187 11 is_stmt 0 view .LVU323
+ 1012 0058 FFF7FEFF 		bl	bRadio_Check_Tx_RX
+ 1013              	.LVL56:
+ 187:Src/main.c    ****       {
+ 1014              		.loc 1 187 10 view .LVU324
+ 1015 005c 1028     		cmp	r0, #16
+ 1016 005e F0D0     		beq	.L59
+ 196:Src/main.c    ****         count++;
+ 1017              		.loc 1 196 9 is_stmt 1 view .LVU325
+ 1018 0060 0120     		movs	r0, #1
+ 1019 0062 FFF7FEFF 		bl	HAL_Delay
+ 1020              	.LVL57:
+ 197:Src/main.c    ****         if (count >= 1000)
+ 1021              		.loc 1 197 9 view .LVU326
+ 197:Src/main.c    ****         if (count >= 1000)
+ 1022              		.loc 1 197 14 is_stmt 0 view .LVU327
+ 1023 0066 0134     		adds	r4, r4, #1
+ 1024              	.LVL58:
+ 198:Src/main.c    ****         {
+ 1025              		.loc 1 198 9 is_stmt 1 view .LVU328
+ 198:Src/main.c    ****         {
+ 1026              		.loc 1 198 12 is_stmt 0 view .LVU329
+ 1027 0068 B4F57A7F 		cmp	r4, #1000
+ 1028 006c F4DB     		blt	.L57
+ 200:Src/main.c    **** 
+ 1029              		.loc 1 200 11 is_stmt 1 view .LVU330
+ 1030 006e 0448     		ldr	r0, .L60+8
+ 1031 0070 FFF7FEFF 		bl	puts
+ 1032              	.LVL59:
+ARM GAS  C:\Users\andywei\AppData\Local\Temp\cc9d6ONx.s 			page 36
 
 
- 1038              		.set	.LANCHOR1,. + 0
- 1041              	huart2:
- 1042 0000 00000000 		.space	132
- 1042      00000000 
- 1042      00000000 
- 1042      00000000 
- 1042      00000000 
- 1043              		.text
- 1044              	.Letext0:
- 1045              		.file 3 "c:\\gnu arm embedded toolchain\\10 2020-q4-major\\arm-none-eabi\\include\\machine\\_defau
- 1046              		.file 4 "c:\\gnu arm embedded toolchain\\10 2020-q4-major\\arm-none-eabi\\include\\sys\\_stdint.h"
- 1047              		.file 5 "Drivers/CMSIS/Device/ST/STM32L4xx/Include/stm32l476xx.h"
- 1048              		.file 6 "Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_def.h"
- 1049              		.file 7 "Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_rcc.h"
- 1050              		.file 8 "Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_rcc_ex.h"
- 1051              		.file 9 "Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_gpio.h"
- 1052              		.file 10 "Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_dma.h"
- 1053              		.file 11 "Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_rtc.h"
- 1054              		.file 12 "Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_spi.h"
- 1055              		.file 13 "Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_uart.h"
- 1056              		.file 14 "Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_cortex.h"
- 1057              		.file 15 "Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_pwr_ex.h"
- 1058              		.file 16 "Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal.h"
- 1059              		.file 17 "Src/si4463/radio.h"
- 1060              		.file 18 "<built-in>"
-ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccR8H12q.s 			page 37
+ 202:Src/main.c    ****         }
+ 1033              		.loc 1 202 11 view .LVU331
+ 1034 0074 EBE7     		b	.L54
+ 1035              	.L61:
+ 1036 0076 00BF     		.align	2
+ 1037              	.L60:
+ 1038 0078 2C000000 		.word	.LC0
+ 1039 007c 00000000 		.word	.LC1
+ 1040 0080 20000000 		.word	.LC2
+ 1041              		.cfi_endproc
+ 1042              	.LFE137:
+ 1044              		.global	huart2
+ 1045              		.global	hspi1
+ 1046              		.global	hrtc
+ 1047              		.section	.bss.hrtc,"aw",%nobits
+ 1048              		.align	2
+ 1049              		.set	.LANCHOR2,. + 0
+ 1052              	hrtc:
+ 1053 0000 00000000 		.space	36
+ 1053      00000000 
+ 1053      00000000 
+ 1053      00000000 
+ 1053      00000000 
+ 1054              		.section	.bss.hspi1,"aw",%nobits
+ 1055              		.align	2
+ 1056              		.set	.LANCHOR0,. + 0
+ 1059              	hspi1:
+ 1060 0000 00000000 		.space	100
+ 1060      00000000 
+ 1060      00000000 
+ 1060      00000000 
+ 1060      00000000 
+ 1061              		.section	.bss.huart2,"aw",%nobits
+ 1062              		.align	2
+ 1063              		.set	.LANCHOR1,. + 0
+ 1066              	huart2:
+ 1067 0000 00000000 		.space	132
+ 1067      00000000 
+ 1067      00000000 
+ 1067      00000000 
+ 1067      00000000 
+ 1068              		.text
+ 1069              	.Letext0:
+ 1070              		.file 3 "c:\\gnu arm embedded toolchain\\10 2020-q4-major\\arm-none-eabi\\include\\machine\\_defau
+ 1071              		.file 4 "c:\\gnu arm embedded toolchain\\10 2020-q4-major\\arm-none-eabi\\include\\sys\\_stdint.h"
+ 1072              		.file 5 "Drivers/CMSIS/Device/ST/STM32L4xx/Include/stm32l476xx.h"
+ 1073              		.file 6 "Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_def.h"
+ 1074              		.file 7 "Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_rcc.h"
+ 1075              		.file 8 "Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_rcc_ex.h"
+ 1076              		.file 9 "Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_gpio.h"
+ 1077              		.file 10 "Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_dma.h"
+ 1078              		.file 11 "Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_rtc.h"
+ 1079              		.file 12 "Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_spi.h"
+ 1080              		.file 13 "Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_uart.h"
+ 1081              		.file 14 "Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_cortex.h"
+ 1082              		.file 15 "Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_pwr_ex.h"
+ 1083              		.file 16 "Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal.h"
+ARM GAS  C:\Users\andywei\AppData\Local\Temp\cc9d6ONx.s 			page 37
+
+
+ 1084              		.file 17 "Src/si4463/radio.h"
+ 1085              		.file 18 "<built-in>"
+ 1086              		.file 19 "Drivers/radio/Si446x/si446x_api_lib.h"
+ARM GAS  C:\Users\andywei\AppData\Local\Temp\cc9d6ONx.s 			page 38
 
 
 DEFINED SYMBOLS
                             *ABS*:00000000 main.c
-C:\Users\andywei\AppData\Local\Temp\ccR8H12q.s:18     .text.MX_GPIO_Init:00000000 $t
-C:\Users\andywei\AppData\Local\Temp\ccR8H12q.s:25     .text.MX_GPIO_Init:00000000 MX_GPIO_Init
-C:\Users\andywei\AppData\Local\Temp\ccR8H12q.s:202    .text.MX_GPIO_Init:000000d4 $d
-C:\Users\andywei\AppData\Local\Temp\ccR8H12q.s:210    .text.SpiInOut:00000000 $t
-C:\Users\andywei\AppData\Local\Temp\ccR8H12q.s:217    .text.SpiInOut:00000000 SpiInOut
-C:\Users\andywei\AppData\Local\Temp\ccR8H12q.s:259    .text.SpiInOut:00000030 $d
-C:\Users\andywei\AppData\Local\Temp\ccR8H12q.s:264    .text._write:00000000 $t
-C:\Users\andywei\AppData\Local\Temp\ccR8H12q.s:271    .text._write:00000000 _write
-C:\Users\andywei\AppData\Local\Temp\ccR8H12q.s:324    .text._write:00000024 $d
-C:\Users\andywei\AppData\Local\Temp\ccR8H12q.s:329    .text.Error_Handler:00000000 $t
-C:\Users\andywei\AppData\Local\Temp\ccR8H12q.s:336    .text.Error_Handler:00000000 Error_Handler
-C:\Users\andywei\AppData\Local\Temp\ccR8H12q.s:368    .text.MX_RTC_Init:00000000 $t
-C:\Users\andywei\AppData\Local\Temp\ccR8H12q.s:374    .text.MX_RTC_Init:00000000 MX_RTC_Init
-C:\Users\andywei\AppData\Local\Temp\ccR8H12q.s:562    .text.MX_RTC_Init:000000c8 $d
-C:\Users\andywei\AppData\Local\Temp\ccR8H12q.s:569    .text.MX_SPI1_Init:00000000 $t
-C:\Users\andywei\AppData\Local\Temp\ccR8H12q.s:575    .text.MX_SPI1_Init:00000000 MX_SPI1_Init
-C:\Users\andywei\AppData\Local\Temp\ccR8H12q.s:652    .text.MX_SPI1_Init:00000044 $d
-C:\Users\andywei\AppData\Local\Temp\ccR8H12q.s:658    .text.MX_USART2_UART_Init:00000000 $t
-C:\Users\andywei\AppData\Local\Temp\ccR8H12q.s:664    .text.MX_USART2_UART_Init:00000000 MX_USART2_UART_Init
-C:\Users\andywei\AppData\Local\Temp\ccR8H12q.s:725    .text.MX_USART2_UART_Init:00000030 $d
-C:\Users\andywei\AppData\Local\Temp\ccR8H12q.s:731    .text.SystemClock_Config:00000000 $t
-C:\Users\andywei\AppData\Local\Temp\ccR8H12q.s:738    .text.SystemClock_Config:00000000 SystemClock_Config
-C:\Users\andywei\AppData\Local\Temp\ccR8H12q.s:899    .rodata.main.str1.4:00000000 $d
-C:\Users\andywei\AppData\Local\Temp\ccR8H12q.s:906    .text.main:00000000 $t
-C:\Users\andywei\AppData\Local\Temp\ccR8H12q.s:913    .text.main:00000000 main
-C:\Users\andywei\AppData\Local\Temp\ccR8H12q.s:1014   .text.main:00000060 $d
-C:\Users\andywei\AppData\Local\Temp\ccR8H12q.s:1041   .bss.huart2:00000000 huart2
-C:\Users\andywei\AppData\Local\Temp\ccR8H12q.s:1034   .bss.hspi1:00000000 hspi1
-C:\Users\andywei\AppData\Local\Temp\ccR8H12q.s:1027   .bss.hrtc:00000000 hrtc
-C:\Users\andywei\AppData\Local\Temp\ccR8H12q.s:1023   .bss.hrtc:00000000 $d
-C:\Users\andywei\AppData\Local\Temp\ccR8H12q.s:1030   .bss.hspi1:00000000 $d
-C:\Users\andywei\AppData\Local\Temp\ccR8H12q.s:1037   .bss.huart2:00000000 $d
+C:\Users\andywei\AppData\Local\Temp\cc9d6ONx.s:18     .text.MX_GPIO_Init:00000000 $t
+C:\Users\andywei\AppData\Local\Temp\cc9d6ONx.s:25     .text.MX_GPIO_Init:00000000 MX_GPIO_Init
+C:\Users\andywei\AppData\Local\Temp\cc9d6ONx.s:202    .text.MX_GPIO_Init:000000d4 $d
+C:\Users\andywei\AppData\Local\Temp\cc9d6ONx.s:210    .text.SpiInOut:00000000 $t
+C:\Users\andywei\AppData\Local\Temp\cc9d6ONx.s:217    .text.SpiInOut:00000000 SpiInOut
+C:\Users\andywei\AppData\Local\Temp\cc9d6ONx.s:259    .text.SpiInOut:00000030 $d
+C:\Users\andywei\AppData\Local\Temp\cc9d6ONx.s:264    .text._write:00000000 $t
+C:\Users\andywei\AppData\Local\Temp\cc9d6ONx.s:271    .text._write:00000000 _write
+C:\Users\andywei\AppData\Local\Temp\cc9d6ONx.s:324    .text._write:00000024 $d
+C:\Users\andywei\AppData\Local\Temp\cc9d6ONx.s:329    .text.Error_Handler:00000000 $t
+C:\Users\andywei\AppData\Local\Temp\cc9d6ONx.s:336    .text.Error_Handler:00000000 Error_Handler
+C:\Users\andywei\AppData\Local\Temp\cc9d6ONx.s:368    .text.MX_RTC_Init:00000000 $t
+C:\Users\andywei\AppData\Local\Temp\cc9d6ONx.s:374    .text.MX_RTC_Init:00000000 MX_RTC_Init
+C:\Users\andywei\AppData\Local\Temp\cc9d6ONx.s:562    .text.MX_RTC_Init:000000c8 $d
+C:\Users\andywei\AppData\Local\Temp\cc9d6ONx.s:569    .text.MX_SPI1_Init:00000000 $t
+C:\Users\andywei\AppData\Local\Temp\cc9d6ONx.s:575    .text.MX_SPI1_Init:00000000 MX_SPI1_Init
+C:\Users\andywei\AppData\Local\Temp\cc9d6ONx.s:652    .text.MX_SPI1_Init:00000044 $d
+C:\Users\andywei\AppData\Local\Temp\cc9d6ONx.s:658    .text.MX_USART2_UART_Init:00000000 $t
+C:\Users\andywei\AppData\Local\Temp\cc9d6ONx.s:664    .text.MX_USART2_UART_Init:00000000 MX_USART2_UART_Init
+C:\Users\andywei\AppData\Local\Temp\cc9d6ONx.s:725    .text.MX_USART2_UART_Init:00000030 $d
+C:\Users\andywei\AppData\Local\Temp\cc9d6ONx.s:731    .text.SystemClock_Config:00000000 $t
+C:\Users\andywei\AppData\Local\Temp\cc9d6ONx.s:738    .text.SystemClock_Config:00000000 SystemClock_Config
+C:\Users\andywei\AppData\Local\Temp\cc9d6ONx.s:899    .rodata.main.str1.4:00000000 $d
+C:\Users\andywei\AppData\Local\Temp\cc9d6ONx.s:909    .text.main:00000000 $t
+C:\Users\andywei\AppData\Local\Temp\cc9d6ONx.s:916    .text.main:00000000 main
+C:\Users\andywei\AppData\Local\Temp\cc9d6ONx.s:1038   .text.main:00000078 $d
+C:\Users\andywei\AppData\Local\Temp\cc9d6ONx.s:1066   .bss.huart2:00000000 huart2
+C:\Users\andywei\AppData\Local\Temp\cc9d6ONx.s:1059   .bss.hspi1:00000000 hspi1
+C:\Users\andywei\AppData\Local\Temp\cc9d6ONx.s:1052   .bss.hrtc:00000000 hrtc
+C:\Users\andywei\AppData\Local\Temp\cc9d6ONx.s:1048   .bss.hrtc:00000000 $d
+C:\Users\andywei\AppData\Local\Temp\cc9d6ONx.s:1055   .bss.hspi1:00000000 $d
+C:\Users\andywei\AppData\Local\Temp\cc9d6ONx.s:1062   .bss.huart2:00000000 $d
 
 UNDEFINED SYMBOLS
 HAL_GPIO_WritePin
@@ -2184,10 +2222,11 @@ HAL_RCCEx_PeriphCLKConfig
 HAL_PWREx_ControlVoltageScaling
 HAL_Init
 vRadio_Init
-vRadio_StartTx_Variable_Packet
-bRadio_Check_Tx_RX
-ARM GAS  C:\Users\andywei\AppData\Local\Temp\ccR8H12q.s 			page 38
-
-
 puts
+si446x_change_state
+ARM GAS  C:\Users\andywei\AppData\Local\Temp\cc9d6ONx.s 			page 39
+
+
+vRadio_StartRX
+bRadio_Check_Tx_RX
 HAL_Delay

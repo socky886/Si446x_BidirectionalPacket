@@ -149,22 +149,22 @@ int main(void)
   while (1)
   {
 
-    vRadio_StartTx_Variable_Packet(0,tx_buf,9);
-    // vRadio_StartTx_Variable_Packet(0,tx_buf1,60);
-    while (1)
-    {
-      if(bRadio_Check_Tx_RX()==0x20)
-      {
-        printf("transmit packet successfully\n");
-        break;
-      }
-      else
-      {
-        // printf("transmit packet is going\n");
-        ;
-      }
-    }
-    HAL_Delay(200);
+    // vRadio_StartTx_Variable_Packet(0,tx_buf,9);
+    // // vRadio_StartTx_Variable_Packet(0,tx_buf1,60);
+    // while (1)
+    // {
+    //   if(bRadio_Check_Tx_RX()==0x20)
+    //   {
+    //     printf("transmit packet successfully\n");
+    //     break;
+    //   }
+    //   else
+    //   {
+    //     // printf("transmit packet is going\n");
+    //     ;
+    //   }
+    // }
+    // HAL_Delay(200);
 
   //   count=crc16(tx_buf,7);
   //   printf("the crc16 is 0x%04x\n",count);
@@ -175,34 +175,34 @@ int main(void)
     // count=CRC16(tx_buf,10);
     // printf("the crc16  is 0x%04x\n",count);
     
-    // vRadio_StartRX(0,0);
-    // // printf("the receive packet length is %d\n",no);
-    // // no++;
-    // // if(no==11)
-    // // no=0;
+    vRadio_StartRX(0,0);
+    // printf("the receive packet length is %d\n",no);
+    // no++;
+    // if(no==11)
+    // no=0;
 
-    // count = 0;
-    // while (1)
-    // {
-    //   if (bRadio_Check_Tx_RX() == 0x10)
-    //   {
-    //     printf("\nreceive packet successfully\n");
-    //     si446x_change_state(SI446X_CMD_CHANGE_STATE_ARG_NEXT_STATE1_NEW_STATE_ENUM_READY);
-    //     break;
-    //   }
-    //   else
-    //   {
-    //     // printf("receive packet is going\n");
-    //     HAL_Delay(1);
-    //     count++;
-    //     if (count >= 1000)
-    //     {
-    //       printf("rx timeout\n");
+    count = 0;
+    while (1)
+    {
+      if (bRadio_Check_Tx_RX() == 0x10)
+      {
+        printf("\nreceive packet successfully\n");
+        si446x_change_state(SI446X_CMD_CHANGE_STATE_ARG_NEXT_STATE1_NEW_STATE_ENUM_READY);
+        break;
+      }
+      else
+      {
+        // printf("receive packet is going\n");
+        HAL_Delay(1);
+        count++;
+        if (count >= 1000)
+        {
+          printf("rx timeout\n");
 
-    //       break;
-    //     }
-    //   }
-    // }
+          break;
+        }
+      }
+    }
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
